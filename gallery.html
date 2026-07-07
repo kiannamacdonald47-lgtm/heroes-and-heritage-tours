@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Photo Gallery — Heroes and Heritage Tours</title>
+  <meta name="description" content="A gallery of real photographs from Vimy Ridge, Flanders Fields and the Somme — memorials, preserved trenches and cemeteries you'll visit on tour." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <nav class="nav" id="nav">
+    <div class="container">
+      <a href="index.html" class="logo" aria-label="Heroes and Heritage Tours home">
+        <img src="media/logo-transparent.png" alt="Heroes and Heritage Tours logo" width="52" height="52">
+        <span class="logo-word">Heroes &amp; Heritage<span>Tours</span></span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="tours.html">Tours</a>
+        <a href="guide.html">Our Guide</a>
+        <a href="family-research.html">Family Research</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <span class="nav-phone">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          +33 6 00 00 00 00
+        </span>
+        <a href="booking.html" class="btn btn-primary btn-sm">Book Now</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu" data-open="false">
+    <a href="index.html">Home</a>
+    <a href="tours.html">Tours</a>
+    <a href="guide.html">Our Guide</a>
+    <a href="family-research.html">Family Research</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="testimonials.html">Reviews</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+    <a href="booking.html" class="btn btn-primary btn-block">Book Now</a>
+    <span class="mobile-menu-phone">Call us: +33 6 00 00 00 00</span>
+  </div>
+
+  <main id="main">
+    <header class="hero hero--compact">
+      <div class="hero-media">
+        <img src="photos/somme/somme-01.jpg" alt="The Beaumont-Hamel Newfoundland Memorial caribou statue" width="1800" height="1200">
+      </div>
+      <div class="container">
+        <div class="hero-content">
+          <span class="eyebrow">Photo gallery</span>
+          <h1>A glimpse of what you'll see.</h1>
+          <p class="lede">Real photographs from our guests and guides, taken at Vimy Ridge, Flanders Fields and the Somme.</p>
+        </div>
+      </div>
+    </header>
+
+    <section class="section">
+      <div class="container">
+        <div class="gallery-filters" role="group" aria-label="Filter gallery by location" data-reveal>
+          <button class="gallery-filter" data-gallery-filter="all" aria-pressed="true">All Photos</button>
+          <button class="gallery-filter" data-gallery-filter="vimy" aria-pressed="false">Vimy Ridge</button>
+          <button class="gallery-filter" data-gallery-filter="flanders" aria-pressed="false">Flanders Fields</button>
+          <button class="gallery-filter" data-gallery-filter="somme" aria-pressed="false">The Somme</button>
+        </div>
+
+        <div class="gallery-grid" data-reveal>
+          <button class="gallery-item" data-gallery-item data-tour="vimy" data-full="photos/vimy/vimy-01.jpg"><img src="photos/vimy/thumbs/vimy-01.jpg" alt="Vimy Ridge battlefield photograph" loading="lazy"><span class="gallery-item-tag">Vimy Ridge</span></button>
+          <button class="gallery-item" data-gallery-item data-tour="vimy" data-full="photos/vimy/vimy-02.jpg"><img src="photos/vimy/thumbs/vimy-02.jpg" alt="Vimy Ridge battlefield photograph" loading="lazy"><span class="gallery-item-tag">Vimy Ridge</span></button>
+          <button class="gallery-item" data-gallery-item data-tour="vimy" data-full="photos/vimy/vimy-03.jpg"><img src="photos/vimy/thumbs/vimy-03.jpg" alt="Vimy Ridge battlefield photograph" loading="lazy"><span class="gallery-item-tag">Vimy Ridge</span></button>
+          <button class="gallery-item" data-gallery-item data-tour="vimy" data-full="photos/vimy/vimy-04.jpg"><img src="photos/vimy/thumbs/vimy-04.jpg" alt="Vimy Ridge battlefield photograph" loading="lazy"><span class="gallery-item-tag">Vimy Ridge</span></button>
+          <button class="gallery-item" data-gallery-item data-tour="vimy" data-full="photos/vimy/vimy-05.jpg"><img src="photos/vimy/thumbs/vimy-05.jpg" alt="Vimy Ridge battlefield photograph" loading="lazy"><span class="gallery-item-tag">Vimy Ridge</span></button>
+          <button class="gallery-item" data-gallery-item data-tour="vimy" data-full="photos/vimy/vimy-06.jpg"><img src="photos/vimy/thumbs/vimy-06.jpg" alt="Vimy Ridge battlefield photograph" loading="lazy"><span class="gallery-item-tag">Vimy Ridge</span></button>
+          <button class="gallery-item" data-gallery-item data-tour="vimy" data-full="photos/vimy/vimy-07.jpg"><img src="photos/vimy/thumbs/vimy-07.jpg" alt="Vimy Ridge battlefield photograph" loading="lazy"><span class="gallery-item-tag">Vimy Ridge</span></button>
+          <button class="gallery-item" data-gallery-item data-tour="vimy" data-full="photos/vimy/vimy-08.jpg"><img src="photos/vimy/thumbs/vimy-08.jpg" alt="Vimy Ridge battlefield photograph" loading="lazy"><span class="gallery-item-tag">Vimy Ridge</span></button>
+          <button class="gallery-item" data-gallery-item data-tour="vimy" data-full="photos/vimy/vimy-09.jpg"><img src="photos/vimy/thumbs/vimy-09.jpg" alt="Vimy Ridge battlefield photograph" loading="lazy"><span class="gallery-item-tag">Vimy Ridge</span></button>
+          <button class="gallery-item" data-gallery-item data-tour="vimy" data-full="photos/vimy/vimy-10.jpg"><img src="photos/vimy/thumbs/vimy-10.jpg" alt="Vimy Ridge battlefield photograph" loading="lazy"><span class="gallery-item-tag">Vimy Ridge</span></button>
+          <button class="gallery-item" data-gallery-item data-tour="vimy" data-full="photos/vimy/vimy-11.jpg"><img src="photos/vimy/thumbs/vimy-11.jpg" alt="Vimy Ridge battlefield photograph" loading="lazy"><span class="gallery-item-tag">Vimy Ridge</span></button>
+          <button class="gallery-item" data-gallery-item data-tour="vimy" data-full="photos/vimy/vimy-12.jpg"><img src="photos/vimy/thumbs/vimy-12.jpg" alt="Vimy Ridge battlefield photograph" loading="lazy"><span class="gallery-item-tag">Vimy Ridge</span></button>
+          <button class="gallery-item" data-gallery-item data-tour="vimy" data-full="photos/vimy/vimy-13.jpg"><img src="photos/vimy/thumbs/vimy-13.jpg" alt="Vimy Ridge battlefield photograph" loading="lazy"><span class="gallery-item-tag">Vimy Ridge</span></button>
+          <button class="gallery-item" data-gallery-item data-tour="vimy" data-full="photos/vimy/vimy-14.jpg"><img src="photos/vimy/thumbs/vimy-14.jpg" alt="Vimy Ridge battlefield photograph" loading="lazy"><span class="gallery-item-tag">Vimy Ridge</span></button>
+          <button class="gallery-item" data-gallery-item data-tour="vimy" data-full="photos/vimy/vimy-15.jpg"><img src="photos/vimy/thumbs/vimy-15.jpg" alt="Vimy Ridge battlefield photograph" loading="lazy"><span class="gallery-item-tag">Vimy Ridge</span></button>
+          <button class="gallery-item" data-gallery-item data-tour="vimy" data-full="photos/vimy/vimy-16.jpg"><img src="photos/vimy/thumbs/vimy-16.jpg" alt="Vimy Ridge battlefield photograph" loading="lazy"><span class="gallery-item-tag">Vimy Ridge</span></button>
+          <button class="gallery-item" data-gallery-item data-tour="vimy" data-full="photos/vimy/vimy-17.jpg"><img src="photos/vimy/thumbs/vimy-17.jpg" alt="Vimy Ridge battlefield photograph" loading="lazy"><span class="gallery-item-tag">Vimy Ridge</span></button>
+          <button class="gallery-item" data-gallery-item data-tour="vimy" data-full="photos/vimy/vimy-18.jpg"><img src="photos/vimy/thumbs/vimy-18.jpg" alt="Vimy Ridge battlefield photograph" loading="lazy"><span class="gallery-item-tag">Vimy Ridge</span></button>
+          <button class="gallery-item" data-gallery-item data-tour="vimy" data-full="photos/vimy/vimy-19.jpg"><img src="photos/vimy/thumbs/vimy-19.jpg" alt="Vimy Ridge battlefield photograph" loading="lazy"><span class="gallery-item-tag">Vimy Ridge</span></button>
+          <button class="gallery-item" data-gallery-item data-tour="vimy" data-full="photos/vimy/vimy-20.jpg"><img src="photos/vimy/thumbs/vimy-20.jpg" alt="Vimy Ridge battlefield photograph" loading="lazy"><span class="gallery-item-tag">Vimy Ridge</span></button>
+          <button class="gallery-item" data-gallery-item data-tour="vimy" data-full="photos/vimy/vimy-21.jpg"><img src="photos/vimy/thumbs/vimy-21.jpg" alt="Vimy Ridge battlefield photograph" loading="lazy"><span class="gallery-item-tag">Vimy Ridge</span></button>
+          <button class="gallery-item" data-gallery-item data-tour="vimy" data-full="photos/vimy/vimy-22.jpg"><img src="photos/vimy/thumbs/vimy-22.jpg" alt="Vimy Ridge battlefield photograph" loading="lazy"><span class="gallery-item-tag">Vimy Ridge</span></button>
+          <button class="gallery-item" data-gallery-item data-tour="vimy" data-full="photos/vimy/vimy-23.jpg"><img src="photos/vimy/thumbs/vimy-23.jpg" alt="Vimy Ridge battlefield photograph" loading="lazy"><span class="gallery-item-tag">Vimy Ridge</span></button>
+          <button class="gallery-item" data-gallery-item data-tour="flanders" data-full="photos/flanders/flanders-01.jpg"><img src="photos/flanders/thumbs/flanders-01.jpg" alt="Flanders Fields battlefield photograph" loading="lazy"><span class="gallery-item-tag">Flanders Fields</span></button>
+          <button class="gallery-item" data-gallery-item data-tour="flanders" data-full="photos/flanders/flanders-02.jpg"><img src="photos/flanders/thumbs/flanders-02.jpg" alt="Flanders Fields battlefield photograph" loading="lazy"><span class="gallery-item-tag">Flanders Fields</span></button>
+          <button class="gallery-item" data-gallery-item data-tour="flanders" data-full="photos/flanders/flanders-03.jpg"><img src="photos/flanders/thumbs/flanders-03.jpg" alt="Flanders Fields battlefield photograph" loading="lazy"><span class="gallery-item-tag">Flanders Fields</span></button>
+          <button class="gallery-item" data-gallery-item data-tour="flanders" data-full="photos/flanders/flanders-04.jpg"><img src="photos/flanders/thumbs/flanders-04.jpg" alt="Flanders Fields battlefield photograph" loading="lazy"><span class="gallery-item-tag">Flanders Fields</span></button>
+          <button class="gallery-item" data-gallery-item data-tour="flanders" data-full="photos/flanders/flanders-05.jpg"><img src="photos/flanders/thumbs/flanders-05.jpg" alt="Flanders Fields battlefield photograph" loading="lazy"><span class="gallery-item-tag">Flanders Fields</span></button>
+          <button class="gallery-item" data-gallery-item data-tour="flanders" data-full="photos/flanders/flanders-06.jpg"><img src="photos/flanders/thumbs/flanders-06.jpg" alt="Flanders Fields battlefield photograph" loading="lazy"><span class="gallery-item-tag">Flanders Fields</span></button>
+          <button class="gallery-item" data-gallery-item data-tour="flanders" data-full="photos/flanders/flanders-07.jpg"><img src="photos/flanders/thumbs/flanders-07.jpg" alt="Flanders Fields battlefield photograph" loading="lazy"><span class="gallery-item-tag">Flanders Fields</span></button>
+          <button class="gallery-item" data-gallery-item data-tour="flanders" data-full="photos/flanders/flanders-08.jpg"><img src="photos/flanders/thumbs/flanders-08.jpg" alt="Flanders Fields battlefield photograph" loading="lazy"><span class="gallery-item-tag">Flanders Fields</span></button>
+          <button class="gallery-item" data-gallery-item data-tour="flanders" data-full="photos/flanders/flanders-09.jpg"><img src="photos/flanders/thumbs/flanders-09.jpg" alt="Flanders Fields battlefield photograph" loading="lazy"><span class="gallery-item-tag">Flanders Fields</span></button>
+          <button class="gallery-item" data-gallery-item data-tour="flanders" data-full="photos/flanders/flanders-10.jpg"><img src="photos/flanders/thumbs/flanders-10.jpg" alt="Flanders Fields battlefield photograph" loading="lazy"><span class="gallery-item-tag">Flanders Fields</span></button>
+          <button class="gallery-item" data-gallery-item data-tour="flanders" data-full="photos/flanders/flanders-11.jpg"><img src="photos/flanders/thumbs/flanders-11.jpg" alt="Flanders Fields battlefield photograph" loading="lazy"><span class="gallery-item-tag">Flanders Fields</span></button>
+          <button class="gallery-item" data-gallery-item data-tour="flanders" data-full="photos/flanders/flanders-12.jpg"><img src="photos/flanders/thumbs/flanders-12.jpg" alt="Flanders Fields battlefield photograph" loading="lazy"><span class="gallery-item-tag">Flanders Fields</span></button>
+          <button class="gallery-item" data-gallery-item data-tour="flanders" data-full="photos/flanders/flanders-13.jpg"><img src="photos/flanders/thumbs/flanders-13.jpg" alt="Flanders Fields battlefield photograph" loading="lazy"><span class="gallery-item-tag">Flanders Fields</span></button>
+          <button class="gallery-item" data-gallery-item data-tour="flanders" data-full="photos/flanders/flanders-14.jpg"><img src="photos/flanders/thumbs/flanders-14.jpg" alt="Flanders Fields battlefield photograph" loading="lazy"><span class="gallery-item-tag">Flanders Fields</span></button>
+          <button class="gallery-item" data-gallery-item data-tour="flanders" data-full="photos/flanders/flanders-15.jpg"><img src="photos/flanders/thumbs/flanders-15.jpg" alt="Flanders Fields battlefield photograph" loading="lazy"><span class="gallery-item-tag">Flanders Fields</span></button>
+          <button class="gallery-item" data-gallery-item data-tour="flanders" data-full="photos/flanders/flanders-16.jpg"><img src="photos/flanders/thumbs/flanders-16.jpg" alt="Flanders Fields battlefield photograph" loading="lazy"><span class="gallery-item-tag">Flanders Fields</span></button>
+          <button class="gallery-item" data-gallery-item data-tour="flanders" data-full="photos/flanders/flanders-17.jpg"><img src="photos/flanders/thumbs/flanders-17.jpg" alt="Flanders Fields battlefield photograph" loading="lazy"><span class="gallery-item-tag">Flanders Fields</span></button>
+          <button class="gallery-item" data-gallery-item data-tour="flanders" data-full="photos/flanders/flanders-18.jpg"><img src="photos/flanders/thumbs/flanders-18.jpg" alt="Flanders Fields battlefield photograph" loading="lazy"><span class="gallery-item-tag">Flanders Fields</span></button>
+          <button class="gallery-item" data-gallery-item data-tour="flanders" data-full="photos/flanders/flanders-19.jpg"><img src="photos/flanders/thumbs/flanders-19.jpg" alt="Flanders Fields battlefield photograph" loading="lazy"><span class="gallery-item-tag">Flanders Fields</span></button>
+          <button class="gallery-item" data-gallery-item data-tour="flanders" data-full="photos/flanders/flanders-20.jpg"><img src="photos/flanders/thumbs/flanders-20.jpg" alt="Flanders Fields battlefield photograph" loading="lazy"><span class="gallery-item-tag">Flanders Fields</span></button>
+          <button class="gallery-item" data-gallery-item data-tour="flanders" data-full="photos/flanders/flanders-21.jpg"><img src="photos/flanders/thumbs/flanders-21.jpg" alt="Flanders Fields battlefield photograph" loading="lazy"><span class="gallery-item-tag">Flanders Fields</span></button>
+          <button class="gallery-item" data-gallery-item data-tour="flanders" data-full="photos/flanders/flanders-22.jpg"><img src="photos/flanders/thumbs/flanders-22.jpg" alt="Flanders Fields battlefield photograph" loading="lazy"><span class="gallery-item-tag">Flanders Fields</span></button>
+          <button class="gallery-item" data-gallery-item data-tour="flanders" data-full="photos/flanders/flanders-23.jpg"><img src="photos/flanders/thumbs/flanders-23.jpg" alt="Flanders Fields battlefield photograph" loading="lazy"><span class="gallery-item-tag">Flanders Fields</span></button>
+          <button class="gallery-item" data-gallery-item data-tour="flanders" data-full="photos/flanders/flanders-24.jpg"><img src="photos/flanders/thumbs/flanders-24.jpg" alt="Flanders Fields battlefield photograph" loading="lazy"><span class="gallery-item-tag">Flanders Fields</span></button>
+          <button class="gallery-item" data-gallery-item data-tour="somme" data-full="photos/somme/somme-01.jpg"><img src="photos/somme/thumbs/somme-01.jpg" alt="The Somme battlefield photograph" loading="lazy"><span class="gallery-item-tag">The Somme</span></button>
+          <button class="gallery-item" data-gallery-item data-tour="somme" data-full="photos/somme/somme-02.jpg"><img src="photos/somme/thumbs/somme-02.jpg" alt="The Somme battlefield photograph" loading="lazy"><span class="gallery-item-tag">The Somme</span></button>
+          <button class="gallery-item" data-gallery-item data-tour="somme" data-full="photos/somme/somme-03.jpg"><img src="photos/somme/thumbs/somme-03.jpg" alt="The Somme battlefield photograph" loading="lazy"><span class="gallery-item-tag">The Somme</span></button>
+          <button class="gallery-item" data-gallery-item data-tour="somme" data-full="photos/somme/somme-04.jpg"><img src="photos/somme/thumbs/somme-04.jpg" alt="The Somme battlefield photograph" loading="lazy"><span class="gallery-item-tag">The Somme</span></button>
+          <button class="gallery-item" data-gallery-item data-tour="somme" data-full="photos/somme/somme-05.jpg"><img src="photos/somme/thumbs/somme-05.jpg" alt="The Somme battlefield photograph" loading="lazy"><span class="gallery-item-tag">The Somme</span></button>
+          <button class="gallery-item" data-gallery-item data-tour="somme" data-full="photos/somme/somme-06.jpg"><img src="photos/somme/thumbs/somme-06.jpg" alt="The Somme battlefield photograph" loading="lazy"><span class="gallery-item-tag">The Somme</span></button>
+          <button class="gallery-item" data-gallery-item data-tour="somme" data-full="photos/somme/somme-07.jpg"><img src="photos/somme/thumbs/somme-07.jpg" alt="The Somme battlefield photograph" loading="lazy"><span class="gallery-item-tag">The Somme</span></button>
+          <button class="gallery-item" data-gallery-item data-tour="somme" data-full="photos/somme/somme-08.jpg"><img src="photos/somme/thumbs/somme-08.jpg" alt="The Somme battlefield photograph" loading="lazy"><span class="gallery-item-tag">The Somme</span></button>
+          <button class="gallery-item" data-gallery-item data-tour="somme" data-full="photos/somme/somme-09.jpg"><img src="photos/somme/thumbs/somme-09.jpg" alt="The Somme battlefield photograph" loading="lazy"><span class="gallery-item-tag">The Somme</span></button>
+          <button class="gallery-item" data-gallery-item data-tour="somme" data-full="photos/somme/somme-10.jpg"><img src="photos/somme/thumbs/somme-10.jpg" alt="The Somme battlefield photograph" loading="lazy"><span class="gallery-item-tag">The Somme</span></button>
+          <button class="gallery-item" data-gallery-item data-tour="somme" data-full="photos/somme/somme-11.jpg"><img src="photos/somme/thumbs/somme-11.jpg" alt="The Somme battlefield photograph" loading="lazy"><span class="gallery-item-tag">The Somme</span></button>
+          <button class="gallery-item" data-gallery-item data-tour="somme" data-full="photos/somme/somme-12.jpg"><img src="photos/somme/thumbs/somme-12.jpg" alt="The Somme battlefield photograph" loading="lazy"><span class="gallery-item-tag">The Somme</span></button>
+          <button class="gallery-item" data-gallery-item data-tour="somme" data-full="photos/somme/somme-13.jpg"><img src="photos/somme/thumbs/somme-13.jpg" alt="The Somme battlefield photograph" loading="lazy"><span class="gallery-item-tag">The Somme</span></button>
+          <button class="gallery-item" data-gallery-item data-tour="somme" data-full="photos/somme/somme-14.jpg"><img src="photos/somme/thumbs/somme-14.jpg" alt="The Somme battlefield photograph" loading="lazy"><span class="gallery-item-tag">The Somme</span></button>
+          <button class="gallery-item" data-gallery-item data-tour="somme" data-full="photos/somme/somme-15.jpg"><img src="photos/somme/thumbs/somme-15.jpg" alt="The Somme battlefield photograph" loading="lazy"><span class="gallery-item-tag">The Somme</span></button>
+          <button class="gallery-item" data-gallery-item data-tour="somme" data-full="photos/somme/somme-16.jpg"><img src="photos/somme/thumbs/somme-16.jpg" alt="The Somme battlefield photograph" loading="lazy"><span class="gallery-item-tag">The Somme</span></button>
+          <button class="gallery-item" data-gallery-item data-tour="somme" data-full="photos/somme/somme-17.jpg"><img src="photos/somme/thumbs/somme-17.jpg" alt="The Somme battlefield photograph" loading="lazy"><span class="gallery-item-tag">The Somme</span></button>
+          <button class="gallery-item" data-gallery-item data-tour="somme" data-full="photos/somme/somme-18.jpg"><img src="photos/somme/thumbs/somme-18.jpg" alt="The Somme battlefield photograph" loading="lazy"><span class="gallery-item-tag">The Somme</span></button>
+          <button class="gallery-item" data-gallery-item data-tour="somme" data-full="photos/somme/somme-19.jpg"><img src="photos/somme/thumbs/somme-19.jpg" alt="The Somme battlefield photograph" loading="lazy"><span class="gallery-item-tag">The Somme</span></button>
+          <button class="gallery-item" data-gallery-item data-tour="somme" data-full="photos/somme/somme-20.jpg"><img src="photos/somme/thumbs/somme-20.jpg" alt="The Somme battlefield photograph" loading="lazy"><span class="gallery-item-tag">The Somme</span></button>
+          <button class="gallery-item" data-gallery-item data-tour="somme" data-full="photos/somme/somme-21.jpg"><img src="photos/somme/thumbs/somme-21.jpg" alt="The Somme battlefield photograph" loading="lazy"><span class="gallery-item-tag">The Somme</span></button>
+          <button class="gallery-item" data-gallery-item data-tour="somme" data-full="photos/somme/somme-22.jpg"><img src="photos/somme/thumbs/somme-22.jpg" alt="The Somme battlefield photograph" loading="lazy"><span class="gallery-item-tag">The Somme</span></button>
+          <button class="gallery-item" data-gallery-item data-tour="somme" data-full="photos/somme/somme-23.jpg"><img src="photos/somme/thumbs/somme-23.jpg" alt="The Somme battlefield photograph" loading="lazy"><span class="gallery-item-tag">The Somme</span></button>
+          <button class="gallery-item" data-gallery-item data-tour="somme" data-full="photos/somme/somme-24.jpg"><img src="photos/somme/thumbs/somme-24.jpg" alt="The Somme battlefield photograph" loading="lazy"><span class="gallery-item-tag">The Somme</span></button>
+          <button class="gallery-item" data-gallery-item data-tour="somme" data-full="photos/somme/somme-25.jpg"><img src="photos/somme/thumbs/somme-25.jpg" alt="The Somme battlefield photograph" loading="lazy"><span class="gallery-item-tag">The Somme</span></button>
+          <button class="gallery-item" data-gallery-item data-tour="somme" data-full="photos/somme/somme-26.jpg"><img src="photos/somme/thumbs/somme-26.jpg" alt="The Somme battlefield photograph" loading="lazy"><span class="gallery-item-tag">The Somme</span></button>
+          <button class="gallery-item" data-gallery-item data-tour="somme" data-full="photos/somme/somme-27.jpg"><img src="photos/somme/thumbs/somme-27.jpg" alt="The Somme battlefield photograph" loading="lazy"><span class="gallery-item-tag">The Somme</span></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cta-band" data-reveal>
+          <h2>See it in person.</h2>
+          <p class="lede">Photographs are only half the story — walk the ground yourself.</p>
+          <a href="tours.html" class="btn btn-primary btn-lg">View Our Tours</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" data-open="false" role="dialog" aria-modal="true" aria-label="Photo viewer">
+    <button class="lightbox-close" aria-label="Close photo viewer">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <button class="lightbox-prev" aria-label="Previous photo">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+    <img src="" alt="">
+    <button class="lightbox-next" aria-label="Next photo">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+    </button>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo"><img src="media/logo-transparent.png" alt="Heroes and Heritage Tours"></a>
+          <p>Small-group, expert-guided tours of Canada's First World War battlefields, based in Arras, France.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Tours</h4>
+          <ul>
+            <li><a href="tours/vimy-to-victory.html">Vimy to Victory</a></li>
+            <li><a href="tours/in-flanders-fields.html">In Flanders Fields</a></li>
+            <li><a href="tours/somme-front.html">The Somme Front</a></li>
+            <li><a href="tours/signature-2-day.html">The Signature (2 Day)</a></li>
+            <li><a href="tours/ultimate-3-day.html">The Ultimate (3 Day)</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="guide.html">Meet Your Guide</a></li>
+            <li><a href="family-research.html">Family Research</a></li>
+            <li><a href="gallery.html">Photo Gallery</a></li>
+            <li><a href="testimonials.html">Reviews</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Plan Your Trip</h4>
+          <ul>
+            <li><a href="booking.html">Book a Tour</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="mailto:info@heroesandheritagetours.com">info@heroesandheritagetours.com</a></li>
+            <li><a href="terms.html">Terms &amp; Conditions</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span data-year></span> Heroes and Heritage Tours. All rights reserved.</span>
+        <span>Based in Arras, France &middot; Tours conducted in English</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
