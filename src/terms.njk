@@ -1,0 +1,26 @@
+---
+layout: base.njk
+title: "Terms & Conditions — Heroes and Heritage Tours"
+description: "Booking terms, deposits, cancellations and refund policy for Heroes and Heritage Tours."
+activeNav: terms
+permalink: "/terms.html"
+---
+
+<section class="section" style="padding-top: 160px;">
+  <div class="container container--text">
+    <span class="eyebrow">Legal</span>
+    <h1 style="margin-top: var(--space-2); margin-bottom: var(--space-5);">Terms &amp; Conditions</h1>
+
+    <div class="stack" style="gap: var(--space-3);">
+      {% for p in terms.paragraphs %}
+      <p class="body-text">{{ p }}</p>
+      {% endfor %}
+    </div>
+
+    <div class="cta-band" style="margin-top: var(--space-7);">
+      <h2>Questions about a booking?</h2>
+      <p class="lede">We're happy to walk through these terms with you before you book.</p>
+      <a href="/contact.html" class="btn btn-primary btn-lg">Contact Us</a>
+    </div>
+  </div>
+</section>

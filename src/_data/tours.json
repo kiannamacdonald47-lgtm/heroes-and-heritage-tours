@@ -1,0 +1,374 @@
+[
+  {
+    "slug": "vimy-to-victory",
+    "shortName": "Vimy to Victory",
+    "name": "Vimy to Victory Day Tour",
+    "tagline": "Canada's greatest battles in the greatest war ever fought.",
+    "badge": "Day Tour",
+    "combo": false,
+    "schedule": "Tue, Fri, Sun",
+    "scheduleFull": "Departs Arras every Tuesday, Friday and Sunday. Other days available on request.",
+    "duration": "8\u20139 hours",
+    "price": 320,
+    "heroImage": "/photos/vimy/vimy-01.jpg",
+    "heroAlt": "The Canadian National Vimy Memorial illuminated at night",
+    "cardImage": "/photos/vimy/vimy-05.jpg",
+    "cardAlt": "Preserved mine craters and trenches at Vimy Ridge",
+    "cardDesc": "Vimy Ridge's preserved trenches and tunnels, the National Vimy Memorial, Hill 70, Monchy-le-Preux and the Hundred Days Offensive.",
+    "intro": [
+      "Follow the trail from Vimy to victory during an unforgettable day on the battlefields of the Artois! Explore the preserved trenches, tunnels, and battlefield of Vimy Ridge before visiting the iconic Canadian National Vimy Memorial, one of Canada's most important national monuments.",
+      "After lunch, continue to the battlefields of Hill 70, Monchy-le-Preux, and the Hundred Days Offensive where Canadian and Newfoundland soldiers achieved some of the most remarkable victories of the war. Along the way, visit both iconic and lesser-known battlefield locations that bring you into the footsteps of soldiers and reveal the full and heroic story of Canada's contribution in the First World War."
+    ],
+    "itinerary": [
+      {
+        "heading": "Morning",
+        "note": "",
+        "items": [
+          "Canadian Corps battle headquarters",
+          "Frontline trenches and underground tunnels on Vimy Ridge",
+          "Vimy Ridge battlefield and mine craters",
+          "Canadian National Vimy Memorial"
+        ],
+        "facts": []
+      },
+      {
+        "heading": "Afternoon",
+        "note": "Lunch is taken near Vimy.",
+        "items": [
+          "Battle of Hill 70 Canadian battlefield & Memorial Park",
+          "Monchy-le-Preux battlefield and the Newfoundland Memorial",
+          "Drocourt-Qu\u00e9ant Line Canadian battlefield and Memorial at Dury",
+          "Canal du Nord battlefield (time permitting)"
+        ],
+        "facts": []
+      }
+    ],
+    "footnote": "The above itinerary may be varied based on the wishes and consensus of the guests travelling on any particular day. This tour is also included within The Signature (2 Day) and The Ultimate (3 Day) Canadian Tours.",
+    "galleryImages": [
+      {
+        "src": "/photos/vimy/thumbs/vimy-01.jpg",
+        "alt": "Vimy Memorial at night"
+      },
+      {
+        "src": "/photos/vimy/thumbs/vimy-05.jpg",
+        "alt": "Preserved trenches and mine craters"
+      },
+      {
+        "src": "/photos/vimy/thumbs/vimy-15.jpg",
+        "alt": "Wall of names at the Vimy Memorial"
+      },
+      {
+        "src": "/photos/vimy/thumbs/vimy-08.jpg",
+        "alt": "A guest visiting a Canadian war grave"
+      }
+    ],
+    "runDays": [
+      2,
+      5,
+      0
+    ]
+  },
+  {
+    "slug": "in-flanders-fields",
+    "shortName": "In Flanders Fields",
+    "name": "In Flanders Fields Tour",
+    "tagline": "\"In Flanders Fields, the poppies blow...\"",
+    "badge": "Day Tour",
+    "combo": false,
+    "schedule": "Mon, Thu",
+    "scheduleFull": "Departs Arras every Monday and Thursday. Other days available on request.",
+    "duration": "12\u201313 hours",
+    "price": 420,
+    "heroImage": "/photos/flanders/flanders-01.jpg",
+    "heroAlt": "The Menin Gate Memorial illuminated at night in Ypres",
+    "cardImage": "/photos/flanders/flanders-01.jpg",
+    "cardAlt": "The Menin Gate Memorial illuminated at night in Ypres",
+    "cardDesc": "Passchendaele, Tyne Cot, the site where \"In Flanders Fields\" was written, and the nightly Last Post Ceremony.",
+    "intro": [
+      "Journey through the infamous Flanders Fields battlefields and discover what inspired the war's most poignant poem. During the Great War, this small corner of Belgium witnessed some of the fiercest fighting of the First World War. Stand where Canadian soldiers stood facing chlorine gas clouds and went over the top through the mud and devastation of Passchendaele.",
+      "From the Christmas Truce battlefield of 1914 to the ridges and cemeteries of Flanders, this tour explores both the famous and not-so-famous side of Flanders Fields. Walk preserved trenches, visit battlefield memorials, and gain a deeper understanding of the sacrifices made by Canadian soldiers in Belgium. The day concludes with attendance at the moving nightly Last Post Ceremony beneath the Menin Gate Memorial in Ypres, where more than 54,000 missing Canadian and Commonwealth soldiers are commemorated."
+    ],
+    "itinerary": [
+      {
+        "heading": "Morning",
+        "note": "",
+        "items": [
+          "Christmas Truce site at Ploegsteert Wood",
+          "Mount Sorrel, Canadian battlefield",
+          "Hill 62 Canadian Memorial"
+        ],
+        "facts": []
+      },
+      {
+        "heading": "Afternoon",
+        "note": "Lunch is taken close to the Passchendaele battlefield.",
+        "items": [
+          "Second Battle of Ypres gas attack battlefield",
+          "Brooding Soldier Memorial at St. Julien",
+          "Princess Patricia's Canadian Light Infantry battlefield at Frezenberg",
+          "Passchendaele battlefield and Crest Farm Memorial",
+          "Tyne Cot Commonwealth War Cemetery",
+          "Essex Farm \u2014 where John McCrae wrote \"In Flanders Fields\""
+        ],
+        "facts": []
+      },
+      {
+        "heading": "Evening",
+        "note": "Dinner at Ypres's historic square.",
+        "items": [
+          "Menin Gate Memorial and the Last Post Ceremony"
+        ],
+        "facts": [
+          "Departure: Arras \u2014 9:00 AM",
+          "Return: Arras \u2014 approx. 9:30 PM"
+        ]
+      }
+    ],
+    "footnote": "Tour itineraries may be adjusted to accommodate weather, timing, or the interests of guests. This tour is also included within The Signature (2 Day) and The Ultimate (3 Day) Canadian Tours.",
+    "galleryImages": [
+      {
+        "src": "/photos/flanders/thumbs/flanders-01.jpg",
+        "alt": "Menin Gate at night"
+      },
+      {
+        "src": "/photos/flanders/thumbs/flanders-05.jpg",
+        "alt": "Last Post Ceremony under the Menin Gate"
+      },
+      {
+        "src": "/photos/flanders/thumbs/flanders-10.jpg",
+        "alt": "Ploegsteert Wood, the Christmas Truce site"
+      },
+      {
+        "src": "/photos/testimonials/thumbs/testimonial-03.jpg",
+        "alt": "A guest placing a Canadian flag at a war grave"
+      }
+    ],
+    "runDays": [
+      1,
+      4
+    ]
+  },
+  {
+    "slug": "somme-front",
+    "shortName": "The Somme Front",
+    "name": "The Somme Front Day Tour",
+    "tagline": "Beaumont-Hamel, Courcelette, and the Battle of Amiens 1918.",
+    "badge": "Day Tour",
+    "combo": false,
+    "schedule": "Wed, Sat",
+    "scheduleFull": "Departs Arras every Wednesday and Saturday. Other days available on request.",
+    "duration": "8\u20139 hours",
+    "price": 320,
+    "heroImage": "/photos/somme/somme-01.jpg",
+    "heroAlt": "The Beaumont-Hamel Newfoundland Memorial caribou statue",
+    "cardImage": "/photos/somme/somme-01.jpg",
+    "cardAlt": "The Beaumont-Hamel Newfoundland Memorial caribou statue",
+    "cardDesc": "Beaumont-Hamel, Courcelette's original trenches, and the Battle of Amiens 1918.",
+    "intro": [
+      "Explore the preserved battlefield of the Beaumont-Hamel Newfoundland Memorial, a UNESCO World Heritage Site, and walk through original trenches and No Man's Land. Later, as we venture off the beaten path, we see what is left of Canada's bloodiest battlefield of Courcelette, where more than 24,000 Canadians were killed or wounded in 1916.",
+      "In the afternoon, visit the Amiens battlefield where the Canadian Corps spearheaded the offensive that would become the blackest day for the German army \u2014 marking the beginning of the end of the First World War."
+    ],
+    "itinerary": [
+      {
+        "heading": "Morning",
+        "note": "",
+        "items": [
+          "Beaumont-Hamel Newfoundland Memorial",
+          "Original frontline trenches and No Man's Land",
+          "Courcelette battlefield and Canadian Victoria Cross locations",
+          "Original German command post bunker",
+          "Thiepval Memorial to the Missing"
+        ],
+        "facts": []
+      },
+      {
+        "heading": "Afternoon",
+        "note": "Lunch is taken at Auchonvillers, close to the battlefield.",
+        "items": [
+          "1916 aid station at Auchonvillers",
+          "Red Baron crash site",
+          "Battle of Amiens 1918 Canadian battlefield",
+          "Hangard Wood and Victoria Cross location",
+          "Sir John Monash Centre (time permitting)"
+        ],
+        "facts": []
+      }
+    ],
+    "footnote": "The above itinerary may be varied based on the wishes and consensus of the guests travelling on any particular day. This tour is also included within The Ultimate (3 Day) Canadian Tour.",
+    "galleryImages": [
+      {
+        "src": "/photos/somme/thumbs/somme-01.jpg",
+        "alt": "Beaumont-Hamel caribou memorial"
+      },
+      {
+        "src": "/photos/somme/thumbs/somme-12.jpg",
+        "alt": "Thiepval Memorial to the Missing"
+      },
+      {
+        "src": "/photos/somme/thumbs/somme-06.jpg",
+        "alt": "A Commonwealth War Cemetery on the Somme"
+      },
+      {
+        "src": "/photos/vimy/thumbs/vimy-03.jpg",
+        "alt": "Archival aerial photograph of the Western Front"
+      }
+    ],
+    "runDays": [
+      3,
+      6
+    ]
+  },
+  {
+    "slug": "signature-2-day",
+    "shortName": "The Signature (2 Day)",
+    "name": "The Signature \u2014 2 Day Canadian Tour",
+    "tagline": "In Flanders Fields + Vimy to Victory, combined.",
+    "badge": "2 Day Tour",
+    "combo": true,
+    "schedule": "Mon\u2013Tue & Thu\u2013Fri departures",
+    "scheduleFull": "Departs Arras every Monday and Thursday. Other days available on request. Accommodation and meals are not included.",
+    "duration": "2 days",
+    "price": 740,
+    "heroImage": "/photos/flanders/flanders-10.jpg",
+    "heroAlt": "Misty morning at Ploegsteert Wood, the Christmas Truce site",
+    "cardImage": "/photos/flanders/flanders-10.jpg",
+    "cardAlt": "Misty morning at Ploegsteert Wood, the Christmas Truce site",
+    "cardDesc": "Includes In Flanders Fields + Vimy to Victory. The top-to-bottom of Canada's action on the Western Front.",
+    "intro": [
+      "The Signature \u2014 2 Day Canadian Tour combines our two most popular day tours to cover the top-to-bottom of Canada's action on the Western Front.",
+      "All tours are based in the old town of Arras. We can recommend accommodation in hotels or guest houses our clients have happily stayed at. Pick-up/drop-off is at your accommodation in Arras or at the train station."
+    ],
+    "itinerary": [
+      {
+        "heading": "Day 1 \u2014 In Flanders Fields",
+        "note": "North into Belgium, visiting some of the most iconic battlegrounds of the First World War \u2014 original trenches, the infamous Passchendaele battlefield, and the site where John McCrae wrote \"In Flanders Fields\" during the gas attacks of 1915. A relaxing dinner in the old town of Ypres leads into the emotive Last Post Ceremony at the Menin Gate, where more than 6,000 missing Canadians are commemorated.",
+        "isPrefaceNote": true,
+        "items": [
+          "Christmas Truce site at Ploegsteert Wood, Mount Sorrel & Hill 62",
+          "Passchendaele battlefield, Crest Farm Memorial & Tyne Cot Cemetery",
+          "Essex Farm and the Menin Gate Last Post Ceremony"
+        ],
+        "facts": [
+          "Departure: Arras \u2014 9:00 AM",
+          "Return: Arras \u2014 approx. 9:30 PM"
+        ]
+      },
+      {
+        "heading": "Day 2 \u2014 Vimy to Victory",
+        "note": "Into the footsteps of Canadian troops at Vimy Ridge, Hill 70, and the pivotal battles of 1918 on the famous Cambrai road \u2014 including the unforgettable National Vimy Memorial, where more than a century on, Canada's efforts and sacrifices are still proudly remembered by local communities.",
+        "isPrefaceNote": true,
+        "items": [
+          "Frontline trenches, tunnels & mine craters on Vimy Ridge",
+          "Canadian National Vimy Memorial",
+          "Hill 70, Monchy-le-Preux & the Drocourt-Qu\u00e9ant Line"
+        ],
+        "facts": [
+          "Departure: Arras \u2014 9:00 AM",
+          "Return: Arras \u2014 approx. 9:30 PM"
+        ]
+      }
+    ],
+    "footnote": "The above itinerary may be varied based on the wishes and consensus of the guests travelling on any particular day. Customised tours are available for this area on request.",
+    "galleryImages": [
+      {
+        "src": "/photos/flanders/thumbs/flanders-01.jpg",
+        "alt": "Menin Gate at night"
+      },
+      {
+        "src": "/photos/vimy/thumbs/vimy-01.jpg",
+        "alt": "Vimy Memorial at night"
+      },
+      {
+        "src": "/photos/vimy/thumbs/vimy-15.jpg",
+        "alt": "Wall of names at the Vimy Memorial"
+      },
+      {
+        "src": "/photos/flanders/thumbs/flanders-10.jpg",
+        "alt": "Ploegsteert Wood"
+      }
+    ],
+    "runDays": [
+      1,
+      4
+    ]
+  },
+  {
+    "slug": "ultimate-3-day",
+    "shortName": "The Ultimate (3 Day)",
+    "name": "The Ultimate \u2014 3 Day Canadian Tour",
+    "tagline": "Vimy to Victory + In Flanders Fields + The Somme Front, combined.",
+    "badge": "3 Day Tour",
+    "combo": true,
+    "schedule": "Mon\u2013Wed & Thu\u2013Sat departures",
+    "scheduleFull": "Departs Arras every Monday and Thursday. Other days available on request. Accommodation and meals are not included.",
+    "duration": "3 days",
+    "price": 1380,
+    "heroImage": "/photos/somme/somme-12.jpg",
+    "heroAlt": "The Thiepval Memorial to the Missing of the Somme",
+    "cardImage": "/photos/somme/somme-12.jpg",
+    "cardAlt": "The Thiepval Memorial to the Missing of the Somme",
+    "cardDesc": "Includes Vimy to Victory + In Flanders Fields + The Somme Front. From the 1915 gas attacks to the victories of 1918.",
+    "intro": [
+      "The Ultimate \u2014 3 Day Canadian Tour combines our three day tours to take you into the complete footsteps of Canadian troops on the frontlines of the First World War. From the 1915 gas attacks, to the brutal Somme, up to Vimy Ridge and onto the victories of 1918, where Canadians fought as shock troops to bring the war to an end.",
+      "All tours run from the old town of Arras. We can recommend accommodation in 3+ star hotels or guest houses our clients have happily stayed at. Pick-up/drop-off is at your accommodation in Arras or at Arras Train Station."
+    ],
+    "itinerary": [
+      {
+        "heading": "Day 1 \u2014 In Flanders Fields",
+        "note": "",
+        "items": [
+          "Christmas Truce site at Ploegsteert Wood, Mount Sorrel & Hill 62",
+          "Passchendaele battlefield, Crest Farm Memorial & Tyne Cot Cemetery",
+          "Essex Farm and the Menin Gate Last Post Ceremony"
+        ],
+        "facts": [
+          "Departure: Arras \u2014 9:00 AM",
+          "Return: Arras \u2014 approx. 9:30 PM"
+        ]
+      },
+      {
+        "heading": "Day 2 \u2014 Vimy to Victory",
+        "note": "",
+        "items": [
+          "Frontline trenches, tunnels & mine craters on Vimy Ridge",
+          "Canadian National Vimy Memorial",
+          "Hill 70, Monchy-le-Preux & the Drocourt-Qu\u00e9ant Line"
+        ],
+        "facts": []
+      },
+      {
+        "heading": "Day 3 \u2014 The Somme Front",
+        "note": "",
+        "items": [
+          "Beaumont-Hamel Newfoundland Memorial & original trenches",
+          "Courcelette battlefield and Thiepval Memorial to the Missing",
+          "Battle of Amiens 1918 Canadian battlefield"
+        ],
+        "facts": []
+      }
+    ],
+    "footnote": "The above itinerary may be varied based on the wishes and consensus of the guests travelling on any particular day. Customised tours are available for this area on request.",
+    "galleryImages": [
+      {
+        "src": "/photos/flanders/thumbs/flanders-01.jpg",
+        "alt": "Menin Gate at night"
+      },
+      {
+        "src": "/photos/vimy/thumbs/vimy-01.jpg",
+        "alt": "Vimy Memorial at night"
+      },
+      {
+        "src": "/photos/somme/thumbs/somme-01.jpg",
+        "alt": "Beaumont-Hamel caribou memorial"
+      },
+      {
+        "src": "/photos/somme/thumbs/somme-12.jpg",
+        "alt": "Thiepval Memorial"
+      }
+    ],
+    "runDays": [
+      1,
+      4
+    ]
+  }
+]

@@ -1,0 +1,111 @@
+---
+layout: base.njk
+title: "Meet Your Guide, Joe MacDonald — Heroes and Heritage Tours"
+description: "Joe MacDonald is a battlefield historian specialising in the Canadian experience of the First World War — recognised by veterans, historians and hundreds of families as one of the best in the business."
+activeNav: guide
+permalink: "/guide.html"
+---
+{% from "partials/macros.njk" import testimonialCard %}
+
+<header class="hero hero--compact">
+  <div class="hero-media">
+    <img src="{{ guide.heroImage }}" alt="{{ guide.heroAlt }}" width="1800" height="1200">
+  </div>
+  <div class="container">
+    <div class="hero-content">
+      <span class="eyebrow">Meet your guide</span>
+      <h1>{{ guide.name }}</h1>
+      <p class="lede">{{ guide.heroIntro }}</p>
+    </div>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container">
+    <div class="guide-layout" data-reveal>
+      <div>
+        <div class="guide-portrait">
+          <img src="{{ guide.portraitImage }}" alt="{{ guide.portraitAlt }}" width="900" height="1100">
+        </div>
+        <ul class="guide-credentials">
+          {% for c in guide.credentials %}
+          <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2l2.35 4.76 5.25.76-3.8 3.7.9 5.23L10 14l-4.7 2.45.9-5.23-3.8-3.7 5.25-.76z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>{{ c }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="stack" style="gap: var(--space-3);">
+        <span class="eyebrow">His story</span>
+        <h2>A childhood passion, carried into a life's work.</h2>
+        {% for p in guide.storyParagraphs %}
+        <p class="body-text">{{ p }}</p>
+        {% endfor %}
+
+        <p class="pull-quote">"{{ guide.pullQuote }}"</p>
+        <p class="body-text" style="font-size: 14px; color: var(--foreground-faint); margin-top: -12px;">— {{ guide.pullQuoteAttribution }}</p>
+
+        <h3 style="margin-top: var(--space-3);">{{ guide.tailoredHeading }}</h3>
+        <p class="body-text">{{ guide.tailoredParagraph }}</p>
+
+        <div class="feature-list" style="margin-top: var(--space-4);">
+          <div class="feature-row">
+            <div class="icon-circle"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+            <div class="feature-row-text">
+              <h4>For all ages and backgrounds</h4>
+              <p>Professional and approachable, with a healthy sense of humour — the perfect combination to lead tours that include guests of every age, gender and background.</p>
+            </div>
+          </div>
+          <div class="feature-row">
+            <div class="icon-circle"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg></div>
+            <div class="feature-row-text">
+              <h4>Trusted by military audiences</h4>
+              <p>From individual veterans to serving soldiers, Joe has a proven ability to enhance existing military knowledge, not just introduce new visitors to the subject.</p>
+            </div>
+          </div>
+          <div class="feature-row">
+            <div class="icon-circle"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+            <div class="feature-row-text">
+              <h4>A personal connection to every family</h4>
+              <p>Joe researches your relative's service record ahead of the tour, then builds actual site visits into your itinerary — turning a family name into a place you can stand.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-actions" style="margin-top: var(--space-3);">
+          <a href="/family-research.html" class="btn btn-primary">Trace your own family's footsteps</a>
+          <a href="/tours.html" class="btn btn-ghost">Browse tours</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container">
+    <div class="section-head center" data-reveal>
+      <span class="eyebrow">In his own guests' words</span>
+      <h2>What it's like to travel with Joe.</h2>
+    </div>
+    <div class="testimonial-grid testimonial-grid--3" data-reveal>
+      {{ testimonialCard(testimonials[6]) }}
+      {{ testimonialCard(testimonials[7]) }}
+      {{ testimonialCard(testimonials[9]) }}
+    </div>
+    <div style="text-align: center; margin-top: var(--space-5);">
+      <a href="/testimonials.html" class="btn btn-ghost">Read all reviews</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="cta-band" data-reveal>
+      <h2>Ready to travel with Joe?</h2>
+      <p class="lede">Choose a tour, or send us your family's story first and we'll build it into your journey.</p>
+      <div class="hero-actions">
+        <a href="/booking.html" class="btn btn-primary btn-lg">Book a Tour</a>
+        <a href="/contact.html" class="btn btn-ghost btn-lg" style="border-color: rgba(244,238,225,0.4); color: #FFF;">Ask Joe a Question</a>
+      </div>
+    </div>
+  </div>
+</section>

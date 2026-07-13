@@ -1,0 +1,41 @@
+---
+layout: base.njk
+title: "Reviews — Heroes and Heritage Tours"
+description: "Read what historians, veterans and families say about touring the WWI battlefields with Heroes and Heritage Tours."
+activeNav: testimonials
+permalink: "/testimonials.html"
+---
+{% from "partials/macros.njk" import testimonialCard %}
+
+<header class="hero hero--compact">
+  <div class="hero-media">
+    <img src="/photos/vimy/vimy-08.jpg" alt="A guest visiting a Canadian war grave marked with a maple leaf" width="1800" height="1200">
+  </div>
+  <div class="container">
+    <div class="hero-content">
+      <span class="eyebrow">What our guests say</span>
+      <h1>Trusted by families, historians and veterans.</h1>
+      <p class="lede">Every review below is from a real guest who travelled with Joe MacDonald.</p>
+    </div>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container">
+    <div class="testimonial-grid" data-reveal>
+      {% for t in testimonials %}
+        {{ testimonialCard(t) }}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="cta-band" data-reveal>
+      <h2>Ready to create your own story?</h2>
+      <p class="lede">Join the families, historians and veterans who have travelled these battlefields with us.</p>
+      <a href="/booking.html" class="btn btn-primary btn-lg">Book a Tour</a>
+    </div>
+  </div>
+</section>

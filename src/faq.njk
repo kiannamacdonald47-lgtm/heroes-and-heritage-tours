@@ -1,0 +1,52 @@
+---
+layout: base.njk
+title: "Frequently Asked Questions — Heroes and Heritage Tours"
+description: "Answers to common questions about group size, fitness level, what to bring, deposits and refunds, travel insurance, and booking logistics."
+activeNav: faq
+permalink: "/faq.html"
+---
+
+<header class="hero hero--compact">
+  <div class="hero-media">
+    <img src="/photos/flanders/flanders-05.jpg" alt="The Last Post Ceremony under the Menin Gate" width="1800" height="1200">
+  </div>
+  <div class="container">
+    <div class="hero-content">
+      <span class="eyebrow">Frequently asked questions</span>
+      <h1>Everything you need to know before you book.</h1>
+      <p class="lede">Can't find your answer here? <a href="/contact.html" style="color: var(--gold); text-decoration: underline;">Get in touch</a> and we'll respond within one business day.</p>
+    </div>
+  </div>
+</header>
+
+{% for group in faq %}
+<section class="section {% if loop.index0 is even %}{% else %}section--alt{% endif %}">
+  <div class="container container--text">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow">{{ group.section }}</span>
+      <h2>{{ group.heading }}</h2>
+    </div>
+    <div class="faq-list" data-reveal>
+      {% for item in group.items %}
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          {{ item.q }}
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="11" y1="4" x2="11" y2="18"/><line x1="4" y1="11" x2="18" y2="11"/></svg>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">{{ item.a | md | safe }}</div></div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endfor %}
+
+<section class="section section--alt">
+  <div class="container">
+    <div class="cta-band" style="background: var(--red);" data-reveal>
+      <h2>Still have a question?</h2>
+      <p class="lede">We reply to every message within one business day.</p>
+      <a href="/contact.html" class="btn btn-dark btn-lg">Contact Us</a>
+    </div>
+  </div>
+</section>

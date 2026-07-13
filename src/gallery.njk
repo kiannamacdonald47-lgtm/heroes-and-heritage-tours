@@ -1,0 +1,60 @@
+---
+layout: base.njk
+title: "Photo Gallery — Heroes and Heritage Tours"
+description: "A gallery of real photographs from Vimy Ridge, Flanders Fields and the Somme — memorials, preserved trenches and cemeteries you'll visit on tour."
+activeNav: gallery
+permalink: "/gallery.html"
+---
+
+<header class="hero hero--compact">
+  <div class="hero-media">
+    <img src="/photos/somme/somme-01.jpg" alt="The Beaumont-Hamel Newfoundland Memorial caribou statue" width="1800" height="1200">
+  </div>
+  <div class="container">
+    <div class="hero-content">
+      <span class="eyebrow">Photo gallery</span>
+      <h1>A glimpse of what you'll see.</h1>
+      <p class="lede">Real photographs from our guests and guides, taken at Vimy Ridge, Flanders Fields and the Somme.</p>
+    </div>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container">
+    <div class="gallery-filters" role="group" aria-label="Filter gallery by location" data-reveal>
+      <button class="gallery-filter" data-gallery-filter="all" aria-pressed="true">All Photos</button>
+      <button class="gallery-filter" data-gallery-filter="vimy" aria-pressed="false">Vimy Ridge</button>
+      <button class="gallery-filter" data-gallery-filter="flanders" aria-pressed="false">Flanders Fields</button>
+      <button class="gallery-filter" data-gallery-filter="somme" aria-pressed="false">The Somme</button>
+    </div>
+
+    <div class="gallery-grid" data-reveal>
+      {% for photo in gallery %}
+      <button class="gallery-item" data-gallery-item data-tour="{{ photo.tour }}" data-full="{{ photo.full }}"><img src="{{ photo.thumb }}" alt="{{ photo.alt }}" loading="lazy"><span class="gallery-item-tag">{{ photo.label }}</span></button>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="cta-band" data-reveal>
+      <h2>See it in person.</h2>
+      <p class="lede">Photographs are only half the story — walk the ground yourself.</p>
+      <a href="/tours.html" class="btn btn-primary btn-lg">View Our Tours</a>
+    </div>
+  </div>
+</section>
+
+<div class="lightbox" id="lightbox" data-open="false" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button class="lightbox-close" aria-label="Close photo viewer">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <button class="lightbox-prev" aria-label="Previous photo">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+  </button>
+  <img src="" alt="">
+  <button class="lightbox-next" aria-label="Next photo">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+  </button>
+</div>

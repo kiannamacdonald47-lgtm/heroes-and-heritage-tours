@@ -152,13 +152,23 @@ if (filterButtons.length) {
 // ============================================================
 const bookingForm = document.getElementById("bookingForm");
 if (bookingForm) {
-  const TOURS = {
-    "vimy-to-victory": { name: "Vimy to Victory Day Tour", price: 320, days: 1 },
-    "in-flanders-fields": { name: "In Flanders Fields Tour", price: 420, days: 1 },
-    "somme-front": { name: "The Somme Front Day Tour", price: 320, days: 1 },
-    "signature-2-day": { name: "The Signature — 2 Day Canadian Tour", price: 740, days: 2 },
-    "ultimate-3-day": { name: "The Ultimate — 3 Day Canadian Tour", price: 1380, days: 3 },
-  };
+  // window.TOUR_DATA is injected by booking.njk at build time from the
+  // CMS-managed tours.json — falls back to a static copy only if that
+  // script tag is ever missing (e.g. a page built outside Eleventy).
+  const TOUR_LIST = window.TOUR_DATA || [
+    { slug: "vimy-to-victory", name: "Vimy to Victory Day Tour", price: 320, runDays: [2, 5, 0] },
+    { slug: "in-flanders-fields", name: "In Flanders Fields Tour", price: 420, runDays: [1, 4] },
+    { slug: "somme-front", name: "The Somme Front Day Tour", price: 320, runDays: [3, 6] },
+    { slug: "signature-2-day", name: "The Signature — 2 Day Canadian Tour", price: 740, runDays: [1, 4] },
+    { slug: "ultimate-3-day", name: "The Ultimate — 3 Day Canadian Tour", price: 1380, runDays: [1, 4] },
+  ];
+
+  const TOURS = {};
+  const RUN_DAYS = {};
+  TOUR_LIST.forEach((t) => {
+    TOURS[t.slug] = { name: t.name, price: t.price };
+    RUN_DAYS[t.slug] = t.runDays;
+  });
 
   const tourRadios = bookingForm.querySelectorAll('input[name="tour"]');
   const guestsInput = document.getElementById("guests");
@@ -170,13 +180,6 @@ if (bookingForm) {
   const dateHint = document.getElementById("dateAvailabilityHint");
   const dateInput = document.getElementById("preferredDate");
 
-  const RUN_DAYS = {
-    "vimy-to-victory": [2, 5, 0], // Tue, Fri, Sun
-    "in-flanders-fields": [1, 4], // Mon, Thu
-    "somme-front": [3, 6], // Wed, Sat
-    "signature-2-day": [1, 4], // Mon, Thu (start)
-    "ultimate-3-day": [1, 4], // Mon, Thu (start)
-  };
   const DAY_NAMES = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
   const getSelectedTour = () => {

@@ -1,0 +1,69 @@
+---
+layout: base.njk
+title: "Our Tours — Heroes and Heritage Tours"
+description: "Five ways to walk in their footsteps: Vimy to Victory, In Flanders Fields, The Somme Front, and our Signature and Ultimate multi-day Canadian tours."
+activeNav: tours
+permalink: "/tours.html"
+---
+{% from "partials/macros.njk" import tourCard %}
+
+<header class="hero hero--compact">
+  <div class="hero-media">
+    <img src="/photos/somme/somme-06.jpg" alt="A Commonwealth War Cemetery on the Somme, framed by trees" width="1800" height="1200">
+  </div>
+  <div class="container">
+    <div class="hero-content">
+      <span class="eyebrow">Our tours</span>
+      <h1>Five ways to walk in their footsteps.</h1>
+      <p class="lede">Every day tour departs from Arras and can be booked alone, or combined into a two- or three-day journey across the full Canadian story on the Western Front. All tours run in small groups of 8 guests or fewer, led personally by our guide.</p>
+    </div>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow">Day tours</span>
+      <h2>Choose a single day, or combine all three.</h2>
+    </div>
+
+    <div class="tours-grid" data-reveal>
+      {% for tour in tours %}{% if not tour.combo %}{{ tourCard(tour) }}{% endif %}{% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow">Multi-day tours</span>
+      <h2>The complete Canadian story.</h2>
+      <p class="lede">Our two most popular day tours, or all three, combined into one seamless journey — with accommodation recommendations in the old town of Arras.</p>
+    </div>
+
+    <div class="tours-grid" data-reveal>
+      {% for tour in tours %}{% if tour.combo %}{{ tourCard(tour) }}{% endif %}{% endfor %}
+    </div>
+
+    <div class="info-panel" style="position: static; margin-top: var(--space-5); max-width: 760px;" data-reveal>
+      <h3>Every tour includes</h3>
+      <ul class="info-panel-list">
+        <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 10.5l4 4 10-10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>An expert, English-speaking Western Front guide</li>
+        <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 10.5l4 4 10-10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>A comfortable, air-conditioned 8/9 seat mini bus</li>
+        <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 10.5l4 4 10-10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Pick-up and drop-off at Arras Train Station or your Arras accommodation</li>
+        <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 10.5l4 4 10-10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>All entry fees</li>
+      </ul>
+      <p class="body-text" style="font-size: 14px;">Prices are quoted in CAD. Itineraries may be varied by consensus of the guests travelling on the day. Customised and private tours are available on request — <a href="/contact.html" style="color: var(--red); font-weight: 600;">get in touch</a>.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="cta-band" data-reveal>
+      <h2>Looking for a more personal journey?</h2>
+      <p class="lede">Send us your relative's name and service details, and we'll research their story and build it into your tour.</p>
+      <a href="/family-research.html" class="btn btn-primary btn-lg">Trace Your Family's Footsteps</a>
+    </div>
+  </div>
+</section>

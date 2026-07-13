@@ -1,0 +1,80 @@
+---
+layout: base.njk
+title: "Contact Us — Heroes and Heritage Tours"
+description: "Have a question before you book? Send us a message and we'll reply within one business day."
+activeNav: contact
+permalink: "/contact.html"
+---
+
+<header class="hero hero--compact">
+  <div class="hero-media">
+    <img src="/photos/somme/somme-06.jpg" alt="A Commonwealth War Cemetery on the Somme" width="1800" height="1200">
+  </div>
+  <div class="container">
+    <div class="hero-content">
+      <span class="eyebrow">Get in touch</span>
+      <h1>We're happy to help you plan.</h1>
+      <p class="lede">Whether you have a question about a tour, want help tracing a family member, or need a custom itinerary — send us a message and we'll reply within one business day.</p>
+    </div>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container">
+    <div class="contact-layout" data-reveal>
+      <div class="contact-info">
+        <div class="contact-detail" style="border-top: none; padding-top: 0;">
+          <strong>Email</strong>
+          <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+        </div>
+        <div class="contact-detail">
+          <strong>Phone</strong>
+          <a href="tel:{{ site.phone }}">{{ site.phone }}</a>
+        </div>
+        <div class="contact-detail">
+          <strong>Response time</strong>
+          <span>Within 1 business day</span>
+        </div>
+        <div class="contact-detail">
+          <strong>Based in</strong>
+          <span>Arras, France — 45 minutes from Paris by train</span>
+        </div>
+        <div class="contact-detail">
+          <strong>Tracing a family member?</strong>
+          <span>Tell us their name and anything you know in the message below, or visit <a href="/family-research.html" style="color: var(--red); font-weight: 600;">Trace Your Family's Footsteps</a>.</span>
+        </div>
+        <div class="contact-detail">
+          <strong>Ready to book?</strong>
+          <span>Head straight to our <a href="/booking.html" style="color: var(--red); font-weight: 600;">booking page</a> to reserve your place.</span>
+        </div>
+      </div>
+
+      <form class="contact-form" id="contactForm" novalidate>
+        <div class="form-field">
+          <label for="name">Full name <span class="required-mark">*</span></label>
+          <input type="text" id="name" name="name" autocomplete="name" required>
+        </div>
+        <div class="form-field">
+          <label for="email">Email address <span class="required-mark">*</span></label>
+          <input type="email" id="email" name="email" autocomplete="email" required>
+        </div>
+        <div class="form-field">
+          <label for="tourInterest">Which tour are you interested in?</label>
+          <select id="tourInterest" name="tourInterest">
+            <option value="">Not sure yet</option>
+            {% for tour in tours %}
+            <option value="{{ tour.slug }}">{{ tour.shortName }}</option>
+            {% endfor %}
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="message">Your message <span class="required-mark">*</span></label>
+          <textarea id="message" name="message" required placeholder="Tell us about your trip, group size, or the family member you're hoping to trace."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block btn-lg">Send Message</button>
+        <p class="form-hint">This form isn't wired to a backend yet — connect it to an email or form service (e.g. Formspree) before launch. See js/main.js for where to add it.</p>
+        <p class="form-status" id="formStatus" role="status"></p>
+      </form>
+    </div>
+  </div>
+</section>

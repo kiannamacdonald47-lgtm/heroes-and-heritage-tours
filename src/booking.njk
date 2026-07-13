@@ -1,0 +1,178 @@
+---
+layout: base.njk
+title: "Book a Tour — Heroes and Heritage Tours"
+description: "Book your WWI battlefield tour with Heroes and Heritage Tours. Choose your tour, pick a date, and reserve your place with a 30% deposit."
+activeNav: booking
+permalink: "/booking.html"
+---
+
+<datalist id="countryList">
+  <option value="Canada"><option value="United States"><option value="United Kingdom">
+  <option value="Australia"><option value="New Zealand"><option value="France">
+  <option value="Ireland"><option value="Germany"><option value="Netherlands">
+  <option value="Belgium"><option value="South Africa"><option value="India">
+</datalist>
+
+<script>
+  // Tour pricing/schedule data, generated from the CMS-managed content
+  // at build time — js/main.js reads this instead of hardcoding prices,
+  // so a price/schedule edit in the CMS never drifts out of sync here.
+  window.TOUR_DATA = {{ tours | dump | safe }};
+</script>
+
+<header class="hero hero--compact">
+  <div class="hero-media">
+    <img src="/photos/vimy/vimy-01.jpg" alt="The Canadian National Vimy Memorial at night" width="1800" height="1200">
+  </div>
+  <div class="container">
+    <div class="hero-content">
+      <span class="eyebrow">Book your tour</span>
+      <h1>Reserve your place on the battlefields.</h1>
+      <p class="lede">Four short steps. A 30% deposit secures your booking — the balance is due 21 days before your tour.</p>
+    </div>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container">
+    <form id="bookingForm" novalidate>
+      <div class="booking-steps">
+        <div class="booking-step" data-active="true"><span class="booking-step-num">1</span>Choose Tour</div>
+        <div class="booking-step"><span class="booking-step-num">2</span>Trip Details</div>
+        <div class="booking-step"><span class="booking-step-num">3</span>Your Details</div>
+        <div class="booking-step"><span class="booking-step-num">4</span>Review &amp; Payment</div>
+      </div>
+
+      <div class="tour-layout">
+        <div>
+          <!-- STEP 1 — Choose Tour -->
+          <div data-step>
+            <div class="form-fieldset">
+              <legend>Which tour would you like to book?</legend>
+              <div class="radio-cards">
+                {% for tour in tours %}
+                <label class="radio-card">
+                  <input type="radio" name="tour" value="{{ tour.slug }}" required {% if loop.first %}checked{% endif %}>
+                  <span class="radio-card-body">
+                    <strong>{{ tour.shortName }}</strong>
+                    <span>{{ tour.badge }} · {{ tour.schedule }}{% if not tour.combo %} · {{ tour.duration }}{% endif %}</span>
+                    <span class="radio-card-price">${{ tour.price | currency }} CAD / person</span>
+                  </span>
+                </label>
+                {% endfor %}
+              </div>
+              <p class="required-note">Not sure which to choose? <a href="/tours.html" style="color: var(--red); font-weight: 600;">Compare all tours</a> or <a href="/contact.html" style="color: var(--red); font-weight: 600;">ask us first</a>.</p>
+            </div>
+            <div class="hero-actions" style="margin-top: var(--space-4); justify-content: flex-end;">
+              <button type="button" class="btn btn-primary btn-lg" data-step-next>Continue to Trip Details</button>
+            </div>
+          </div>
+
+          <!-- STEP 2 — Trip Details -->
+          <div data-step>
+            <div class="form-fieldset">
+              <legend>Trip details</legend>
+              <div class="form-grid form-grid--2">
+                <div class="form-field">
+                  <label for="preferredDate">Preferred date <span class="required-mark">*</span></label>
+                  <input type="date" id="preferredDate" name="preferredDate" required>
+                  <span class="hint" id="dateAvailabilityHint"></span>
+                  <span class="hint" id="dateWarning" style="display:none; color: var(--red-bright); font-weight: 600;">That date doesn't match this tour's usual schedule — that's fine, we'll confirm the closest available date by email.</span>
+                </div>
+                <div class="form-field">
+                  <label for="guests">Number of guests <span class="required-mark">*</span></label>
+                  <input type="number" id="guests" name="guests" min="1" max="8" value="1" required>
+                  <span class="hint">Maximum 8 guests per tour.</span>
+                </div>
+              </div>
+              <div class="form-field">
+                <label for="familyResearch">Tracing a family member? Tell us who (optional)</label>
+                <textarea id="familyResearch" name="familyResearch" placeholder="Name, regiment, or anything you know — Joe will research the rest."></textarea>
+                <span class="hint">See <a href="/family-research.html" style="color: var(--red); font-weight: 600;">Trace Your Family's Footsteps</a> for how this works.</span>
+              </div>
+            </div>
+            <div class="hero-actions" style="margin-top: var(--space-4); justify-content: space-between;">
+              <button type="button" class="btn btn-ghost" data-step-back>Back</button>
+              <button type="button" class="btn btn-primary btn-lg" data-step-next>Continue to Your Details</button>
+            </div>
+          </div>
+
+          <!-- STEP 3 — Your Details -->
+          <div data-step>
+            <div class="form-fieldset">
+              <legend>Your details</legend>
+              <p class="body-text" style="font-size: 14px;">These details are for the lead booker. If you're travelling with others, we'll follow up by email for their names before the tour.</p>
+              <div class="form-grid form-grid--2">
+                <div class="form-field">
+                  <label for="fullName">Full name <span class="required-mark">*</span></label>
+                  <input type="text" id="fullName" name="fullName" autocomplete="name" required>
+                </div>
+                <div class="form-field">
+                  <label for="email">Email address <span class="required-mark">*</span></label>
+                  <input type="email" id="email" name="email" autocomplete="email" required>
+                </div>
+                <div class="form-field">
+                  <label for="phone">Phone number <span class="required-mark">*</span></label>
+                  <input type="tel" id="phone" name="phone" autocomplete="tel" required>
+                </div>
+                <div class="form-field">
+                  <label for="age">Age range <span class="required-mark">*</span></label>
+                  <select id="age" name="age" required>
+                    <option value="">Select a range</option>
+                    <option>Under 30</option>
+                    <option>30–44</option>
+                    <option>45–59</option>
+                    <option>60–74</option>
+                    <option>75+</option>
+                  </select>
+                </div>
+                <div class="form-field span-2">
+                  <label for="country">Country of residence <span class="required-mark">*</span></label>
+                  <input type="text" id="country" name="country" list="countryList" autocomplete="country-name" required>
+                </div>
+              </div>
+              <div class="form-field">
+                <label for="notes">Anything else we should know?</label>
+                <textarea id="notes" name="notes" placeholder="Mobility needs, dietary requirements, special occasions, or questions."></textarea>
+              </div>
+            </div>
+            <div class="hero-actions" style="margin-top: var(--space-4); justify-content: space-between;">
+              <button type="button" class="btn btn-ghost" data-step-back>Back</button>
+              <button type="button" class="btn btn-primary btn-lg" data-step-next>Continue to Review</button>
+            </div>
+          </div>
+
+          <!-- STEP 4 — Review & Payment -->
+          <div data-step>
+            <div class="form-fieldset">
+              <legend>Review &amp; payment</legend>
+              <p class="body-text">Please review your booking summary to the right before confirming. A member of our team will email you within one business day to confirm your exact date and arrange your deposit payment.</p>
+              <div class="form-field">
+                <label style="display: flex; align-items: flex-start; gap: 12px; font-weight: 400;">
+                  <input type="checkbox" id="agreeTerms" name="agreeTerms" required style="width: 22px; height: 22px; margin-top: 2px; accent-color: var(--red); flex-shrink: 0;">
+                  <span>I have read and agree to the <a href="/terms.html" style="color: var(--red); font-weight: 600;">Terms &amp; Conditions</a>, including the deposit and cancellation policy. <span class="required-mark">*</span></span>
+                </label>
+              </div>
+            </div>
+            <div class="hero-actions" style="margin-top: var(--space-4); justify-content: space-between;">
+              <button type="button" class="btn btn-ghost" data-step-back>Back</button>
+              <button type="submit" class="btn btn-primary btn-lg">Confirm Booking Request</button>
+            </div>
+            <p class="form-hint">This form isn't connected to a payment processor yet — see <code>js/main.js</code> for where to wire up Stripe and a form backend before launch.</p>
+            <p class="form-status" id="bookingStatus" role="status"></p>
+          </div>
+        </div>
+
+        <aside class="booking-summary">
+          <h3>Your booking summary</h3>
+          <div class="booking-summary-row"><span>Tour</span><strong id="summaryTour">—</strong></div>
+          <div class="booking-summary-row"><span>Guests</span><strong id="summaryGuests">1</strong></div>
+          <div class="booking-summary-row"><span>Price per person</span><strong id="summaryPerPerson">—</strong></div>
+          <div class="booking-summary-row"><span>Subtotal</span><strong id="summarySubtotal">—</strong></div>
+          <div class="booking-summary-total"><span>Deposit due now (30%)</span><span id="summaryDeposit">—</span></div>
+          <p class="body-text" style="font-size: 13px;">Remaining balance is due 21 days before your tour. Accommodation and meals are not included on multi-day tours.</p>
+        </aside>
+      </div>
+    </form>
+  </div>
+</section>

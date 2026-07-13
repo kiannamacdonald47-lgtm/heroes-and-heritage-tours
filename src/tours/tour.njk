@@ -1,0 +1,128 @@
+---
+layout: base.njk
+pagination:
+  data: tours
+  size: 1
+  alias: tour
+permalink: "/tours/{{ tour.slug }}.html"
+activeNav: tours
+eleventyComputed:
+  title: "{{ tour.name }} — Heroes and Heritage Tours"
+  description: "{{ tour.cardDesc }}"
+---
+{% from "partials/macros.njk" import tourCard %}
+
+<header class="hero hero--compact">
+  <div class="hero-media">
+    <img src="{{ tour.heroImage }}" alt="{{ tour.heroAlt }}" width="1800" height="1350">
+  </div>
+  <div class="container">
+    <div class="hero-content">
+      <span class="eyebrow">{{ tour.badge }} · {{ tour.schedule }} · {{ tour.duration }}</span>
+      <h1>{{ tour.name }}</h1>
+      <p class="lede">{{ tour.tagline }}</p>
+    </div>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container">
+    <p class="mono-label" style="margin-bottom: var(--space-4);"><a href="/index.html" style="color: inherit;">Home</a> / <a href="/tours.html" style="color: inherit;">Tours</a> / {{ tour.shortName }}</p>
+
+    <div class="grid-2" style="grid-template-columns: 1fr; gap: var(--space-6);" data-reveal>
+      <div class="tour-layout">
+        <div class="stack" style="gap: var(--space-4);">
+          {% for p in tour.intro %}
+          <p class="body-text">{{ p }}</p>
+          {% endfor %}
+
+          <div class="itinerary">
+            {% for day in tour.itinerary %}
+            <div class="itinerary-day">
+              <div class="itinerary-marker"></div>
+              <div class="itinerary-content">
+                {% if day.note and day.isPrefaceNote %}
+                <h4>{{ day.heading }}</h4>
+                <p class="body-text" style="margin-bottom: var(--space-2);">{{ day.note }}</p>
+                {% elif day.note %}
+                <div class="itinerary-note">{{ day.note }}</div>
+                <h4>{{ day.heading }}</h4>
+                {% else %}
+                <h4>{{ day.heading }}</h4>
+                {% endif %}
+                <ul class="itinerary-list">
+                  {% for item in day.items %}
+                  <li>{{ item }}</li>
+                  {% endfor %}
+                </ul>
+                {% if day.facts.length %}
+                <div class="itinerary-facts">
+                  {% for fact in day.facts %}<span>{{ fact }}</span>{% endfor %}
+                </div>
+                {% endif %}
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+
+          <p class="body-text" style="font-size: 14px; color: var(--foreground-faint);">{{ tour.footnote }}</p>
+        </div>
+
+        <aside class="info-panel">
+          <div class="info-panel-price">
+            <span class="amount">${{ tour.price | currency }}</span>
+            <span class="unit">CAD / person</span>
+          </div>
+          <ul class="info-panel-list">
+            <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 10.5l4 4 10-10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Expert WWI Western Front guide</li>
+            <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 10.5l4 4 10-10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Comfortable, air-conditioned 8/9 seat mini bus</li>
+            <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 10.5l4 4 10-10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Pick-up / drop-off at Arras Train Station or your Arras accommodation</li>
+            <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 10.5l4 4 10-10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>All entry fees</li>
+          </ul>
+          <div class="info-panel-days">
+            <strong>Runs every week</strong>
+            {{ tour.scheduleFull }}
+          </div>
+          <a href="/booking.html?tour={{ tour.slug }}" class="btn btn-primary btn-block btn-lg">Book This Tour</a>
+          <a href="/contact.html" class="btn btn-ghost btn-block">Ask a question first</a>
+        </aside>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow">{{ tour.shortName }} in pictures</span>
+      <h2>What you'll see on this tour.</h2>
+    </div>
+    <div class="gallery-grid" data-reveal>
+      {% for img in tour.galleryImages %}
+      <a href="/gallery.html" class="gallery-item"><img src="{{ img.src }}" alt="{{ img.alt }}" loading="lazy"></a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow">Continue your journey</span>
+      <h2>Combine this tour, or explore more.</h2>
+    </div>
+    <div class="tours-grid" data-reveal>
+      {% for other in tours | relatedTours(tour.slug, 2) %}
+        {{ tourCard(other) }}
+      {% endfor %}
+      <article class="tour-card">
+        <a href="/family-research.html" class="tour-card-media"><img src="/photos/testimonials/testimonial-01.jpg" alt="A guest at her relative's grave" width="800" height="600"></a>
+        <div class="tour-card-body">
+          <h3><a href="/family-research.html">Trace Your Family's Footsteps</a></h3>
+          <p class="tour-card-desc">Add personal research on a relative who served to any tour.</p>
+          <div class="tour-card-footer"><a href="/family-research.html" class="btn btn-ghost btn-sm">Learn more</a></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,249 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "photos"
+public_folder: "/photos"
+
+publish_mode: simple
+
+site_url: https://heroesandheritagetours.ca
+display_url: https://heroesandheritagetours.ca
+
+collections:
+  - name: "site"
+    label: "Site Settings"
+    files:
+      - name: "settings"
+        label: "Contact Info & Tagline"
+        file: "src/_data/site.json"
+        fields:
+          - { label: "Phone Number", name: "phone", widget: "string" }
+          - { label: "Email Address", name: "email", widget: "string" }
+          - { label: "Footer Tagline", name: "tagline", widget: "text" }
+
+  - name: "home"
+    label: "Homepage"
+    files:
+      - name: "home"
+        label: "Homepage Content"
+        file: "src/_data/home.json"
+        fields:
+          - { label: "Hero Background Image", name: "heroImage", widget: "image" }
+          - { label: "Hero Image Alt Text", name: "heroAlt", widget: "string" }
+          - { label: "Hero Eyebrow Text", name: "heroEyebrow", widget: "string" }
+          - { label: "Hero Title", name: "heroTitle", widget: "string" }
+          - { label: "Hero Subtitle", name: "heroLede", widget: "text" }
+          - label: "Trust Strip (4 stats)"
+            name: "trustStrip"
+            widget: "list"
+            fields:
+              - { label: "Value", name: "value", widget: "string" }
+              - { label: "Label", name: "label", widget: "string" }
+          - { label: "Our Story Heading", name: "introHeading", widget: "string" }
+          - label: "Our Story Paragraphs"
+            name: "introParagraphs"
+            widget: "list"
+            field: { label: "Paragraph", name: "paragraph", widget: "text" }
+          - { label: "Our Story Image", name: "introImage", widget: "image" }
+          - { label: "Our Story Image Alt Text", name: "introImageAlt", widget: "string" }
+          - { label: "Family Research Teaser Image", name: "familyTeaserImage", widget: "image" }
+          - { label: "Family Research Teaser Image Alt Text", name: "familyTeaserAlt", widget: "string" }
+          - { label: "Family Research Teaser Paragraph", name: "familyTeaserParagraph", widget: "text" }
+          - { label: "Family Research Teaser Quote", name: "familyTeaserQuote", widget: "text" }
+
+  - name: "tours"
+    label: "Tours"
+    files:
+      - name: "tours"
+        label: "All Tours"
+        file: "src/_data/tours.json"
+        fields:
+          - label: "Tours"
+            name: "tours"
+            widget: "list"
+            summary: "{{fields.shortName}} — ${{fields.price}} CAD"
+            fields:
+              - { label: "URL Slug (no spaces, e.g. vimy-to-victory)", name: "slug", widget: "string" }
+              - { label: "Short Name (for cards & nav)", name: "shortName", widget: "string" }
+              - { label: "Full Name (page title)", name: "name", widget: "string" }
+              - { label: "Tagline", name: "tagline", widget: "string" }
+              - { label: "Badge Text", name: "badge", widget: "string", hint: "e.g. Day Tour, 2 Day Tour, 3 Day Tour" }
+              - { label: "Is this a multi-day combo tour?", name: "combo", widget: "boolean", default: false }
+              - { label: "Schedule (short, e.g. Tue, Fri, Sun)", name: "schedule", widget: "string" }
+              - { label: "Schedule (full sentence)", name: "scheduleFull", widget: "text" }
+              - label: "Days it runs (for the booking calendar)"
+                name: "runDays"
+                widget: "select"
+                multiple: true
+                options:
+                  - { label: "Sunday", value: 0 }
+                  - { label: "Monday", value: 1 }
+                  - { label: "Tuesday", value: 2 }
+                  - { label: "Wednesday", value: 3 }
+                  - { label: "Thursday", value: 4 }
+                  - { label: "Friday", value: 5 }
+                  - { label: "Saturday", value: 6 }
+              - { label: "Duration (e.g. 8–9 hours)", name: "duration", widget: "string" }
+              - { label: "Price (CAD, per person)", name: "price", widget: "number", value_type: "int" }
+              - { label: "Hero Image", name: "heroImage", widget: "image" }
+              - { label: "Hero Image Alt Text", name: "heroAlt", widget: "string" }
+              - { label: "Card Image (used on Tours & Home listings)", name: "cardImage", widget: "image" }
+              - { label: "Card Image Alt Text", name: "cardAlt", widget: "string" }
+              - { label: "Card Description (short, for listings)", name: "cardDesc", widget: "text" }
+              - label: "Intro Paragraphs"
+                name: "intro"
+                widget: "list"
+                field: { label: "Paragraph", name: "paragraph", widget: "text" }
+              - label: "Itinerary"
+                name: "itinerary"
+                widget: "list"
+                summary: "{{fields.heading}}"
+                fields:
+                  - { label: "Heading (e.g. Morning, or Day 1 — In Flanders Fields)", name: "heading", widget: "string" }
+                  - { label: "Note (e.g. lunch location, or a preface paragraph for multi-day tours)", name: "note", widget: "text", required: false }
+                  - { label: "Show note as a paragraph above the heading (multi-day tours)?", name: "isPrefaceNote", widget: "boolean", default: false, required: false }
+                  - label: "Highlights"
+                    name: "items"
+                    widget: "list"
+                    field: { label: "Highlight", name: "item", widget: "string" }
+                  - label: "Facts (e.g. departure/return times)"
+                    name: "facts"
+                    widget: "list"
+                    required: false
+                    field: { label: "Fact", name: "fact", widget: "string" }
+              - { label: "Footnote (small print below itinerary)", name: "footnote", widget: "text" }
+              - label: "Gallery Images (4 shown on this tour's page)"
+                name: "galleryImages"
+                widget: "list"
+                fields:
+                  - { label: "Image", name: "src", widget: "image" }
+                  - { label: "Alt Text", name: "alt", widget: "string" }
+
+  - name: "testimonials"
+    label: "Reviews"
+    files:
+      - name: "testimonials"
+        label: "All Reviews"
+        file: "src/_data/testimonials.json"
+        fields:
+          - label: "Reviews"
+            name: "testimonials"
+            widget: "list"
+            summary: "{{fields.name}}"
+            fields:
+              - { label: "Quote", name: "quote", widget: "text" }
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Role (e.g. Battlefield guest, Family history guest)", name: "role", widget: "string" }
+              - { label: "Photo (leave blank to show initials instead)", name: "photo", widget: "image", required: false }
+
+  - name: "faq"
+    label: "FAQ"
+    files:
+      - name: "faq"
+        label: "FAQ Sections"
+        file: "src/_data/faq.json"
+        fields:
+          - label: "Sections"
+            name: "faq"
+            widget: "list"
+            summary: "{{fields.heading}}"
+            fields:
+              - { label: "Section Label (small eyebrow text)", name: "section", widget: "string" }
+              - { label: "Section Heading", name: "heading", widget: "string" }
+              - label: "Questions"
+                name: "items"
+                widget: "list"
+                summary: "{{fields.q}}"
+                fields:
+                  - { label: "Question", name: "q", widget: "string" }
+                  - { label: "Answer (supports [link text](/page.html) style links)", name: "a", widget: "text" }
+
+  - name: "guide"
+    label: "Meet Your Guide"
+    files:
+      - name: "guide"
+        label: "Guide Bio Page"
+        file: "src/_data/guide.json"
+        fields:
+          - { label: "Guide's Name", name: "name", widget: "string" }
+          - { label: "Hero Background Image", name: "heroImage", widget: "image" }
+          - { label: "Hero Image Alt Text", name: "heroAlt", widget: "string" }
+          - { label: "Hero Intro Sentence", name: "heroIntro", widget: "text" }
+          - { label: "Portrait / Side Image", name: "portraitImage", widget: "image" }
+          - { label: "Portrait Image Alt Text", name: "portraitAlt", widget: "string" }
+          - label: "Credentials List"
+            name: "credentials"
+            widget: "list"
+            field: { label: "Credential", name: "credential", widget: "string" }
+          - label: "Story Paragraphs"
+            name: "storyParagraphs"
+            widget: "list"
+            field: { label: "Paragraph", name: "paragraph", widget: "text" }
+          - { label: "Pull Quote", name: "pullQuote", widget: "text" }
+          - { label: "Pull Quote Attribution", name: "pullQuoteAttribution", widget: "string" }
+          - { label: "\"Tailored\" Section Heading", name: "tailoredHeading", widget: "string" }
+          - { label: "\"Tailored\" Section Paragraph", name: "tailoredParagraph", widget: "text" }
+
+  - name: "familyResearch"
+    label: "Family Research Page"
+    files:
+      - name: "familyResearch"
+        label: "Family Research Content"
+        file: "src/_data/familyResearch.json"
+        fields:
+          - { label: "Hero Background Image", name: "heroImage", widget: "image" }
+          - { label: "Hero Image Alt Text", name: "heroAlt", widget: "string" }
+          - label: "Intro Paragraphs"
+            name: "introParagraphs"
+            widget: "list"
+            field: { label: "Paragraph", name: "paragraph", widget: "text" }
+          - { label: "Side Image", name: "sideImage", widget: "image" }
+          - { label: "Side Image Alt Text", name: "sideImageAlt", widget: "string" }
+          - label: "How It Works — Steps"
+            name: "steps"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Step Title", name: "title", widget: "string" }
+              - { label: "Step Text", name: "text", widget: "text" }
+          - label: "Which reviews to feature below (must match a review's Name exactly)"
+            name: "storyTestimonials"
+            widget: "list"
+            field: { label: "Reviewer Name", name: "reviewerName", widget: "string" }
+
+  - name: "terms"
+    label: "Terms & Conditions"
+    files:
+      - name: "terms"
+        label: "Terms & Conditions Text"
+        file: "src/_data/terms.json"
+        fields:
+          - label: "Paragraphs"
+            name: "paragraphs"
+            widget: "list"
+            field: { label: "Paragraph", name: "paragraph", widget: "text" }
+
+  - name: "gallery"
+    label: "Photo Gallery"
+    files:
+      - name: "gallery"
+        label: "Gallery Photos"
+        file: "src/_data/gallery.json"
+        fields:
+          - label: "Photos"
+            name: "gallery"
+            widget: "list"
+            summary: "{{fields.label}} — {{fields.alt}}"
+            fields:
+              - label: "Location Tag"
+                name: "tour"
+                widget: "select"
+                options: ["vimy", "flanders", "somme"]
+              - label: "Location Label"
+                name: "label"
+                widget: "select"
+                options: ["Vimy Ridge", "Flanders Fields", "The Somme"]
+              - { label: "Full-size Image", name: "full", widget: "image" }
+              - { label: "Thumbnail Image", name: "thumb", widget: "image" }
+              - { label: "Alt Text", name: "alt", widget: "string" }

@@ -1,0 +1,26 @@
+{
+  "name": "heroes-and-heritage-tours",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kiannamacdonald47-lgtm/heroes-and-heritage-tours.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/kiannamacdonald47-lgtm/heroes-and-heritage-tours/issues"
+  },
+  "homepage": "https://github.com/kiannamacdonald47-lgtm/heroes-and-heritage-tours#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.6"
+  }
+}

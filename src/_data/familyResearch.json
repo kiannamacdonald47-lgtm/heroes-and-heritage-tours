@@ -1,0 +1,17 @@
+{
+  "heroImage": "/photos/testimonials/testimonial-03.jpg",
+  "heroAlt": "A guest places a small Canadian flag at her relative's grave in a Commonwealth war cemetery",
+  "introParagraphs": [
+    "Before your trip, tell Joe who you're hoping to find — a great-grandfather, a great-uncle, a name passed down at the dinner table with little else attached to it. He researches their service record, the battles they fought in, and the locations where they served, then works actual site visits into your itinerary.",
+    "Families have found gravesites they never knew existed, uncovered medical histories, and walked the exact paths their relatives walked over a century ago. For many, it turns a battlefield tour into something closer to a homecoming."
+  ],
+  "sideImage": "/photos/testimonials/testimonial-01.jpg",
+  "sideImageAlt": "Kristin Roberts kneeling beside her relative's headstone in a Commonwealth war cemetery",
+  "steps": [
+    { "title": "Share what you know", "text": "A name, a regiment, a hometown — even a single detail is often enough for Joe to begin. Do this when you book, or send it to us any time beforehand." },
+    { "title": "We research their service", "text": "Joe traces their unit, the battles they were part of, and — where possible — the exact locations tied to their story: where they fought, where they were treated, where they're remembered." },
+    { "title": "It's woven into your tour", "text": "Your itinerary is adjusted so that, alongside the scheduled highlights, you visit the ground that matters to your family specifically." },
+    { "title": "You stand where they stood", "text": "Whether it's a gravesite, a trench line, or a village square, you leave with more than photographs — a real, physical connection to your family's history." }
+  ],
+  "storyTestimonials": ["Sheila McGowan", "Kristin Roberts"]
+}

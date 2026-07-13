@@ -1,0 +1,38 @@
+{% macro tourCard(tour) %}
+<article class="tour-card">
+  <a href="/tours/{{ tour.slug }}.html" class="tour-card-media">
+    <img src="{{ tour.cardImage }}" alt="{{ tour.cardAlt }}" width="800" height="600">
+    <span class="tour-card-badge {% if tour.combo %}tour-card-badge--combo{% endif %}">{{ tour.badge }}</span>
+  </a>
+  <div class="tour-card-body">
+    <h3><a href="/tours/{{ tour.slug }}.html">{{ tour.shortName }}</a></h3>
+    <div class="tour-card-meta">
+      <span>{{ tour.schedule }}</span>
+      <span>{{ tour.duration }}</span>
+    </div>
+    <p class="tour-card-desc">{{ tour.cardDesc }}</p>
+    <div class="tour-card-footer">
+      <div class="tour-card-price"><span class="amount">${{ tour.price | currency }}</span><span class="unit">CAD / person</span></div>
+      <a href="/tours/{{ tour.slug }}.html" class="btn btn-ghost btn-sm">Details</a>
+    </div>
+  </div>
+</article>
+{% endmacro %}
+
+{% macro testimonialCard(t) %}
+<article class="testimonial-card">
+  <span class="quote-mark">&ldquo;</span>
+  <blockquote>{{ t.quote }}</blockquote>
+  <div class="testimonial-attribution">
+    {% if t.photo %}
+    <img src="{{ t.photo }}" alt="{{ t.name }}" loading="lazy">
+    {% else %}
+    <div class="testimonial-avatar-fallback">{{ t.name | initials }}</div>
+    {% endif %}
+    <div class="testimonial-attribution-text">
+      <strong>{{ t.name }}</strong>
+      <span>{{ t.role }}</span>
+    </div>
+  </div>
+</article>
+{% endmacro %}

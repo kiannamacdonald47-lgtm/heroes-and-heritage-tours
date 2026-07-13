@@ -1,0 +1,43 @@
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/index.html" class="logo"><img src="/media/logo-transparent.png" alt="Heroes and Heritage Tours"></a>
+        <p>{{ site.tagline }}</p>
+      </div>
+      <div class="footer-col">
+        <h4>Tours</h4>
+        <ul>
+          {% for tour in tours %}
+          <li><a href="/tours/{{ tour.slug }}.html">{{ tour.shortName }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="/guide.html">Meet Your Guide</a></li>
+          <li><a href="/family-research.html">Family Research</a></li>
+          <li><a href="/gallery.html">Photo Gallery</a></li>
+          <li><a href="/testimonials.html">Reviews</a></li>
+          <li><a href="/faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Plan Your Trip</h4>
+        <ul>
+          <li><a href="/booking.html">Book a Tour</a></li>
+          <li><a href="/contact.html">Contact Us</a></li>
+          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+          <li><a href="/terms.html">Terms &amp; Conditions</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span data-year></span> Heroes and Heritage Tours. All rights reserved.</span>
+      <span>Based in Arras, France &middot; Tours conducted in English</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/main.js"></script>

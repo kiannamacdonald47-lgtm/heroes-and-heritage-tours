@@ -1,0 +1,150 @@
+---
+layout: base.njk
+title: "Heroes and Heritage Tours — Canadian WWI Battlefield Tours from Arras"
+description: "Travel back in time and follow in the footsteps of heroes. Small-group, expert-guided tours of Vimy Ridge, Flanders Fields and the Somme, based in Arras, France."
+activeNav: home
+permalink: "/index.html"
+---
+{% from "partials/macros.njk" import tourCard, testimonialCard %}
+
+<header class="hero">
+  <div class="hero-media">
+    <img src="{{ home.heroImage }}" alt="{{ home.heroAlt }}" width="1800" height="1350">
+  </div>
+  <div class="container">
+    <div class="hero-content">
+      <span class="eyebrow">{{ home.heroEyebrow }}</span>
+      <h1>{{ home.heroTitle }}</h1>
+      <p class="lede">{{ home.heroLede }}</p>
+      <div class="hero-actions">
+        <a href="/tours.html" class="btn btn-primary btn-lg">View Our Tours</a>
+        <a href="/family-research.html" class="btn btn-ghost btn-lg" style="border-color: rgba(244,238,225,0.4); color: #FFF;">Trace a Family Member</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="section section--tight">
+  <div class="container">
+    <div class="trust-strip" data-reveal>
+      {% for item in home.trustStrip %}
+      <div class="trust-item">
+        <span class="trust-value">{{ item.value }}</span>
+        <span class="trust-label">{{ item.label }}</span>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider container">
+
+<section class="section">
+  <div class="container">
+    <div class="grid-2" data-reveal>
+      <div class="stack" style="gap: var(--space-3);">
+        <span class="eyebrow">Our story</span>
+        <h2>{{ home.introHeading }}</h2>
+        {% for p in home.introParagraphs %}
+        <p class="body-text">{{ p }}</p>
+        {% endfor %}
+        <div>
+          <a href="/guide.html" class="btn btn-ghost">Meet your guide, {{ guide.name }}</a>
+        </div>
+      </div>
+      <div class="rounded-photo">
+        <img src="{{ home.introImage }}" alt="{{ home.introImageAlt }}" width="1800" height="1200">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt" id="tours">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow">Our tours</span>
+      <h2>Five ways to walk in their footsteps.</h2>
+      <p class="lede">Every day tour can be booked alone, or combined into a two- or three-day journey across the full Canadian story on the Western Front.</p>
+    </div>
+
+    <div class="tours-grid" data-reveal>
+      {% for tour in tours %}
+        {{ tourCard(tour) }}
+      {% endfor %}
+      <article class="tour-card" style="background: var(--black); color: var(--cream-text); display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding: var(--space-4); gap: var(--space-2);">
+        <h3 style="color: #FFF;">Not sure which tour is right for you?</h3>
+        <p class="body-text" style="color: var(--cream-text-muted);">Every itinerary can be customised — tell us who you're travelling with, or which ancestor you're hoping to find, and we'll help you choose.</p>
+        <a href="/contact.html" class="btn btn-primary">Ask us a question</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="two-col-media reverse" data-reveal>
+      <div class="two-col-media-media rounded-photo">
+        <img src="{{ home.familyTeaserImage }}" alt="{{ home.familyTeaserAlt }}" width="1800" height="1200">
+      </div>
+      <div class="stack" style="gap: var(--space-3);">
+        <span class="eyebrow">A tour like no other</span>
+        <h2>Trace your family's footsteps.</h2>
+        <p class="body-text">{{ home.familyTeaserParagraph }}</p>
+        <p class="pull-quote" style="font-size: 1.15rem; margin-block: var(--space-2);">"{{ home.familyTeaserQuote }}"</p>
+        <div>
+          <a href="/family-research.html" class="btn btn-primary">How it works</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt" id="testimonials">
+  <div class="container">
+    <div class="section-head center" data-reveal>
+      <span class="eyebrow">What our guests say</span>
+      <h2>Trusted by families, historians and veterans.</h2>
+    </div>
+
+    <div class="testimonial-grid testimonial-grid--3" data-reveal>
+      {{ testimonialCard(testimonials[0]) }}
+      {{ testimonialCard(testimonials[2]) }}
+      {{ testimonialCard(testimonials[4]) }}
+    </div>
+
+    <div style="text-align: center; margin-top: var(--space-5);">
+      <a href="/testimonials.html" class="btn btn-ghost">Read all reviews</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow">From the battlefields</span>
+      <h2>A glimpse of what you'll see.</h2>
+    </div>
+    <div class="gallery-grid" data-reveal>
+      <a href="/gallery.html" class="gallery-item"><img src="{{ gallery[0].thumb }}" alt="{{ gallery[0].alt }}" loading="lazy"></a>
+      <a href="/gallery.html" class="gallery-item"><img src="/photos/flanders/thumbs/flanders-01.jpg" alt="Menin Gate at night" loading="lazy"></a>
+      <a href="/gallery.html" class="gallery-item"><img src="/photos/somme/thumbs/somme-01.jpg" alt="Beaumont-Hamel caribou memorial" loading="lazy"></a>
+      <a href="/gallery.html" class="gallery-item"><img src="/photos/vimy/thumbs/vimy-05.jpg" alt="Preserved trenches at Vimy Ridge" loading="lazy"></a>
+    </div>
+    <div style="text-align: center; margin-top: var(--space-5);">
+      <a href="/gallery.html" class="btn btn-ghost">View the full gallery</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="cta-band" data-reveal>
+      <h2>Your pilgrimage to the battlefields starts here.</h2>
+      <p class="lede">Reserve your place on a tour, or send us your family's story and let us build it into your journey.</p>
+      <div class="hero-actions">
+        <a href="/booking.html" class="btn btn-primary btn-lg">Book a Tour</a>
+        <a href="/contact.html" class="btn btn-ghost btn-lg" style="border-color: rgba(244,238,225,0.4); color: #FFF;">Contact Us</a>
+      </div>
+    </div>
+  </div>
+</section>

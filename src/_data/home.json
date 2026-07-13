@@ -1,0 +1,24 @@
+{
+  "heroImage": "/photos/vimy/vimy-01.jpg",
+  "heroAlt": "The Canadian National Vimy Memorial illuminated at night",
+  "heroEyebrow": "Based in Arras, France — 45 minutes from Paris",
+  "heroTitle": "Travel back in time and follow in the footsteps of heroes.",
+  "heroLede": "Small-group, expert-guided tours of Canada's First World War battlefields — Vimy Ridge, Flanders Fields and the Somme. Walk the preserved trenches. Stand where they stood.",
+  "trustStrip": [
+    { "value": "8", "label": "Guests maximum per tour" },
+    { "value": "Arras", "label": "The historic heart of Canada's Western Front" },
+    { "value": "5★", "label": "Rated by veterans, historians & families alike" },
+    { "value": "1", "label": "Expert guide, every step of the way" }
+  ],
+  "introHeading": "Beyond the memorials, onto the ground where history happened.",
+  "introParagraphs": [
+    "Based in Arras — the historic heart of Canada's war on the Western Front, and just 45 minutes from Paris by train — our tours bring history to life. Whether you are retracing a relative's footsteps, exploring Canada's military heritage, or fulfilling a lifelong pilgrimage to the battlefields, we take you beyond the memorials and onto the ground where history happened.",
+    "Catering to individuals, couples, and small groups, Heroes and Heritage Tours is your gateway to the First World War battlefields — guided by a historian who treats every visit as personal."
+  ],
+  "introImage": "/photos/flanders/flanders-05.jpg",
+  "introImageAlt": "The Last Post Ceremony beneath the Menin Gate Memorial in Ypres",
+  "familyTeaserImage": "/photos/testimonials/testimonial-03.jpg",
+  "familyTeaserAlt": "A guest places a Canadian flag at her relative's grave in a Commonwealth war cemetery",
+  "familyTeaserParagraph": "Send us your relative's name, and Joe will research their service record, the battles they fought in, and the exact ground they stood on — then build it into your tour. Families have found gravesites, uncovered medical histories, and walked the paths their great-grandfathers walked over a century ago.",
+  "familyTeaserQuote": "He brought my Great Grandfather's war experience to life, and completed my own journey with an emotional trip to my Great Uncle's gravesite."
+}
