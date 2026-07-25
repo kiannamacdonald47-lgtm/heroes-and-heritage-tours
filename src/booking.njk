@@ -22,7 +22,7 @@ permalink: "/booking.html"
 
 <header class="hero hero--compact">
   <div class="hero-media">
-    <img src="/photos/vimy/vimy-01.jpg" alt="The Canadian National Vimy Memorial at night" width="1800" height="1200">
+    <img src="/photos/vimy/vimy-cover.jpg" alt="The Canadian National Vimy Memorial at night" width="1800" height="1200">
   </div>
   <div class="container">
     <div class="hero-content">
@@ -50,7 +50,7 @@ permalink: "/booking.html"
             <div class="form-fieldset">
               <legend>Which tour would you like to book?</legend>
               <div class="radio-cards">
-                {% for tour in tours %}
+                {% for tour in tours %}{% if not tour.normandy %}
                 <label class="radio-card">
                   <input type="radio" name="tour" value="{{ tour.slug }}" required {% if loop.first %}checked{% endif %}>
                   <span class="radio-card-body">
@@ -59,9 +59,9 @@ permalink: "/booking.html"
                     <span class="radio-card-price">${{ tour.price | currency }} CAD / person</span>
                   </span>
                 </label>
-                {% endfor %}
+                {% endif %}{% endfor %}
               </div>
-              <p class="required-note">Not sure which to choose? <a href="/tours.html" style="color: var(--red); font-weight: 600;">Compare all tours</a> or <a href="/contact.html" style="color: var(--red); font-weight: 600;">ask us first</a>.</p>
+              <p class="required-note">Not sure which to choose? <a href="/tours.html" style="color: var(--red); font-weight: 600;">Compare all tours</a> or <a href="/contact.html" style="color: var(--red); font-weight: 600;">ask us first</a>. Booking the Western Front &amp; Normandy 5-Day Tour? <a href="/contact.html?tour=western-front-normandy-5day" style="color: var(--red); font-weight: 600;">Enquire here instead</a> — its Normandy leg is arranged directly with our team.</p>
             </div>
             <div class="hero-actions" style="margin-top: var(--space-4); justify-content: flex-end;">
               <button type="button" class="btn btn-primary btn-lg" data-step-next>Continue to Trip Details</button>
@@ -72,12 +72,32 @@ permalink: "/booking.html"
           <div data-step>
             <div class="form-fieldset">
               <legend>Trip details</legend>
-              <div class="form-grid form-grid--2">
+              <div class="form-grid">
                 <div class="form-field">
-                  <label for="preferredDate">Preferred date <span class="required-mark">*</span></label>
-                  <input type="date" id="preferredDate" name="preferredDate" required>
-                  <span class="hint" id="dateAvailabilityHint"></span>
-                  <span class="hint" id="dateWarning" style="display:none; color: var(--red-bright); font-weight: 600;">That date doesn't match this tour's usual schedule — that's fine, we'll confirm the closest available date by email.</span>
+                  <label id="calendarLabel">Preferred date <span class="required-mark">*</span></label>
+                  <span class="hint" id="dateAvailabilityHint" style="margin-bottom: 4px;"></span>
+
+                  <div class="booking-calendar" role="group" aria-labelledby="calendarLabel">
+                    <div class="booking-calendar-header">
+                      <button type="button" class="booking-calendar-nav" id="calPrev" aria-label="Previous month">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="12 15 7 10 12 5"/></svg>
+                      </button>
+                      <span class="booking-calendar-month" id="calMonthLabel" aria-live="polite">Month Year</span>
+                      <button type="button" class="booking-calendar-nav" id="calNext" aria-label="Next month">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="8 15 13 10 8 5"/></svg>
+                      </button>
+                    </div>
+                    <div class="booking-calendar-weekdays">
+                      <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
+                    </div>
+                    <div class="booking-calendar-grid" id="calGrid"></div>
+                    <div class="booking-calendar-legend">
+                      <span><i class="booking-calendar-swatch booking-calendar-swatch--available"></i>Available</span>
+                      <span><i class="booking-calendar-swatch booking-calendar-swatch--selected"></i>Selected</span>
+                    </div>
+                  </div>
+
+                  <input type="text" id="preferredDate" name="preferredDate" readonly required placeholder="Choose a date on the calendar above" style="margin-top: var(--space-2); cursor: default; font-weight: 700;">
                 </div>
                 <div class="form-field">
                   <label for="guests">Number of guests <span class="required-mark">*</span></label>

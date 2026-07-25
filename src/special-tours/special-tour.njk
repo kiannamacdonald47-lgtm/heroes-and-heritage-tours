@@ -1,0 +1,43 @@
+---
+layout: base.njk
+pagination:
+  data: specialTours
+  size: 1
+  alias: tour
+permalink: "/special-tours/{{ tour.slug }}.html"
+activeNav: tours
+eleventyComputed:
+  title: "{{ tour.name }} — Heroes and Heritage Tours"
+  description: "{{ tour.summary }}"
+---
+
+<header class="hero hero--compact">
+  <div class="hero-media">
+    <img src="{{ tour.heroImage }}" alt="{{ tour.heroAlt }}" width="1800" height="1350">
+  </div>
+  <div class="container">
+    <div class="hero-content">
+      <span class="eyebrow">Special tour · {{ tour.dateLabel }} · Coming soon</span>
+      <h1>{{ tour.name }}</h1>
+    </div>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container container--text">
+    <p class="mono-label" style="margin-bottom: var(--space-4);"><a href="/index.html" style="color: inherit;">Home</a> / <a href="/tours.html" style="color: inherit;">Tours</a> / {{ tour.name }}</p>
+
+    <div class="stack" style="gap: var(--space-4);" data-reveal>
+      <p class="body-text" style="font-size: 1.15rem;">{{ tour.summary }}</p>
+
+      <div class="itinerary-note">{{ tour.status }}</div>
+
+      <p class="body-text">Want to be notified the moment this tour opens for booking? Get in touch and we'll make sure you're among the first to know.</p>
+
+      <div class="hero-actions" style="margin-top: var(--space-2);">
+        <a href="/contact.html?tour={{ tour.slug }}" class="btn btn-primary btn-lg">Notify Me When It's Ready</a>
+        <a href="/tours.html" class="btn btn-ghost btn-lg">Browse Our Current Tours</a>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,7 +1,7 @@
 ---
 layout: base.njk
 title: "Our Tours — Heroes and Heritage Tours"
-description: "Five ways to walk in their footsteps: Vimy to Victory, In Flanders Fields, The Somme Front, and our Signature and Ultimate multi-day Canadian tours."
+description: "Vimy to Victory, In Flanders Fields, The Bloody Somme, our Signature and Ultimate multi-day Canadian tours, and our 5-Day Western Front & Normandy tour."
 activeNav: tours
 permalink: "/tours.html"
 ---
@@ -9,13 +9,13 @@ permalink: "/tours.html"
 
 <header class="hero hero--compact">
   <div class="hero-media">
-    <img src="/photos/somme/somme-06.jpg" alt="A Commonwealth War Cemetery on the Somme, framed by trees" width="1800" height="1200">
+    <img src="/photos/somme/somme-cover.jpg" alt="The Beaumont-Hamel Newfoundland Memorial caribou statue" width="1800" height="1200">
   </div>
   <div class="container">
     <div class="hero-content">
       <span class="eyebrow">Our tours</span>
-      <h1>Five ways to walk in their footsteps.</h1>
-      <p class="lede">Every day tour departs from Arras and can be booked alone, or combined into a two- or three-day journey across the full Canadian story on the Western Front. All tours run in small groups of 8 guests or fewer, led personally by our guide.</p>
+      <h1>Many ways to walk in their footsteps.</h1>
+      <p class="lede">Every day tour departs from Arras and can be booked alone, or combined into a multi-day journey across the full Canadian story on the Western Front — and into Normandy. All tours run in small groups of 8 guests or fewer, led personally by our guide.</p>
     </div>
   </div>
 </header>
@@ -54,6 +54,35 @@ permalink: "/tours.html"
         <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 10.5l4 4 10-10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>All entry fees</li>
       </ul>
       <p class="body-text" style="font-size: 14px;">Prices are quoted in CAD. Itineraries may be varied by consensus of the guests travelling on the day. Customised and private tours are available on request — <a href="/contact.html" style="color: var(--red); font-weight: 600;">get in touch</a>.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow">Special tours</span>
+      <h2>Commemorative departures on the horizon.</h2>
+      <p class="lede">Two special tours are in the works for 2027 — full details are being finalized.</p>
+    </div>
+
+    <div class="tours-grid" data-reveal>
+      {% for tour in specialTours %}
+      <article class="tour-card">
+        <a href="/special-tours/{{ tour.slug }}.html" class="tour-card-media">
+          <img src="{{ tour.heroImage }}" alt="{{ tour.heroAlt }}" width="800" height="600">
+          <span class="tour-card-badge tour-card-badge--combo">Coming Soon</span>
+        </a>
+        <div class="tour-card-body">
+          <h3><a href="/special-tours/{{ tour.slug }}.html">{{ tour.name }}</a></h3>
+          <div class="tour-card-meta"><span>{{ tour.dateLabel }}</span></div>
+          <p class="tour-card-desc">{{ tour.summary }}</p>
+          <div class="tour-card-footer">
+            <a href="/special-tours/{{ tour.slug }}.html" class="btn btn-ghost btn-sm">Learn more</a>
+          </div>
+        </div>
+      </article>
+      {% endfor %}
     </div>
   </div>
 </section>

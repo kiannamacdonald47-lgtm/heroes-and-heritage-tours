@@ -86,6 +86,8 @@ collections:
                   - { label: "Saturday", value: 6 }
               - { label: "Duration (e.g. 8–9 hours)", name: "duration", widget: "string" }
               - { label: "Price (CAD, per person)", name: "price", widget: "number", value_type: "int" }
+              - { label: "Single Supplement (CAD, multi-day tours only — leave blank if not applicable)", name: "singleSupplement", widget: "number", value_type: "int", required: false }
+              - { label: "This tour includes a Normandy leg (arranged with a local partner guide)", name: "normandy", widget: "boolean", default: false, required: false }
               - { label: "Hero Image", name: "heroImage", widget: "image" }
               - { label: "Hero Image Alt Text", name: "heroAlt", widget: "string" }
               - { label: "Card Image (used on Tours & Home listings)", name: "cardImage", widget: "image" }
@@ -223,6 +225,26 @@ collections:
             name: "paragraphs"
             widget: "list"
             field: { label: "Paragraph", name: "paragraph", widget: "text" }
+
+  - name: "specialTours"
+    label: "Special Tours (Coming Soon)"
+    files:
+      - name: "specialTours"
+        label: "Special Tours"
+        file: "src/_data/specialTours.json"
+        fields:
+          - label: "Special Tours"
+            name: "specialTours"
+            widget: "list"
+            summary: "{{fields.name}} — {{fields.dateLabel}}"
+            fields:
+              - { label: "URL Slug (no spaces)", name: "slug", widget: "string" }
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Date Label (e.g. April 2027)", name: "dateLabel", widget: "string" }
+              - { label: "Hero Image", name: "heroImage", widget: "image" }
+              - { label: "Hero Image Alt Text", name: "heroAlt", widget: "string" }
+              - { label: "Summary", name: "summary", widget: "text" }
+              - { label: "Status Note (shown as a highlighted callout)", name: "status", widget: "text" }
 
   - name: "gallery"
     label: "Photo Gallery"

@@ -133,34 +133,6 @@
     "alt": "Vimy Ridge battlefield photograph"
   },
   {
-    "tour": "vimy",
-    "label": "Vimy Ridge",
-    "full": "/photos/vimy/vimy-20.jpg",
-    "thumb": "/photos/vimy/thumbs/vimy-20.jpg",
-    "alt": "Vimy Ridge battlefield photograph"
-  },
-  {
-    "tour": "vimy",
-    "label": "Vimy Ridge",
-    "full": "/photos/vimy/vimy-21.jpg",
-    "thumb": "/photos/vimy/thumbs/vimy-21.jpg",
-    "alt": "Vimy Ridge battlefield photograph"
-  },
-  {
-    "tour": "vimy",
-    "label": "Vimy Ridge",
-    "full": "/photos/vimy/vimy-22.jpg",
-    "thumb": "/photos/vimy/thumbs/vimy-22.jpg",
-    "alt": "Vimy Ridge battlefield photograph"
-  },
-  {
-    "tour": "vimy",
-    "label": "Vimy Ridge",
-    "full": "/photos/vimy/vimy-23.jpg",
-    "thumb": "/photos/vimy/thumbs/vimy-23.jpg",
-    "alt": "Vimy Ridge battlefield photograph"
-  },
-  {
     "tour": "flanders",
     "label": "Flanders Fields",
     "full": "/photos/flanders/flanders-01.jpg",
@@ -263,69 +235,6 @@
     "label": "Flanders Fields",
     "full": "/photos/flanders/flanders-15.jpg",
     "thumb": "/photos/flanders/thumbs/flanders-15.jpg",
-    "alt": "Flanders Fields battlefield photograph"
-  },
-  {
-    "tour": "flanders",
-    "label": "Flanders Fields",
-    "full": "/photos/flanders/flanders-16.jpg",
-    "thumb": "/photos/flanders/thumbs/flanders-16.jpg",
-    "alt": "Flanders Fields battlefield photograph"
-  },
-  {
-    "tour": "flanders",
-    "label": "Flanders Fields",
-    "full": "/photos/flanders/flanders-17.jpg",
-    "thumb": "/photos/flanders/thumbs/flanders-17.jpg",
-    "alt": "Flanders Fields battlefield photograph"
-  },
-  {
-    "tour": "flanders",
-    "label": "Flanders Fields",
-    "full": "/photos/flanders/flanders-18.jpg",
-    "thumb": "/photos/flanders/thumbs/flanders-18.jpg",
-    "alt": "Flanders Fields battlefield photograph"
-  },
-  {
-    "tour": "flanders",
-    "label": "Flanders Fields",
-    "full": "/photos/flanders/flanders-19.jpg",
-    "thumb": "/photos/flanders/thumbs/flanders-19.jpg",
-    "alt": "Flanders Fields battlefield photograph"
-  },
-  {
-    "tour": "flanders",
-    "label": "Flanders Fields",
-    "full": "/photos/flanders/flanders-20.jpg",
-    "thumb": "/photos/flanders/thumbs/flanders-20.jpg",
-    "alt": "Flanders Fields battlefield photograph"
-  },
-  {
-    "tour": "flanders",
-    "label": "Flanders Fields",
-    "full": "/photos/flanders/flanders-21.jpg",
-    "thumb": "/photos/flanders/thumbs/flanders-21.jpg",
-    "alt": "Flanders Fields battlefield photograph"
-  },
-  {
-    "tour": "flanders",
-    "label": "Flanders Fields",
-    "full": "/photos/flanders/flanders-22.jpg",
-    "thumb": "/photos/flanders/thumbs/flanders-22.jpg",
-    "alt": "Flanders Fields battlefield photograph"
-  },
-  {
-    "tour": "flanders",
-    "label": "Flanders Fields",
-    "full": "/photos/flanders/flanders-23.jpg",
-    "thumb": "/photos/flanders/thumbs/flanders-23.jpg",
-    "alt": "Flanders Fields battlefield photograph"
-  },
-  {
-    "tour": "flanders",
-    "label": "Flanders Fields",
-    "full": "/photos/flanders/flanders-24.jpg",
-    "thumb": "/photos/flanders/thumbs/flanders-24.jpg",
     "alt": "Flanders Fields battlefield photograph"
   },
   {
@@ -438,83 +347,6 @@
     "label": "The Somme",
     "full": "/photos/somme/somme-16.jpg",
     "thumb": "/photos/somme/thumbs/somme-16.jpg",
-    "alt": "The Somme battlefield photograph"
-  },
-  {
-    "tour": "somme",
-    "label": "The Somme",
-    "full": "/photos/somme/somme-17.jpg",
-    "thumb": "/photos/somme/thumbs/somme-17.jpg",
-    "alt": "The Somme battlefield photograph"
-  },
-  {
-    "tour": "somme",
-    "label": "The Somme",
-    "full": "/photos/somme/somme-18.jpg",
-    "thumb": "/photos/somme/thumbs/somme-18.jpg",
-    "alt": "The Somme battlefield photograph"
-  },
-  {
-    "tour": "somme",
-    "label": "The Somme",
-    "full": "/photos/somme/somme-19.jpg",
-    "thumb": "/photos/somme/thumbs/somme-19.jpg",
-    "alt": "The Somme battlefield photograph"
-  },
-  {
-    "tour": "somme",
-    "label": "The Somme",
-    "full": "/photos/somme/somme-20.jpg",
-    "thumb": "/photos/somme/thumbs/somme-20.jpg",
-    "alt": "The Somme battlefield photograph"
-  },
-  {
-    "tour": "somme",
-    "label": "The Somme",
-    "full": "/photos/somme/somme-21.jpg",
-    "thumb": "/photos/somme/thumbs/somme-21.jpg",
-    "alt": "The Somme battlefield photograph"
-  },
-  {
-    "tour": "somme",
-    "label": "The Somme",
-    "full": "/photos/somme/somme-22.jpg",
-    "thumb": "/photos/somme/thumbs/somme-22.jpg",
-    "alt": "The Somme battlefield photograph"
-  },
-  {
-    "tour": "somme",
-    "label": "The Somme",
-    "full": "/photos/somme/somme-23.jpg",
-    "thumb": "/photos/somme/thumbs/somme-23.jpg",
-    "alt": "The Somme battlefield photograph"
-  },
-  {
-    "tour": "somme",
-    "label": "The Somme",
-    "full": "/photos/somme/somme-24.jpg",
-    "thumb": "/photos/somme/thumbs/somme-24.jpg",
-    "alt": "The Somme battlefield photograph"
-  },
-  {
-    "tour": "somme",
-    "label": "The Somme",
-    "full": "/photos/somme/somme-25.jpg",
-    "thumb": "/photos/somme/thumbs/somme-25.jpg",
-    "alt": "The Somme battlefield photograph"
-  },
-  {
-    "tour": "somme",
-    "label": "The Somme",
-    "full": "/photos/somme/somme-26.jpg",
-    "thumb": "/photos/somme/thumbs/somme-26.jpg",
-    "alt": "The Somme battlefield photograph"
-  },
-  {
-    "tour": "somme",
-    "label": "The Somme",
-    "full": "/photos/somme/somme-27.jpg",
-    "thumb": "/photos/somme/thumbs/somme-27.jpg",
     "alt": "The Somme battlefield photograph"
   }
 ]

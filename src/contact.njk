@@ -65,6 +65,9 @@ permalink: "/contact.html"
             {% for tour in tours %}
             <option value="{{ tour.slug }}">{{ tour.shortName }}</option>
             {% endfor %}
+            {% for tour in specialTours %}
+            <option value="{{ tour.slug }}">{{ tour.name }} ({{ tour.dateLabel }})</option>
+            {% endfor %}
           </select>
         </div>
         <div class="form-field">

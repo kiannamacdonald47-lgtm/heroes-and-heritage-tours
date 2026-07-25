@@ -218,17 +218,94 @@ if (bookingForm) {
   }
   updateSummary();
 
-  // Validate the preferred date falls on a valid running day; if not, warn (soft, not blocking)
-  dateInput?.addEventListener("change", () => {
-    const tourKey = getSelectedTour();
-    if (!tourKey || !dateInput.value) return;
-    const selectedDay = new Date(dateInput.value + "T00:00:00").getDay();
-    const valid = RUN_DAYS[tourKey].includes(selectedDay);
-    const warning = document.getElementById("dateWarning");
-    if (warning) {
-      warning.style.display = valid ? "none" : "block";
-    }
-  });
+  // ==========================================================
+  // Interactive calendar — only lets guests click dates that
+  // actually match the selected tour's recurring schedule, so
+  // there's no way to submit a date the tour doesn't run on.
+  // ==========================================================
+  const calGrid = document.getElementById("calGrid");
+  const calMonthLabel = document.getElementById("calMonthLabel");
+  const calPrev = document.getElementById("calPrev");
+  const calNext = document.getElementById("calNext");
+
+  if (calGrid && calMonthLabel && calPrev && calNext && dateInput) {
+    const MONTH_NAMES = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    let viewYear = today.getFullYear();
+    let viewMonth = today.getMonth();
+    let selectedISO = null;
+
+    const formatDisplay = (date) => `${DAY_NAMES[date.getDay()]}, ${MONTH_NAMES[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`;
+
+    const renderCalendar = () => {
+      const tourKey = getSelectedTour();
+      const runDays = RUN_DAYS[tourKey] || [];
+      calMonthLabel.textContent = `${MONTH_NAMES[viewMonth]} ${viewYear}`;
+
+      const firstOfMonth = new Date(viewYear, viewMonth, 1);
+      const startOffset = firstOfMonth.getDay();
+      const daysInMonth = new Date(viewYear, viewMonth + 1, 0).getDate();
+
+      calGrid.innerHTML = "";
+
+      for (let i = 0; i < startOffset; i++) {
+        const empty = document.createElement("span");
+        empty.className = "booking-calendar-day booking-calendar-day--empty";
+        calGrid.appendChild(empty);
+      }
+
+      for (let d = 1; d <= daysInMonth; d++) {
+        const date = new Date(viewYear, viewMonth, d);
+        const iso = `${viewYear}-${String(viewMonth + 1).padStart(2, "0")}-${String(d).padStart(2, "0")}`;
+        const isPast = date < today;
+        const available = runDays.includes(date.getDay()) && !isPast;
+
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.textContent = String(d);
+        btn.className = "booking-calendar-day " + (available ? "booking-calendar-day--available" : "booking-calendar-day--unavailable");
+        if (!available) btn.disabled = true;
+        if (iso === selectedISO) btn.classList.add("booking-calendar-day--selected");
+        btn.setAttribute("aria-label", formatDisplay(date) + (available ? "" : " — not available"));
+
+        if (available) {
+          btn.addEventListener("click", () => {
+            selectedISO = iso;
+            dateInput.value = formatDisplay(date);
+            dateInput.dataset.iso = iso;
+            renderCalendar();
+          });
+        }
+
+        calGrid.appendChild(btn);
+      }
+
+      calPrev.disabled = viewYear === today.getFullYear() && viewMonth === today.getMonth();
+    };
+
+    calPrev.addEventListener("click", () => {
+      viewMonth -= 1;
+      if (viewMonth < 0) { viewMonth = 11; viewYear -= 1; }
+      renderCalendar();
+    });
+    calNext.addEventListener("click", () => {
+      viewMonth += 1;
+      if (viewMonth > 11) { viewMonth = 0; viewYear += 1; }
+      renderCalendar();
+    });
+
+    // Changing tour clears the selected date (a different tour may run
+    // on different days) and re-renders against the new schedule.
+    tourRadios.forEach((radio) => radio.addEventListener("change", () => {
+      selectedISO = null;
+      dateInput.value = "";
+      renderCalendar();
+    }));
+
+    renderCalendar();
+  }
 
   // Step navigation (visual only — single-page form, steps are sections)
   const steps = bookingForm.querySelectorAll("[data-step]");
@@ -302,6 +379,14 @@ if (bookingForm) {
 // ============================================================
 const contactForm = document.getElementById("contactForm");
 if (contactForm) {
+  // Pre-select tour from ?tour=slug when arriving from a tour detail page
+  const contactTourSelect = document.getElementById("tourInterest");
+  const preselectTour = new URLSearchParams(window.location.search).get("tour");
+  if (contactTourSelect && preselectTour) {
+    const match = Array.from(contactTourSelect.options).find((o) => o.value === preselectTour);
+    if (match) contactTourSelect.value = preselectTour;
+  }
+
   contactForm.addEventListener("submit", (e) => {
     e.preventDefault();
     const status = document.getElementById("formStatus");
