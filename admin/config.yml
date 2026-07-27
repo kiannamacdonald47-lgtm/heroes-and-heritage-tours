@@ -29,11 +29,17 @@ collections:
         label: "Homepage Content"
         file: "src/_data/home.json"
         fields:
-          - { label: "Hero Background Image", name: "heroImage", widget: "image" }
-          - { label: "Hero Image Alt Text", name: "heroAlt", widget: "string" }
+          - label: "Hero Slideshow Images"
+            name: "heroSlides"
+            widget: "list"
+            summary: "{{fields.alt}}"
+            fields:
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Alt Text", name: "alt", widget: "string" }
           - { label: "Hero Eyebrow Text", name: "heroEyebrow", widget: "string" }
           - { label: "Hero Title", name: "heroTitle", widget: "string" }
           - { label: "Hero Subtitle", name: "heroLede", widget: "text" }
+          - { label: "Hero Trust Line (small text under buttons)", name: "heroTrustLine", widget: "string" }
           - label: "Trust Strip (4 stats)"
             name: "trustStrip"
             widget: "list"
@@ -47,10 +53,42 @@ collections:
             field: { label: "Paragraph", name: "paragraph", widget: "text" }
           - { label: "Our Story Image", name: "introImage", widget: "image" }
           - { label: "Our Story Image Alt Text", name: "introImageAlt", widget: "string" }
+          - label: "Choose Your Battlefield Journey (4 panels)"
+            name: "journeyPanels"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Image Alt Text", name: "imageAlt", widget: "string" }
+              - { label: "Link Text", name: "linkText", widget: "string" }
+              - { label: "Link (page URL)", name: "link", widget: "string" }
+          - label: "Why Tour With Us (icon list)"
+            name: "whyUs"
+            widget: "list"
+            summary: "{{fields.heading}}"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+              - { label: "Icon", name: "icon", widget: "select", options: ["medal", "people", "quote", "map", "family", "compass"] }
           - { label: "Family Research Teaser Image", name: "familyTeaserImage", widget: "image" }
           - { label: "Family Research Teaser Image Alt Text", name: "familyTeaserAlt", widget: "string" }
           - { label: "Family Research Teaser Paragraph", name: "familyTeaserParagraph", widget: "text" }
           - { label: "Family Research Teaser Quote", name: "familyTeaserQuote", widget: "text" }
+          - { label: "Remembrance Section Heading", name: "remembranceHeading", widget: "string" }
+          - label: "Remembrance Section Paragraphs"
+            name: "remembranceParagraphs"
+            widget: "list"
+            field: { label: "Paragraph", name: "paragraph", widget: "text" }
+          - { label: "Remembrance Section Image", name: "remembranceImage", widget: "image" }
+          - { label: "Remembrance Section Image Alt Text", name: "remembranceImageAlt", widget: "string" }
+          - { label: "Email Signup Heading", name: "emailCaptureHeading", widget: "string" }
+          - { label: "Email Signup Text", name: "emailCaptureText", widget: "text" }
+          - { label: "Final CTA Heading", name: "finalCtaHeading", widget: "string" }
+          - { label: "Final CTA Text", name: "finalCtaText", widget: "text" }
+          - { label: "Final CTA Background Image", name: "finalCtaImage", widget: "image" }
+          - { label: "Final CTA Image Alt Text", name: "finalCtaImageAlt", widget: "string" }
 
   - name: "tours"
     label: "Tours"
@@ -62,7 +100,7 @@ collections:
           - label: "Tours"
             name: "tours"
             widget: "list"
-            summary: "{{fields.shortName}} — ${{fields.price}} CAD"
+            summary: "{{fields.shortName}} | ${{fields.price}} CAD"
             fields:
               - { label: "URL Slug (no spaces, e.g. vimy-to-victory)", name: "slug", widget: "string" }
               - { label: "Short Name (for cards & nav)", name: "shortName", widget: "string" }
@@ -86,7 +124,7 @@ collections:
                   - { label: "Saturday", value: 6 }
               - { label: "Duration (e.g. 8–9 hours)", name: "duration", widget: "string" }
               - { label: "Price (CAD, per person)", name: "price", widget: "number", value_type: "int" }
-              - { label: "Single Supplement (CAD, multi-day tours only — leave blank if not applicable)", name: "singleSupplement", widget: "number", value_type: "int", required: false }
+              - { label: "Single Supplement (CAD, multi-day tours only; leave blank if not applicable)", name: "singleSupplement", widget: "number", value_type: "int", required: false }
               - { label: "This tour includes a Normandy leg (arranged with a local partner guide)", name: "normandy", widget: "boolean", default: false, required: false }
               - { label: "Hero Image", name: "heroImage", widget: "image" }
               - { label: "Hero Image Alt Text", name: "heroAlt", widget: "string" }
@@ -102,7 +140,7 @@ collections:
                 widget: "list"
                 summary: "{{fields.heading}}"
                 fields:
-                  - { label: "Heading (e.g. Morning, or Day 1 — In Flanders Fields)", name: "heading", widget: "string" }
+                  - { label: "Heading (e.g. Morning, or Day 1: In Flanders Fields)", name: "heading", widget: "string" }
                   - { label: "Note (e.g. lunch location, or a preface paragraph for multi-day tours)", name: "note", widget: "text", required: false }
                   - { label: "Show note as a paragraph above the heading (multi-day tours)?", name: "isPrefaceNote", widget: "boolean", default: false, required: false }
                   - label: "Highlights"
@@ -202,7 +240,7 @@ collections:
             field: { label: "Paragraph", name: "paragraph", widget: "text" }
           - { label: "Side Image", name: "sideImage", widget: "image" }
           - { label: "Side Image Alt Text", name: "sideImageAlt", widget: "string" }
-          - label: "How It Works — Steps"
+          - label: "How It Works: Steps"
             name: "steps"
             widget: "list"
             summary: "{{fields.title}}"
@@ -236,7 +274,7 @@ collections:
           - label: "Special Tours"
             name: "specialTours"
             widget: "list"
-            summary: "{{fields.name}} — {{fields.dateLabel}}"
+            summary: "{{fields.name}} | {{fields.dateLabel}}"
             fields:
               - { label: "URL Slug (no spaces)", name: "slug", widget: "string" }
               - { label: "Name", name: "name", widget: "string" }
@@ -256,7 +294,7 @@ collections:
           - label: "Photos"
             name: "gallery"
             widget: "list"
-            summary: "{{fields.label}} — {{fields.alt}}"
+            summary: "{{fields.label}} | {{fields.alt}}"
             fields:
               - label: "Location Tag"
                 name: "tour"

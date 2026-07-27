@@ -1,0 +1,53 @@
+---
+layout: base.njk
+title: "Special Tours | Heroes and Heritage Tours"
+description: "Commemorative departures, including our Vimy 110 and 49th Battalion Pilgrimage tours, planned for 2027."
+activeNav: special-tours
+permalink: "/special-tours.html"
+---
+
+<header class="hero hero--compact">
+  <div class="hero-media">
+    <img src="/photos/vimy/vimy-cover.jpg" alt="A preserved sandbagged trench at Vimy Ridge" width="1800" height="1200">
+  </div>
+  <div class="container">
+    <div class="hero-content">
+      <span class="eyebrow">Special tours</span>
+      <h1>Commemorative departures on the horizon.</h1>
+      <p class="lede">Beyond our regular Western Front and Normandy tours, we run occasional commemorative departures tied to significant anniversaries. Two are in the works for 2027.</p>
+    </div>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container">
+    <div class="tours-grid" data-reveal>
+      {% for tour in specialTours %}
+      <article class="tour-card">
+        <a href="/special-tours/{{ tour.slug }}.html" class="tour-card-media">
+          <img src="{{ tour.heroImage }}" alt="{{ tour.heroAlt }}" width="800" height="600">
+          <span class="tour-card-badge tour-card-badge--combo">Coming Soon</span>
+        </a>
+        <div class="tour-card-body">
+          <h3><a href="/special-tours/{{ tour.slug }}.html">{{ tour.name }}</a></h3>
+          <div class="tour-card-meta"><span>{{ tour.dateLabel }}</span></div>
+          <p class="tour-card-desc">{{ tour.summary }}</p>
+          <div class="tour-card-footer">
+            <a href="/special-tours/{{ tour.slug }}.html" class="btn btn-ghost btn-sm">Learn more</a>
+          </div>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container">
+    <div class="cta-band" data-reveal>
+      <h2>Looking for a regular departure instead?</h2>
+      <p class="lede">Our Western Front day and multi-day tours run year-round from Arras.</p>
+      <a href="/tours.html" class="btn btn-primary btn-lg">See Western Front Tours</a>
+    </div>
+  </div>
+</section>

@@ -7,7 +7,7 @@ pagination:
 permalink: "/tours/{{ tour.slug }}.html"
 activeNav: tours
 eleventyComputed:
-  title: "{{ tour.name }} — Heroes and Heritage Tours"
+  title: "{{ tour.name }} | Heroes and Heritage Tours"
   description: "{{ tour.cardDesc }}"
 ---
 {% from "partials/macros.njk" import tourCard %}
@@ -68,7 +68,7 @@ eleventyComputed:
           <p class="body-text" style="font-size: 14px; color: var(--foreground-faint);">{{ tour.footnote }}</p>
 
           {% if tour.normandy %}
-          <div class="itinerary-note" style="margin-top: var(--space-3);">This tour's Normandy leg is arranged together with a local partner guide. Full online booking for this tour is coming soon — for now, please enquire and our team will confirm availability and full trip details directly.</div>
+          <div class="itinerary-note" style="margin-top: var(--space-3);">This tour's Normandy leg is arranged together with a local partner guide. Full online booking for this tour is coming soon; for now, please enquire and our team will confirm availability and full trip details directly.</div>
           {% endif %}
         </div>
 

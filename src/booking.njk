@@ -1,6 +1,6 @@
 ---
 layout: base.njk
-title: "Book a Tour — Heroes and Heritage Tours"
+title: "Book a Tour | Heroes and Heritage Tours"
 description: "Book your WWI battlefield tour with Heroes and Heritage Tours. Choose your tour, pick a date, and reserve your place with a 30% deposit."
 activeNav: booking
 permalink: "/booking.html"
@@ -28,7 +28,7 @@ permalink: "/booking.html"
     <div class="hero-content">
       <span class="eyebrow">Book your tour</span>
       <h1>Reserve your place on the battlefields.</h1>
-      <p class="lede">Four short steps. A 30% deposit secures your booking — the balance is due 21 days before your tour.</p>
+      <p class="lede">Four short steps. A 30% deposit secures your booking; the balance is due 21 days before your tour.</p>
     </div>
   </div>
 </header>
@@ -61,7 +61,7 @@ permalink: "/booking.html"
                 </label>
                 {% endif %}{% endfor %}
               </div>
-              <p class="required-note">Not sure which to choose? <a href="/tours.html" style="color: var(--red); font-weight: 600;">Compare all tours</a> or <a href="/contact.html" style="color: var(--red); font-weight: 600;">ask us first</a>. Booking the Western Front &amp; Normandy 5-Day Tour? <a href="/contact.html?tour=western-front-normandy-5day" style="color: var(--red); font-weight: 600;">Enquire here instead</a> — its Normandy leg is arranged directly with our team.</p>
+              <p class="required-note">Not sure which to choose? <a href="/tours.html" style="color: var(--red); font-weight: 600;">Compare all tours</a> or <a href="/contact.html" style="color: var(--red); font-weight: 600;">ask us first</a>. Booking the Western Front &amp; Normandy 5-Day Tour? <a href="/contact.html?tour=western-front-normandy-5day" style="color: var(--red); font-weight: 600;">Enquire here instead</a>, since its Normandy leg is arranged directly with our team.</p>
             </div>
             <div class="hero-actions" style="margin-top: var(--space-4); justify-content: flex-end;">
               <button type="button" class="btn btn-primary btn-lg" data-step-next>Continue to Trip Details</button>
@@ -107,7 +107,7 @@ permalink: "/booking.html"
               </div>
               <div class="form-field">
                 <label for="familyResearch">Tracing a family member? Tell us who (optional)</label>
-                <textarea id="familyResearch" name="familyResearch" placeholder="Name, regiment, or anything you know — Joe will research the rest."></textarea>
+                <textarea id="familyResearch" name="familyResearch" placeholder="Name, regiment, or anything you know: Joe will research the rest."></textarea>
                 <span class="hint">See <a href="/family-research.html" style="color: var(--red); font-weight: 600;">Trace Your Family's Footsteps</a> for how this works.</span>
               </div>
             </div>
@@ -178,18 +178,18 @@ permalink: "/booking.html"
               <button type="button" class="btn btn-ghost" data-step-back>Back</button>
               <button type="submit" class="btn btn-primary btn-lg">Confirm Booking Request</button>
             </div>
-            <p class="form-hint">This form isn't connected to a payment processor yet — see <code>js/main.js</code> for where to wire up Stripe and a form backend before launch.</p>
+            <p class="form-hint">This form isn't connected to a payment processor yet. See <code>js/main.js</code> for where to wire up Stripe and a form backend before launch.</p>
             <p class="form-status" id="bookingStatus" role="status"></p>
           </div>
         </div>
 
         <aside class="booking-summary">
           <h3>Your booking summary</h3>
-          <div class="booking-summary-row"><span>Tour</span><strong id="summaryTour">—</strong></div>
+          <div class="booking-summary-row"><span>Tour</span><strong id="summaryTour">–</strong></div>
           <div class="booking-summary-row"><span>Guests</span><strong id="summaryGuests">1</strong></div>
-          <div class="booking-summary-row"><span>Price per person</span><strong id="summaryPerPerson">—</strong></div>
-          <div class="booking-summary-row"><span>Subtotal</span><strong id="summarySubtotal">—</strong></div>
-          <div class="booking-summary-total"><span>Deposit due now (30%)</span><span id="summaryDeposit">—</span></div>
+          <div class="booking-summary-row"><span>Price per person</span><strong id="summaryPerPerson">–</strong></div>
+          <div class="booking-summary-row"><span>Subtotal</span><strong id="summarySubtotal">–</strong></div>
+          <div class="booking-summary-total"><span>Deposit due now (30%)</span><span id="summaryDeposit">–</span></div>
           <p class="body-text" style="font-size: 13px;">Remaining balance is due 21 days before your tour. Accommodation and meals are not included on multi-day tours.</p>
         </aside>
       </div>

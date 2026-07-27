@@ -7,6 +7,47 @@ document.querySelectorAll("[data-year]").forEach((el) => {
   el.textContent = new Date().getFullYear();
 });
 
+// Homepage hero carousel — auto-advances and crossfades; dots and
+// prefers-reduced-motion both just stop the timer, since a static
+// first slide is always a complete, valid hero on its own.
+const heroCarousel = document.getElementById("heroCarousel");
+if (heroCarousel) {
+  const slides = Array.from(heroCarousel.querySelectorAll("[data-carousel-slide]"));
+  const dots = Array.from(heroCarousel.querySelectorAll("[data-carousel-dot]"));
+  let current = 0;
+  let timer = null;
+
+  const showSlide = (index) => {
+    current = (index + slides.length) % slides.length;
+    slides.forEach((slide, i) => slide.classList.toggle("is-active", i === current));
+    dots.forEach((dot, i) => {
+      dot.classList.toggle("is-active", i === current);
+      dot.setAttribute("aria-pressed", String(i === current));
+    });
+  };
+
+  const startAutoplay = () => {
+    stopAutoplay();
+    timer = window.setInterval(() => showSlide(current + 1), 6000);
+  };
+
+  const stopAutoplay = () => {
+    if (timer) window.clearInterval(timer);
+    timer = null;
+  };
+
+  if (slides.length > 1) {
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    dots.forEach((dot, i) => {
+      dot.addEventListener("click", () => {
+        showSlide(i);
+        if (!prefersReducedMotion) startAutoplay();
+      });
+    });
+    if (!prefersReducedMotion) startAutoplay();
+  }
+}
+
 // Nav scroll state
 const nav = document.getElementById("nav");
 if (nav) {
@@ -35,6 +76,48 @@ if (navToggle && mobileMenu) {
     });
   });
 }
+
+// Nav "Tours" dropdown — hover works on desktop via CSS; this adds a
+// tap/click toggle so touch devices (no hover) can open it too.
+document.querySelectorAll(".nav-dropdown").forEach((dropdown) => {
+  const trigger = dropdown.querySelector(".nav-dropdown-trigger");
+  if (!trigger) return;
+
+  const closeDropdown = () => {
+    dropdown.dataset.open = "false";
+    trigger.setAttribute("aria-expanded", "false");
+  };
+
+  trigger.addEventListener("click", (e) => {
+    e.stopPropagation();
+    const isOpen = dropdown.dataset.open === "true";
+    document.querySelectorAll(".nav-dropdown").forEach((d) => (d.dataset.open = "false"));
+    dropdown.dataset.open = isOpen ? "false" : "true";
+    trigger.setAttribute("aria-expanded", String(!isOpen));
+  });
+
+  dropdown.querySelectorAll(".nav-dropdown-menu a").forEach((link) => {
+    link.addEventListener("click", closeDropdown);
+  });
+});
+
+document.addEventListener("click", () => {
+  document.querySelectorAll(".nav-dropdown").forEach((d) => {
+    d.dataset.open = "false";
+    const trigger = d.querySelector(".nav-dropdown-trigger");
+    if (trigger) trigger.setAttribute("aria-expanded", "false");
+  });
+});
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    document.querySelectorAll(".nav-dropdown").forEach((d) => {
+      d.dataset.open = "false";
+      const trigger = d.querySelector(".nav-dropdown-trigger");
+      if (trigger) trigger.setAttribute("aria-expanded", "false");
+    });
+  }
+});
 
 // Scroll reveal (progressive enhancement — see CSS: content is visible
 // without JS or with prefers-reduced-motion)
@@ -159,8 +242,8 @@ if (bookingForm) {
     { slug: "vimy-to-victory", name: "Vimy to Victory Day Tour", price: 320, runDays: [2, 5, 0] },
     { slug: "in-flanders-fields", name: "In Flanders Fields Tour", price: 420, runDays: [1, 4] },
     { slug: "somme-front", name: "The Somme Front Day Tour", price: 320, runDays: [3, 6] },
-    { slug: "signature-2-day", name: "The Signature — 2 Day Canadian Tour", price: 740, runDays: [1, 4] },
-    { slug: "ultimate-3-day", name: "The Ultimate — 3 Day Canadian Tour", price: 1380, runDays: [1, 4] },
+    { slug: "signature-2-day", name: "The Signature: 2 Day Canadian Tour", price: 740, runDays: [1, 4] },
+    { slug: "ultimate-3-day", name: "The Ultimate: 3 Day Canadian Tour", price: 1380, runDays: [1, 4] },
   ];
 
   const TOURS = {};
@@ -203,7 +286,7 @@ if (bookingForm) {
 
     if (dateHint) {
       const days = RUN_DAYS[tourKey].map((d) => DAY_NAMES[d]).join(", ");
-      dateHint.textContent = `${tour.name} departs Arras every ${days}. Other days available on request — we'll confirm your exact date by email.`;
+      dateHint.textContent = `${tour.name} departs Arras every ${days}. Other days available on request; we'll confirm your exact date by email.`;
     }
   };
 
@@ -268,7 +351,7 @@ if (bookingForm) {
         btn.className = "booking-calendar-day " + (available ? "booking-calendar-day--available" : "booking-calendar-day--unavailable");
         if (!available) btn.disabled = true;
         if (iso === selectedISO) btn.classList.add("booking-calendar-day--selected");
-        btn.setAttribute("aria-label", formatDisplay(date) + (available ? "" : " — not available"));
+        btn.setAttribute("aria-label", formatDisplay(date) + (available ? "" : ", not available"));
 
         if (available) {
           btn.addEventListener("click", () => {
@@ -366,7 +449,7 @@ if (bookingForm) {
     // 2) On success, redirect to a Stripe Checkout / Payment Link for the
     //    deposit shown in the summary panel, pre-filled with the amount.
     if (status) {
-      status.textContent = "This is a placeholder confirmation — the booking form isn't connected to a payment processor yet. See js/main.js for where to add Stripe + your form backend.";
+      status.textContent = "This is a placeholder confirmation. The booking form isn't connected to a payment processor yet. See js/main.js for where to add Stripe + your form backend.";
       status.dataset.visible = "true";
     }
     steps.forEach((step) => (step.style.display = "none"));
@@ -397,9 +480,31 @@ if (contactForm) {
     // TODO: replace this block with a real submit — e.g.
     // fetch("https://formspree.io/f/YOUR_ID", { method: "POST", body: new FormData(contactForm), headers: { Accept: "application/json" } })
     if (status) {
-      status.textContent = "Thank you — this is a placeholder confirmation. Connect a form backend in js/main.js to actually receive messages.";
+      status.textContent = "Thank you. This is a placeholder confirmation. Connect a form backend in js/main.js to actually receive messages.";
       status.dataset.visible = "true";
     }
     contactForm.reset();
+  });
+}
+
+// ============================================================
+// Homepage email capture form (placeholder, no backend wired yet)
+// ============================================================
+const emailCaptureForm = document.getElementById("emailCaptureForm");
+if (emailCaptureForm) {
+  emailCaptureForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const status = document.getElementById("signupStatus");
+    if (!emailCaptureForm.checkValidity()) {
+      emailCaptureForm.reportValidity();
+      return;
+    }
+    // TODO: replace this block with a real submit, e.g.
+    // fetch("https://formspree.io/f/YOUR_ID", { method: "POST", body: new FormData(emailCaptureForm), headers: { Accept: "application/json" } })
+    if (status) {
+      status.textContent = "Thank you. This is a placeholder confirmation. Connect a form backend in js/main.js to actually receive signups.";
+      status.dataset.visible = "true";
+    }
+    emailCaptureForm.reset();
   });
 }

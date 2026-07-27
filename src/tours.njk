@@ -1,7 +1,7 @@
 ---
 layout: base.njk
-title: "Our Tours — Heroes and Heritage Tours"
-description: "Vimy to Victory, In Flanders Fields, The Bloody Somme, our Signature and Ultimate multi-day Canadian tours, and our 5-Day Western Front & Normandy tour."
+title: "Western Front Tours | Heroes and Heritage Tours"
+description: "Vimy to Victory, In Flanders Fields, The Bloody Somme, and our Signature and Ultimate multi-day Canadian tours of the Western Front."
 activeNav: tours
 permalink: "/tours.html"
 ---
@@ -13,9 +13,9 @@ permalink: "/tours.html"
   </div>
   <div class="container">
     <div class="hero-content">
-      <span class="eyebrow">Our tours</span>
+      <span class="eyebrow">Western Front tours</span>
       <h1>Many ways to walk in their footsteps.</h1>
-      <p class="lede">Every day tour departs from Arras and can be booked alone, or combined into a multi-day journey across the full Canadian story on the Western Front — and into Normandy. All tours run in small groups of 8 guests or fewer, led personally by our guide.</p>
+      <p class="lede">Every day tour departs from Arras and can be booked alone, or combined into a multi-day journey across the full Canadian story on the Western Front. All tours run in small groups of 8 guests or fewer, led personally by our guide.</p>
     </div>
   </div>
 </header>
@@ -38,7 +38,7 @@ permalink: "/tours.html"
     <div class="section-head" data-reveal>
       <span class="eyebrow">Multi-day tours</span>
       <h2>The complete Canadian story.</h2>
-      <p class="lede">Our two most popular day tours, or all three, combined into one seamless journey — with accommodation recommendations in the old town of Arras.</p>
+      <p class="lede">Our two most popular day tours, or all three, combined into one seamless journey, with accommodation recommendations in the old town of Arras.</p>
     </div>
 
     <div class="tours-grid" data-reveal>
@@ -53,7 +53,7 @@ permalink: "/tours.html"
         <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 10.5l4 4 10-10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Pick-up and drop-off at Arras Train Station or your Arras accommodation</li>
         <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 10.5l4 4 10-10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>All entry fees</li>
       </ul>
-      <p class="body-text" style="font-size: 14px;">Prices are quoted in CAD. Itineraries may be varied by consensus of the guests travelling on the day. Customised and private tours are available on request — <a href="/contact.html" style="color: var(--red); font-weight: 600;">get in touch</a>.</p>
+      <p class="body-text" style="font-size: 14px;">Prices are quoted in CAD. Itineraries may be varied by consensus of the guests travelling on the day. Customised and private tours are available on request; <a href="/contact.html" style="color: var(--red); font-weight: 600;">get in touch</a>.</p>
     </div>
   </div>
 </section>
@@ -61,33 +61,41 @@ permalink: "/tours.html"
 <section class="section">
   <div class="container">
     <div class="section-head" data-reveal>
-      <span class="eyebrow">Special tours</span>
-      <h2>Commemorative departures on the horizon.</h2>
-      <p class="lede">Two special tours are in the works for 2027 — full details are being finalized.</p>
+      <span class="eyebrow">Looking for something else?</span>
+      <h2>Also visiting Normandy, or after a commemorative departure?</h2>
     </div>
 
     <div class="tours-grid" data-reveal>
-      {% for tour in specialTours %}
       <article class="tour-card">
-        <a href="/special-tours/{{ tour.slug }}.html" class="tour-card-media">
-          <img src="{{ tour.heroImage }}" alt="{{ tour.heroAlt }}" width="800" height="600">
-          <span class="tour-card-badge tour-card-badge--combo">Coming Soon</span>
+        <a href="/normandy.html" class="tour-card-media">
+          <img src="/photos/normandy5day/normandy5day-cover.jpg" alt="Aerial view of Juno Beach, Normandy" width="800" height="600">
         </a>
         <div class="tour-card-body">
-          <h3><a href="/special-tours/{{ tour.slug }}.html">{{ tour.name }}</a></h3>
-          <div class="tour-card-meta"><span>{{ tour.dateLabel }}</span></div>
-          <p class="tour-card-desc">{{ tour.summary }}</p>
+          <h3><a href="/normandy.html">Normandy Tours</a></h3>
+          <p class="tour-card-desc">Normandy is included in our 5-Day Western Front &amp; Normandy tour, with standalone Normandy day tours coming soon.</p>
           <div class="tour-card-footer">
-            <a href="/special-tours/{{ tour.slug }}.html" class="btn btn-ghost btn-sm">Learn more</a>
+            <a href="/normandy.html" class="btn btn-ghost btn-sm">Learn more</a>
           </div>
         </div>
       </article>
-      {% endfor %}
+      <article class="tour-card">
+        <a href="/special-tours.html" class="tour-card-media">
+          <img src="/photos/vimy/vimy-cover.jpg" alt="A preserved sandbagged trench at Vimy Ridge" width="800" height="600">
+          <span class="tour-card-badge tour-card-badge--combo">Coming Soon</span>
+        </a>
+        <div class="tour-card-body">
+          <h3><a href="/special-tours.html">Special Tours</a></h3>
+          <p class="tour-card-desc">Commemorative departures, including Vimy 110 and the 49th Battalion Pilgrimage, planned for 2027.</p>
+          <div class="tour-card-footer">
+            <a href="/special-tours.html" class="btn btn-ghost btn-sm">Learn more</a>
+          </div>
+        </div>
+      </article>
     </div>
   </div>
 </section>
 
-<section class="section">
+<section class="section section--alt">
   <div class="container">
     <div class="cta-band" data-reveal>
       <h2>Looking for a more personal journey?</h2>
