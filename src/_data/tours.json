@@ -45,10 +45,10 @@
     ],
     "footnote": "The above itinerary may be varied based on the wishes and consensus of the guests travelling on any particular day. This tour is also included within The Signature (2 Day) and The Ultimate (3 Day) Canadian Tours.",
     "galleryImages": [
-      { "src": "/photos/vimy/thumbs/vimy-cover.jpg", "alt": "Vimy Memorial at night" },
-      { "src": "/photos/vimy/thumbs/vimy-05.jpg", "alt": "Preserved trenches at Vimy Ridge" },
-      { "src": "/photos/vimy/thumbs/vimy-09.jpg", "alt": "Vimy Ridge battlefield" },
-      { "src": "/photos/vimy/thumbs/vimy-cover-alt.jpg", "alt": "The Canadian National Vimy Memorial" }
+      { "src": "/photos/vimy/thumbs/vimy-20.jpg", "alt": "Archival photograph of Canadian soldiers advancing under bombardment" },
+      { "src": "/photos/vimy/thumbs/vimy-21.jpg", "alt": "Underground tunnel beneath Vimy Ridge" },
+      { "src": "/photos/vimy/thumbs/vimy-22.jpg", "alt": "The Canadian National Vimy Memorial viewed from below" },
+      { "src": "/photos/vimy/thumbs/vimy-23.jpg", "alt": "A guest visiting a Canadian war grave at Vimy" }
     ],
     "runDays": [2, 5, 0]
   },
@@ -107,10 +107,10 @@
     ],
     "footnote": "Tour itineraries may be adjusted to accommodate weather, timing, or the interests of guests. This tour is also included within The Signature (2 Day) and The Ultimate (3 Day) Canadian Tours.",
     "galleryImages": [
-      { "src": "/photos/flanders/thumbs/flanders-cover.jpg", "alt": "Menin Gate at night" },
-      { "src": "/photos/flanders/thumbs/flanders-11.jpg", "alt": "A Canadian memorial in the fields of Flanders" },
-      { "src": "/photos/flanders/thumbs/flanders-10.jpg", "alt": "Guests examining preserved battlefield relics on tour" },
-      { "src": "/photos/flanders/thumbs/flanders-13.jpg", "alt": "A guest paying respects at a Commonwealth war cemetery in Flanders" }
+      { "src": "/photos/flanders/thumbs/flanders-16.jpg", "alt": "Archival photograph of soldiers crossing the flooded Passchendaele battlefield" },
+      { "src": "/photos/flanders/thumbs/flanders-17.jpg", "alt": "A preserved trench and shelter in the woods of Flanders" },
+      { "src": "/photos/flanders/thumbs/flanders-18.jpg", "alt": "A guest paying respects at Tyne Cot Commonwealth War Cemetery" },
+      { "src": "/photos/flanders/thumbs/flanders-19.jpg", "alt": "Guests examining battlefield relics found in Flanders" }
     ],
     "runDays": [1, 4]
   },
@@ -162,10 +162,10 @@
     ],
     "footnote": "The above itinerary may be varied based on the wishes and consensus of the guests travelling on any particular day. This tour is also included within The Ultimate (3 Day) Canadian Tour.",
     "galleryImages": [
-      { "src": "/photos/somme/thumbs/somme-cover.jpg", "alt": "Beaumont-Hamel caribou memorial" },
-      { "src": "/photos/somme/thumbs/somme-06.jpg", "alt": "Courcelette battlefield" },
-      { "src": "/photos/somme/thumbs/somme-12.jpg", "alt": "The Thiepval Memorial to the Missing" },
-      { "src": "/photos/somme/thumbs/somme-16.jpg", "alt": "A guest paying respects at a Somme war cemetery" }
+      { "src": "/photos/somme/thumbs/somme-17.jpg", "alt": "Beaumont-Hamel Newfoundland Memorial trenches and craters" },
+      { "src": "/photos/somme/thumbs/somme-18.jpg", "alt": "A guest in a preserved trench dugout museum" },
+      { "src": "/photos/somme/thumbs/somme-19.jpg", "alt": "Aerial view of a Somme battlefield mine crater" },
+      { "src": "/photos/somme/thumbs/somme-20.jpg", "alt": "A commemorative ceremony at a Somme war cemetery" }
     ],
     "runDays": [3, 6]
   },
