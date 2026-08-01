@@ -1,10 +1,10 @@
 {
   "heroSlides": [
-    { "image": "/photos/vimy/vimy-cover.jpg", "alt": "A preserved sandbagged trench at Vimy Ridge" },
+    { "image": "/photos/vimy/vimy-22.jpg", "alt": "The Canadian National Vimy Memorial viewed from below" },
     { "image": "/photos/flanders/flanders-cover.jpg", "alt": "The Menin Gate Memorial illuminated at night in Ypres" },
     { "image": "/photos/somme/somme-cover.jpg", "alt": "The Beaumont-Hamel Newfoundland Memorial caribou statue" },
     { "image": "/photos/normandy5day/normandy5day-cover.jpg", "alt": "Aerial view of Juno Beach, Normandy" },
-    { "image": "/photos/vimy/vimy-22.jpg", "alt": "The Canadian National Vimy Memorial viewed from below" }
+    { "image": "/photos/vimy/vimy-cover.jpg", "alt": "A preserved sandbagged trench at Vimy Ridge" }
   ],
   "heroEyebrow": "Based in Arras, France, 45 minutes from Paris",
   "heroTitle": "Walk in the Footsteps of Canada's Heroes.",
@@ -45,7 +45,7 @@
       "title": "Multi-Day Experiences",
       "text": "Complete journeys combining the Western Front and Normandy.",
       "image": "/photos/ultimate/ultimate-cover.jpg",
-      "imageAlt": "Canadian soldiers visiting the Beaumont-Hamel caribou memorial",
+      "imageAlt": "The Canadian National Vimy Memorial illuminated at night",
       "linkText": "Explore Multi-Day Tours",
       "link": "/tours.html#tours"
     },

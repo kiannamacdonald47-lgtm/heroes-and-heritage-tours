@@ -181,9 +181,9 @@
     "duration": "2 days",
     "price": 770,
     "heroImage": "/photos/signature/signature-cover.jpg",
-    "heroAlt": "Preserved trench line on the Western Front",
+    "heroAlt": "The Menin Gate Memorial illuminated at night in Ypres",
     "cardImage": "/photos/signature/signature-cover.jpg",
-    "cardAlt": "Preserved trench line on the Western Front",
+    "cardAlt": "The Menin Gate Memorial illuminated at night in Ypres",
     "cardDesc": "Includes In Flanders Fields + Vimy to Victory. The top-to-bottom of Canada's action on the Western Front.",
     "intro": [
       "The Signature: 2 Day Canadian Tour combines our two most popular day tours to cover the top-to-bottom of Canada's action on the Western Front.",
@@ -215,10 +215,10 @@
     ],
     "footnote": "The above itinerary may be varied based on the wishes and consensus of the guests travelling on any particular day. Customised tours are available for this area on request.",
     "galleryImages": [
-      { "src": "/photos/flanders/thumbs/flanders-cover.jpg", "alt": "Menin Gate at night" },
-      { "src": "/photos/vimy/thumbs/vimy-cover.jpg", "alt": "Vimy Memorial at night" },
-      { "src": "/photos/signature/thumbs/signature-cover.jpg", "alt": "Preserved trench line" },
-      { "src": "/photos/signature/thumbs/signature-04.jpg", "alt": "Archival aerial photograph of the Western Front" }
+      { "src": "/photos/signature/thumbs/signature-01.jpg", "alt": "A preserved wood-lined trench in the Ypres Salient" },
+      { "src": "/photos/signature/thumbs/signature-02.jpg", "alt": "Wild poppies growing among rusted barbed wire on the former battlefield" },
+      { "src": "/photos/signature/thumbs/signature-03.jpg", "alt": "The Canadian National Vimy Memorial's twin pylons against a blue sky" },
+      { "src": "/photos/signature/thumbs/signature-04.jpg", "alt": "A guest reading the names of the missing carved into the Vimy Memorial wall" }
     ],
     "runDays": [1, 4]
   },
@@ -234,9 +234,9 @@
     "duration": "3 days",
     "price": 1090,
     "heroImage": "/photos/ultimate/ultimate-cover.jpg",
-    "heroAlt": "Canadian soldiers visiting the Beaumont-Hamel caribou memorial",
+    "heroAlt": "The Canadian National Vimy Memorial illuminated at night",
     "cardImage": "/photos/ultimate/ultimate-cover.jpg",
-    "cardAlt": "Canadian soldiers visiting the Beaumont-Hamel caribou memorial",
+    "cardAlt": "The Canadian National Vimy Memorial illuminated at night",
     "cardDesc": "Includes Vimy to Victory + In Flanders Fields + The Bloody Somme. From the 1915 gas attacks to the victories of 1918.",
     "intro": [
       "The Ultimate: 3 Day Canadian Tour combines our three day tours to take you into the complete footsteps of Canadian troops on the frontlines of the First World War. From the 1915 gas attacks, to the brutal Somme, up to Vimy Ridge and onto the victories of 1918, where Canadians fought as shock troops to bring the war to an end.",
@@ -276,10 +276,10 @@
     ],
     "footnote": "The above itinerary may be varied based on the wishes and consensus of the guests travelling on any particular day. Customised tours are available for this area on request.",
     "galleryImages": [
-      { "src": "/photos/flanders/thumbs/flanders-cover.jpg", "alt": "Menin Gate at night" },
-      { "src": "/photos/vimy/thumbs/vimy-cover.jpg", "alt": "Vimy Memorial at night" },
-      { "src": "/photos/somme/thumbs/somme-cover.jpg", "alt": "Beaumont-Hamel caribou memorial" },
-      { "src": "/photos/ultimate/thumbs/ultimate-05.jpg", "alt": "The Canada Gate memorial" }
+      { "src": "/photos/ultimate/thumbs/ultimate-01.jpg", "alt": "A snow-covered preserved trench and bunker at Vimy Ridge" },
+      { "src": "/photos/ultimate/thumbs/ultimate-02.jpg", "alt": "A guide and guest examining a battlefield relic found in the woods" },
+      { "src": "/photos/ultimate/thumbs/ultimate-03.jpg", "alt": "The Menin Gate Memorial at dusk in Ypres" },
+      { "src": "/photos/ultimate/thumbs/ultimate-04.jpg", "alt": "Canadian Armed Forces members visiting the Beaumont-Hamel Newfoundland Memorial caribou statue" }
     ],
     "runDays": [1, 4]
   },
