@@ -120,12 +120,30 @@ permalink: "/index.html"
     </div>
 
     <div class="tours-grid" data-reveal>
-      {% for tour in tours %}{% if tour.combo %}{{ tourCard(tour) }}{% endif %}{% endfor %}
+      {% for tour in tours %}{% if tour.combo and not tour.normandyRegion %}{{ tourCard(tour) }}{% endif %}{% endfor %}
     </div>
   </div>
 </section>
 
 <section class="section">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow">Normandy</span>
+      <h2>Discover Normandy.</h2>
+      <p class="lede">Stand on Juno Beach, or explore the full American, British and Canadian D-Day story on our five-day Normandy Explorer.</p>
+    </div>
+
+    <div class="tours-grid" data-reveal>
+      {% for tour in tours %}{% if tour.slug == "juno-beach-paris" or tour.slug == "juno-beach-bayeux" or tour.slug == "normandy-explorer-5day" %}{{ tourCard(tour) }}{% endif %}{% endfor %}
+    </div>
+
+    <div style="text-align: center; margin-top: var(--space-5);">
+      <a href="/normandy.html" class="btn btn-primary">See All Normandy Tours</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt">
   <div class="container">
     <div class="section-head" data-reveal>
       <span class="eyebrow">Why choose us</span>

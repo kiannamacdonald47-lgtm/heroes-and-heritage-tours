@@ -50,12 +50,12 @@ permalink: "/booking.html"
             <div class="form-fieldset">
               <legend>Which tour would you like to book?</legend>
               <div class="radio-cards">
-                {% for tour in tours %}{% if not tour.normandy %}
+                {% for tour in tours %}{% if tour.bookingMethod != "email" %}
                 <label class="radio-card">
                   <input type="radio" name="tour" value="{{ tour.slug }}" required {% if loop.first %}checked{% endif %}>
                   <span class="radio-card-body">
                     <strong>{{ tour.shortName }}</strong>
-                    <span>{{ tour.badge }} · {{ tour.schedule }}{% if not tour.combo %} · {{ tour.duration }}{% endif %}</span>
+                    <span>{{ tour.badge }} · Departs {{ tour.departureCity }} · {{ tour.schedule }}{% if not tour.combo %} · {{ tour.duration }}{% endif %}</span>
                     <span class="radio-card-price">${{ tour.price | currency }} CAD / person</span>
                   </span>
                 </label>

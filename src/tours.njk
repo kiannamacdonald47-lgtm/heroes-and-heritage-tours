@@ -1,7 +1,7 @@
 ---
 layout: base.njk
-title: "Western Front Tours | Heroes and Heritage Tours"
-description: "Vimy to Victory, In Flanders Fields, The Bloody Somme, and our Signature and Ultimate multi-day Canadian tours of the Western Front."
+title: "All Battlefield Tours | Heroes and Heritage Tours"
+description: "Every Western Front and Normandy tour we run: Vimy to Victory, In Flanders Fields, The Bloody Somme, Juno Beach, Omaha Beach, and our multi-day Canadian and Normandy journeys."
 activeNav: tours
 permalink: "/tours.html"
 ---
@@ -58,26 +58,32 @@ permalink: "/tours.html"
   </div>
 </section>
 
-<section class="section">
+<section class="section" id="normandy">
   <div class="container">
     <div class="section-head" data-reveal>
-      <span class="eyebrow">Looking for something else?</span>
-      <h2>Also visiting Normandy, or after a commemorative departure?</h2>
+      <span class="eyebrow">Normandy</span>
+      <h2>Juno Beach, Omaha Beach, and the D-Day landing beaches.</h2>
+      <p class="lede">From single-day tours of Juno Beach and Omaha Beach to multi-day journeys across the full American, British and Canadian D-Day story.</p>
     </div>
 
     <div class="tours-grid" data-reveal>
-      <article class="tour-card">
-        <a href="/normandy.html" class="tour-card-media">
-          <img src="/photos/normandy5day/normandy5day-cover.jpg" alt="Aerial view of Juno Beach, Normandy" width="800" height="600">
-        </a>
-        <div class="tour-card-body">
-          <h3><a href="/normandy.html">Normandy Tours</a></h3>
-          <p class="tour-card-desc">Normandy is included in our 5-Day Western Front &amp; Normandy tour, with standalone Normandy day tours coming soon.</p>
-          <div class="tour-card-footer">
-            <a href="/normandy.html" class="btn btn-ghost btn-sm">Learn more</a>
-          </div>
-        </div>
-      </article>
+      {% for tour in tours %}{% if tour.normandyRegion %}{{ tourCard(tour) }}{% endif %}{% endfor %}
+    </div>
+
+    <div style="text-align: center; margin-top: var(--space-5);">
+      <a href="/normandy.html" class="btn btn-primary">See All Normandy Tours</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow">Looking for something else?</span>
+      <h2>After a commemorative departure?</h2>
+    </div>
+
+    <div class="tours-grid" data-reveal>
       <article class="tour-card">
         <a href="/special-tours.html" class="tour-card-media">
           <img src="/photos/vimy/vimy-cover.jpg" alt="A preserved sandbagged trench at Vimy Ridge" width="800" height="600">

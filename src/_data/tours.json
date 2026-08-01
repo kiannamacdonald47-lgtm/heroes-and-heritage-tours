@@ -45,12 +45,35 @@
     ],
     "footnote": "The above itinerary may be varied based on the wishes and consensus of the guests travelling on any particular day. This tour is also included within The Signature (2 Day) and The Ultimate (3 Day) Canadian Tours.",
     "galleryImages": [
-      { "src": "/photos/vimy/thumbs/vimy-20.jpg", "alt": "Archival photograph of Canadian soldiers advancing under bombardment" },
-      { "src": "/photos/vimy/thumbs/vimy-21.jpg", "alt": "Underground tunnel beneath Vimy Ridge" },
-      { "src": "/photos/vimy/thumbs/vimy-22.jpg", "alt": "The Canadian National Vimy Memorial viewed from below" },
-      { "src": "/photos/vimy/thumbs/vimy-23.jpg", "alt": "A guest visiting a Canadian war grave at Vimy" }
+      {
+        "src": "/photos/vimy/thumbs/vimy-20.jpg",
+        "alt": "Archival photograph of Canadian soldiers advancing under bombardment"
+      },
+      {
+        "src": "/photos/vimy/thumbs/vimy-21.jpg",
+        "alt": "Underground tunnel beneath Vimy Ridge"
+      },
+      {
+        "src": "/photos/vimy/thumbs/vimy-22.jpg",
+        "alt": "The Canadian National Vimy Memorial viewed from below"
+      },
+      {
+        "src": "/photos/vimy/thumbs/vimy-23.jpg",
+        "alt": "A guest visiting a Canadian war grave at Vimy"
+      }
     ],
-    "runDays": [2, 5, 0]
+    "runDays": [
+      2,
+      5,
+      0
+    ],
+    "inclusions": [
+      "Expert WWI Western Front guide",
+      "Comfortable, air-conditioned 8/9 seat mini bus",
+      "Pick-up / drop-off at Arras Train Station or your Arras accommodation",
+      "All entry fees"
+    ],
+    "departureCity": "Arras"
   },
   {
     "slug": "in-flanders-fields",
@@ -102,17 +125,42 @@
         "items": [
           "Menin Gate Memorial and the Last Post Ceremony"
         ],
-        "facts": ["Departure: Arras, 9:00 AM", "Return: Arras, approx. 9:30 PM"]
+        "facts": [
+          "Departure: Arras, 9:00 AM",
+          "Return: Arras, approx. 9:30 PM"
+        ]
       }
     ],
     "footnote": "Tour itineraries may be adjusted to accommodate weather, timing, or the interests of guests. This tour is also included within The Signature (2 Day) and The Ultimate (3 Day) Canadian Tours.",
     "galleryImages": [
-      { "src": "/photos/flanders/thumbs/flanders-16.jpg", "alt": "Archival photograph of soldiers crossing the flooded Passchendaele battlefield" },
-      { "src": "/photos/flanders/thumbs/flanders-17.jpg", "alt": "A preserved trench and shelter in the woods of Flanders" },
-      { "src": "/photos/flanders/thumbs/flanders-18.jpg", "alt": "A guest paying respects at Tyne Cot Commonwealth War Cemetery" },
-      { "src": "/photos/flanders/thumbs/flanders-19.jpg", "alt": "Guests examining battlefield relics found in Flanders" }
+      {
+        "src": "/photos/flanders/thumbs/flanders-16.jpg",
+        "alt": "Archival photograph of soldiers crossing the flooded Passchendaele battlefield"
+      },
+      {
+        "src": "/photos/flanders/thumbs/flanders-17.jpg",
+        "alt": "A preserved trench and shelter in the woods of Flanders"
+      },
+      {
+        "src": "/photos/flanders/thumbs/flanders-18.jpg",
+        "alt": "A guest paying respects at Tyne Cot Commonwealth War Cemetery"
+      },
+      {
+        "src": "/photos/flanders/thumbs/flanders-19.jpg",
+        "alt": "Guests examining battlefield relics found in Flanders"
+      }
     ],
-    "runDays": [1, 4]
+    "runDays": [
+      1,
+      4
+    ],
+    "inclusions": [
+      "Expert WWI Western Front guide",
+      "Comfortable, air-conditioned 8/9 seat mini bus",
+      "Pick-up / drop-off at Arras Train Station or your Arras accommodation",
+      "All entry fees"
+    ],
+    "departureCity": "Arras"
   },
   {
     "slug": "somme-front",
@@ -162,12 +210,34 @@
     ],
     "footnote": "The above itinerary may be varied based on the wishes and consensus of the guests travelling on any particular day. This tour is also included within The Ultimate (3 Day) Canadian Tour.",
     "galleryImages": [
-      { "src": "/photos/somme/thumbs/somme-17.jpg", "alt": "Beaumont-Hamel Newfoundland Memorial trenches and craters" },
-      { "src": "/photos/somme/thumbs/somme-18.jpg", "alt": "A guest in a preserved trench dugout museum" },
-      { "src": "/photos/somme/thumbs/somme-19.jpg", "alt": "Aerial view of a Somme battlefield mine crater" },
-      { "src": "/photos/somme/thumbs/somme-20.jpg", "alt": "A commemorative ceremony at a Somme war cemetery" }
+      {
+        "src": "/photos/somme/thumbs/somme-17.jpg",
+        "alt": "Beaumont-Hamel Newfoundland Memorial trenches and craters"
+      },
+      {
+        "src": "/photos/somme/thumbs/somme-18.jpg",
+        "alt": "A guest in a preserved trench dugout museum"
+      },
+      {
+        "src": "/photos/somme/thumbs/somme-19.jpg",
+        "alt": "Aerial view of a Somme battlefield mine crater"
+      },
+      {
+        "src": "/photos/somme/thumbs/somme-20.jpg",
+        "alt": "A commemorative ceremony at a Somme war cemetery"
+      }
     ],
-    "runDays": [3, 6]
+    "runDays": [
+      3,
+      6
+    ],
+    "inclusions": [
+      "Expert WWI Western Front guide",
+      "Comfortable, air-conditioned 8/9 seat mini bus",
+      "Pick-up / drop-off at Arras Train Station or your Arras accommodation",
+      "All entry fees"
+    ],
+    "departureCity": "Arras"
   },
   {
     "slug": "signature-2-day",
@@ -199,7 +269,10 @@
           "Passchendaele battlefield, Crest Farm Memorial & Tyne Cot Cemetery",
           "Essex Farm and the Menin Gate Last Post Ceremony"
         ],
-        "facts": ["Departure: Arras, 9:00 AM", "Return: Arras, approx. 9:30 PM"]
+        "facts": [
+          "Departure: Arras, 9:00 AM",
+          "Return: Arras, approx. 9:30 PM"
+        ]
       },
       {
         "heading": "Day 2: Vimy to Victory",
@@ -210,17 +283,42 @@
           "Canadian National Vimy Memorial",
           "Hill 70, Monchy-le-Preux & the Drocourt-Quéant Line"
         ],
-        "facts": ["Departure: Arras, 9:00 AM", "Return: Arras, approx. 9:30 PM"]
+        "facts": [
+          "Departure: Arras, 9:00 AM",
+          "Return: Arras, approx. 9:30 PM"
+        ]
       }
     ],
     "footnote": "The above itinerary may be varied based on the wishes and consensus of the guests travelling on any particular day. Customised tours are available for this area on request.",
     "galleryImages": [
-      { "src": "/photos/signature/thumbs/signature-01.jpg", "alt": "A preserved wood-lined trench in the Ypres Salient" },
-      { "src": "/photos/signature/thumbs/signature-02.jpg", "alt": "Wild poppies growing among rusted barbed wire on the former battlefield" },
-      { "src": "/photos/signature/thumbs/signature-03.jpg", "alt": "The Canadian National Vimy Memorial's twin pylons against a blue sky" },
-      { "src": "/photos/signature/thumbs/signature-04.jpg", "alt": "A guest reading the names of the missing carved into the Vimy Memorial wall" }
+      {
+        "src": "/photos/signature/thumbs/signature-01.jpg",
+        "alt": "A preserved wood-lined trench in the Ypres Salient"
+      },
+      {
+        "src": "/photos/signature/thumbs/signature-02.jpg",
+        "alt": "Wild poppies growing among rusted barbed wire on the former battlefield"
+      },
+      {
+        "src": "/photos/signature/thumbs/signature-03.jpg",
+        "alt": "The Canadian National Vimy Memorial's twin pylons against a blue sky"
+      },
+      {
+        "src": "/photos/signature/thumbs/signature-04.jpg",
+        "alt": "A guest reading the names of the missing carved into the Vimy Memorial wall"
+      }
     ],
-    "runDays": [1, 4]
+    "runDays": [
+      1,
+      4
+    ],
+    "inclusions": [
+      "Expert WWI Western Front guide",
+      "Comfortable, air-conditioned 8/9 seat mini bus",
+      "Pick-up / drop-off at Arras Train Station or your Arras accommodation",
+      "All entry fees"
+    ],
+    "departureCity": "Arras"
   },
   {
     "slug": "ultimate-3-day",
@@ -251,7 +349,10 @@
           "Passchendaele battlefield, Crest Farm Memorial & Tyne Cot Cemetery",
           "Essex Farm and the Menin Gate Last Post Ceremony"
         ],
-        "facts": ["Departure: Arras, 9:00 AM", "Return: Arras, approx. 9:30 PM"]
+        "facts": [
+          "Departure: Arras, 9:00 AM",
+          "Return: Arras, approx. 9:30 PM"
+        ]
       },
       {
         "heading": "Day 2: Vimy to Victory",
@@ -276,12 +377,34 @@
     ],
     "footnote": "The above itinerary may be varied based on the wishes and consensus of the guests travelling on any particular day. Customised tours are available for this area on request.",
     "galleryImages": [
-      { "src": "/photos/ultimate/thumbs/ultimate-01.jpg", "alt": "A snow-covered preserved trench and bunker at Vimy Ridge" },
-      { "src": "/photos/ultimate/thumbs/ultimate-02.jpg", "alt": "A guide and guest examining a battlefield relic found in the woods" },
-      { "src": "/photos/ultimate/thumbs/ultimate-03.jpg", "alt": "The Menin Gate Memorial at dusk in Ypres" },
-      { "src": "/photos/ultimate/thumbs/ultimate-04.jpg", "alt": "Canadian Armed Forces members visiting the Beaumont-Hamel Newfoundland Memorial caribou statue" }
+      {
+        "src": "/photos/ultimate/thumbs/ultimate-01.jpg",
+        "alt": "A snow-covered preserved trench and bunker at Vimy Ridge"
+      },
+      {
+        "src": "/photos/ultimate/thumbs/ultimate-02.jpg",
+        "alt": "A guide and guest examining a battlefield relic found in the woods"
+      },
+      {
+        "src": "/photos/ultimate/thumbs/ultimate-03.jpg",
+        "alt": "The Menin Gate Memorial at dusk in Ypres"
+      },
+      {
+        "src": "/photos/ultimate/thumbs/ultimate-04.jpg",
+        "alt": "Canadian Armed Forces members visiting the Beaumont-Hamel Newfoundland Memorial caribou statue"
+      }
     ],
-    "runDays": [1, 4]
+    "runDays": [
+      1,
+      4
+    ],
+    "inclusions": [
+      "Expert WWI Western Front guide",
+      "Comfortable, air-conditioned 8/9 seat mini bus",
+      "Pick-up / drop-off at Arras Train Station or your Arras accommodation",
+      "All entry fees"
+    ],
+    "departureCity": "Arras"
   },
   {
     "slug": "western-front-normandy-5day",
@@ -290,7 +413,6 @@
     "tagline": "From Flanders Fields to the beaches of D-Day.",
     "badge": "5 Day Tour",
     "combo": true,
-    "normandy": true,
     "schedule": "Selected Monday departures",
     "scheduleFull": "Selected five-day departures throughout the year, always starting on a Monday. Other dates available on request; contact us to confirm availability for this tour, as its Normandy leg is arranged with our local partner guides.",
     "duration": "5 days / 4 nights",
@@ -324,7 +446,10 @@
           "Dinner in Ypres's historic market square",
           "Menin Gate Memorial and Last Post Ceremony"
         ],
-        "facts": ["Overnight: four-star accommodation in Arras", "Meals included: Dinner"]
+        "facts": [
+          "Overnight: four-star accommodation in Arras",
+          "Meals included: Dinner"
+        ]
       },
       {
         "heading": "Day 2: Vimy to Victory",
@@ -340,7 +465,10 @@
           "Drocourt–Quéant Line battlefield and the Canadian Memorial at Dury",
           "Canal du Nord Canadian battlefield and memorial (time permitting)"
         ],
-        "facts": ["Overnight: four-star accommodation in Arras", "Meals included: Breakfast"]
+        "facts": [
+          "Overnight: four-star accommodation in Arras",
+          "Meals included: Breakfast"
+        ]
       },
       {
         "heading": "Day 3: Arras to Bayeux",
@@ -352,7 +480,10 @@
           "Caen Canal battlefield",
           "Historic centre of Bayeux and Bayeux Cathedral"
         ],
-        "facts": ["Overnight: four-star accommodation in Bayeux", "Meals included: Breakfast and lunch (Honfleur)"]
+        "facts": [
+          "Overnight: four-star accommodation in Bayeux",
+          "Meals included: Breakfast and lunch (Honfleur)"
+        ]
       },
       {
         "heading": "Day 4: American Airborne & Band of Brothers",
@@ -365,7 +496,10 @@
           "Sainte-Marie-du-Mont and the road to Carentan",
           "La Cambe German War Cemetery"
         ],
-        "facts": ["Overnight: four-star accommodation in Bayeux", "Meals included: Breakfast"]
+        "facts": [
+          "Overnight: four-star accommodation in Bayeux",
+          "Meals included: Breakfast"
+        ]
       },
       {
         "heading": "Day 5: Omaha Beach & the Atlantic Wall",
@@ -378,16 +512,624 @@
           "Longues-sur-Mer German artillery battery",
           "Arromanches-les-Bains and the Mulberry Harbour remains"
         ],
-        "facts": ["Tour concludes in Bayeux at approximately 5:00 PM", "Meals included: Breakfast"]
+        "facts": [
+          "Tour concludes in Bayeux at approximately 5:00 PM",
+          "Meals included: Breakfast"
+        ]
       }
     ],
     "footnote": "The order and content of the itinerary may be adjusted because of traffic, weather, opening times, battlefield access, commemorative events or other operational requirements. Private and customized versions of the tour are available upon request. Prices are per person, based on double or twin occupancy; ask us about the single supplement when you enquire.",
     "galleryImages": [
-      { "src": "/photos/normandy5day/thumbs/normandy5day-cover.jpg", "alt": "Aerial view of Juno Beach, Normandy" },
-      { "src": "/photos/normandy5day/thumbs/normandy5day-03.jpg", "alt": "A preserved First World War trench" },
-      { "src": "/photos/normandy5day/thumbs/normandy5day-06.jpg", "alt": "Pegasus Bridge, Normandy" },
-      { "src": "/photos/vimy/thumbs/vimy-cover.jpg", "alt": "Vimy Memorial at night" }
+      {
+        "src": "/photos/normandy5day/thumbs/normandy5day-cover.jpg",
+        "alt": "Aerial view of Juno Beach, Normandy"
+      },
+      {
+        "src": "/photos/normandy5day/thumbs/normandy5day-03.jpg",
+        "alt": "A preserved First World War trench"
+      },
+      {
+        "src": "/photos/normandy5day/thumbs/normandy5day-06.jpg",
+        "alt": "Pegasus Bridge, Normandy"
+      },
+      {
+        "src": "/photos/vimy/thumbs/vimy-cover.jpg",
+        "alt": "Vimy Memorial at night"
+      }
     ],
-    "runDays": [1]
+    "runDays": [
+      1
+    ],
+    "inclusions": [
+      "Expert English-speaking First and Second World War battlefield guide",
+      "Comfortable, air-conditioned touring vehicle",
+      "Four nights of four-star accommodation (two in Arras, two in Bayeux)",
+      "Pick-up from Arras Train Station or your Arras accommodation",
+      "Drop-off at Bayeux Train Station or your Bayeux accommodation",
+      "All scheduled admission fees"
+    ],
+    "bookingMethod": "email",
+    "enquiryNote": "This tour's Normandy leg is arranged together with a local partner guide. Full online booking for this tour is coming soon; for now, please enquire and our team will confirm availability and full trip details directly.",
+    "departureCity": "Arras"
+  },
+  {
+    "slug": "juno-beach-paris",
+    "shortName": "Juno Beach from Paris",
+    "name": "Juno Beach from Paris",
+    "tagline": "From the heart of Paris to the sands of Canada's D-Day battlefield.",
+    "badge": "Day Tour",
+    "combo": false,
+    "normandyRegion": true,
+    "schedule": "Most days, subject to availability",
+    "scheduleFull": "Tours run most days of the week, departing central Paris. Other days are available upon request.",
+    "duration": "12–13 hours",
+    "price": null,
+    "bookingMethod": "email",
+    "enquiryNote": "This tour's pricing is confirmed directly with our team when you enquire, based on the season and group size. Send us a message and we'll reply with full details and availability.",
+    "heroImage": "/photos/juno-paris/juno-paris-cover.jpg",
+    "heroAlt": "Aerial view of Juno Beach, with the Canadian memorial and preserved bunker in the foreground",
+    "cardImage": "/photos/juno-paris/juno-paris-cover.jpg",
+    "cardAlt": "Aerial view of Juno Beach, with the Canadian memorial and preserved bunker in the foreground",
+    "cardDesc": "Canada House, the Juno Beach Centre, original Atlantic Wall bunkers, and Bény-sur-Mer Cemetery, with convenient return transportation from Paris.",
+    "intro": [
+      "Leave Paris behind for an unforgettable journey to the Normandy coast and discover the remarkable story of the brave Canadians who landed at Juno Beach in 1944.",
+      "Walk the sands where Canadian soldiers stormed ashore under devastating fire. See the famous Canada House at Bernières-sur-Mer and explore the surviving German defences of Hitler's Atlantic Wall. At the Juno Beach Centre, discover Canada's story and follow an expert Canadian guide into original German bunkers overlooking the landing beach.",
+      "After lunch in the seaside town of Courseulles-sur-Mer, continue inland along the route followed by Canadian soldiers on D-Day. Pay your respects at Bény-sur-Mer Canadian War Cemetery, stand at Hell's Corner near the furthest point reached by Canadian troops on June 6, and visit the historic Abbaye d'Ardenne."
+    ],
+    "itinerary": [
+      {
+        "heading": "Morning",
+        "note": "Scenic journey from Paris through the Normandy countryside.",
+        "items": [
+          "Juno Beach and the Canadian D-Day landing sector",
+          "Canada House at Bernières-sur-Mer",
+          "Juno Beach Centre",
+          "Guided visit to original German Atlantic Wall bunkers"
+        ],
+        "facts": []
+      },
+      {
+        "heading": "Afternoon",
+        "note": "Lunch and free time in Courseulles-sur-Mer.",
+        "items": [
+          "Canadian memorials at Courseulles-sur-Mer",
+          "Bény-sur-Mer Canadian War Cemetery",
+          "Hell's Corner and the Canadian advance toward Caen",
+          "Villons-les-Buissons battlefield",
+          "Abbaye d'Ardenne and the memorial to murdered Canadian prisoners of war"
+        ],
+        "facts": [
+          "Departure: Paris, 7:00 AM",
+          "Return: Paris, approx. 7:00-8:00 PM"
+        ]
+      }
+    ],
+    "footnote": "Tour itineraries may be adjusted to accommodate weather, traffic, museum schedules, site availability or the interests of guests. Private and customized battlefield tours are available upon request.",
+    "inclusions": [
+      "Expert English-speaking Second World War battlefield guide",
+      "Comfortable, air-conditioned eight- or nine-seat minibus",
+      "Return transportation from central Paris",
+      "Admission to the Juno Beach Centre",
+      "Guided access to the German bunkers at Juno Beach"
+    ],
+    "galleryImages": [
+      {
+        "src": "/photos/juno-paris/thumbs/juno-paris-01.jpg",
+        "alt": "Archival photograph of Canadian troops landing at Juno Beach on D-Day"
+      },
+      {
+        "src": "/photos/juno-paris/thumbs/juno-paris-02.jpg",
+        "alt": "A guide leading guests through the D-Day story at the Juno Beach Centre"
+      },
+      {
+        "src": "/photos/juno-paris/thumbs/juno-paris-03.jpg",
+        "alt": "Bény-sur-Mer Canadian War Cemetery"
+      },
+      {
+        "src": "/photos/juno-paris/thumbs/juno-paris-04.jpg",
+        "alt": "A memorial to Canadian soldiers murdered as prisoners of war at Abbaye d'Ardenne"
+      }
+    ],
+    "runDays": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+    ],
+    "departureCity": "Paris"
+  },
+  {
+    "slug": "juno-beach-bayeux",
+    "shortName": "Juno Beach from Bayeux",
+    "name": "Juno Beach from Bayeux",
+    "tagline": "From Juno Beach to the battle for Caen.",
+    "badge": "Day Tour",
+    "combo": false,
+    "normandyRegion": true,
+    "schedule": "Every day",
+    "scheduleFull": "Departs Bayeux every day. This tour may also be offered as part of a wider multi-day Canadian battlefield tour.",
+    "duration": "9-9.5 hours",
+    "price": 370,
+    "heroImage": "/photos/juno-bayeux/juno-bayeux-cover.jpg",
+    "heroAlt": "A Canadian memorial reading 'À tous nos morts' overlooking Juno Beach",
+    "cardImage": "/photos/juno-bayeux/juno-bayeux-cover.jpg",
+    "cardAlt": "A Canadian memorial reading 'À tous nos morts' overlooking Juno Beach",
+    "cardDesc": "Juno Beach, surviving German bunkers, the Juno Beach Centre, Bény-sur-Mer Cemetery, and the Canadian battle for Caen at Authie and Carpiquet.",
+    "intro": [
+      "Stand on Juno Beach, where brave Canadians famously broke Hitler's Atlantic Wall under intense fire on D-Day. Explore the surviving German coastal defences and visit the Juno Beach Centre, Canada's main memorial and museum in Normandy.",
+      "Your journey continues beyond the beaches, tracing the Canadian advance through the villages and fields outside the historic city of Caen. Visit the battlefield of Authie, the Waffen SS headquarters at Abbaye d'Ardenne, Carpiquet and Hill 67, where Canadian soldiers faced some of the most determined German resistance of the Normandy campaign.",
+      "Along the way, visit both iconic landmarks and lesser-known battlefield locations that reveal the courage, sacrifice and achievements of the Canadians who liberated France in the summer of 1944."
+    ],
+    "itinerary": [
+      {
+        "heading": "Morning",
+        "note": "",
+        "items": [
+          "Juno Beach and the Canadian D-Day landing sector",
+          "Surviving German bunkers and coastal defences",
+          "Juno Beach Centre",
+          "Canada House at Bernières-sur-Mer, subject to access and timing",
+          "Bény-sur-Mer Canadian War Cemetery"
+        ],
+        "facts": []
+      },
+      {
+        "heading": "Afternoon",
+        "note": "Lunch is near the Juno Beach battlefield.",
+        "items": [
+          "Authie and the Canadian battlefield of June 7, 1944",
+          "Abbaye d'Ardenne",
+          "Carpiquet battlefield and airfield",
+          "Hill 67 Canadian Memorial",
+          "The Canadian battle for Caen"
+        ],
+        "facts": [
+          "Departure: Bayeux, approx. 8:30 AM",
+          "Return: Bayeux, approx. 6:00 PM"
+        ]
+      }
+    ],
+    "footnote": "Tour itineraries may be adjusted to accommodate weather, traffic, site availability, commemorative events or the interests of guests. Private and customized battlefield tours are available upon request.",
+    "inclusions": [
+      "Expert English-speaking Second World War battlefield guide",
+      "Comfortable, air-conditioned eight- or nine-seat minibus",
+      "Pick-up and drop-off at Bayeux Train Station or your Bayeux accommodation",
+      "Admission to the Juno Beach Centre",
+      "All scheduled entry fees"
+    ],
+    "galleryImages": [
+      {
+        "src": "/photos/juno-bayeux/thumbs/juno-bayeux-01.jpg",
+        "alt": "Archival photograph of Canadian troops landing at Juno Beach on D-Day"
+      },
+      {
+        "src": "/photos/juno-bayeux/thumbs/juno-bayeux-02.jpg",
+        "alt": "A guide leading guests through the D-Day story at the Juno Beach Centre"
+      },
+      {
+        "src": "/photos/juno-bayeux/thumbs/juno-bayeux-03.jpg",
+        "alt": "Bény-sur-Mer Canadian War Cemetery"
+      },
+      {
+        "src": "/photos/juno-bayeux/thumbs/juno-bayeux-04.jpg",
+        "alt": "The courtyard of Abbaye d'Ardenne near Caen"
+      }
+    ],
+    "runDays": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+    ],
+    "bookingMethod": "email",
+    "enquiryNote": "Send us a message with your preferred dates and we'll confirm availability directly.",
+    "departureCity": "Bayeux"
+  },
+  {
+    "slug": "omaha-beach",
+    "shortName": "Omaha Beach",
+    "name": "Omaha Beach & Band of Brothers Tour",
+    "tagline": "From the sands of Omaha Beach to the battlefields of Easy Company.",
+    "badge": "Day Tour",
+    "combo": false,
+    "normandyRegion": true,
+    "schedule": "Select days, by request",
+    "scheduleFull": "Runs on select days each week, departing Bayeux. Confirm availability and exact departure days when you enquire.",
+    "duration": "9 hours",
+    "price": null,
+    "bookingMethod": "email",
+    "enquiryNote": "This tour's pricing and weekly schedule are confirmed directly with our team when you enquire. Send us a message and we'll reply with full details and availability.",
+    "heroImage": "/photos/omaha/omaha-cover.jpg",
+    "heroAlt": "The cliffs and coastline near the American D-Day landing sector in Normandy",
+    "cardImage": "/photos/omaha/omaha-cover.jpg",
+    "cardAlt": "The cliffs and coastline near the American D-Day landing sector in Normandy",
+    "cardDesc": "Omaha Beach, the Normandy American Cemetery, Pointe du Hoc, and the Band of Brothers battlefields of Easy Company.",
+    "intro": [
+      "Explore the American battlefields of Normandy during an unforgettable journey through the story of D-Day and the men of the 101st Airborne Division.",
+      "Begin along the coast at Omaha Beach, where American troops faced some of the strongest German defences of June 6, 1944. Visit the Normandy American Cemetery at Colleville-sur-Mer and stand above the beaches where thousands of soldiers fought to establish the Allied foothold in France.",
+      "The tour then follows the story made famous by the book and television series Band of Brothers. Travel inland through the Norman countryside to the drop zones, villages, gun positions and battlefields associated with Easy Company of the 506th Parachute Infantry Regiment."
+    ],
+    "itinerary": [
+      {
+        "heading": "Morning",
+        "note": "",
+        "items": [
+          "Omaha Beach and the American D-Day landing sector",
+          "German coastal defences overlooking Omaha Beach",
+          "Normandy American Cemetery at Colleville-sur-Mer",
+          "Pointe du Hoc and the battlefield of the U.S. Army Rangers"
+        ],
+        "facts": []
+      },
+      {
+        "heading": "Afternoon",
+        "note": "Lunch is in the Normandy countryside.",
+        "items": [
+          "Sainte-Mère-Église and the American airborne landings",
+          "Easy Company drop-zone locations",
+          "Brécourt Manor battlefield",
+          "Angoville-au-Plain church and the story of the American airborne medics",
+          "Carentan battlefield"
+        ],
+        "facts": [
+          "Departure: Bayeux, approx. 8:20 AM",
+          "Return: Bayeux, approx. 5:20-5:30 PM"
+        ]
+      }
+    ],
+    "footnote": "Tour itineraries may be adjusted to accommodate traffic, weather, access restrictions, commemorative events or the interests of guests. Private and customized battlefield tours are available upon request.",
+    "inclusions": [
+      "Expert English-speaking Second World War battlefield guide",
+      "Comfortable, air-conditioned eight- or nine-seat minibus",
+      "Pick-up and drop-off at the designated central Bayeux meeting point",
+      "All scheduled battlefield visits",
+      "Historical maps, photographs and supporting interpretation"
+    ],
+    "galleryImages": [
+      {
+        "src": "/photos/omaha/thumbs/omaha-01.jpg",
+        "alt": "The Normandy American Cemetery at Colleville-sur-Mer"
+      },
+      {
+        "src": "/photos/omaha/thumbs/omaha-02.jpg",
+        "alt": "A memorial sculpture near the American D-Day landing sector"
+      },
+      {
+        "src": "/photos/omaha/thumbs/omaha-03.jpg",
+        "alt": "A memorial to the 101st Airborne Division's 'E' Company"
+      }
+    ],
+    "runDays": [
+      2,
+      4,
+      6
+    ],
+    "departureCity": "Bayeux"
+  },
+  {
+    "slug": "normandy-2-day",
+    "shortName": "The Normandy Experience (2 Day)",
+    "name": "The Normandy Experience: 2-Day Tour",
+    "tagline": "American, British and Canadian D-Day sites, without rushing through Normandy in a single day.",
+    "badge": "2 Day Tour",
+    "combo": true,
+    "normandyRegion": true,
+    "schedule": "Mon-Tue & Thu-Fri departures",
+    "scheduleFull": "Departs Bayeux every Monday and Thursday. Other days available on request. Accommodation and meals are not included.",
+    "duration": "2 days",
+    "price": 995,
+    "heroImage": "/photos/normandy2day/normandy2day-cover.jpg",
+    "heroAlt": "Aerial view of Juno Beach with a preserved German bunker and Canadian memorial",
+    "cardImage": "/photos/normandy2day/normandy2day-cover.jpg",
+    "cardAlt": "Aerial view of Juno Beach with a preserved German bunker and Canadian memorial",
+    "cardDesc": "The American airborne battlefields and Omaha Beach, then Gold Beach, Juno Beach and Pegasus Bridge. Based in Bayeux.",
+    "intro": [
+      "Discover the full story of the Allied landings in Normandy during an immersive two-day battlefield tour based in the historic town of Bayeux.",
+      "From the American airborne battlefields and the sands of Omaha Beach to the British and Canadian landing sectors at Gold and Juno, this tour follows the events of June 6, 1944, across the breadth of the Normandy invasion area.",
+      "Walk through preserved German gun positions, stand on the beaches where Allied soldiers came ashore and follow the footsteps of the paratroopers who landed behind enemy lines during the opening hours of D-Day."
+    ],
+    "itinerary": [
+      {
+        "heading": "Day 1: American Airborne & Omaha Beach",
+        "note": "The first day begins with the American airborne landings west of Sainte-Mère-Église, where paratroopers of the 82nd and 101st Airborne Divisions descended into the fields and villages of Normandy during the early hours of June 6, 1944. Walk in the footsteps of Easy Company and learn about the assault on the German artillery positions at Brécourt Manor before the dramatic battlefield at Pointe du Hoc and the Normandy American Cemetery.",
+        "isPrefaceNote": true,
+        "items": [
+          "Sainte-Mère-Église and the American airborne landings",
+          "Easy Company and Band of Brothers locations at Brécourt Manor",
+          "Carentan battlefield and causeway",
+          "Pointe du Hoc",
+          "Omaha Beach and the Normandy American Cemetery"
+        ],
+        "facts": [
+          "Return to Bayeux: approx. 5:00 PM"
+        ]
+      },
+      {
+        "heading": "Day 2: Gold Beach, Juno Beach & Pegasus Bridge",
+        "note": "The second day explores the British and Canadian sectors of the D-Day battlefield, from the German gun battery at Longues-sur-Mer and the Mulberry Harbour remains at Arromanches, into the Canadian sector at Juno Beach, concluding at Pegasus Bridge, where British airborne troops landed by glider during the opening minutes of D-Day.",
+        "isPrefaceNote": true,
+        "items": [
+          "Longues-sur-Mer German artillery battery",
+          "Gold Beach and Arromanches-les-Bains, with the Mulberry Harbour remains",
+          "Juno Beach and the Canadian landing sector",
+          "Pegasus Bridge and the story of the glider assault"
+        ],
+        "facts": [
+          "Return to Bayeux: approx. 5:00 PM"
+        ]
+      }
+    ],
+    "footnote": "The order and content of the itinerary may be adjusted because of weather, traffic, tides, site access, commemorative events or operational requirements. Private and customized battlefield tours are available upon request.",
+    "inclusions": [
+      "Expert English-speaking Second World War battlefield guide",
+      "Comfortable, air-conditioned eight- or nine-seat minibus",
+      "Pick-up and drop-off at your Bayeux accommodation",
+      "Bayeux Train Station drop-off following the second day, upon request",
+      "All scheduled entry fees",
+      "Historical maps, photographs and battlefield interpretation"
+    ],
+    "galleryImages": [
+      {
+        "src": "/photos/normandy2day/thumbs/normandy2day-01.jpg",
+        "alt": "The cliffs and coastline near Pointe du Hoc"
+      },
+      {
+        "src": "/photos/normandy2day/thumbs/normandy2day-02.jpg",
+        "alt": "Pegasus Bridge, captured by British airborne troops on D-Day"
+      },
+      {
+        "src": "/photos/normandy2day/thumbs/normandy2day-03.jpg",
+        "alt": "Archival photograph of Canadian troops landing at Juno Beach on D-Day"
+      },
+      {
+        "src": "/photos/normandy2day/thumbs/normandy2day-04.jpg",
+        "alt": "Bény-sur-Mer Canadian War Cemetery"
+      }
+    ],
+    "runDays": [
+      1,
+      4
+    ],
+    "departureCity": "Bayeux"
+  },
+  {
+    "slug": "normandy-3-day",
+    "shortName": "The Complete Normandy Experience (3 Day)",
+    "name": "The Complete Normandy Experience: 3-Day Tour",
+    "tagline": "The essential D-Day sites, plus the medieval splendour of Mont-Saint-Michel.",
+    "badge": "3 Day Tour",
+    "combo": true,
+    "normandyRegion": true,
+    "schedule": "Mon-Wed & Wed-Fri departures",
+    "scheduleFull": "Departs Bayeux every Monday and Wednesday. Other days available on request. Accommodation and meals are not included.",
+    "duration": "3 days",
+    "price": 1499,
+    "heroImage": "/photos/normandy3day/normandy3day-cover.jpg",
+    "heroAlt": "Mont-Saint-Michel rising above its tidal bay",
+    "cardImage": "/photos/normandy3day/normandy3day-cover.jpg",
+    "cardAlt": "Mont-Saint-Michel rising above its tidal bay",
+    "cardDesc": "Includes the American, British and Canadian D-Day battlefields, plus a full day at Mont-Saint-Michel. Based in Bayeux.",
+    "intro": [
+      "Discover the remarkable history and beauty of Normandy during a three-day journey based in the medieval town of Bayeux.",
+      "The first two days explore the principal American, British and Canadian battlefields of D-Day. Follow the airborne landings behind Utah Beach, stand on the sands of Omaha, walk among the surviving German guns at Longues-sur-Mer and discover the stories of Gold Beach, Juno Beach and Pegasus Bridge.",
+      "On the third day, travel beyond the battlefields to Mont-Saint-Michel, one of France's most spectacular historic landmarks, and explore the medieval island village and its ancient abbey."
+    ],
+    "itinerary": [
+      {
+        "heading": "Day 1: American Airborne & Omaha Beach",
+        "note": "Begin at Sainte-Mère-Église, one of the first towns liberated during the invasion, before travelling through the landing grounds of the 82nd and 101st Airborne Divisions and following the story of Easy Company. The afternoon moves toward Pointe du Hoc and concludes at Omaha Beach and the Normandy American Cemetery.",
+        "isPrefaceNote": true,
+        "items": [
+          "Sainte-Mère-Église and the American airborne landing grounds",
+          "Easy Company and Band of Brothers locations at Brécourt Manor",
+          "Pointe du Hoc",
+          "Omaha Beach and the Normandy American Cemetery"
+        ],
+        "facts": [
+          "Return to Bayeux: approx. 5:00 PM"
+        ]
+      },
+      {
+        "heading": "Day 2: Gold Beach, Juno Beach & Pegasus Bridge",
+        "note": "Begin at the German artillery battery at Longues-sur-Mer, continue to Gold Beach and Arromanches-les-Bains, then enter the Canadian sector at Juno Beach before concluding at Pegasus Bridge, captured during a daring glider assault in the opening minutes of June 6.",
+        "isPrefaceNote": true,
+        "items": [
+          "Longues-sur-Mer German artillery battery",
+          "Gold Beach and Arromanches-les-Bains, with the Mulberry Harbour remains",
+          "Juno Beach and the Canadian D-Day landing sector",
+          "Pegasus Bridge and the story of the glider assault"
+        ],
+        "facts": [
+          "Return to Bayeux: approx. 5:00 PM"
+        ]
+      },
+      {
+        "heading": "Day 3: Mont-Saint-Michel",
+        "note": "Travel west through the Norman countryside to Mont-Saint-Michel, rising above a sweeping tidal bay, for a guided visit to its hilltop abbey and free time to explore the medieval island village.",
+        "isPrefaceNote": true,
+        "items": [
+          "Scenic journey through western Normandy",
+          "Mont-Saint-Michel tidal bay and medieval island village",
+          "Historic ramparts and narrow streets",
+          "Free time to explore the island"
+        ],
+        "facts": [
+          "Return to Bayeux: approx. 5:00 PM"
+        ]
+      }
+    ],
+    "footnote": "The order and content of the itinerary may be adjusted because of weather, traffic, tides, site access or operational requirements. Private and customized battlefield tours are available upon request.",
+    "inclusions": [
+      "Expert English-speaking guide",
+      "Comfortable, air-conditioned eight- or nine-seat minibus",
+      "Pick-up and drop-off at your Bayeux accommodation",
+      "Bayeux Train Station drop-off following the third day, upon request",
+      "Admission to Mont-Saint-Michel Abbey",
+      "All scheduled entry fees",
+      "Historical maps, photographs and battlefield interpretation"
+    ],
+    "galleryImages": [
+      {
+        "src": "/photos/normandy3day/thumbs/normandy3day-01.jpg",
+        "alt": "Pegasus Bridge, captured by British airborne troops on D-Day"
+      },
+      {
+        "src": "/photos/normandy3day/thumbs/normandy3day-02.jpg",
+        "alt": "Aerial view of Juno Beach with a preserved German bunker"
+      },
+      {
+        "src": "/photos/normandy3day/thumbs/normandy3day-03.jpg",
+        "alt": "The courtyard of Abbaye d'Ardenne near Caen"
+      },
+      {
+        "src": "/photos/normandy3day/thumbs/normandy3day-04.jpg",
+        "alt": "A Canadian memorial reading 'À tous nos morts' overlooking Juno Beach"
+      }
+    ],
+    "runDays": [
+      1,
+      3
+    ],
+    "departureCity": "Bayeux"
+  },
+  {
+    "slug": "normandy-explorer-5day",
+    "shortName": "The Normandy Explorer (5 Day)",
+    "name": "The Normandy Explorer: 5-Day Tour",
+    "tagline": "Battlefields, medieval heritage and the flavours of Normandy.",
+    "badge": "5 Day Tour",
+    "combo": true,
+    "normandyRegion": true,
+    "bookingMethod": "email",
+    "enquiryNote": "This tour runs on the second and fourth Monday of each month rather than a simple weekly schedule, so online booking isn't available yet. Please enquire and our team will confirm availability and full trip details directly.",
+    "schedule": "2nd & 4th Monday of each month",
+    "scheduleFull": "Tours begin on the second and fourth Monday of each month, departing Caen. Additional departures may be available upon request.",
+    "duration": "5 days / 4 nights",
+    "price": 3785,
+    "heroImage": "/photos/normandy5dayexplorer/normandy5dayexplorer-cover.jpg",
+    "heroAlt": "The timber-framed houses and flower-filled streets of Beuvron-en-Auge in the Pays d'Auge",
+    "cardImage": "/photos/normandy5dayexplorer/normandy5dayexplorer-cover.jpg",
+    "cardAlt": "The timber-framed houses and flower-filled streets of Beuvron-en-Auge in the Pays d'Auge",
+    "cardDesc": "D-Day battlefields, Mont-Saint-Michel, and the villages, cider and cheese of the Pays d'Auge. Four nights of four-star accommodation in Caen.",
+    "intro": [
+      "Discover the remarkable history, culture and scenery of Normandy during a five-day journey based in the historic city of Caen.",
+      "From the airborne landing grounds and invasion beaches of D-Day to the medieval splendour of Mont-Saint-Michel, this tour explores the many stories that have shaped Normandy. Follow the American paratroopers through the fields around Sainte-Mère-Église, stand on the sands of Omaha, explore the British and Canadian landing sectors and visit the site of the daring assault on Pegasus Bridge.",
+      "Beyond the battlefields, travel through the picturesque villages of the Pays d'Auge, sample the flavours of Normandy along the Route du Cidre and discover the historic towns of Lisieux, Cabourg and Bayeux."
+    ],
+    "itinerary": [
+      {
+        "heading": "Day 1: Sainte-Mère-Église & the American Airborne",
+        "note": "Travel inland from Utah Beach to the landing grounds of the 82nd and 101st Airborne Divisions. Visit Sainte-Mère-Église before following the route taken by American paratroopers toward Carentan, and walk in the footsteps of Easy Company near Brécourt Manor. The day also includes a visit to a traditional Normandy caramel producer.",
+        "isPrefaceNote": true,
+        "items": [
+          "American airborne landing grounds",
+          "Sainte-Mère-Église",
+          "Easy Company and Band of Brothers locations at Brécourt Manor",
+          "Traditional Normandy caramel producer"
+        ],
+        "facts": [
+          "Overnight: four-star accommodation in Caen"
+        ]
+      },
+      {
+        "heading": "Day 2: The Normandy Cider Route, Cambremer & Lisieux",
+        "note": "Begin in Beuvron-en-Auge, widely regarded as one of the most beautiful villages in France, then continue along the Route du Cidre to Cambremer for a distillery visit and regional tastings, before the Basilica of Sainte-Thérèse in Lisieux and the seaside resort of Cabourg.",
+        "isPrefaceNote": true,
+        "items": [
+          "Beuvron-en-Auge and the Pays d'Auge countryside",
+          "Normandy's Route du Cidre, Cambremer",
+          "Local cider, Calvados and cheese tastings",
+          "Basilica of Sainte-Thérèse in Lisieux",
+          "Cabourg seafront and promenade"
+        ],
+        "facts": [
+          "Breakfast, lunch and dinner included",
+          "Overnight: four-star accommodation in Caen"
+        ]
+      },
+      {
+        "heading": "Day 3: Mont-Saint-Michel",
+        "note": "Travel west through the Normandy countryside to Mont-Saint-Michel for a guided tour of the remarkable hilltop abbey and free time to explore the medieval island village.",
+        "isPrefaceNote": true,
+        "items": [
+          "Mont-Saint-Michel tidal bay",
+          "Guided visit to Mont-Saint-Michel Abbey",
+          "Free time to explore the island"
+        ],
+        "facts": [
+          "Breakfast and lunch included",
+          "Overnight: four-star accommodation in Caen"
+        ]
+      },
+      {
+        "heading": "Day 4: William the Conqueror to the Longest Day",
+        "note": "Begin in Caen with the burial place of William the Conqueror before travelling to historic Bayeux and its cathedral, then on to Pointe du Hoc, Omaha Beach and the Normandy American Cemetery.",
+        "isPrefaceNote": true,
+        "items": [
+          "Grave of William the Conqueror in Caen",
+          "Historic Bayeux and Bayeux Cathedral",
+          "Pointe du Hoc Ranger battlefield",
+          "Omaha Beach and the Normandy American Cemetery"
+        ],
+        "facts": [
+          "Breakfast and lunch included",
+          "Overnight: four-star accommodation in Caen"
+        ]
+      },
+      {
+        "heading": "Day 5: Gold Beach, Juno Beach & Pegasus Bridge",
+        "note": "Begin at the German gun battery at Longues-sur-Mer, then Arromanches-les-Bains and Gold Beach, continuing into the Canadian sector at Juno Beach before concluding at Pegasus Bridge.",
+        "isPrefaceNote": true,
+        "items": [
+          "Longues-sur-Mer German artillery battery",
+          "Arromanches-les-Bains and the Mulberry Harbour remains",
+          "Gold Beach and the British Normandy Memorial",
+          "Juno Beach and the Canadian D-Day story",
+          "Pegasus Bridge and the British glider landing grounds"
+        ],
+        "facts": [
+          "Breakfast included",
+          "Tour concludes in Caen at approximately 5:00 PM"
+        ]
+      }
+    ],
+    "footnote": "The order and content of the itinerary may be adjusted because of weather, traffic, tides, opening times, battlefield access or other operational requirements. Private and customized battlefield tours are available upon request. Prices are per person.",
+    "inclusions": [
+      "Expert English-speaking guide",
+      "Comfortable, air-conditioned touring vehicle",
+      "Four nights of four-star accommodation in Caen",
+      "Four buffet breakfasts, three lunches and one dinner",
+      "Guided visit to Mont-Saint-Michel Abbey",
+      "Regional tastings along the Normandy Cider Route",
+      "All scheduled admission fees"
+    ],
+    "galleryImages": [
+      {
+        "src": "/photos/normandy5dayexplorer/thumbs/normandy5dayexplorer-01.jpg",
+        "alt": "Mont-Saint-Michel rising above its tidal bay"
+      },
+      {
+        "src": "/photos/normandy5dayexplorer/thumbs/normandy5dayexplorer-02.jpg",
+        "alt": "Traditional Normandy cider barrels ageing in a cellar"
+      },
+      {
+        "src": "/photos/normandy5dayexplorer/thumbs/normandy5dayexplorer-03.jpg",
+        "alt": "Bayeux Cathedral rising above the historic town"
+      },
+      {
+        "src": "/photos/normandy5dayexplorer/thumbs/normandy5dayexplorer-04.jpg",
+        "alt": "Pegasus Bridge, captured by British airborne troops on D-Day"
+      }
+    ],
+    "runDays": [
+      1
+    ],
+    "departureCity": "Caen"
   }
 ]

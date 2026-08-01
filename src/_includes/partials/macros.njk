@@ -12,7 +12,13 @@
     </div>
     <p class="tour-card-desc">{{ tour.cardDesc }}</p>
     <div class="tour-card-footer">
-      <div class="tour-card-price"><span class="amount">${{ tour.price | currency }}</span><span class="unit">CAD / person</span></div>
+      <div class="tour-card-price">
+        {% if tour.price %}
+        <span class="amount">${{ tour.price | currency }}</span><span class="unit">CAD / person</span>
+        {% else %}
+        <span class="amount" style="font-size: 16px;">Price on request</span>
+        {% endif %}
+      </div>
       <a href="/tours/{{ tour.slug }}.html" class="btn btn-ghost btn-sm">Details</a>
     </div>
   </div>

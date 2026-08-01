@@ -123,14 +123,29 @@ collections:
                   - { label: "Friday", value: 5 }
                   - { label: "Saturday", value: 6 }
               - { label: "Duration (e.g. 8–9 hours)", name: "duration", widget: "string" }
-              - { label: "Price (CAD, per person)", name: "price", widget: "number", value_type: "int" }
+              - { label: "Price (CAD, per person; leave blank to show 'Price on request')", name: "price", widget: "number", value_type: "int", required: false }
               - { label: "Single Supplement (CAD, multi-day tours only; leave blank if not applicable)", name: "singleSupplement", widget: "number", value_type: "int", required: false }
-              - { label: "This tour includes a Normandy leg (arranged with a local partner guide)", name: "normandy", widget: "boolean", default: false, required: false }
+              - { label: "Departure City", name: "departureCity", widget: "string", hint: "e.g. Arras, Bayeux, Caen, Paris" }
+              - { label: "This tour is in the Normandy region (shows in Normandy sections)", name: "normandyRegion", widget: "boolean", default: false, required: false }
+              - label: "Booking Method"
+                name: "bookingMethod"
+                widget: "select"
+                default: "calendar"
+                required: false
+                hint: "Email: guests enquire by contact form instead of the online calendar (for day tours or irregular schedules)"
+                options:
+                  - { label: "Online calendar booking", value: "calendar" }
+                  - { label: "Enquire by email", value: "email" }
+              - { label: "Enquiry Note (shown instead of the calendar when Booking Method is Email)", name: "enquiryNote", widget: "text", required: false }
               - { label: "Hero Image", name: "heroImage", widget: "image" }
               - { label: "Hero Image Alt Text", name: "heroAlt", widget: "string" }
               - { label: "Card Image (used on Tours & Home listings)", name: "cardImage", widget: "image" }
               - { label: "Card Image Alt Text", name: "cardAlt", widget: "string" }
               - { label: "Card Description (short, for listings)", name: "cardDesc", widget: "text" }
+              - label: "Inclusions (shown as a checklist on the tour page)"
+                name: "inclusions"
+                widget: "list"
+                field: { label: "Item", name: "item", widget: "string" }
               - label: "Intro Paragraphs"
                 name: "intro"
                 widget: "list"

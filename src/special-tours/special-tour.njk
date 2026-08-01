@@ -7,7 +7,7 @@ pagination:
 permalink: "/special-tours/{{ tour.slug }}.html"
 activeNav: tours
 eleventyComputed:
-  title: "{{ tour.name }} | Heroes and Heritage Tours"
+  title: "{{ tour.name | safe }} | Heroes and Heritage Tours"
   description: "{{ tour.summary }}"
 ---
 

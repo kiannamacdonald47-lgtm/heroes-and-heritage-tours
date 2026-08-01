@@ -7,7 +7,7 @@ pagination:
 permalink: "/tours/{{ tour.slug }}.html"
 activeNav: tours
 eleventyComputed:
-  title: "{{ tour.name }} | Heroes and Heritage Tours"
+  title: "{{ tour.name | safe }} | Heroes and Heritage Tours"
   description: "{{ tour.cardDesc }}"
 ---
 {% from "partials/macros.njk" import tourCard %}
@@ -67,30 +67,33 @@ eleventyComputed:
 
           <p class="body-text" style="font-size: 14px; color: var(--foreground-faint);">{{ tour.footnote }}</p>
 
-          {% if tour.normandy %}
-          <div class="itinerary-note" style="margin-top: var(--space-3);">This tour's Normandy leg is arranged together with a local partner guide. Full online booking for this tour is coming soon; for now, please enquire and our team will confirm availability and full trip details directly.</div>
+          {% if tour.bookingMethod == "email" %}
+          <div class="itinerary-note" style="margin-top: var(--space-3);">{{ tour.enquiryNote or "Full online booking for this tour is coming soon; for now, please enquire and our team will confirm availability and full trip details directly." }}</div>
           {% endif %}
         </div>
 
         <aside class="info-panel">
           <div class="info-panel-price">
+            {% if tour.price %}
             <span class="amount">${{ tour.price | currency }}</span>
             <span class="unit">CAD / person</span>
+            {% else %}
+            <span class="amount" style="font-size: 22px;">Price on request</span>
+            {% endif %}
           </div>
           {% if tour.singleSupplement %}
           <p class="body-text" style="font-size: 13px; margin-top: -8px;">Single supplement: ${{ tour.singleSupplement | currency }} CAD</p>
           {% endif %}
           <ul class="info-panel-list">
-            <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 10.5l4 4 10-10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Expert WWI Western Front guide</li>
-            <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 10.5l4 4 10-10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Comfortable, air-conditioned 8/9 seat mini bus</li>
-            <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 10.5l4 4 10-10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Pick-up / drop-off at Arras Train Station or your Arras accommodation</li>
-            <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 10.5l4 4 10-10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>All entry fees</li>
+            {% for item in tour.inclusions %}
+            <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 10.5l4 4 10-10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>{{ item }}</li>
+            {% endfor %}
           </ul>
           <div class="info-panel-days">
-            <strong>{% if tour.normandy %}Selected departures{% else %}Runs every week{% endif %}</strong>
+            <strong>{% if tour.bookingMethod == "email" %}Selected departures{% else %}Runs every week{% endif %}</strong>
             {{ tour.scheduleFull }}
           </div>
-          {% if tour.normandy %}
+          {% if tour.bookingMethod == "email" %}
           <a href="/contact.html?tour={{ tour.slug }}" class="btn btn-primary btn-block btn-lg">Enquire About This Tour</a>
           {% else %}
           <a href="/booking.html?tour={{ tour.slug }}" class="btn btn-primary btn-block btn-lg">Book This Tour</a>

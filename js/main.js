@@ -239,17 +239,17 @@ if (bookingForm) {
   // CMS-managed tours.json — falls back to a static copy only if that
   // script tag is ever missing (e.g. a page built outside Eleventy).
   const TOUR_LIST = window.TOUR_DATA || [
-    { slug: "vimy-to-victory", name: "Vimy to Victory Day Tour", price: 320, runDays: [2, 5, 0] },
-    { slug: "in-flanders-fields", name: "In Flanders Fields Tour", price: 420, runDays: [1, 4] },
-    { slug: "somme-front", name: "The Somme Front Day Tour", price: 320, runDays: [3, 6] },
-    { slug: "signature-2-day", name: "The Signature: 2 Day Canadian Tour", price: 740, runDays: [1, 4] },
-    { slug: "ultimate-3-day", name: "The Ultimate: 3 Day Canadian Tour", price: 1380, runDays: [1, 4] },
+    { slug: "vimy-to-victory", name: "Vimy to Victory Day Tour", price: 320, runDays: [2, 5, 0], departureCity: "Arras" },
+    { slug: "in-flanders-fields", name: "In Flanders Fields Tour", price: 420, runDays: [1, 4], departureCity: "Arras" },
+    { slug: "somme-front", name: "The Somme Front Day Tour", price: 320, runDays: [3, 6], departureCity: "Arras" },
+    { slug: "signature-2-day", name: "The Signature: 2 Day Canadian Tour", price: 740, runDays: [1, 4], departureCity: "Arras" },
+    { slug: "ultimate-3-day", name: "The Ultimate: 3 Day Canadian Tour", price: 1380, runDays: [1, 4], departureCity: "Arras" },
   ];
 
   const TOURS = {};
   const RUN_DAYS = {};
   TOUR_LIST.forEach((t) => {
-    TOURS[t.slug] = { name: t.name, price: t.price };
+    TOURS[t.slug] = { name: t.name, price: t.price, departureCity: t.departureCity };
     RUN_DAYS[t.slug] = t.runDays;
   });
 
@@ -286,7 +286,7 @@ if (bookingForm) {
 
     if (dateHint) {
       const days = RUN_DAYS[tourKey].map((d) => DAY_NAMES[d]).join(", ");
-      dateHint.textContent = `${tour.name} departs Arras every ${days}. Other days available on request; we'll confirm your exact date by email.`;
+      dateHint.textContent = `${tour.name} departs ${tour.departureCity} every ${days}. Other days available on request; we'll confirm your exact date by email.`;
     }
   };
 
