@@ -77,9 +77,9 @@ permalink: "/index.html"
     </div>
 
     <div class="tours-grid" data-reveal>
-      {% for tour in tours %}
+      {% for tour in tours %}{% if not tour.normandyRegion %}
         {{ tourCard(tour) }}
-      {% endfor %}
+      {% endif %}{% endfor %}
     </div>
 
     <div style="text-align: center; margin-top: var(--space-5);">

@@ -2,15 +2,16 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a href="/index.html" class="logo"><img src="/media/logo-transparent.png" alt="Heroes and Heritage Tours"></a>
+        <a href="/index.html" class="logo footer-logo" aria-label="Heroes and Heritage Tours home">
+          <img src="/media/logo-transparent.png" alt="Heroes and Heritage Tours logo" width="52" height="52">
+          <span class="logo-word footer-logo-word">Heroes &amp; Heritage<span>Tours</span></span>
+        </a>
         <p>{{ site.tagline }}</p>
       </div>
       <div class="footer-col">
         <h4>Tours</h4>
         <ul>
-          {% for tour in tours %}
-          <li><a href="/tours/{{ tour.slug }}.html">{{ tour.shortName }}</a></li>
-          {% endfor %}
+          <li><a href="/tours.html">Western Front</a></li>
           <li><a href="/normandy.html">Normandy</a></li>
           <li><a href="/special-tours.html">Special Tours</a></li>
         </ul>

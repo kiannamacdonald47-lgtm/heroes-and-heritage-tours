@@ -28,7 +28,7 @@ permalink: "/tours.html"
     </div>
 
     <div class="tours-grid" data-reveal>
-      {% for tour in tours %}{% if not tour.combo %}{{ tourCard(tour) }}{% endif %}{% endfor %}
+      {% for tour in tours %}{% if not tour.combo and not tour.normandyRegion %}{{ tourCard(tour) }}{% endif %}{% endfor %}
     </div>
   </div>
 </section>
@@ -42,7 +42,7 @@ permalink: "/tours.html"
     </div>
 
     <div class="tours-grid" data-reveal>
-      {% for tour in tours %}{% if tour.combo %}{{ tourCard(tour) }}{% endif %}{% endfor %}
+      {% for tour in tours %}{% if tour.combo and not tour.normandyRegion %}{{ tourCard(tour) }}{% endif %}{% endfor %}
     </div>
 
     <div class="info-panel" style="position: static; margin-top: var(--space-5); max-width: 760px;" data-reveal>
