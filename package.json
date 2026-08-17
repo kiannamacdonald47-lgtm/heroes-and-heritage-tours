@@ -22,5 +22,8 @@
   "homepage": "https://github.com/kiannamacdonald47-lgtm/heroes-and-heritage-tours#readme",
   "devDependencies": {
     "@11ty/eleventy": "^3.1.6"
+  },
+  "dependencies": {
+    "stripe": "^17.0.0"
   }
 }

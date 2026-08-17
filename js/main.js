@@ -294,12 +294,23 @@ if (bookingForm) {
   guestsInput?.addEventListener("input", updateSummary);
 
   // Pre-select tour from ?tour=slug when arriving from a tour detail page
-  const preselect = new URLSearchParams(window.location.search).get("tour");
+  const searchParams = new URLSearchParams(window.location.search);
+  const preselect = searchParams.get("tour");
   if (preselect && TOURS[preselect]) {
     const match = bookingForm.querySelector(`input[name="tour"][value="${preselect}"]`);
     if (match) match.checked = true;
   }
   updateSummary();
+
+  // Returning from a canceled Stripe Checkout: let the guest know their
+  // details weren't lost and they can pick up where they left off.
+  if (searchParams.get("canceled") === "true") {
+    const status = document.getElementById("bookingStatus");
+    if (status) {
+      status.textContent = "Checkout was canceled, no payment was taken. Review your details below and try again whenever you're ready.";
+      status.dataset.visible = "true";
+    }
+  }
 
   // ==========================================================
   // Interactive calendar — only lets guests click dates that
@@ -436,24 +447,52 @@ if (bookingForm) {
     });
   });
 
-  bookingForm.addEventListener("submit", (e) => {
+  bookingForm.addEventListener("submit", async (e) => {
     e.preventDefault();
     if (!bookingForm.checkValidity()) {
       bookingForm.reportValidity();
       return;
     }
     const status = document.getElementById("bookingStatus");
-    // TODO — wire real submission before launch:
-    // 1) POST the form data to a form backend (e.g. Formspree) so you
-    //    receive the guest's details (including age/country demographics).
-    // 2) On success, redirect to a Stripe Checkout / Payment Link for the
-    //    deposit shown in the summary panel, pre-filled with the amount.
+    const submitBtn = bookingForm.querySelector('button[type="submit"]');
+    const formData = new FormData(bookingForm);
+
+    if (submitBtn) submitBtn.disabled = true;
     if (status) {
-      status.textContent = "This is a placeholder confirmation. The booking form isn't connected to a payment processor yet. See js/main.js for where to add Stripe + your form backend.";
+      status.textContent = "Redirecting you to secure checkout...";
       status.dataset.visible = "true";
     }
-    steps.forEach((step) => (step.style.display = "none"));
-    stepIndicators.forEach((el) => (el.dataset.active = "false"));
+
+    try {
+      const response = await fetch("/.netlify/functions/create-checkout-session", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          tourSlug: formData.get("tour"),
+          preferredDate: formData.get("preferredDate"),
+          guests: formData.get("guests"),
+          familyResearch: formData.get("familyResearch"),
+          fullName: formData.get("fullName"),
+          email: formData.get("email"),
+          phone: formData.get("phone"),
+          age: formData.get("age"),
+          country: formData.get("country"),
+          notes: formData.get("notes"),
+        }),
+      });
+
+      if (!response.ok) throw new Error(await response.text());
+      const { url } = await response.json();
+      if (!url) throw new Error("No checkout URL returned.");
+      window.location.href = url;
+    } catch (err) {
+      console.error("Checkout error:", err);
+      if (submitBtn) submitBtn.disabled = false;
+      if (status) {
+        status.textContent = "We couldn't start checkout just now. Please try again, or contact us directly and we'll take your booking by hand.";
+        status.dataset.visible = "true";
+      }
+    }
   });
 }
 
