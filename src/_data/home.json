@@ -10,6 +10,7 @@
   "heroTitle": "Walk in the Footsteps of Canada's Heroes.",
   "heroLede": "Expert-led battlefield tours through the Western Front and Normandy, created for travellers who want to understand the people, places and stories that shaped Canada.",
   "heroTrustLine": "Small groups · Expert Canadian guide · Departures from Arras",
+  "popularTourSlugs": ["vimy-to-victory", "in-flanders-fields", "juno-beach-bayeux", "ultimate-3-day", "normandy-explorer-5day", "western-front-normandy-5day"],
   "trustStrip": [
     { "value": "8", "label": "Guests maximum per tour" },
     { "value": "Arras", "label": "The historic heart of Canada's Western Front" },

@@ -652,7 +652,7 @@
     "schedule": "Every day",
     "scheduleFull": "Departs Bayeux every day. This tour may also be offered as part of a wider multi-day Canadian battlefield tour.",
     "duration": "9-9.5 hours",
-    "price": 370,
+    "price": 500,
     "heroImage": "/photos/juno-bayeux/juno-bayeux-cover.jpg",
     "heroAlt": "A Canadian memorial reading 'À tous nos morts' overlooking Juno Beach",
     "cardImage": "/photos/juno-bayeux/juno-bayeux-cover.jpg",
@@ -729,87 +729,6 @@
     ],
     "bookingMethod": "email",
     "enquiryNote": "Send us a message with your preferred dates and we'll confirm availability directly.",
-    "departureCity": "Bayeux"
-  },
-  {
-    "slug": "omaha-beach",
-    "shortName": "Omaha Beach",
-    "name": "Omaha Beach & Band of Brothers Tour",
-    "tagline": "From the sands of Omaha Beach to the battlefields of Easy Company.",
-    "badge": "Day Tour",
-    "combo": false,
-    "normandyRegion": true,
-    "schedule": "Select days, by request",
-    "scheduleFull": "Runs on select days each week, departing Bayeux. Confirm availability and exact departure days when you enquire.",
-    "duration": "9 hours",
-    "price": null,
-    "bookingMethod": "email",
-    "enquiryNote": "This tour's pricing and weekly schedule are confirmed directly with our team when you enquire. Send us a message and we'll reply with full details and availability.",
-    "heroImage": "/photos/omaha/omaha-cover.jpg",
-    "heroAlt": "The cliffs and coastline near the American D-Day landing sector in Normandy",
-    "cardImage": "/photos/omaha/omaha-cover.jpg",
-    "cardAlt": "The cliffs and coastline near the American D-Day landing sector in Normandy",
-    "cardDesc": "Omaha Beach, the Normandy American Cemetery, Pointe du Hoc, and the Band of Brothers battlefields of Easy Company.",
-    "intro": [
-      "Explore the American battlefields of Normandy during an unforgettable journey through the story of D-Day and the men of the 101st Airborne Division.",
-      "Begin along the coast at Omaha Beach, where American troops faced some of the strongest German defences of June 6, 1944. Visit the Normandy American Cemetery at Colleville-sur-Mer and stand above the beaches where thousands of soldiers fought to establish the Allied foothold in France.",
-      "The tour then follows the story made famous by the book and television series Band of Brothers. Travel inland through the Norman countryside to the drop zones, villages, gun positions and battlefields associated with Easy Company of the 506th Parachute Infantry Regiment."
-    ],
-    "itinerary": [
-      {
-        "heading": "Morning",
-        "note": "",
-        "items": [
-          "Omaha Beach and the American D-Day landing sector",
-          "German coastal defences overlooking Omaha Beach",
-          "Normandy American Cemetery at Colleville-sur-Mer",
-          "Pointe du Hoc and the battlefield of the U.S. Army Rangers"
-        ],
-        "facts": []
-      },
-      {
-        "heading": "Afternoon",
-        "note": "Lunch is in the Normandy countryside.",
-        "items": [
-          "Sainte-Mère-Église and the American airborne landings",
-          "Easy Company drop-zone locations",
-          "Brécourt Manor battlefield",
-          "Angoville-au-Plain church and the story of the American airborne medics",
-          "Carentan battlefield"
-        ],
-        "facts": [
-          "Departure: Bayeux, approx. 8:20 AM",
-          "Return: Bayeux, approx. 5:20-5:30 PM"
-        ]
-      }
-    ],
-    "footnote": "Tour itineraries may be adjusted to accommodate traffic, weather, access restrictions, commemorative events or the interests of guests. Private and customized battlefield tours are available upon request.",
-    "inclusions": [
-      "Expert English-speaking Second World War battlefield guide",
-      "Comfortable, air-conditioned eight- or nine-seat minibus",
-      "Pick-up and drop-off at the designated central Bayeux meeting point",
-      "All scheduled battlefield visits",
-      "Historical maps, photographs and supporting interpretation"
-    ],
-    "galleryImages": [
-      {
-        "src": "/photos/omaha/thumbs/omaha-01.jpg",
-        "alt": "The Normandy American Cemetery at Colleville-sur-Mer"
-      },
-      {
-        "src": "/photos/omaha/thumbs/omaha-02.jpg",
-        "alt": "A memorial sculpture near the American D-Day landing sector"
-      },
-      {
-        "src": "/photos/omaha/thumbs/omaha-03.jpg",
-        "alt": "A memorial to the 101st Airborne Division's 'E' Company"
-      }
-    ],
-    "runDays": [
-      2,
-      4,
-      6
-    ],
     "departureCity": "Bayeux"
   },
   {
@@ -1131,5 +1050,91 @@
       1
     ],
     "departureCity": "Caen"
+  },
+  {
+    "slug": "dieppe-raid",
+    "shortName": "The Dieppe Raid",
+    "name": "The Dieppe Raid",
+    "tagline": "Canada's Darkest Hour",
+    "badge": "Day Tour",
+    "combo": false,
+    "normandyRegion": true,
+    "bookingMethod": "email",
+    "enquiryNote": "Send us a message with your preferred date and the number of guests, and we'll confirm availability directly.",
+    "schedule": "Monday to Friday",
+    "scheduleFull": "Departs Dieppe Monday to Friday, subject to availability. Private and customized versions of this tour are also available upon request.",
+    "duration": "9-9.5 hours",
+    "price": 370,
+    "departureCity": "Dieppe",
+    "heroImage": "/photos/dieppe/dieppe-cover.jpg",
+    "heroAlt": "The shingle beach, seafront lawns and town of Dieppe seen from the clifftop above the promenade",
+    "cardImage": "/photos/dieppe/dieppe-cover.jpg",
+    "cardAlt": "The shingle beach, seafront lawns and town of Dieppe seen from the clifftop above the promenade",
+    "cardDesc": "Blue Beach at Puys, the Pourville battlefield, surviving Atlantic Wall defences, and Dieppe Canadian War Cemetery.",
+    "intro": [
+      "On 19 August 1942, more than 6,000 Allied troops, most of them Canadian, landed along the coast of occupied France during the Dieppe Raid. Within hours, the operation had ended in disaster, leaving thousands killed, wounded or captured.",
+      "Beginning in Dieppe, this full-day battlefield tour follows the Canadians from the beaches where they came ashore to the surrounding cliffs, villages and fortified positions that shaped the battle. Stand on Blue Beach at Puys, explore the battlefield at Pourville and discover surviving Atlantic Wall defences hidden among the picturesque white cliffs of the Normandy coast.",
+      "The day concludes at Dieppe Canadian War Cemetery, where many of those who fell during the raid remain buried.",
+      "Although historians continue to debate its legacy, the Dieppe Raid exposed serious weaknesses in Allied amphibious planning. Many of its lessons influenced preparations for the Normandy landings and the successful Canadian assault on Juno Beach less than two years later."
+    ],
+    "itinerary": [
+      {
+        "heading": "Morning",
+        "note": "",
+        "items": [
+          "Departure from Dieppe",
+          "Visit the Dieppe Memorial Museum",
+          "Blue Beach at Puys",
+          "Examine the terrain and surviving German defensive positions",
+          "Learn about the landing of the Royal Regiment of Canada"
+        ],
+        "facts": []
+      },
+      {
+        "heading": "Afternoon",
+        "note": "Lunch is near the Puys battlefield.",
+        "items": [
+          "Green Beach and the Pourville battlefield",
+          "Follow the advance of the South Saskatchewan Regiment",
+          "Learn about the role of the Queen's Own Cameron Highlanders of Canada",
+          "Explore surviving Atlantic Wall defensive positions",
+          "Visit an original German command bunker",
+          "Dieppe Canadian War Cemetery"
+        ],
+        "facts": [
+          "Departure: Dieppe, approximately 8:30 AM",
+          "Return: Dieppe, approximately 6:00 PM"
+        ]
+      }
+    ],
+    "footnote": "Tour itineraries may be adjusted to accommodate weather, traffic, site accessibility, commemorative events or the interests of guests. Private and customized battlefield tours are available upon request.",
+    "inclusions": [
+      "Expert English-speaking Second World War battlefield guide",
+      "Comfortable, air-conditioned eight- or nine-seat minibus",
+      "Pick-up and drop-off at Dieppe Train Station or your Dieppe accommodation",
+      "Access to original German defensive positions and bunkers",
+      "Maximum group size of eight guests"
+    ],
+    "galleryImages": [
+      {
+        "src": "/photos/dieppe/thumbs/dieppe-01.jpg",
+        "alt": "A bilingual interpretive panel describing the raid of 19 August 1942, beside the road bridge over the river at Pourville"
+      },
+      {
+        "src": "/photos/dieppe/thumbs/dieppe-02.jpg",
+        "alt": "Rows of Commonwealth war graves and flower borders at Dieppe Canadian War Cemetery"
+      },
+      {
+        "src": "/photos/dieppe/thumbs/dieppe-03.jpg",
+        "alt": "An artist's depiction of the Dieppe Raid, with disabled tanks and a landing craft on the shingle beach below the cliffs"
+      }
+    ],
+    "runDays": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
   }
 ]

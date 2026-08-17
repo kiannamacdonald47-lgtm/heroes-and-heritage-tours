@@ -36,58 +36,6 @@ permalink: "/index.html"
   </div>
 </header>
 
-<section class="section section--tight">
-  <div class="container">
-    <div class="trust-strip" data-reveal>
-      {% for item in home.trustStrip %}
-      <div class="trust-item">
-        <span class="trust-value">{{ item.value }}</span>
-        <span class="trust-label">{{ item.label }}</span>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
-</section>
-
-<hr class="section-divider container">
-
-<section class="section">
-  <div class="container">
-    <div class="grid-2" data-reveal>
-      <div class="stack" style="gap: var(--space-3);">
-        <span class="eyebrow">Our story</span>
-        <h2>{{ home.introHeading }}</h2>
-        {% for p in home.introParagraphs %}
-        <p class="body-text">{{ p }}</p>
-        {% endfor %}
-      </div>
-      <div class="rounded-photo">
-        <img src="{{ home.introImage }}" alt="{{ home.introImageAlt }}" width="1800" height="1200">
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section section--alt" id="tours">
-  <div class="container">
-    <div class="section-head" data-reveal>
-      <span class="eyebrow">Featured tours</span>
-      <h2>Many ways to walk in their footsteps.</h2>
-      <p class="lede">Every day tour can be booked alone, or combined into a multi-day journey across the full Canadian story on the Western Front, and into Normandy.</p>
-    </div>
-
-    <div class="tours-grid" data-reveal>
-      {% for tour in tours %}{% if not tour.normandyRegion %}
-        {{ tourCard(tour) }}
-      {% endif %}{% endfor %}
-    </div>
-
-    <div style="text-align: center; margin-top: var(--space-5);">
-      <a href="/tours.html" class="btn btn-primary">View All Battlefield Tours</a>
-    </div>
-  </div>
-</section>
-
 <section class="section">
   <div class="container">
     <div class="section-head" data-reveal>
@@ -115,59 +63,17 @@ permalink: "/index.html"
 <section class="section section--alt">
   <div class="container">
     <div class="section-head" data-reveal>
-      <span class="eyebrow">Multi-day packages</span>
-      <h2>See More. Experience More. Stay Longer.</h2>
+      <span class="eyebrow">Most popular</span>
+      <h2>Most Popular Tours</h2>
+      <p class="lede">Explore our most popular battlefield experiences, from focused day tours to complete multi-day journeys across the Western Front and Normandy.</p>
     </div>
 
     <div class="tours-grid" data-reveal>
-      {% for tour in tours %}{% if tour.combo and not tour.normandyRegion %}{{ tourCard(tour) }}{% endif %}{% endfor %}
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div class="section-head" data-reveal>
-      <span class="eyebrow">Normandy</span>
-      <h2>Discover Normandy.</h2>
-      <p class="lede">Stand on Juno Beach, or explore the full American, British and Canadian D-Day story on our five-day Normandy Explorer.</p>
-    </div>
-
-    <div class="tours-grid" data-reveal>
-      {% for tour in tours %}{% if tour.slug == "juno-beach-paris" or tour.slug == "juno-beach-bayeux" or tour.slug == "normandy-explorer-5day" %}{{ tourCard(tour) }}{% endif %}{% endfor %}
+      {% for slug in home.popularTourSlugs %}{% for tour in tours %}{% if tour.slug == slug %}{{ tourCard(tour) }}{% endif %}{% endfor %}{% endfor %}
     </div>
 
     <div style="text-align: center; margin-top: var(--space-5);">
-      <a href="/normandy.html" class="btn btn-primary">See All Normandy Tours</a>
-    </div>
-  </div>
-</section>
-
-<section class="section section--alt">
-  <div class="container">
-    <div class="section-head" data-reveal>
-      <span class="eyebrow">Why choose us</span>
-      <h2>Why Tour With Heroes and Heritage?</h2>
-    </div>
-
-    <div class="why-us-grid" data-reveal>
-      {% for item in home.whyUs %}
-      <div class="feature-row">
-        <div class="icon-circle">
-          {% if item.icon == "medal" %}<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.35 4.76 5.25.76-3.8 3.7.9 5.23L12 14l-4.7 2.45.9-5.23-3.8-3.7 5.25-.76z"/></svg>
-          {% elif item.icon == "people" %}<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-          {% elif item.icon == "quote" %}<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 8a3 3 0 0 0-3 3v3h4v-3H5a3 3 0 0 1 3-3V8z"/><path d="M17 8a3 3 0 0 0-3 3v3h4v-3h-3a3 3 0 0 1 3-3V8z"/></svg>
-          {% elif item.icon == "map" %}<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 6v16l7-4 8 4 7-4V2l-7 4-8-4z"/><path d="M8 2v16"/><path d="M16 6v16"/></svg>
-          {% elif item.icon == "family" %}<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-          {% else %}<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
-          {% endif %}
-        </div>
-        <div class="feature-row-text">
-          <h4>{{ item.heading }}</h4>
-          <p>{{ item.text }}</p>
-        </div>
-      </div>
-      {% endfor %}
+      <a href="/tours.html" class="btn btn-primary">View All Battlefield Tours</a>
     </div>
   </div>
 </section>
@@ -210,26 +116,6 @@ permalink: "/index.html"
   </div>
 </section>
 
-<section class="section">
-  <div class="container">
-    <div class="two-col-media" data-reveal>
-      <div class="two-col-media-media rounded-photo">
-        <img src="{{ home.remembranceImage }}" alt="{{ home.remembranceImageAlt }}" width="1800" height="1200">
-      </div>
-      <div class="stack" style="gap: var(--space-3);">
-        <span class="eyebrow">Beyond the tour</span>
-        <h2>{{ home.remembranceHeading }}</h2>
-        {% for p in home.remembranceParagraphs %}
-        <p class="body-text">{{ p }}</p>
-        {% endfor %}
-        <div>
-          <a href="/guide.html" class="btn btn-ghost">Discover Our Remembrance Work</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section class="section section--dark">
   <div class="container">
     <div class="email-capture" data-reveal>
@@ -263,43 +149,6 @@ permalink: "/index.html"
         <p class="form-hint" style="color: var(--cream-text-faint);">This form isn't wired to a backend yet. Connect it to an email or form service (e.g. Formspree) before launch. See js/main.js for where to add it.</p>
         <p class="form-status" id="signupStatus" role="status"></p>
       </form>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div class="section-head" data-reveal>
-      <span class="eyebrow">From the battlefields</span>
-      <h2>A glimpse of what you'll see.</h2>
-    </div>
-    <div class="gallery-grid" data-reveal>
-      <a href="/gallery.html" class="gallery-item"><img src="/photos/vimy/thumbs/vimy-cover.jpg" alt="Vimy Memorial at night" loading="lazy"></a>
-      <a href="/gallery.html" class="gallery-item"><img src="/photos/flanders/thumbs/flanders-cover.jpg" alt="Menin Gate at night" loading="lazy"></a>
-      <a href="/gallery.html" class="gallery-item"><img src="/photos/somme/thumbs/somme-01.jpg" alt="Beaumont-Hamel caribou memorial" loading="lazy"></a>
-      <a href="/gallery.html" class="gallery-item"><img src="/photos/vimy/thumbs/vimy-05.jpg" alt="Preserved trenches at Vimy Ridge" loading="lazy"></a>
-    </div>
-    <div style="text-align: center; margin-top: var(--space-5);">
-      <a href="/gallery.html" class="btn btn-ghost">View the full gallery</a>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div class="cta-band" data-reveal>
-      <div class="hero-media" style="position: absolute; inset: 0; z-index: 0;">
-        <img src="{{ home.finalCtaImage }}" alt="{{ home.finalCtaImageAlt }}" style="width: 100%; height: 100%; object-fit: cover;">
-        <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(11,9,8,0.55), rgba(11,9,8,0.85));"></div>
-      </div>
-      <div style="position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; gap: var(--space-3);">
-        <h2>{{ home.finalCtaHeading }}</h2>
-        <p class="lede">{{ home.finalCtaText }}</p>
-        <div class="hero-actions">
-          <a href="/tours.html" class="btn btn-primary btn-lg">Explore All Tours</a>
-          <a href="/contact.html" class="btn btn-ghost btn-lg" style="border-color: rgba(244,238,225,0.4); color: #FFF;">Request a Private Tour</a>
-        </div>
-      </div>
     </div>
   </div>
 </section>
