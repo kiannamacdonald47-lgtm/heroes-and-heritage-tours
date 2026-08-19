@@ -166,7 +166,7 @@ permalink: "/booking.html"
           <div data-step>
             <div class="form-fieldset">
               <legend>Review &amp; payment</legend>
-              <p class="body-text">Please review your booking summary to the right before confirming. A member of our team will email you within one business day to confirm your exact date and arrange your deposit payment.</p>
+              <p class="body-text">Please review your booking summary to the right before confirming. You'll be taken to secure Stripe checkout to pay your 30% deposit now; our team will confirm your exact date by email within one business day.</p>
               <div class="form-field">
                 <label style="display: flex; align-items: flex-start; gap: 12px; font-weight: 400;">
                   <input type="checkbox" id="agreeTerms" name="agreeTerms" required style="width: 22px; height: 22px; margin-top: 2px; accent-color: var(--red); flex-shrink: 0;">
@@ -176,9 +176,8 @@ permalink: "/booking.html"
             </div>
             <div class="hero-actions" style="margin-top: var(--space-4); justify-content: space-between;">
               <button type="button" class="btn btn-ghost" data-step-back>Back</button>
-              <button type="submit" class="btn btn-primary btn-lg">Confirm Booking Request</button>
+              <button type="submit" class="btn btn-primary btn-lg">Proceed to Secure Payment</button>
             </div>
-            <p class="form-hint">This form isn't connected to a payment processor yet. See <code>js/main.js</code> for where to wire up Stripe and a form backend before launch.</p>
             <p class="form-status" id="bookingStatus" role="status"></p>
           </div>
         </div>

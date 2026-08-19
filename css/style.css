@@ -1370,6 +1370,14 @@ em, .accent-italic {
 
 .form-field input:invalid:not(:placeholder-shown) { border-color: var(--red-bright); }
 
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.contact-form .btn { margin-top: var(--space-2); }
+
 .form-fieldset {
   border: 2px solid var(--line);
   border-radius: var(--radius-md);

@@ -527,11 +527,12 @@ if (contactForm) {
 
     try {
       const data = Object.fromEntries(new FormData(contactForm).entries());
-      await fetch("/", {
+      const response = await fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: encodeForm(data),
       });
+      if (!response.ok) throw new Error(`Form submission failed with status ${response.status}`);
       if (status) {
         status.textContent = "Thank you, your message has been sent. We'll reply within one business day.";
         status.dataset.visible = "true";
