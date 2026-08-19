@@ -7,6 +7,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("photos");
   eleventyConfig.addPassthroughCopy("admin");
   eleventyConfig.addPassthroughCopy("CNAME");
+  eleventyConfig.addPassthroughCopy("robots.txt");
 
   eleventyConfig.addFilter("currency", (value) => {
     return Number(value).toLocaleString("en-US");

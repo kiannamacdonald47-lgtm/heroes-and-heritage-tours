@@ -14,6 +14,12 @@ permalink: "/booking-confirmed.html"
       <span class="eyebrow">Booking received</span>
       <h1>Thank you, your deposit is confirmed.</h1>
       <p class="lede" style="color: var(--foreground-muted);">We've received your 30% deposit and your booking details. A receipt has been emailed to you by Stripe, and a member of our team will be in touch within one business day to confirm your exact date and finalize your itinerary.</p>
+      <div class="booking-summary" id="confirmedSummary" style="display: none; text-align: left; margin-top: var(--space-2);">
+        <div class="booking-summary-row"><span>Tour</span><strong id="confirmedTour">–</strong></div>
+        <div class="booking-summary-row"><span>Guests</span><strong id="confirmedGuests">–</strong></div>
+        <div class="booking-summary-row"><span>Preferred date</span><strong id="confirmedDate">–</strong></div>
+        <div class="booking-summary-total"><span>Deposit paid</span><span id="confirmedDeposit">–</span></div>
+      </div>
       <div class="hero-actions" style="margin-top: var(--space-3);">
         <a href="/tours.html" class="btn btn-primary btn-lg">View Our Tours</a>
         <a href="/contact.html" class="btn btn-ghost btn-lg">Contact Us</a>
@@ -21,3 +27,21 @@ permalink: "/booking-confirmed.html"
     </div>
   </div>
 </section>
+
+<script>
+  (function () {
+    const sessionId = new URLSearchParams(window.location.search).get("session_id");
+    if (!sessionId) return;
+    fetch("/.netlify/functions/get-checkout-session?session_id=" + encodeURIComponent(sessionId))
+      .then((res) => (res.ok ? res.json() : null))
+      .then((data) => {
+        if (!data || data.paymentStatus !== "paid") return;
+        document.getElementById("confirmedTour").textContent = data.tourName || "–";
+        document.getElementById("confirmedGuests").textContent = data.guests || "–";
+        document.getElementById("confirmedDate").textContent = data.preferredDate || "–";
+        document.getElementById("confirmedDeposit").textContent = data.depositCad ? "$" + data.depositCad + " CAD" : "–";
+        document.getElementById("confirmedSummary").style.display = "block";
+      })
+      .catch(() => {});
+  })();
+</script>

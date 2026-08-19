@@ -1,0 +1,24 @@
+---
+permalink: "/sitemap.xml"
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{%- for page in collections.all %}
+{%- if page.url != "/booking-confirmed.html" and not (page.url.startsWith("/tours/") or page.url.startsWith("/special-tours/")) %}
+  <url>
+    <loc>https://heroesandheritagetours.ca{{ page.url }}</loc>
+  </url>
+{%- endif %}
+{%- endfor %}
+{%- for tour in tours %}
+  <url>
+    <loc>https://heroesandheritagetours.ca/tours/{{ tour.slug }}.html</loc>
+  </url>
+{%- endfor %}
+{%- for tour in specialTours %}
+  <url>
+    <loc>https://heroesandheritagetours.ca/special-tours/{{ tour.slug }}.html</loc>
+  </url>
+{%- endfor %}
+</urlset>
