@@ -497,7 +497,8 @@ if (bookingForm) {
 }
 
 // ============================================================
-// Contact form (placeholder — no backend wired yet)
+// Contact form — submits to Netlify Forms (data-netlify="true"
+// on the <form> tag is what registers it at build/deploy time).
 // ============================================================
 const contactForm = document.getElementById("contactForm");
 if (contactForm) {
@@ -509,20 +510,42 @@ if (contactForm) {
     if (match) contactTourSelect.value = preselectTour;
   }
 
-  contactForm.addEventListener("submit", (e) => {
+  const encodeForm = (data) =>
+    Object.keys(data)
+      .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
+      .join("&");
+
+  contactForm.addEventListener("submit", async (e) => {
     e.preventDefault();
     const status = document.getElementById("formStatus");
     if (!contactForm.checkValidity()) {
       contactForm.reportValidity();
       return;
     }
-    // TODO: replace this block with a real submit — e.g.
-    // fetch("https://formspree.io/f/YOUR_ID", { method: "POST", body: new FormData(contactForm), headers: { Accept: "application/json" } })
-    if (status) {
-      status.textContent = "Thank you. This is a placeholder confirmation. Connect a form backend in js/main.js to actually receive messages.";
-      status.dataset.visible = "true";
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+    if (submitBtn) submitBtn.disabled = true;
+
+    try {
+      const data = Object.fromEntries(new FormData(contactForm).entries());
+      await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encodeForm(data),
+      });
+      if (status) {
+        status.textContent = "Thank you, your message has been sent. We'll reply within one business day.";
+        status.dataset.visible = "true";
+      }
+      contactForm.reset();
+    } catch (err) {
+      console.error("Contact form submission error:", err);
+      if (status) {
+        status.textContent = "We couldn't send your message just now. Please try again, or email us directly.";
+        status.dataset.visible = "true";
+      }
+    } finally {
+      if (submitBtn) submitBtn.disabled = false;
     }
-    contactForm.reset();
   });
 }
 

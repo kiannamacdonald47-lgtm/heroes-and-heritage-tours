@@ -1,10 +1,10 @@
 {
   "heroSlides": [
-    { "image": "/photos/vimy/vimy-22.jpg", "alt": "The Canadian National Vimy Memorial viewed from below" },
-    { "image": "/photos/flanders/flanders-cover.jpg", "alt": "The Menin Gate Memorial illuminated at night in Ypres" },
-    { "image": "/photos/somme/somme-cover.jpg", "alt": "The Beaumont-Hamel Newfoundland Memorial caribou statue" },
-    { "image": "/photos/normandy5day/normandy5day-cover.jpg", "alt": "Aerial view of Juno Beach, Normandy" },
-    { "image": "/photos/vimy/vimy-cover.jpg", "alt": "A preserved sandbagged trench at Vimy Ridge" }
+    { "image": "/photos/homeslides/homeslide-1.jpg", "alt": "The Canadian National Vimy Memorial framed by trees on a clear day" },
+    { "image": "/photos/homeslides/homeslide-2.jpg", "alt": "A preserved trench with sandbag revetting at Vimy Ridge" },
+    { "image": "/photos/homeslides/homeslide-3.jpg", "alt": "A guest placing a Canadian flag at a war grave in a Commonwealth cemetery" },
+    { "image": "/photos/homeslides/homeslide-4.jpg", "alt": "Aerial view of Juno Beach, with the Canadian memorial and preserved bunker in the foreground" },
+    { "image": "/photos/homeslides/homeslide-5.jpg", "alt": "Wild poppies growing among rusted battlefield wire" }
   ],
   "heroEyebrow": "Based in Arras, France, 45 minutes from Paris",
   "heroTitle": "Walk in the Footsteps of Canada's Heroes.",
@@ -30,13 +30,13 @@
       "title": "Canadian Western Front",
       "text": "Vimy Ridge, Ypres, Passchendaele and the Somme.",
       "image": "/photos/vimy/vimy-cover.jpg",
-      "imageAlt": "A preserved sandbagged trench at Vimy Ridge",
+      "imageAlt": "The Canadian National Vimy Memorial against a blue sky",
       "linkText": "Explore Western Front Tours",
       "link": "/tours.html"
     },
     {
       "title": "Normandy and D-Day",
-      "text": "Juno Beach, Omaha Beach, and the American, British and Canadian D-Day sectors.",
+      "text": "Juno Beach, Dieppe, and the American, British and Canadian D-Day sectors.",
       "image": "/photos/juno-paris/juno-paris-cover.jpg",
       "imageAlt": "Aerial view of Juno Beach, with the Canadian memorial and preserved bunker in the foreground",
       "linkText": "Explore Normandy Tours",
@@ -93,7 +93,7 @@
   ],
   "familyTeaserImage": "/photos/testimonials/testimonial-03.jpg",
   "familyTeaserAlt": "A guest places a Canadian flag at her relative's grave in a Commonwealth war cemetery",
-  "familyTeaserParagraph": "Send us your relative's name, and Joe will research their service record, the battles they fought in, and the exact ground they stood on, then build it into your tour. Families have found gravesites, uncovered medical histories, and walked the paths their great-grandfathers walked over a century ago.",
+  "familyTeaserParagraph": "Send us your relative's name, and we'll research their service record, the battles they fought in, and the exact ground they stood on, then build it into your tour. Families have found gravesites, uncovered medical histories, and walked the paths their great-grandfathers walked over a century ago.",
   "familyTeaserQuote": "He brought my Great Grandfather's war experience to life, and completed my own journey with an emotional trip to my Great Uncle's gravesite.",
   "remembranceHeading": "Tours With a Purpose",
   "remembranceParagraphs": [

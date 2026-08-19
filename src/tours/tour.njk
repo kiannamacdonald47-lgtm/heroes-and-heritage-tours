@@ -113,11 +113,24 @@ eleventyComputed:
     </div>
     <div class="gallery-grid" data-reveal>
       {% for img in tour.galleryImages %}
-      <a href="/gallery.html" class="gallery-item"><img src="{{ img.src }}" alt="{{ img.alt }}" loading="lazy"></a>
+      <button class="gallery-item" data-gallery-item data-full="{{ img.src | replace('/thumbs/', '/') }}"><img src="{{ img.src }}" alt="{{ img.alt }}" loading="lazy"></button>
       {% endfor %}
     </div>
   </div>
 </section>
+
+<div class="lightbox" id="lightbox" data-open="false" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button class="lightbox-close" aria-label="Close photo viewer">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <button class="lightbox-prev" aria-label="Previous photo">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+  </button>
+  <img src="" alt="">
+  <button class="lightbox-next" aria-label="Next photo">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+  </button>
+</div>
 
 <section class="section">
   <div class="container">

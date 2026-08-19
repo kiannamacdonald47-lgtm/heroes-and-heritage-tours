@@ -49,7 +49,11 @@ permalink: "/contact.html"
         </div>
       </div>
 
-      <form class="contact-form" id="contactForm" novalidate>
+      <form class="contact-form" id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="botField" novalidate>
+        <input type="hidden" name="form-name" value="contact">
+        <p class="visually-hidden">
+          <label>Don't fill this out if you're human: <input name="botField" tabindex="-1" autocomplete="off"></label>
+        </p>
         <div class="form-field">
           <label for="name">Full name <span class="required-mark">*</span></label>
           <input type="text" id="name" name="name" autocomplete="name" required>
@@ -75,7 +79,6 @@ permalink: "/contact.html"
           <textarea id="message" name="message" required placeholder="Tell us about your trip, group size, or the family member you're hoping to trace."></textarea>
         </div>
         <button type="submit" class="btn btn-primary btn-block btn-lg">Send Message</button>
-        <p class="form-hint">This form isn't wired to a backend yet. Connect it to an email or form service (e.g. Formspree) before launch. See js/main.js for where to add it.</p>
         <p class="form-status" id="formStatus" role="status"></p>
       </form>
     </div>

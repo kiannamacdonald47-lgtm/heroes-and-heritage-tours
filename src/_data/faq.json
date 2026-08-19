@@ -9,7 +9,7 @@
       },
       {
         "q": "How fit do I need to be?",
-        "a": "Our tours involve gentle-to-moderate walking on grass, gravel paths and occasionally uneven battlefield ground, including preserved trenches and cemeteries. Most guests of all ages and mobility levels manage comfortably at a relaxed pace, and Joe is happy to adjust the walking pace or route. If you have specific mobility concerns, let us know when booking and we'll help you plan accordingly."
+        "a": "Our tours involve gentle-to-moderate walking on grass, gravel paths and occasionally uneven battlefield ground, including preserved trenches and cemeteries. Most guests of all ages and mobility levels manage comfortably at a relaxed pace. If you have specific mobility concerns, let us know when booking and we'll help you plan accordingly."
       },
       {
         "q": "What should I bring or wear?",
@@ -17,7 +17,7 @@
       },
       {
         "q": "What language are the tours conducted in?",
-        "a": "All Heroes and Heritage Tours are conducted in English."
+        "a": "All Heroes and Heritage Tours are conducted in English. Private tours in French may be booked upon request."
       },
       {
         "q": "Can I request a private or customised tour?",
@@ -31,11 +31,11 @@
     "items": [
       {
         "q": "Where do tours depart from?",
-        "a": "All tours are based in Arras, the historic heart of Canada's war on the Western Front, and just 45 minutes from Paris by train. We provide pick-up and drop-off at Arras Train Station or your Arras accommodation. We're happy to recommend hotels and guest houses our clients have stayed at."
+        "a": "All Western Front tours are based in Arras, the historic heart of Canada's Great War, and just 45 minutes from Paris by train. We provide pick-up and drop-off at Arras Train Station or your Arras accommodation. We're happy to recommend hotels and guest houses our clients have stayed at. For Normandy tours, please refer to the information on the specific tour you are interested in."
       },
       {
         "q": "What's included in the price?",
-        "a": "Every tour includes an expert, English-speaking Western Front guide; a comfortable, air-conditioned 8/9 seat mini bus; pick-up and drop-off at Arras Train Station or your Arras accommodation; and all entry fees. On multi-day tours, accommodation and meals are not included."
+        "a": "Every tour includes an expert, English-speaking battlefield guide; a comfortable, air-conditioned 8/9 seat mini bus; pick-up and drop-off, and all entry fees."
       },
       {
         "q": "What currency are prices in?",
@@ -53,7 +53,7 @@
     "items": [
       {
         "q": "How do deposits work?",
-        "a": "A 30% deposit secures your booking. The remaining balance must be received at least 21 days before your Day Tour begins."
+        "a": "A 30% deposit secures your booking. The remaining balance must be received at least 21 days before your tour begins."
       },
       {
         "q": "What is your cancellation and refund policy?",
@@ -65,7 +65,7 @@
       },
       {
         "q": "What happens if the tour can't run?",
-        "a": "If we are unable to deliver a booked Day Tour, our liability is limited to a full refund of the tour fee. No refund applies where a tour is prevented by Force Majeure. See our full [Terms & Conditions](/terms.html) for details."
+        "a": "If we are unable to deliver a booked tour, our liability is limited to a full refund of the tour fee. No refund applies where a tour is prevented by Force Majeure. See our full [Terms & Conditions](/terms.html) for details."
       },
       {
         "q": "Can you help me trace a family member who served?",

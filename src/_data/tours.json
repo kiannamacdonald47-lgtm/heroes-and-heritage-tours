@@ -6,14 +6,14 @@
     "tagline": "Canada's greatest battles in the greatest war ever fought.",
     "badge": "Day Tour",
     "combo": false,
-    "schedule": "Tue, Fri, Sun",
-    "scheduleFull": "Departs Arras every Tuesday, Friday and Sunday. Other days available on request.",
+    "schedule": "Sat, Tue",
+    "scheduleFull": "Departs Arras every Saturday and Tuesday. Other days available on request.",
     "duration": "8–9 hours",
     "price": 350,
     "heroImage": "/photos/vimy/vimy-cover.jpg",
-    "heroAlt": "A preserved sandbagged trench at Vimy Ridge",
+    "heroAlt": "The Canadian National Vimy Memorial against a blue sky",
     "cardImage": "/photos/vimy/vimy-cover.jpg",
-    "cardAlt": "A preserved sandbagged trench at Vimy Ridge",
+    "cardAlt": "The Canadian National Vimy Memorial against a blue sky",
     "cardDesc": "Vimy Ridge's preserved trenches and tunnels, the National Vimy Memorial, Hill 70, Monchy-le-Preux and the Hundred Days Offensive.",
     "intro": [
       "Follow the trail from Vimy to victory during an unforgettable day on the battlefields of the Artois! Explore the preserved trenches, tunnels, and battlefield of Vimy Ridge before visiting the iconic Canadian National Vimy Memorial, one of Canada's most important national monuments.",
@@ -46,26 +46,41 @@
     "footnote": "The above itinerary may be varied based on the wishes and consensus of the guests travelling on any particular day. This tour is also included within The Signature (2 Day) and The Ultimate (3 Day) Canadian Tours.",
     "galleryImages": [
       {
-        "src": "/photos/vimy/thumbs/vimy-20.jpg",
-        "alt": "Archival photograph of Canadian soldiers advancing under bombardment"
-      },
-      {
-        "src": "/photos/vimy/thumbs/vimy-21.jpg",
+        "src": "/photos/vimy/thumbs/vimy-new-1.jpg",
         "alt": "Underground tunnel beneath Vimy Ridge"
       },
       {
-        "src": "/photos/vimy/thumbs/vimy-22.jpg",
-        "alt": "The Canadian National Vimy Memorial viewed from below"
+        "src": "/photos/vimy/thumbs/vimy-new-2.jpg",
+        "alt": "A guide and guest walking through the preserved trenches and mine craters at Vimy Ridge"
       },
       {
-        "src": "/photos/vimy/thumbs/vimy-23.jpg",
-        "alt": "A guest visiting a Canadian war grave at Vimy"
+        "src": "/photos/vimy/thumbs/vimy-new-3.jpg",
+        "alt": "Archival photograph of Canadian soldiers advancing under bombardment"
+      },
+      {
+        "src": "/photos/vimy/thumbs/vimy-new-4.jpg",
+        "alt": "The Canadian National Vimy Memorial illuminated at night, showing the mourning figures carved into its base"
+      },
+      {
+        "src": "/photos/vimy/thumbs/vimy-new-5.jpg",
+        "alt": "A guest reading the names of the missing inscribed on the Vimy Memorial wall"
+      },
+      {
+        "src": "/photos/vimy/thumbs/vimy-new-6.jpg",
+        "alt": "The Newfoundland Caribou memorial at Monchy-le-Preux"
+      },
+      {
+        "src": "/photos/vimy/thumbs/vimy-new-7.jpg",
+        "alt": "A memorial marking the Seven Victoria Crosses awarded near Cambrai on 2 September 1918"
+      },
+      {
+        "src": "/photos/vimy/thumbs/vimy-new-8.jpg",
+        "alt": "A guest at the grave of a soldier of the 49th Battalion, Canadian Infantry"
       }
     ],
     "runDays": [
-      2,
-      5,
-      0
+      6,
+      2
     ],
     "inclusions": [
       "Expert WWI Western Front guide",
@@ -82,14 +97,14 @@
     "tagline": "\"In Flanders Fields, the poppies blow...\"",
     "badge": "Day Tour",
     "combo": false,
-    "schedule": "Mon, Thu",
-    "scheduleFull": "Departs Arras every Monday and Thursday. Other days available on request.",
+    "schedule": "Sun, Wed",
+    "scheduleFull": "Departs Arras every Sunday and Wednesday. Other days available on request.",
     "duration": "12–13 hours",
     "price": 420,
     "heroImage": "/photos/flanders/flanders-cover.jpg",
-    "heroAlt": "The Menin Gate Memorial illuminated at night in Ypres",
+    "heroAlt": "The Canada Gate memorial arch at Tyne Cot Cemetery in autumn",
     "cardImage": "/photos/flanders/flanders-cover.jpg",
-    "cardAlt": "The Menin Gate Memorial illuminated at night in Ypres",
+    "cardAlt": "The Canada Gate memorial arch at Tyne Cot Cemetery in autumn",
     "cardDesc": "Passchendaele, Tyne Cot, the site where \"In Flanders Fields\" was written, and the nightly Last Post Ceremony.",
     "intro": [
       "Journey through the infamous Flanders Fields battlefields and discover what inspired the war's most poignant poem. During the Great War, this small corner of Belgium witnessed some of the fiercest fighting of the First World War. Stand where Canadian soldiers stood facing chlorine gas clouds and went over the top through the mud and devastation of Passchendaele.",
@@ -134,25 +149,41 @@
     "footnote": "Tour itineraries may be adjusted to accommodate weather, timing, or the interests of guests. This tour is also included within The Signature (2 Day) and The Ultimate (3 Day) Canadian Tours.",
     "galleryImages": [
       {
-        "src": "/photos/flanders/thumbs/flanders-16.jpg",
-        "alt": "Archival photograph of soldiers crossing the flooded Passchendaele battlefield"
+        "src": "/photos/flanders/thumbs/flanders-new-1.jpg",
+        "alt": "A preserved trench with corrugated metal revetting in the woods of Flanders"
       },
       {
-        "src": "/photos/flanders/thumbs/flanders-17.jpg",
-        "alt": "A preserved trench and shelter in the woods of Flanders"
+        "src": "/photos/flanders/thumbs/flanders-new-2.jpg",
+        "alt": "A guide and guests at the Hill 62 Sanctuary Wood museum, with a preserved artillery piece"
       },
       {
-        "src": "/photos/flanders/thumbs/flanders-18.jpg",
-        "alt": "A guest paying respects at Tyne Cot Commonwealth War Cemetery"
+        "src": "/photos/flanders/thumbs/flanders-new-3.jpg",
+        "alt": "Archival photograph of soldiers crossing duckboards through the flooded Passchendaele battlefield"
       },
       {
-        "src": "/photos/flanders/thumbs/flanders-19.jpg",
-        "alt": "Guests examining battlefield relics found in Flanders"
+        "src": "/photos/flanders/thumbs/flanders-new-4.jpg",
+        "alt": "Wild poppies growing among rusted battlefield wire"
+      },
+      {
+        "src": "/photos/flanders/thumbs/flanders-new-5.jpg",
+        "alt": "A guest placing a Canadian flag at a war grave in a Commonwealth cemetery"
+      },
+      {
+        "src": "/photos/flanders/thumbs/flanders-new-6.jpg",
+        "alt": "The Mount Sorrel Canadian Memorial near Ypres"
+      },
+      {
+        "src": "/photos/flanders/thumbs/flanders-new-7.jpg",
+        "alt": "The Last Post Ceremony beneath the Menin Gate Memorial in Ypres"
+      },
+      {
+        "src": "/photos/flanders/thumbs/flanders-new-8.jpg",
+        "alt": "The historic market square and Cloth Hall of Ypres"
       }
     ],
     "runDays": [
-      1,
-      4
+      0,
+      3
     ],
     "inclusions": [
       "Expert WWI Western Front guide",
@@ -169,8 +200,8 @@
     "tagline": "Beaumont-Hamel, Courcelette, and the Battle of Amiens 1918.",
     "badge": "Day Tour",
     "combo": false,
-    "schedule": "Wed, Sat",
-    "scheduleFull": "Departs Arras every Wednesday and Saturday. Other days available on request.",
+    "schedule": "Mon",
+    "scheduleFull": "Departs Arras every Monday. Other days available on request.",
     "duration": "8–9 hours",
     "price": 320,
     "heroImage": "/photos/somme/somme-cover.jpg",
@@ -211,25 +242,40 @@
     "footnote": "The above itinerary may be varied based on the wishes and consensus of the guests travelling on any particular day. This tour is also included within The Ultimate (3 Day) Canadian Tour.",
     "galleryImages": [
       {
-        "src": "/photos/somme/thumbs/somme-17.jpg",
-        "alt": "Beaumont-Hamel Newfoundland Memorial trenches and craters"
+        "src": "/photos/somme/thumbs/somme-new-1.jpg",
+        "alt": "The Beaumont-Hamel Newfoundland Memorial caribou statue against a blue sky"
       },
       {
-        "src": "/photos/somme/thumbs/somme-18.jpg",
-        "alt": "A guest in a preserved trench dugout museum"
+        "src": "/photos/somme/thumbs/somme-new-2.jpg",
+        "alt": "Aerial view of the Lochnagar Crater, a giant mine crater on the Somme battlefield"
       },
       {
-        "src": "/photos/somme/thumbs/somme-19.jpg",
-        "alt": "Aerial view of a Somme battlefield mine crater"
+        "src": "/photos/somme/thumbs/somme-new-3.jpg",
+        "alt": "The Pozieres Tank Memorial marking the Canadian Corps' battle honours of 1918"
       },
       {
-        "src": "/photos/somme/thumbs/somme-20.jpg",
+        "src": "/photos/somme/thumbs/somme-new-4.jpg",
+        "alt": "A preserved First World War tank and artillery pieces on display"
+      },
+      {
+        "src": "/photos/somme/thumbs/somme-new-5.jpg",
+        "alt": "The grave of Private John Bernard Croak VC in a Commonwealth war cemetery"
+      },
+      {
+        "src": "/photos/somme/thumbs/somme-new-6.jpg",
+        "alt": "A remembrance ceremony at a Commonwealth war cemetery on the Somme"
+      },
+      {
+        "src": "/photos/somme/thumbs/somme-new-7.jpg",
         "alt": "A commemorative ceremony at a Somme war cemetery"
+      },
+      {
+        "src": "/photos/somme/thumbs/somme-new-8.jpg",
+        "alt": "Rows of Commonwealth war graves at a cemetery on the Somme"
       }
     ],
     "runDays": [
-      3,
-      6
+      1
     ],
     "inclusions": [
       "Expert WWI Western Front guide",
@@ -246,8 +292,8 @@
     "tagline": "In Flanders Fields + Vimy to Victory, combined.",
     "badge": "2 Day Tour",
     "combo": true,
-    "schedule": "Mon–Tue & Thu–Fri departures",
-    "scheduleFull": "Departs Arras every Monday and Thursday. Other days available on request. Accommodation and meals are not included.",
+    "schedule": "Sat–Sun & Tue–Wed departures",
+    "scheduleFull": "Departs Arras every Saturday and Tuesday. Other days available on request. Accommodation and meals are not included.",
     "duration": "2 days",
     "price": 770,
     "heroImage": "/photos/signature/signature-cover.jpg",
@@ -292,25 +338,41 @@
     "footnote": "The above itinerary may be varied based on the wishes and consensus of the guests travelling on any particular day. Customised tours are available for this area on request.",
     "galleryImages": [
       {
-        "src": "/photos/signature/thumbs/signature-01.jpg",
-        "alt": "A preserved wood-lined trench in the Ypres Salient"
+        "src": "/photos/signature/thumbs/signature-new-1.jpg",
+        "alt": "The Canadian National Vimy Memorial illuminated at night"
       },
       {
-        "src": "/photos/signature/thumbs/signature-02.jpg",
-        "alt": "Wild poppies growing among rusted barbed wire on the former battlefield"
+        "src": "/photos/signature/thumbs/signature-new-2.jpg",
+        "alt": "An underground tunnel beneath Vimy Ridge"
       },
       {
-        "src": "/photos/signature/thumbs/signature-03.jpg",
-        "alt": "The Canadian National Vimy Memorial's twin pylons against a blue sky"
+        "src": "/photos/signature/thumbs/signature-new-3.jpg",
+        "alt": "A preserved trench in the woods of the Ypres Salient"
       },
       {
-        "src": "/photos/signature/thumbs/signature-04.jpg",
-        "alt": "A guest reading the names of the missing carved into the Vimy Memorial wall"
+        "src": "/photos/signature/thumbs/signature-new-4.jpg",
+        "alt": "Wild poppies growing among rusted battlefield wire"
+      },
+      {
+        "src": "/photos/signature/thumbs/signature-new-5.jpg",
+        "alt": "A guest at the grave of a soldier of the 49th Battalion, Canadian Infantry"
+      },
+      {
+        "src": "/photos/signature/thumbs/signature-new-6.jpg",
+        "alt": "The Last Post Ceremony beneath the Menin Gate Memorial in Ypres"
+      },
+      {
+        "src": "/photos/signature/thumbs/signature-new-7.jpg",
+        "alt": "A memorial marking the Seven Victoria Crosses awarded near Cambrai on 2 September 1918"
+      },
+      {
+        "src": "/photos/signature/thumbs/signature-new-8.jpg",
+        "alt": "The Newfoundland Caribou memorial at Monchy-le-Preux"
       }
     ],
     "runDays": [
-      1,
-      4
+      6,
+      2
     ],
     "inclusions": [
       "Expert WWI Western Front guide",
@@ -327,8 +389,8 @@
     "tagline": "Vimy to Victory + In Flanders Fields + The Bloody Somme, combined.",
     "badge": "3 Day Tour",
     "combo": true,
-    "schedule": "Mon–Wed & Thu–Sat departures",
-    "scheduleFull": "Departs Arras every Monday and Thursday. Other days available on request. Accommodation and meals are not included.",
+    "schedule": "Sat–Mon & Mon–Wed departures",
+    "scheduleFull": "Departs Arras every Saturday and Monday. Other days available on request. Accommodation and meals are not included.",
     "duration": "3 days",
     "price": 1090,
     "heroImage": "/photos/ultimate/ultimate-cover.jpg",
@@ -378,25 +440,41 @@
     "footnote": "The above itinerary may be varied based on the wishes and consensus of the guests travelling on any particular day. Customised tours are available for this area on request.",
     "galleryImages": [
       {
-        "src": "/photos/ultimate/thumbs/ultimate-01.jpg",
-        "alt": "A snow-covered preserved trench and bunker at Vimy Ridge"
+        "src": "/photos/ultimate/thumbs/ultimate-new-1.jpg",
+        "alt": "The Last Post Ceremony beneath the Menin Gate Memorial in Ypres"
       },
       {
-        "src": "/photos/ultimate/thumbs/ultimate-02.jpg",
+        "src": "/photos/ultimate/thumbs/ultimate-new-2.jpg",
         "alt": "A guide and guest examining a battlefield relic found in the woods"
       },
       {
-        "src": "/photos/ultimate/thumbs/ultimate-03.jpg",
-        "alt": "The Menin Gate Memorial at dusk in Ypres"
+        "src": "/photos/ultimate/thumbs/ultimate-new-3.jpg",
+        "alt": "A preserved trench in the woods of the Ypres Salient"
       },
       {
-        "src": "/photos/ultimate/thumbs/ultimate-04.jpg",
-        "alt": "Canadian Armed Forces members visiting the Beaumont-Hamel Newfoundland Memorial caribou statue"
+        "src": "/photos/ultimate/thumbs/ultimate-new-4.jpg",
+        "alt": "The Beaumont-Hamel Newfoundland Memorial caribou statue against a blue sky"
+      },
+      {
+        "src": "/photos/ultimate/thumbs/ultimate-new-5.jpg",
+        "alt": "The entrance to Vimy Ridge's Centennial Park, with the Vimy Memorial in the distance"
+      },
+      {
+        "src": "/photos/ultimate/thumbs/ultimate-new-6.jpg",
+        "alt": "The Canadian National Vimy Memorial illuminated at night, viewed from below"
+      },
+      {
+        "src": "/photos/ultimate/thumbs/ultimate-new-7.jpg",
+        "alt": "A guide and guest at the preserved trenches and mine craters at Vimy Ridge"
+      },
+      {
+        "src": "/photos/ultimate/thumbs/ultimate-new-8.jpg",
+        "alt": "The Canada Gate memorial arch at Tyne Cot Cemetery in autumn"
       }
     ],
     "runDays": [
-      1,
-      4
+      6,
+      1
     ],
     "inclusions": [
       "Expert WWI Western Front guide",
@@ -534,7 +612,7 @@
       },
       {
         "src": "/photos/vimy/thumbs/vimy-cover.jpg",
-        "alt": "Vimy Memorial at night"
+        "alt": "The Canadian National Vimy Memorial against a blue sky"
       }
     ],
     "runDays": [
@@ -628,6 +706,14 @@
       {
         "src": "/photos/juno-paris/thumbs/juno-paris-04.jpg",
         "alt": "A memorial to Canadian soldiers murdered as prisoners of war at Abbaye d'Ardenne"
+      },
+      {
+        "src": "/photos/juno-paris/thumbs/juno-paris-05.jpg",
+        "alt": "A Canadian memorial reading 'À tous nos morts' overlooking Juno Beach"
+      },
+      {
+        "src": "/photos/juno-paris/thumbs/juno-paris-06.jpg",
+        "alt": "The courtyard of Abbaye d'Ardenne near Caen"
       }
     ],
     "runDays": [
@@ -716,6 +802,14 @@
       {
         "src": "/photos/juno-bayeux/thumbs/juno-bayeux-04.jpg",
         "alt": "The courtyard of Abbaye d'Ardenne near Caen"
+      },
+      {
+        "src": "/photos/juno-bayeux/thumbs/juno-bayeux-05.jpg",
+        "alt": "Aerial view of Juno Beach, with the Canadian memorial and preserved bunker in the foreground"
+      },
+      {
+        "src": "/photos/juno-bayeux/thumbs/juno-bayeux-06.jpg",
+        "alt": "A memorial to Canadian soldiers murdered as prisoners of war at Abbaye d'Ardenne"
       }
     ],
     "runDays": [
@@ -809,6 +903,18 @@
       {
         "src": "/photos/normandy2day/thumbs/normandy2day-04.jpg",
         "alt": "Bény-sur-Mer Canadian War Cemetery"
+      },
+      {
+        "src": "/photos/normandy2day/thumbs/normandy2day-05.jpg",
+        "alt": "A memorial to the 101st Airborne Division's 'E' Company"
+      },
+      {
+        "src": "/photos/normandy2day/thumbs/normandy2day-06.jpg",
+        "alt": "The Normandy American Cemetery at Colleville-sur-Mer"
+      },
+      {
+        "src": "/photos/normandy2day/thumbs/normandy2day-07.jpg",
+        "alt": "A guide leading guests through the D-Day story at the Juno Beach Centre"
       }
     ],
     "runDays": [
@@ -909,6 +1015,18 @@
       {
         "src": "/photos/normandy3day/thumbs/normandy3day-04.jpg",
         "alt": "A Canadian memorial reading 'À tous nos morts' overlooking Juno Beach"
+      },
+      {
+        "src": "/photos/normandy3day/thumbs/normandy3day-05.jpg",
+        "alt": "A memorial to the 101st Airborne Division's 'E' Company"
+      },
+      {
+        "src": "/photos/normandy3day/thumbs/normandy3day-06.jpg",
+        "alt": "The Normandy American Cemetery at Colleville-sur-Mer"
+      },
+      {
+        "src": "/photos/normandy3day/thumbs/normandy3day-07.jpg",
+        "alt": "Archival photograph of Canadian troops landing at Juno Beach on D-Day"
       }
     ],
     "runDays": [
@@ -1044,6 +1162,18 @@
       {
         "src": "/photos/normandy5dayexplorer/thumbs/normandy5dayexplorer-04.jpg",
         "alt": "Pegasus Bridge, captured by British airborne troops on D-Day"
+      },
+      {
+        "src": "/photos/normandy5dayexplorer/thumbs/normandy5dayexplorer-05.jpg",
+        "alt": "Aerial view of Juno Beach, with the Canadian memorial and preserved bunker in the foreground"
+      },
+      {
+        "src": "/photos/normandy5dayexplorer/thumbs/normandy5dayexplorer-06.jpg",
+        "alt": "Bény-sur-Mer Canadian War Cemetery"
+      },
+      {
+        "src": "/photos/normandy5dayexplorer/thumbs/normandy5dayexplorer-07.jpg",
+        "alt": "Archival photograph of a German Tiger tank and crew in Normandy"
       }
     ],
     "runDays": [
@@ -1116,6 +1246,10 @@
       "Maximum group size of eight guests"
     ],
     "galleryImages": [
+      {
+        "src": "/photos/dieppe/thumbs/dieppe-cover.jpg",
+        "alt": "The shingle beach, seafront lawns and town of Dieppe seen from the clifftop above the promenade"
+      },
       {
         "src": "/photos/dieppe/thumbs/dieppe-01.jpg",
         "alt": "A bilingual interpretive panel describing the raid of 19 August 1942, beside the road bridge over the river at Pourville"
