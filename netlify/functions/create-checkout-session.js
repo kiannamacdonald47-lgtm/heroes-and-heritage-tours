@@ -30,7 +30,19 @@ exports.handler = async (event) => {
   }
 
   const subtotal = tour.price * guests;
-  const deposit = Math.round(subtotal * 0.3);
+
+  // Tours departing within 21 days must be paid in full — there's no
+  // time left to collect a balance payment before departure.
+  let fullPaymentRequired = false;
+  const isIsoDate = /^\d{4}-\d{2}-\d{2}$/.test(data.preferredDateISO || "");
+  const parsedDate = isIsoDate ? new Date(`${data.preferredDateISO}T00:00:00`) : new Date(data.preferredDate);
+  if (!isNaN(parsedDate)) {
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    const daysUntilTour = Math.round((parsedDate - today) / 86400000);
+    fullPaymentRequired = daysUntilTour < 21;
+  }
+  const deposit = fullPaymentRequired ? subtotal : Math.round(subtotal * 0.3);
 
   const stripe = Stripe(process.env.STRIPE_SECRET_KEY);
   const siteUrl = process.env.URL || "https://heroesandheritagetours.ca";
@@ -47,7 +59,7 @@ exports.handler = async (event) => {
             currency: "cad",
             unit_amount: deposit * 100,
             product_data: {
-              name: `${tour.name}: 30% deposit`,
+              name: `${tour.name}: ${fullPaymentRequired ? "full payment" : "30% deposit"}`,
               description: `${guests} guest${guests > 1 ? "s" : ""} · Preferred date: ${data.preferredDate}`,
             },
           },
@@ -66,6 +78,7 @@ exports.handler = async (event) => {
         notes: (data.notes || "").slice(0, 400),
         subtotalCad: String(subtotal),
         depositCad: String(deposit),
+        fullPaymentRequired: String(fullPaymentRequired),
       },
       success_url: `${siteUrl}/booking-confirmed.html?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${siteUrl}/booking.html?canceled=true&tour=${encodeURIComponent(tour.slug)}`,

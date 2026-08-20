@@ -27,6 +27,7 @@ exports.handler = async (event) => {
         guests: session.metadata.guests,
         preferredDate: session.metadata.preferredDate,
         depositCad: session.metadata.depositCad,
+        fullPaymentRequired: session.metadata.fullPaymentRequired === "true",
         fullName: session.metadata.fullName,
       }),
     };

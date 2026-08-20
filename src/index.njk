@@ -124,7 +124,11 @@ permalink: "/index.html"
         <h2 style="color: #FFF; max-width: 20ch;">{{ home.emailCaptureHeading }}</h2>
         <p class="lede" style="max-width: 50ch;">{{ home.emailCaptureText }}</p>
       </div>
-      <form class="email-capture-form" id="emailCaptureForm" novalidate>
+      <form class="email-capture-form" id="emailCaptureForm" name="tour-list-signup" method="POST" data-netlify="true" netlify-honeypot="signupBotField" novalidate>
+        <input type="hidden" name="form-name" value="tour-list-signup">
+        <p class="visually-hidden">
+          <label>Don't fill this out if you're human: <input name="signupBotField" tabindex="-1" autocomplete="off"></label>
+        </p>
         <div class="form-grid form-grid--2">
           <div class="form-field">
             <label for="signupName" class="visually-hidden">First name</label>
@@ -146,7 +150,6 @@ permalink: "/index.html"
           </select>
         </div>
         <button type="submit" class="btn btn-primary btn-block btn-lg">Join the Tour List</button>
-        <p class="form-hint" style="color: var(--cream-text-faint);">This form isn't wired to a backend yet. Connect it to an email or form service (e.g. Formspree) before launch. See js/main.js for where to add it.</p>
         <p class="form-status" id="signupStatus" role="status"></p>
       </form>
     </div>

@@ -1,7 +1,7 @@
 ---
 layout: base.njk
 title: "Booking Confirmed | Heroes and Heritage Tours"
-description: "Your deposit has been received. Thank you for booking with Heroes and Heritage Tours."
+description: "Your payment has been received. Thank you for booking with Heroes and Heritage Tours."
 permalink: "/booking-confirmed.html"
 ---
 
@@ -12,13 +12,13 @@ permalink: "/booking-confirmed.html"
         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
       </div>
       <span class="eyebrow">Booking received</span>
-      <h1>Thank you, your deposit is confirmed.</h1>
-      <p class="lede" style="color: var(--foreground-muted);">We've received your 30% deposit and your booking details. A receipt has been emailed to you by Stripe, and a member of our team will be in touch within one business day to confirm your exact date and finalize your itinerary.</p>
+      <h1>Thank you, your booking is confirmed.</h1>
+      <p class="lede" style="color: var(--foreground-muted);">We've received your payment and your booking details. A receipt has been emailed to you by Stripe, and a member of our team will be in touch within one business day to confirm your exact date and finalize your itinerary.</p>
       <div class="booking-summary" id="confirmedSummary" style="display: none; text-align: left; margin-top: var(--space-2);">
         <div class="booking-summary-row"><span>Tour</span><strong id="confirmedTour">–</strong></div>
         <div class="booking-summary-row"><span>Guests</span><strong id="confirmedGuests">–</strong></div>
         <div class="booking-summary-row"><span>Preferred date</span><strong id="confirmedDate">–</strong></div>
-        <div class="booking-summary-total"><span>Deposit paid</span><span id="confirmedDeposit">–</span></div>
+        <div class="booking-summary-total"><span id="confirmedDepositLabel">Deposit paid</span><span id="confirmedDeposit">–</span></div>
       </div>
       <div class="hero-actions" style="margin-top: var(--space-3);">
         <a href="/tours.html" class="btn btn-primary btn-lg">View Our Tours</a>
@@ -40,6 +40,7 @@ permalink: "/booking-confirmed.html"
         document.getElementById("confirmedGuests").textContent = data.guests || "–";
         document.getElementById("confirmedDate").textContent = data.preferredDate || "–";
         document.getElementById("confirmedDeposit").textContent = data.depositCad ? "$" + data.depositCad + " CAD" : "–";
+        document.getElementById("confirmedDepositLabel").textContent = data.fullPaymentRequired ? "Full payment received" : "Deposit paid";
         document.getElementById("confirmedSummary").style.display = "block";
       })
       .catch(() => {});

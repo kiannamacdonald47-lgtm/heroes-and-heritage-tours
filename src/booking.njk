@@ -166,7 +166,7 @@ permalink: "/booking.html"
           <div data-step>
             <div class="form-fieldset">
               <legend>Review &amp; payment</legend>
-              <p class="body-text">Please review your booking summary to the right before confirming. You'll be taken to secure Stripe checkout to pay your 30% deposit now; our team will confirm your exact date by email within one business day.</p>
+              <p class="body-text">Please review your booking summary to the right before confirming. You'll be taken to secure Stripe checkout to make the payment shown there now; our team will confirm your exact date by email within one business day. Tours departing within 21 days require full payment at booking, as there's no time left to collect a balance beforehand.</p>
               <div class="form-field">
                 <label style="display: flex; align-items: flex-start; gap: 12px; font-weight: 400;">
                   <input type="checkbox" id="agreeTerms" name="agreeTerms" required style="width: 22px; height: 22px; margin-top: 2px; accent-color: var(--red); flex-shrink: 0;">
@@ -188,8 +188,8 @@ permalink: "/booking.html"
           <div class="booking-summary-row"><span>Guests</span><strong id="summaryGuests">1</strong></div>
           <div class="booking-summary-row"><span>Price per person</span><strong id="summaryPerPerson">–</strong></div>
           <div class="booking-summary-row"><span>Subtotal</span><strong id="summarySubtotal">–</strong></div>
-          <div class="booking-summary-total"><span>Deposit due now (30%)</span><span id="summaryDeposit">–</span></div>
-          <p class="body-text" style="font-size: 13px;">Remaining balance is due 21 days before your tour. Accommodation and meals are not included on multi-day tours.</p>
+          <div class="booking-summary-total"><span id="summaryDepositLabel">Deposit due now (30%)</span><span id="summaryDeposit">–</span></div>
+          <p class="body-text" style="font-size: 13px;" id="summaryBalanceNote">Remaining balance is due 21 days before your tour. Inclusions vary by tour: please refer to the individual tour page.</p>
         </aside>
       </div>
     </form>

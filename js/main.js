@@ -260,8 +260,21 @@ if (bookingForm) {
   const summaryPerPerson = document.getElementById("summaryPerPerson");
   const summarySubtotal = document.getElementById("summarySubtotal");
   const summaryDeposit = document.getElementById("summaryDeposit");
+  const summaryDepositLabel = document.getElementById("summaryDepositLabel");
+  const summaryBalanceNote = document.getElementById("summaryBalanceNote");
   const dateHint = document.getElementById("dateAvailabilityHint");
   const dateInput = document.getElementById("preferredDate");
+
+  // Bookings made within 21 days of departure must be paid in full —
+  // there's no time left to collect a balance payment before the tour.
+  const FULL_PAYMENT_WINDOW_DAYS = 21;
+  const daysUntil = (iso) => {
+    if (!iso) return null;
+    const target = new Date(iso + "T00:00:00");
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    return Math.round((target - today) / 86400000);
+  };
 
   const DAY_NAMES = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
@@ -276,13 +289,21 @@ if (bookingForm) {
     if (!tourKey) return;
     const tour = TOURS[tourKey];
     const subtotal = tour.price * guests;
-    const deposit = Math.round(subtotal * 0.3);
+    const days = daysUntil(dateInput?.dataset.iso);
+    const fullPaymentRequired = days !== null && days < FULL_PAYMENT_WINDOW_DAYS;
+    const amountDueNow = fullPaymentRequired ? subtotal : Math.round(subtotal * 0.3);
 
     if (summaryTour) summaryTour.textContent = tour.name;
     if (summaryGuests) summaryGuests.textContent = String(guests);
     if (summaryPerPerson) summaryPerPerson.textContent = `$${tour.price.toLocaleString()} CAD`;
     if (summarySubtotal) summarySubtotal.textContent = `$${subtotal.toLocaleString()} CAD`;
-    if (summaryDeposit) summaryDeposit.textContent = `$${deposit.toLocaleString()} CAD`;
+    if (summaryDeposit) summaryDeposit.textContent = `$${amountDueNow.toLocaleString()} CAD`;
+    if (summaryDepositLabel) summaryDepositLabel.textContent = fullPaymentRequired ? "Full payment due now" : "Deposit due now (30%)";
+    if (summaryBalanceNote) {
+      summaryBalanceNote.textContent = fullPaymentRequired
+        ? "Your tour departs within 21 days, so full payment is due now. Inclusions vary by tour: please refer to the individual tour page."
+        : "Remaining balance is due 21 days before your tour. Inclusions vary by tour: please refer to the individual tour page.";
+    }
 
     if (dateHint) {
       const days = RUN_DAYS[tourKey].map((d) => DAY_NAMES[d]).join(", ");
@@ -370,6 +391,7 @@ if (bookingForm) {
             dateInput.value = formatDisplay(date);
             dateInput.dataset.iso = iso;
             renderCalendar();
+            updateSummary();
           });
         }
 
@@ -395,7 +417,9 @@ if (bookingForm) {
     tourRadios.forEach((radio) => radio.addEventListener("change", () => {
       selectedISO = null;
       dateInput.value = "";
+      delete dateInput.dataset.iso;
       renderCalendar();
+      updateSummary();
     }));
 
     renderCalendar();
@@ -470,6 +494,7 @@ if (bookingForm) {
         body: JSON.stringify({
           tourSlug: formData.get("tour"),
           preferredDate: formData.get("preferredDate"),
+          preferredDateISO: dateInput?.dataset.iso || "",
           guests: formData.get("guests"),
           familyResearch: formData.get("familyResearch"),
           fullName: formData.get("fullName"),
@@ -551,23 +576,47 @@ if (contactForm) {
 }
 
 // ============================================================
-// Homepage email capture form (placeholder, no backend wired yet)
+// Homepage email capture form — submits to Netlify Forms, same
+// pattern as the contact form.
 // ============================================================
 const emailCaptureForm = document.getElementById("emailCaptureForm");
 if (emailCaptureForm) {
-  emailCaptureForm.addEventListener("submit", (e) => {
+  const encodeSignupForm = (data) =>
+    Object.keys(data)
+      .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
+      .join("&");
+
+  emailCaptureForm.addEventListener("submit", async (e) => {
     e.preventDefault();
     const status = document.getElementById("signupStatus");
     if (!emailCaptureForm.checkValidity()) {
       emailCaptureForm.reportValidity();
       return;
     }
-    // TODO: replace this block with a real submit, e.g.
-    // fetch("https://formspree.io/f/YOUR_ID", { method: "POST", body: new FormData(emailCaptureForm), headers: { Accept: "application/json" } })
-    if (status) {
-      status.textContent = "Thank you. This is a placeholder confirmation. Connect a form backend in js/main.js to actually receive signups.";
-      status.dataset.visible = "true";
+    const submitBtn = emailCaptureForm.querySelector('button[type="submit"]');
+    if (submitBtn) submitBtn.disabled = true;
+
+    try {
+      const data = Object.fromEntries(new FormData(emailCaptureForm).entries());
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encodeSignupForm(data),
+      });
+      if (!response.ok) throw new Error(`Form submission failed with status ${response.status}`);
+      if (status) {
+        status.textContent = "Thank you, you're on the list.";
+        status.dataset.visible = "true";
+      }
+      emailCaptureForm.reset();
+    } catch (err) {
+      console.error("Tour list signup error:", err);
+      if (status) {
+        status.textContent = "We couldn't sign you up just now. Please try again, or contact us directly.";
+        status.dataset.visible = "true";
+      }
+    } finally {
+      if (submitBtn) submitBtn.disabled = false;
     }
-    emailCaptureForm.reset();
   });
 }
