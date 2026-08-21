@@ -5,3 +5,13 @@
 
 [build.environment]
   NODE_VERSION = "20"
+
+[[redirects]]
+  from = "/tours/omaha-beach"
+  to = "/normandy"
+  status = 301
+
+[[redirects]]
+  from = "/tours/omaha-beach.html"
+  to = "/normandy"
+  status = 301

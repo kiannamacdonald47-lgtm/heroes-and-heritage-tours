@@ -306,13 +306,13 @@
     ],
     "itinerary": [
       {
-        "heading": "Day 1: In Flanders Fields",
-        "note": "North into Belgium, visiting some of the most iconic battlegrounds of the First World War: original trenches, the infamous Passchendaele battlefield, and the site where John McCrae wrote \"In Flanders Fields\" during the gas attacks of 1915. A relaxing dinner in the old town of Ypres leads into the emotive Last Post Ceremony at the Menin Gate, where more than 6,000 missing Canadians are commemorated.",
+        "heading": "Day 1: Vimy to Victory",
+        "note": "Into the footsteps of Canadian troops at Vimy Ridge, Hill 70, and the pivotal battles of 1918 on the famous Cambrai road, including the unforgettable National Vimy Memorial, where more than a century on, Canada's efforts and sacrifices are still proudly remembered by local communities.",
         "isPrefaceNote": true,
         "items": [
-          "Christmas Truce site at Ploegsteert Wood, Mount Sorrel & Hill 62",
-          "Passchendaele battlefield, Crest Farm Memorial & Tyne Cot Cemetery",
-          "Essex Farm and the Menin Gate Last Post Ceremony"
+          "Frontline trenches, tunnels & mine craters on Vimy Ridge",
+          "Canadian National Vimy Memorial",
+          "Hill 70, Monchy-le-Preux & the Drocourt-Quéant Line"
         ],
         "facts": [
           "Departure: Arras, 9:00 AM",
@@ -320,13 +320,13 @@
         ]
       },
       {
-        "heading": "Day 2: Vimy to Victory",
-        "note": "Into the footsteps of Canadian troops at Vimy Ridge, Hill 70, and the pivotal battles of 1918 on the famous Cambrai road, including the unforgettable National Vimy Memorial, where more than a century on, Canada's efforts and sacrifices are still proudly remembered by local communities.",
+        "heading": "Day 2: In Flanders Fields",
+        "note": "North into Belgium, visiting some of the most iconic battlegrounds of the First World War: original trenches, the infamous Passchendaele battlefield, and the site where John McCrae wrote \"In Flanders Fields\" during the gas attacks of 1915. A relaxing dinner in the old town of Ypres leads into the emotive Last Post Ceremony at the Menin Gate, where more than 6,000 missing Canadians are commemorated.",
         "isPrefaceNote": true,
         "items": [
-          "Frontline trenches, tunnels & mine craters on Vimy Ridge",
-          "Canadian National Vimy Memorial",
-          "Hill 70, Monchy-le-Preux & the Drocourt-Quéant Line"
+          "Christmas Truce site at Ploegsteert Wood, Mount Sorrel & Hill 62",
+          "Passchendaele battlefield, Crest Farm Memorial & Tyne Cot Cemetery",
+          "Essex Farm and the Menin Gate Last Post Ceremony"
         ],
         "facts": [
           "Departure: Arras, 9:00 AM",
@@ -398,17 +398,70 @@
     "cardAlt": "The Canadian National Vimy Memorial illuminated at night",
     "cardDesc": "Includes Vimy to Victory + In Flanders Fields + The Bloody Somme. From the 1915 gas attacks to the victories of 1918.",
     "intro": [
-      "The Ultimate: 3 Day Canadian Tour combines our three day tours to take you into the complete footsteps of Canadian troops on the frontlines of the First World War. From the 1915 gas attacks, to the brutal Somme, up to Vimy Ridge and onto the victories of 1918, where Canadians fought as shock troops to bring the war to an end.",
+      "The Ultimate: 3 Day Canadian Tour combines our three day tours to take you into the complete footsteps of Canadian troops on the frontlines of the First World War. From the 1915 gas attacks, to the brutal Somme, up to Vimy Ridge and onto the victories of 1918, where Canadians fought as shock troops to bring the war to an end. Itinerary order varies depending on your departure day (see below).",
       "All tours run from the old town of Arras. We can recommend accommodation in 3+ star hotels or guest houses our clients have happily stayed at. Pick-up/drop-off is at your accommodation in Arras or at Arras Train Station."
     ],
     "itinerary": [
       {
-        "heading": "Day 1: In Flanders Fields",
+        "heading": "Saturday Departure",
+        "note": "This sequence follows each site's own weekly schedule: Vimy to Victory on Saturday, In Flanders Fields on Sunday, and The Bloody Somme on Monday.",
+        "isPrefaceNote": true,
+        "items": [],
+        "facts": []
+      },
+      {
+        "heading": "Day 1: Vimy to Victory",
+        "note": "",
+        "items": [
+          "Frontline trenches, tunnels & mine craters on Vimy Ridge",
+          "Canadian National Vimy Memorial",
+          "Hill 70, Monchy-le-Preux & the Drocourt-Quéant Line"
+        ],
+        "facts": [
+          "Departure: Arras, 9:00 AM",
+          "Return: Arras, approx. 9:30 PM"
+        ]
+      },
+      {
+        "heading": "Day 2: In Flanders Fields",
         "note": "",
         "items": [
           "Christmas Truce site at Ploegsteert Wood, Mount Sorrel & Hill 62",
           "Passchendaele battlefield, Crest Farm Memorial & Tyne Cot Cemetery",
           "Essex Farm and the Menin Gate Last Post Ceremony"
+        ],
+        "facts": [
+          "Departure: Arras, 9:00 AM",
+          "Return: Arras, approx. 9:30 PM"
+        ]
+      },
+      {
+        "heading": "Day 3: The Bloody Somme",
+        "note": "",
+        "items": [
+          "Beaumont-Hamel Newfoundland Memorial & Museum, original trenches",
+          "Courcelette Canadian battlefield and the Tank memorial",
+          "Battle of Amiens 1918 Canadian battlefield"
+        ],
+        "facts": [
+          "Departure: Arras, 9:00 AM",
+          "Return: Arras, approx. 9:30 PM"
+        ]
+      },
+      {
+        "heading": "Monday Departure",
+        "note": "This sequence follows each site's own weekly schedule: The Bloody Somme on Monday, Vimy to Victory on Tuesday, and In Flanders Fields on Wednesday.",
+        "isPrefaceNote": true,
+        "items": [],
+        "facts": []
+      },
+      {
+        "heading": "Day 1: The Bloody Somme",
+        "note": "",
+        "items": [
+          "Beaumont-Hamel Newfoundland Memorial & Museum, original trenches",
+          "Courcelette Canadian battlefield and the Tank memorial",
+          "Battle of Amiens 1918 Canadian battlefield"
         ],
         "facts": [
           "Departure: Arras, 9:00 AM",
@@ -423,17 +476,23 @@
           "Canadian National Vimy Memorial",
           "Hill 70, Monchy-le-Preux & the Drocourt-Quéant Line"
         ],
-        "facts": []
+        "facts": [
+          "Departure: Arras, 9:00 AM",
+          "Return: Arras, approx. 9:30 PM"
+        ]
       },
       {
-        "heading": "Day 3: The Bloody Somme",
+        "heading": "Day 3: In Flanders Fields",
         "note": "",
         "items": [
-          "Beaumont-Hamel Newfoundland Memorial & Museum, original trenches",
-          "Courcelette Canadian battlefield and the Tank memorial",
-          "Battle of Amiens 1918 Canadian battlefield"
+          "Christmas Truce site at Ploegsteert Wood, Mount Sorrel & Hill 62",
+          "Passchendaele battlefield, Crest Farm Memorial & Tyne Cot Cemetery",
+          "Essex Farm and the Menin Gate Last Post Ceremony"
         ],
-        "facts": []
+        "facts": [
+          "Departure: Arras, 9:00 AM",
+          "Return: Arras, approx. 9:30 PM"
+        ]
       }
     ],
     "footnote": "The above itinerary may be varied based on the wishes and consensus of the guests travelling on any particular day. Customised tours are available for this area on request.",
