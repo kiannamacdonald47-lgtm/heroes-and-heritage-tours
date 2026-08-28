@@ -279,6 +279,19 @@ collections:
             widget: "list"
             field: { label: "Paragraph", name: "paragraph", widget: "text" }
 
+  - name: "privacy"
+    label: "Privacy Policy"
+    files:
+      - name: "privacy"
+        label: "Privacy Policy Text"
+        file: "src/_data/privacy.json"
+        fields:
+          - { label: "Last Updated", name: "lastUpdated", widget: "string" }
+          - label: "Paragraphs"
+            name: "paragraphs"
+            widget: "list"
+            field: { label: "Paragraph", name: "paragraph", widget: "text" }
+
   - name: "specialTours"
     label: "Special Tours (Coming Soon)"
     files:

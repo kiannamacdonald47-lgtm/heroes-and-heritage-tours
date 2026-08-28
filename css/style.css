@@ -454,18 +454,6 @@ em, .accent-italic {
   .nav-actions .btn-primary { display: none; }
 }
 
-.nav-phone {
-  display: none;
-  font-weight: 700;
-  font-size: 15px;
-  color: var(--foreground);
-  white-space: nowrap;
-}
-
-@media (min-width: 1150px) {
-  .nav-phone { display: inline-flex; align-items: center; gap: 8px; }
-}
-
 .nav-toggle {
   display: inline-flex;
   width: 48px;
@@ -536,12 +524,6 @@ em, .accent-italic {
   color: var(--foreground-muted);
 }
 
-.mobile-menu-phone {
-  margin-top: auto;
-  padding-top: var(--space-3);
-  font-weight: 700;
-  font-size: 17px;
-}
 
 @media (min-width: 980px) {
   .mobile-menu { display: none; }
