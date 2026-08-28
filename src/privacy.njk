@@ -1,0 +1,27 @@
+---
+layout: base.njk
+title: "Privacy Policy | Heroes and Heritage Tours"
+description: "How Heroes and Heritage Tours collects, uses and protects your personal information."
+activeNav: privacy
+permalink: "/privacy.html"
+---
+
+<section class="section" style="padding-top: 160px;">
+  <div class="container container--text">
+    <span class="eyebrow">Legal</span>
+    <h1 style="margin-top: var(--space-2); margin-bottom: var(--space-2);">Privacy Policy</h1>
+    <p class="mono-label" style="margin-bottom: var(--space-5);">Last updated: {{ privacy.lastUpdated }}</p>
+
+    <div class="stack" style="gap: var(--space-3);">
+      {% for p in privacy.paragraphs %}
+      <p class="body-text">{{ p | md | safe }}</p>
+      {% endfor %}
+    </div>
+
+    <div class="cta-band" style="margin-top: var(--space-7);">
+      <h2>Questions about your data?</h2>
+      <p class="lede">Contact us and we'll be happy to help.</p>
+      <a href="/contact.html" class="btn btn-primary btn-lg">Contact Us</a>
+    </div>
+  </div>
+</section>

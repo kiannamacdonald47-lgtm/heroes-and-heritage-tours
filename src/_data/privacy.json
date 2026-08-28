@@ -1,0 +1,24 @@
+{
+  "lastUpdated": "August 2026",
+  "paragraphs": [
+    "Heroes and Heritage Tours (\"we\", \"us\", \"our\") respects your privacy. This policy explains what personal information we collect through heroesandheritagetours.ca, why we collect it, and how it is handled.",
+    "**Information we collect**",
+    "When you use our booking form, we collect your full name, email address, phone number, country of residence, your preferred tour date and guest count, and any details you choose to share about a family member you are researching. Age range is optional. When you use our contact form, we collect your name, email address, and message. If you sign up for tour updates, we collect your first name, email address, and area of interest.",
+    "**How we use it**",
+    "We use this information to process your booking, take payment, respond to your enquiry, confirm tour details, and, if you have signed up for updates, send you occasional emails about new tours and departures. We do not use your information for any purpose beyond these.",
+    "**Payment processing**",
+    "Payments are processed securely by Stripe. We do not receive or store your card details; they are handled entirely by Stripe in accordance with Stripe's own privacy policy and security standards.",
+    "**Forms and hosting**",
+    "Our website is hosted by Netlify, and our contact and sign-up forms are handled by Netlify's form service. Submitting a form on this site shares your information with Netlify solely for the purpose of delivering that submission to us.",
+    "**Cookies and tracking**",
+    "This website does not use analytics, advertising, or tracking cookies.",
+    "**Data retention**",
+    "We keep your information only for as long as needed to fulfil your booking or enquiry, and to meet our accounting and legal obligations. If you have signed up for tour updates, we retain your details until you unsubscribe or request removal.",
+    "**Your rights**",
+    "You may ask us at any time to access, correct, or delete the personal information we hold about you, or to stop receiving marketing emails, by contacting us at Bookings@heroesandheritagetours.ca. If you are located in the European Union or United Kingdom, you have these rights under the General Data Protection Regulation (GDPR).",
+    "**Sharing your information**",
+    "We do not sell or rent your personal information. We share it only with the service providers named in this policy (Stripe and Netlify), and only as needed to operate our booking process and website.",
+    "**Changes to this policy**",
+    "We may update this policy from time to time. The most current version will always be posted on this page."
+  ]
+}
