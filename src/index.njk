@@ -45,7 +45,7 @@ permalink: "/index.html"
 
     <div class="journey-grid" data-reveal>
       {% for panel in home.journeyPanels %}
-      <a href="{{ panel.link }}" class="journey-panel">
+      <a href="{{ panel.link }}" class="journey-panel{% if panel.title == "Private and Family Tours" %} journey-panel--photo-hidden-mobile{% endif %}">
         <img src="{{ panel.image }}" alt="{{ panel.imageAlt }}" width="700" height="800" loading="lazy">
         <div class="journey-panel-overlay">
           <h3>{{ panel.title }}</h3>
