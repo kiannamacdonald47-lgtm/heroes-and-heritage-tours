@@ -11,15 +11,10 @@ exports.handler = async (event) => {
   }
 
   if (event.queryStringParameters && event.queryStringParameters.debugEnv) {
+    const keys = Object.keys(process.env).filter((k) => /SITE|BLOB|NETLIFY|URL|DEPLOY|CONTEXT/i.test(k)).sort();
     return {
       statusCode: 200,
-      body: JSON.stringify({
-        hasSiteId: !!process.env.NETLIFY_SITE_ID,
-        siteIdLength: (process.env.NETLIFY_SITE_ID || "").length,
-        hasBlobsToken: !!process.env.NETLIFY_BLOBS_TOKEN,
-        blobsTokenLength: (process.env.NETLIFY_BLOBS_TOKEN || "").length,
-        hasBlobsContext: !!process.env.NETLIFY_BLOBS_CONTEXT,
-      }),
+      body: JSON.stringify({ matchingKeys: keys }),
     };
   }
 
