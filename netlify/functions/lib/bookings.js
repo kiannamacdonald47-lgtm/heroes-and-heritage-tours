@@ -2,7 +2,20 @@ const { getStore } = require("@netlify/blobs");
 
 const CAPACITY_PER_DATE = 8;
 
+// Netlify's automatic Blobs environment injection (NETLIFY_BLOBS_CONTEXT)
+// isn't reaching this site's functions for reasons unrelated to bundler
+// choice, so credentials are supplied explicitly instead of relying on
+// getStore("bookings") to auto-detect them. NETLIFY_SITE_ID is provided
+// automatically; NETLIFY_BLOBS_TOKEN is a manually-created Personal
+// Access Token set as a site environment variable.
 function bookingsStore() {
+  if (process.env.NETLIFY_SITE_ID && process.env.NETLIFY_BLOBS_TOKEN) {
+    return getStore({
+      name: "bookings",
+      siteID: process.env.NETLIFY_SITE_ID,
+      token: process.env.NETLIFY_BLOBS_TOKEN,
+    });
+  }
   return getStore("bookings");
 }
 
