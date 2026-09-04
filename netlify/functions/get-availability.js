@@ -29,6 +29,6 @@ exports.handler = async (event) => {
     };
   } catch (err) {
     console.error("get-availability error:", err);
-    return { statusCode: 500, body: "Could not load availability." };
+    return { statusCode: 500, body: "Could not load availability. DEBUG: " + (err && err.stack ? err.stack : String(err)) };
   }
 };
