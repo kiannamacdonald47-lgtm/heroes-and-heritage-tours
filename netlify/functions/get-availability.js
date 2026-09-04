@@ -10,14 +10,6 @@ exports.handler = async (event) => {
     return { statusCode: 400, body: "Missing tourSlug." };
   }
 
-  if (event.queryStringParameters && event.queryStringParameters.debugEnv) {
-    const keys = Object.keys(process.env).filter((k) => /SITE|BLOB|NETLIFY|URL|DEPLOY|CONTEXT/i.test(k)).sort();
-    return {
-      statusCode: 200,
-      body: JSON.stringify({ matchingKeys: keys }),
-    };
-  }
-
   try {
     const store = bookingsStore();
     const { blobs } = await store.list({ prefix: `${tourSlug}__` });
@@ -37,6 +29,6 @@ exports.handler = async (event) => {
     };
   } catch (err) {
     console.error("get-availability error:", err);
-    return { statusCode: 500, body: "Could not load availability. DEBUG: " + (err && err.stack ? err.stack : String(err)) };
+    return { statusCode: 500, body: "Could not load availability." };
   }
 };
