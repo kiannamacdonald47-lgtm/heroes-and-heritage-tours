@@ -1,5 +1,6 @@
 const Stripe = require("stripe");
 const tours = require("../../src/_data/tours.json");
+const { CAPACITY_PER_DATE, bookingsStore, getBookedCount } = require("./lib/bookings");
 
 exports.handler = async (event) => {
   if (event.httpMethod !== "POST") {
@@ -25,17 +26,34 @@ exports.handler = async (event) => {
   const guests = Math.max(1, Math.min(8, parseInt(data.guests, 10) || 1));
   const fullName = (data.fullName || "").trim();
   const email = (data.email || "").trim();
-  if (!fullName || !email || !data.preferredDate) {
+  const isIsoDate = /^\d{4}-\d{2}-\d{2}$/.test(data.preferredDateISO || "");
+  if (!fullName || !email || !data.preferredDate || !isIsoDate) {
     return { statusCode: 400, body: "Missing required booking details." };
+  }
+
+  try {
+    const store = bookingsStore();
+    const booked = await getBookedCount(store, tour.slug, data.preferredDateISO);
+    if (booked + guests > CAPACITY_PER_DATE) {
+      const spotsLeft = Math.max(0, CAPACITY_PER_DATE - booked);
+      return {
+        statusCode: 409,
+        body: spotsLeft > 0
+          ? `Only ${spotsLeft} spot${spotsLeft === 1 ? "" : "s"} left for this date. Please reduce your guest count or choose another date.`
+          : "This date is fully booked. Please choose another date.",
+      };
+    }
+  } catch (err) {
+    console.error("Availability check error:", err);
+    return { statusCode: 500, body: "Could not check availability. Please try again." };
   }
 
   const subtotal = tour.price * guests;
 
   // Tours departing within 21 days must be paid in full — there's no
   // time left to collect a balance payment before departure.
+  const parsedDate = new Date(`${data.preferredDateISO}T00:00:00`);
   let fullPaymentRequired = false;
-  const isIsoDate = /^\d{4}-\d{2}-\d{2}$/.test(data.preferredDateISO || "");
-  const parsedDate = isIsoDate ? new Date(`${data.preferredDateISO}T00:00:00`) : new Date(data.preferredDate);
   if (!isNaN(parsedDate)) {
     const today = new Date();
     today.setHours(0, 0, 0, 0);
@@ -70,7 +88,9 @@ exports.handler = async (event) => {
         tourName: tour.name,
         guests: String(guests),
         preferredDate: data.preferredDate,
+        preferredDateISO: data.preferredDateISO,
         fullName,
+        email,
         phone: data.phone || "",
         age: data.age || "",
         country: data.country || "",

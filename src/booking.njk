@@ -195,3 +195,16 @@ permalink: "/booking.html"
     </form>
   </div>
 </section>
+
+<!-- Detected by Netlify at build time so the Stripe webhook can relay
+     confirmed bookings into a real email via Netlify Forms. Never
+     rendered or submitted by a visitor's browser. -->
+<form name="booking-notification" data-netlify="true" hidden>
+  <input type="text" name="tourName">
+  <input type="text" name="preferredDate">
+  <input type="text" name="fullName">
+  <input type="email" name="email">
+  <input type="text" name="phone">
+  <input type="text" name="guests">
+  <input type="text" name="specialRequest">
+</form>
