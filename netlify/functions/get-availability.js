@@ -10,6 +10,19 @@ exports.handler = async (event) => {
     return { statusCode: 400, body: "Missing tourSlug." };
   }
 
+  if (event.queryStringParameters && event.queryStringParameters.debugEnv) {
+    return {
+      statusCode: 200,
+      body: JSON.stringify({
+        hasSiteId: !!process.env.NETLIFY_SITE_ID,
+        siteIdLength: (process.env.NETLIFY_SITE_ID || "").length,
+        hasBlobsToken: !!process.env.NETLIFY_BLOBS_TOKEN,
+        blobsTokenLength: (process.env.NETLIFY_BLOBS_TOKEN || "").length,
+        hasBlobsContext: !!process.env.NETLIFY_BLOBS_CONTEXT,
+      }),
+    };
+  }
+
   try {
     const store = bookingsStore();
     const { blobs } = await store.list({ prefix: `${tourSlug}__` });
