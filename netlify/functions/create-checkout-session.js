@@ -100,6 +100,23 @@ exports.handler = async (event) => {
         depositCad: String(deposit),
         fullPaymentRequired: String(fullPaymentRequired),
       },
+      // Session metadata above doesn't automatically appear on the
+      // resulting Payment — Stripe's Payments list and payment detail
+      // page read from the PaymentIntent instead, so the same summary
+      // is set here too, including a description that shows directly
+      // in the Payments list without needing to click in.
+      payment_intent_data: {
+        description: `${tour.name} · ${guests} guest${guests > 1 ? "s" : ""} · ${data.preferredDate}`,
+        metadata: {
+          tourSlug: tour.slug,
+          tourName: tour.name,
+          guests: String(guests),
+          preferredDate: data.preferredDate,
+          fullName,
+          email,
+          phone: data.phone || "",
+        },
+      },
       success_url: `${siteUrl}/booking-confirmed.html?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${siteUrl}/booking.html?canceled=true&tour=${encodeURIComponent(tour.slug)}`,
     });
