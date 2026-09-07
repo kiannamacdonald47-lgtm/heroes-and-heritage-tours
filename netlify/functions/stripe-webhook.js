@@ -10,8 +10,11 @@ const encodeForm = (data) =>
 // inbox as the contact form, without needing a separate email service.
 async function notifyBooking(siteUrl, metadata) {
   const specialRequest = [metadata.familyResearch, metadata.notes].filter(Boolean).join(" | ") || "None";
+  const guestWord = metadata.guests === "1" ? "guest" : "guests";
+  const summary = `${metadata.tourName || ""} · ${metadata.guests || "0"} ${guestWord} · ${metadata.preferredDate || ""}`;
   const body = encodeForm({
     "form-name": "booking-notification",
+    summary,
     tourName: metadata.tourName || "",
     preferredDate: metadata.preferredDate || "",
     fullName: metadata.fullName || "",
