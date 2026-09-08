@@ -20,6 +20,17 @@ function bookingsStore() {
   return getStore("bookings");
 }
 
+function balanceStore() {
+  if (process.env.SITE_ID && process.env.NETLIFY_JOE_TOKEN) {
+    return getStore({
+      name: "balance-tracking",
+      siteID: process.env.SITE_ID,
+      token: process.env.NETLIFY_JOE_TOKEN,
+    });
+  }
+  return getStore("balance-tracking");
+}
+
 function bookingKey(tourSlug, dateISO) {
   return `${tourSlug}__${dateISO}`;
 }
@@ -66,4 +77,70 @@ async function setManualBlock(store, tourSlug, dateISO, manualBlock) {
   return existing;
 }
 
-module.exports = { CAPACITY_PER_DATE, bookingsStore, bookingKey, getRecord, getBookedCount, addBooking, setManualBlock };
+// ============================================================
+// Balance-payment tracking — separate from the capacity store
+// above (which is keyed by tourSlug+date and only cares about
+// guest counts). This is keyed by the original deposit session's
+// ID, one record per individual booking, and drives the balance
+// reminder emails and the "pay your balance" link.
+// ============================================================
+
+async function createBalanceRecord(store, sessionId, data) {
+  const record = {
+    ...data,
+    balancePaid: false,
+    balanceSessionId: null,
+    reminder1SentAt: null,
+    reminder2SentAt: null,
+    createdAt: new Date().toISOString(),
+  };
+  await store.setJSON(sessionId, record);
+  return record;
+}
+
+async function getBalanceRecord(store, sessionId) {
+  return store.get(sessionId, { type: "json" });
+}
+
+async function markBalancePaid(store, sessionId, balanceSessionId) {
+  const record = await getBalanceRecord(store, sessionId);
+  if (!record) return null;
+  record.balancePaid = true;
+  record.balanceSessionId = balanceSessionId;
+  await store.setJSON(sessionId, record);
+  return record;
+}
+
+async function markReminderSent(store, sessionId, which) {
+  const record = await getBalanceRecord(store, sessionId);
+  if (!record) return null;
+  record[which === 1 ? "reminder1SentAt" : "reminder2SentAt"] = new Date().toISOString();
+  await store.setJSON(sessionId, record);
+  return record;
+}
+
+async function listBalanceRecords(store) {
+  const { blobs } = await store.list();
+  const records = [];
+  for (const { key } of blobs) {
+    const record = await store.get(key, { type: "json" });
+    if (record) records.push({ sessionId: key, ...record });
+  }
+  return records;
+}
+
+module.exports = {
+  CAPACITY_PER_DATE,
+  bookingsStore,
+  balanceStore,
+  bookingKey,
+  getRecord,
+  getBookedCount,
+  addBooking,
+  setManualBlock,
+  createBalanceRecord,
+  getBalanceRecord,
+  markBalancePaid,
+  markReminderSent,
+  listBalanceRecords,
+};

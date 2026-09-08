@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "stripe": "^17.0.0",
-    "@netlify/blobs": "^11.0.3"
+    "@netlify/blobs": "^11.0.3",
+    "resend": "^6.26.0"
   }
 }

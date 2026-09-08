@@ -11,9 +11,9 @@ permalink: "/booking-confirmed.html"
       <div class="icon-circle" style="width: 72px; height: 72px;">
         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
       </div>
-      <span class="eyebrow">Booking received</span>
-      <h1>Thank you, your booking is confirmed.</h1>
-      <p class="lede" style="color: var(--foreground-muted);">We've received your payment and your booking details. A receipt has been emailed to you by Stripe, and a member of our team will be in touch within one business day to confirm your exact date and finalize your itinerary.</p>
+      <span class="eyebrow" id="confirmedEyebrow">Booking received</span>
+      <h1 id="confirmedHeading">Thank you, your booking is confirmed.</h1>
+      <p class="lede" id="confirmedLede" style="color: var(--foreground-muted);">We've received your payment and your booking details. A receipt has been emailed to you by Stripe, and a member of our team will be in touch within one business day to confirm your exact date and finalize your itinerary.</p>
       <div class="booking-summary" id="confirmedSummary" style="display: none; text-align: left; margin-top: var(--space-2);">
         <div class="booking-summary-row"><span>Tour</span><strong id="confirmedTour">–</strong></div>
         <div class="booking-summary-row"><span>Guests</span><strong id="confirmedGuests">–</strong></div>
@@ -30,7 +30,29 @@ permalink: "/booking-confirmed.html"
 
 <script>
   (function () {
-    const sessionId = new URLSearchParams(window.location.search).get("session_id");
+    const params = new URLSearchParams(window.location.search);
+    const balanceStatus = params.get("balance");
+    if (balanceStatus) {
+      const heading = document.getElementById("confirmedHeading");
+      const lede = document.getElementById("confirmedLede");
+      const eyebrow = document.getElementById("confirmedEyebrow");
+      if (balanceStatus === "paid") {
+        eyebrow.textContent = "Balance received";
+        heading.textContent = "Thank you, your balance payment is complete.";
+        lede.textContent = "Your tour is fully paid. A receipt has been emailed to you by Stripe. We look forward to seeing you!";
+      } else if (balanceStatus === "already-paid") {
+        eyebrow.textContent = "Already paid";
+        heading.textContent = "This balance has already been paid.";
+        lede.textContent = "Our records show this booking's balance was already received. If you think that's a mistake, please contact us.";
+      } else if (balanceStatus === "canceled") {
+        eyebrow.textContent = "Checkout canceled";
+        heading.textContent = "No payment was taken.";
+        lede.textContent = "You canceled the balance payment, so nothing was charged. You can pay any time using the link in your reminder email, or by contacting us.";
+      }
+      return;
+    }
+
+    const sessionId = params.get("session_id");
     if (!sessionId) return;
     fetch("/.netlify/functions/get-checkout-session?session_id=" + encodeURIComponent(sessionId))
       .then((res) => (res.ok ? res.json() : null))
