@@ -1,30 +1,68 @@
 {
-  "heroSlides": [
-    { "image": "/photos/homeslides/homeslide-1.jpg", "alt": "The Canadian National Vimy Memorial framed by trees on a clear day" },
-    { "image": "/photos/homeslides/homeslide-2.jpg", "alt": "A preserved trench with sandbag revetting at Vimy Ridge" },
-    { "image": "/photos/homeslides/homeslide-3.jpg", "alt": "Buglers and a crowd of visitors gathered for the Last Post Ceremony beneath the Menin Gate Memorial in Ypres" },
-    { "image": "/photos/homeslides/homeslide-4.jpg", "alt": "Aerial view of Juno Beach, with the Canadian memorial and preserved bunker in the foreground" },
-    { "image": "/photos/homeslides/homeslide-5.jpg", "alt": "Wild poppies growing among rusted battlefield wire" }
-  ],
-  "heroEyebrow": "Based in Arras, France, 45 minutes from Paris",
-  "heroTitle": "Walk in the Footsteps of Canada's Heroes.",
-  "heroLede": "Expert-led battlefield tours through the Western Front and Normandy, created for travellers who want to understand the people, places and stories that shaped Canada.",
-  "heroTrustLine": "Small groups · Expert Canadian guide · Departures across France and Belgium",
-  "popularTourSlugs": ["vimy-to-victory", "in-flanders-fields", "juno-beach-bayeux", "ultimate-3-day", "normandy-explorer-5day", "western-front-normandy-5day"],
   "trustStrip": [
-    { "value": "8", "label": "Guests maximum per tour" },
-    { "value": "Arras", "label": "The historic heart of Canada's Western Front" },
-    { "value": "5★", "label": "Rated by veterans, historians & families alike" },
-    { "value": "1", "label": "Expert guide, every step of the way" }
+    {
+      "value": "8",
+      "label": "Guests maximum per tour"
+    },
+    {
+      "value": "Arras",
+      "label": "The historic heart of Canada's Western Front"
+    },
+    {
+      "value": "5★",
+      "label": "Rated by veterans, historians & families alike"
+    },
+    {
+      "value": "1",
+      "label": "Expert guide, every step of the way"
+    }
   ],
-  "introHeading": "More Than a Battlefield Tour",
-  "introParagraphs": [
-    "Heroes and Heritage Tours brings Canadian military history to life through carefully researched, small-group journeys across France and Belgium.",
-    "From the trenches of Vimy Ridge and the battlefields of Passchendaele to the beaches of Normandy, every tour combines expert interpretation, personal stories and meaningful visits to the places where history happened.",
-    "Whether you are following a relative, discovering Canada's wartime story, or visiting these battlefields for the first time, our tours are designed to be informative, personal and unforgettable."
+  "finalCtaImage": "/photos/somme/somme-cover.jpg",
+  "remembranceHeading": "Tours With a Purpose",
+  "whyUs": [
+    {
+      "heading": "Expert Historical Interpretation",
+      "text": "Tours are led by a Canadian battlefield guide specialising in the First World War.",
+      "icon": "medal"
+    },
+    {
+      "heading": "Small Groups",
+      "text": "Travel in a comfortable minibus with fewer guests, more conversation and more time at each site.",
+      "icon": "people"
+    },
+    {
+      "heading": "Personal Stories",
+      "text": "History is explained through the experiences of the soldiers who fought there, not only dates and military movements.",
+      "icon": "quote"
+    },
+    {
+      "heading": "Carefully Researched Itineraries",
+      "text": "Every route is designed around historical importance, geography and the quality of the guest experience.",
+      "icon": "map"
+    },
+    {
+      "heading": "Family Research",
+      "text": "Guests following a relative can request preliminary research and a personalised battlefield experience.",
+      "icon": "family"
+    },
+    {
+      "heading": "Local Knowledge",
+      "text": "Benefit from years of experience travelling, researching and guiding throughout France and Belgium.",
+      "icon": "compass"
+    }
   ],
+  "remembranceParagraphs": [
+    "Heroes and Heritage Tours is committed to preserving and sharing Canada's military heritage.",
+    "Through careful battlefield research and a deep respect for the places we visit, we work to ensure that the stories of Canadian soldiers remain connected to the ground where they served."
+  ],
+  "finalCtaText": "Explore Canada's battlefields with an expert guide, carefully planned itineraries and stories that connect the past to the ground beneath your feet.",
+  "familyTeaserImage": "/photos/testimonials/testimonial-03.jpg",
+  "familyTeaserQuote": "He brought my Great Grandfather's war experience to life, and completed my own journey with an emotional trip to my Great Uncle's gravesite.",
+  "finalCtaImageAlt": "The Beaumont-Hamel Newfoundland Memorial caribou statue",
+  "finalCtaHeading": "Your Journey Through History Starts Here",
+  "remembranceImageAlt": "A guest in a preserved trench dugout museum",
   "introImage": "/photos/flanders/flanders-08.jpg",
-  "introImageAlt": "Archival photograph of Canadian soldiers crossing duckboards through the Passchendaele mud",
+  "heroEyebrow": "Based in Arras, France, 45 minutes from Paris",
   "journeyPanels": [
     {
       "title": "Canadian Western Front",
@@ -59,53 +97,49 @@
       "link": "/family-research.html"
     }
   ],
-  "whyUs": [
+  "introParagraphs": [
+    "Heroes and Heritage Tours brings Canadian military history to life through carefully researched, small-group journeys across France and Belgium.",
+    "From the trenches of Vimy Ridge and the battlefields of Passchendaele to the beaches of Normandy, every tour combines expert interpretation, personal stories and meaningful visits to the places where history happened.",
+    "Whether you are following a relative, discovering Canada's wartime story, or visiting these battlefields for the first time, our tours are designed to be informative, personal and unforgettable."
+  ],
+  "heroTrustLine": "Small groups · Expert Canadian guide · Departures across France and Belgium",
+  "heroLede": "Expert-led battlefield tours through the Western Front and Normandy, created for travellers who want to understand the people, places and stories that shaped Canada.",
+  "familyTeaserAlt": "A guest places a Canadian flag at her relative's grave in a Commonwealth war cemetery",
+  "introHeading": "More Than a Battlefield Tour",
+  "emailCaptureText": "Receive new tour dates, special departures, battlefield stories and travel-planning advice from Heroes and Heritage Tours.",
+  "popularTourSlugs": [
+    "vimy-to-victory",
+    "in-flanders-fields",
+    "juno-beach-bayeux",
+    "ultimate-3-day",
+    "normandy-explorer-5day",
+    "western-front-normandy-5day"
+  ],
+  "emailCaptureHeading": "Planning a Trip to France or Belgium?",
+  "introImageAlt": "Archival photograph of Canadian soldiers crossing duckboards through the Passchendaele mud",
+  "familyTeaserParagraph": "Send us your relative's name, and we'll research their service record, the battles they fought in, and the exact ground they stood on, then build it into your tour. Families have found gravesites, uncovered medical histories, and walked the paths their great-grandfathers walked over a century ago.",
+  "remembranceImage": "/photos/somme/somme-18.jpg",
+  "heroSlides": [
     {
-      "heading": "Expert Historical Interpretation",
-      "text": "Tours are led by a Canadian battlefield guide specialising in the First World War.",
-      "icon": "medal"
+      "image": "/photos/homeslides/homeslide-1.jpg",
+      "alt": "The Canadian National Vimy Memorial framed by trees on a clear day"
     },
     {
-      "heading": "Small Groups",
-      "text": "Travel in a comfortable minibus with fewer guests, more conversation and more time at each site.",
-      "icon": "people"
+      "image": "/photos/homeslides/homeslide-2.jpg",
+      "alt": "A preserved trench with sandbag revetting at Vimy Ridge"
     },
     {
-      "heading": "Personal Stories",
-      "text": "History is explained through the experiences of the soldiers who fought there, not only dates and military movements.",
-      "icon": "quote"
+      "image": "/photos/homeslides/homeslide-3.jpg",
+      "alt": "Buglers and a crowd of visitors gathered for the Last Post Ceremony beneath the Menin Gate Memorial in Ypres"
     },
     {
-      "heading": "Carefully Researched Itineraries",
-      "text": "Every route is designed around historical importance, geography and the quality of the guest experience.",
-      "icon": "map"
+      "image": "/photos/homeslides/homeslide-4.jpg",
+      "alt": "Aerial view of Juno Beach, with the Canadian memorial and preserved bunker in the foreground"
     },
     {
-      "heading": "Family Research",
-      "text": "Guests following a relative can request preliminary research and a personalised battlefield experience.",
-      "icon": "family"
-    },
-    {
-      "heading": "Local Knowledge",
-      "text": "Benefit from years of experience travelling, researching and guiding throughout France and Belgium.",
-      "icon": "compass"
+      "image": "/photos/homeslides/homeslide-5.jpg",
+      "alt": "Wild poppies growing among rusted battlefield wire"
     }
   ],
-  "familyTeaserImage": "/photos/testimonials/testimonial-03.jpg",
-  "familyTeaserAlt": "A guest places a Canadian flag at her relative's grave in a Commonwealth war cemetery",
-  "familyTeaserParagraph": "Send us your relative's name, and we'll research their service record, the battles they fought in, and the exact ground they stood on, then build it into your tour. Families have found gravesites, uncovered medical histories, and walked the paths their great-grandfathers walked over a century ago.",
-  "familyTeaserQuote": "He brought my Great Grandfather's war experience to life, and completed my own journey with an emotional trip to my Great Uncle's gravesite.",
-  "remembranceHeading": "Tours With a Purpose",
-  "remembranceParagraphs": [
-    "Heroes and Heritage Tours is committed to preserving and sharing Canada's military heritage.",
-    "Through careful battlefield research and a deep respect for the places we visit, we work to ensure that the stories of Canadian soldiers remain connected to the ground where they served."
-  ],
-  "remembranceImage": "/photos/somme/somme-18.jpg",
-  "remembranceImageAlt": "A guest in a preserved trench dugout museum",
-  "emailCaptureHeading": "Planning a Trip to France or Belgium?",
-  "emailCaptureText": "Receive new tour dates, special departures, battlefield stories and travel-planning advice from Heroes and Heritage Tours.",
-  "finalCtaHeading": "Your Journey Through History Starts Here.",
-  "finalCtaText": "Explore Canada's battlefields with an expert guide, carefully planned itineraries and stories that connect the past to the ground beneath your feet.",
-  "finalCtaImage": "/photos/somme/somme-cover.jpg",
-  "finalCtaImageAlt": "The Beaumont-Hamel Newfoundland Memorial caribou statue"
+  "heroTitle": "Walk in the Footsteps of Canada's Heroes."
 }
