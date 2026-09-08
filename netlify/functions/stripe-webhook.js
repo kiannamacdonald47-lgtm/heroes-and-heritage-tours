@@ -85,6 +85,7 @@ exports.handler = async (event) => {
         secretLength: (process.env.STRIPE_WEBHOOK_SECRET || "").length,
         secretFirst10: (process.env.STRIPE_WEBHOOK_SECRET || "").slice(0, 10),
         secretLast6: (process.env.STRIPE_WEBHOOK_SECRET || "").slice(-6),
+        secretSha256: crypto.createHash("sha256").update(process.env.STRIPE_WEBHOOK_SECRET || "").digest("hex"),
       }),
     };
   }
