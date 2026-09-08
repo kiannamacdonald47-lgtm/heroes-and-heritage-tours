@@ -69,25 +69,7 @@ exports.handler = async (event) => {
     stripeEvent = stripe.webhooks.constructEvent(rawBody, signature, process.env.STRIPE_WEBHOOK_SECRET);
   } catch (err) {
     console.error("Webhook signature verification failed:", err.message);
-    const crypto = require("crypto");
-    const rawBodyBase64 = Buffer.from(rawBody).toString("base64");
-    const rawBodySha256 = crypto.createHash("sha256").update(rawBody).digest("hex");
-    return {
-      statusCode: 400,
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        error: err.message,
-        isBase64Encoded: event.isBase64Encoded,
-        bodyLength: (event.body || "").length,
-        sigHeader: signature,
-        rawBodySha256,
-        rawBodyBase64,
-        secretLength: (process.env.STRIPE_WEBHOOK_SECRET || "").length,
-        secretFirst10: (process.env.STRIPE_WEBHOOK_SECRET || "").slice(0, 10),
-        secretLast6: (process.env.STRIPE_WEBHOOK_SECRET || "").slice(-6),
-        secretSha256: crypto.createHash("sha256").update(process.env.STRIPE_WEBHOOK_SECRET || "").digest("hex"),
-      }),
-    };
+    return { statusCode: 400, body: "Webhook signature verification failed." };
   }
 
   if (stripeEvent.type !== "checkout.session.completed") {
