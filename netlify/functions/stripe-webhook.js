@@ -82,6 +82,9 @@ exports.handler = async (event) => {
         sigHeader: signature,
         rawBodySha256,
         rawBodyBase64,
+        secretLength: (process.env.STRIPE_WEBHOOK_SECRET || "").length,
+        secretFirst10: (process.env.STRIPE_WEBHOOK_SECRET || "").slice(0, 10),
+        secretLast6: (process.env.STRIPE_WEBHOOK_SECRET || "").slice(-6),
       }),
     };
   }
