@@ -1357,6 +1357,25 @@ em, .accent-italic {
 
 .form-field input:invalid:not(:placeholder-shown) { border-color: var(--red-bright); }
 
+.contact-layout {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: var(--space-6);
+}
+
+.contact-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  border-top: 1px solid var(--line);
+  padding-block: var(--space-2);
+}
+
 .contact-form {
   display: flex;
   flex-direction: column;

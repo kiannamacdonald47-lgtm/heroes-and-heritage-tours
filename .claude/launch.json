@@ -6,6 +6,12 @@
       "runtimeExecutable": "python3",
       "runtimeArgs": ["-m", "http.server", "8422", "--directory", "/Users/kiannamacdonald/Desktop/Freelance/Heroes and Heritage Tours"],
       "port": 8422
+    },
+    {
+      "name": "hht-site-built",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "8423", "--directory", "/Users/kiannamacdonald/Desktop/Freelance/Heroes and Heritage Tours/_site"],
+      "port": 8423
     }
   ]
 }
