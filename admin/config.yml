@@ -95,7 +95,7 @@ collections:
     files:
       - name: "tours"
         label: "All Tours"
-        file: "src/_data/tours.json"
+        file: "src/_data/tours-source.json"
         fields:
           - label: "Tours"
             name: "tours"
@@ -137,6 +137,7 @@ collections:
                   - { label: "Online calendar booking", value: "calendar" }
                   - { label: "Enquire by email", value: "email" }
               - { label: "Enquiry Note (shown instead of the calendar when Booking Method is Email)", name: "enquiryNote", widget: "text", required: false }
+              - { label: "Available on the private appointment-booking page", name: "appointmentOnly", widget: "boolean", default: false, required: false, hint: "Turn this on to let this tour be booked online through the unlisted /normandy-by-appointment.html link, without it showing up on the public booking page." }
               - { label: "Hero Image", name: "heroImage", widget: "image" }
               - { label: "Hero Image Alt Text", name: "heroAlt", widget: "string" }
               - { label: "Card Image (used on Tours & Home listings)", name: "cardImage", widget: "image" }
@@ -180,7 +181,7 @@ collections:
     files:
       - name: "testimonials"
         label: "All Reviews"
-        file: "src/_data/testimonials.json"
+        file: "src/_data/testimonials-source.json"
         fields:
           - label: "Reviews"
             name: "testimonials"
@@ -197,7 +198,7 @@ collections:
     files:
       - name: "faq"
         label: "FAQ Sections"
-        file: "src/_data/faq.json"
+        file: "src/_data/faq-source.json"
         fields:
           - label: "Sections"
             name: "faq"
@@ -297,7 +298,7 @@ collections:
     files:
       - name: "specialTours"
         label: "Special Tours"
-        file: "src/_data/specialTours.json"
+        file: "src/_data/specialTours-source.json"
         fields:
           - label: "Special Tours"
             name: "specialTours"
@@ -317,7 +318,7 @@ collections:
     files:
       - name: "gallery"
         label: "Gallery Photos"
-        file: "src/_data/gallery.json"
+        file: "src/_data/gallery-source.json"
         fields:
           - label: "Photos"
             name: "gallery"

@@ -1,9 +1,10 @@
 ---
 layout: base.njk
-title: "Book a Tour | Heroes and Heritage Tours"
-description: "Book your Canadian battlefield tour with Heroes and Heritage Tours. Choose your tour, pick a date, and reserve your place with a deposit."
-activeNav: booking
-permalink: "/booking.html"
+title: "Reserve Your Appointment | Heroes and Heritage Tours"
+description: "Reserve your appointment-only Normandy day tour."
+robots: "noindex, nofollow"
+eleventyExcludeFromCollections: true
+permalink: "/normandy-by-appointment.html"
 ---
 
 <datalist id="countryList">
@@ -22,13 +23,13 @@ permalink: "/booking.html"
 
 <header class="hero hero--compact">
   <div class="hero-media">
-    <img src="/photos/vimy/vimy-cover.jpg" alt="The Canadian National Vimy Memorial against a blue sky" width="1800" height="1200">
+    <img src="/photos/somme/somme-06.jpg" alt="A Commonwealth War Cemetery on the Somme" width="1800" height="1200">
   </div>
   <div class="container">
     <div class="hero-content">
-      <span class="eyebrow">Book your tour</span>
-      <h1>Reserve your place on the battlefields.</h1>
-      <p class="lede">Four short steps. A 30% deposit secures your booking; the balance is due 21 days before your tour.</p>
+      <span class="eyebrow">Appointment booking</span>
+      <h1>Reserve your confirmed date.</h1>
+      <p class="lede">This link is for tours we've already discussed and agreed on by email. Enter the date we confirmed, and a 30% deposit secures your booking.</p>
     </div>
   </div>
 </header>
@@ -48,20 +49,22 @@ permalink: "/booking.html"
           <!-- STEP 1 — Choose Tour -->
           <div data-step>
             <div class="form-fieldset">
-              <legend>Which tour would you like to book?</legend>
+              <legend>Which tour did we confirm?</legend>
+              {% set appointmentTours = [] %}
+              {% for tour in tours %}{% if tour.appointmentOnly %}{% set noop = appointmentTours.push(tour) %}{% endif %}{% endfor %}
               <div class="radio-cards">
-                {% for tour in tours %}{% if tour.bookingMethod != "email" %}
+                {% for tour in appointmentTours %}
                 <label class="radio-card">
                   <input type="radio" name="tour" value="{{ tour.slug }}" required {% if loop.first %}checked{% endif %}>
                   <span class="radio-card-body">
                     <strong>{{ tour.shortName }}</strong>
-                    <span>{{ tour.badge }} · Departs {{ tour.departureCity }} · {{ tour.schedule }}{% if not tour.combo %} · {{ tour.duration }}{% endif %}</span>
+                    <span>{{ tour.badge }} · Departs {{ tour.departureCity }}{% if not tour.combo %} · {{ tour.duration }}{% endif %}</span>
                     <span class="radio-card-price">${{ tour.price | currency }} CAD / person</span>
                   </span>
                 </label>
-                {% endif %}{% endfor %}
+                {% endfor %}
               </div>
-              <p class="required-note">Not sure which to choose? <a href="/tours.html" style="color: var(--red); font-weight: 600;">Compare all tours</a> or <a href="/contact.html" style="color: var(--red); font-weight: 600;">ask us first</a>. Booking the Western Front &amp; Normandy 5-Day Tour? <a href="/contact.html?tour=western-front-normandy-5day" style="color: var(--red); font-weight: 600;">Enquire here instead</a>, since its Normandy leg is arranged directly with our team.</p>
+              <p class="required-note">Not the tour you had in mind? <a href="/contact.html" style="color: var(--red); font-weight: 600;">Get in touch</a> before booking.</p>
             </div>
             <div class="hero-actions" style="margin-top: var(--space-4); justify-content: flex-end;">
               <button type="button" class="btn btn-primary btn-lg" data-step-next>Continue to Trip Details</button>
@@ -74,30 +77,9 @@ permalink: "/booking.html"
               <legend>Trip details</legend>
               <div class="form-grid">
                 <div class="form-field">
-                  <label id="calendarLabel">Preferred date <span class="required-mark">*</span></label>
-                  <span class="hint" id="dateAvailabilityHint" style="margin-bottom: 4px;"></span>
-
-                  <div class="booking-calendar" role="group" aria-labelledby="calendarLabel">
-                    <div class="booking-calendar-header">
-                      <button type="button" class="booking-calendar-nav" id="calPrev" aria-label="Previous month">
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="12 15 7 10 12 5"/></svg>
-                      </button>
-                      <span class="booking-calendar-month" id="calMonthLabel" aria-live="polite">Month Year</span>
-                      <button type="button" class="booking-calendar-nav" id="calNext" aria-label="Next month">
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="8 15 13 10 8 5"/></svg>
-                      </button>
-                    </div>
-                    <div class="booking-calendar-weekdays">
-                      <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
-                    </div>
-                    <div class="booking-calendar-grid" id="calGrid"></div>
-                    <div class="booking-calendar-legend">
-                      <span><i class="booking-calendar-swatch booking-calendar-swatch--available"></i>Available</span>
-                      <span><i class="booking-calendar-swatch booking-calendar-swatch--selected"></i>Selected</span>
-                    </div>
-                  </div>
-
-                  <input type="text" id="preferredDate" name="preferredDate" readonly required placeholder="Choose a date on the calendar above" style="margin-top: var(--space-2); cursor: default; font-weight: 700;">
+                  <label for="preferredDate">Confirmed date <span class="required-mark">*</span></label>
+                  <input type="date" id="preferredDate" name="preferredDate" required>
+                  <span class="hint">Enter the date we already agreed on by email.</span>
                 </div>
                 <div class="form-field">
                   <label for="guests">Number of guests <span class="required-mark">*</span></label>
@@ -173,7 +155,7 @@ permalink: "/booking.html"
           <div data-step>
             <div class="form-fieldset">
               <legend>Review &amp; payment</legend>
-              <p class="body-text">Please review your booking summary to the right before confirming. You'll be taken to secure Stripe checkout to make the payment shown there now; our team will confirm your exact date by email within one business day. Tours departing within 21 days require full payment at booking, as there's no time left to collect a balance beforehand.</p>
+              <p class="body-text">Please review your booking summary to the right before confirming. You'll be taken to secure Stripe checkout to make the payment shown there now. Tours departing within 21 days require full payment at booking, as there's no time left to collect a balance beforehand.</p>
               <div class="form-field">
                 <label style="display: flex; align-items: flex-start; gap: 12px; font-weight: 400;">
                   <input type="checkbox" id="agreeTerms" name="agreeTerms" required style="width: 22px; height: 22px; margin-top: 2px; accent-color: var(--red); flex-shrink: 0;">
@@ -202,18 +184,3 @@ permalink: "/booking.html"
     </form>
   </div>
 </section>
-
-<!-- Detected by Netlify at build time so the Stripe webhook can relay
-     confirmed bookings into a real email via Netlify Forms. Never
-     rendered or submitted by a visitor's browser. -->
-<form name="booking-notification" data-netlify="true" hidden>
-  <input type="text" name="summary">
-  <input type="text" name="tourName">
-  <input type="text" name="preferredDate">
-  <input type="text" name="fullName">
-  <input type="email" name="email">
-  <input type="text" name="phone">
-  <input type="text" name="guests">
-  <input type="text" name="province">
-  <input type="text" name="specialRequest">
-</form>

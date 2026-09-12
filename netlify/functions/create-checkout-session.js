@@ -1,5 +1,5 @@
 const Stripe = require("stripe");
-const tours = require("../../src/_data/tours.json");
+const tours = require("../../src/_data/tours.js");
 const { CAPACITY_PER_DATE, bookingsStore, getBookedCount } = require("./lib/bookings");
 
 exports.handler = async (event) => {
@@ -19,7 +19,7 @@ exports.handler = async (event) => {
   }
 
   const tour = tours.find((t) => t.slug === data.tourSlug);
-  if (!tour || tour.bookingMethod === "email") {
+  if (!tour || (tour.bookingMethod === "email" && !tour.appointmentOnly)) {
     return { statusCode: 400, body: "This tour isn't available for online booking." };
   }
 
@@ -94,6 +94,7 @@ exports.handler = async (event) => {
         phone: data.phone || "",
         age: data.age || "",
         country: data.country || "",
+        province: data.province || "",
         familyResearch: (data.familyResearch || "").slice(0, 400),
         notes: (data.notes || "").slice(0, 400),
         subtotalCad: String(subtotal),

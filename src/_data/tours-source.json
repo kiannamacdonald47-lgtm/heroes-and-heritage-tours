@@ -782,7 +782,8 @@
       6,
       0
     ],
-    "departureCity": "Paris"
+    "departureCity": "Paris",
+    "appointmentOnly": true
   },
   {
     "slug": "juno-beach-bayeux",
@@ -880,7 +881,8 @@
     ],
     "bookingMethod": "email",
     "enquiryNote": "Send us a message with your preferred dates and we'll confirm availability directly.",
-    "departureCity": "Bayeux"
+    "departureCity": "Bayeux",
+    "appointmentOnly": true
   },
   {
     "slug": "normandy-2-day",
@@ -1326,6 +1328,7 @@
       3,
       4,
       5
-    ]
+    ],
+    "appointmentOnly": true
   }
 ]

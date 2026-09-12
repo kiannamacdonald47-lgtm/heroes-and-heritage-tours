@@ -2,5 +2,6 @@ User-agent: *
 Allow: /
 Disallow: /admin/
 Disallow: /admin-bookings.html
+Disallow: /normandy-by-appointment.html
 
 Sitemap: https://heroesandheritagetours.ca/sitemap.xml

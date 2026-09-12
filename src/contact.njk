@@ -32,10 +32,6 @@ permalink: "/contact.html"
           <span>Within 1 business day</span>
         </div>
         <div class="contact-detail">
-          <strong>Based in:</strong>
-          <span>Arras, France, 45 minutes from Paris by train</span>
-        </div>
-        <div class="contact-detail">
           <strong>Tracing a family member?</strong>
           <span>Tell us their name and anything you know in the message below, or visit <a href="/family-research.html" style="color: var(--red); font-weight: 600;">Trace Your Family's Footsteps</a></span>
         </div>
@@ -58,6 +54,13 @@ permalink: "/contact.html"
         <div class="form-field">
           <label for="email">Email address <span class="required-mark">*</span></label>
           <input type="email" id="email" name="email" autocomplete="email" required>
+        </div>
+        <div class="form-field">
+          <label for="province">Province / territory <span class="required-mark">*</span></label>
+          <select id="province" name="province" required>
+            {% include "partials/province-options.njk" %}
+          </select>
+          <span class="hint">Outside Canada? Choose International.</span>
         </div>
         <div class="form-field">
           <label for="tourInterest">Which tour are you interested in?</label>

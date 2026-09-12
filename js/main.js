@@ -277,6 +277,8 @@ if (bookingForm) {
   };
 
   const DAY_NAMES = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  const MONTH_NAMES = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  const formatDisplay = (date) => `${DAY_NAMES[date.getDay()]}, ${MONTH_NAMES[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`;
 
   const getSelectedTour = () => {
     const checked = Array.from(tourRadios).find((r) => r.checked);
@@ -344,7 +346,6 @@ if (bookingForm) {
   const calNext = document.getElementById("calNext");
 
   if (calGrid && calMonthLabel && calPrev && calNext && dateInput) {
-    const MONTH_NAMES = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     const today = new Date();
     today.setHours(0, 0, 0, 0);
 
@@ -367,8 +368,6 @@ if (bookingForm) {
         })
         .catch(() => {});
     };
-
-    const formatDisplay = (date) => `${DAY_NAMES[date.getDay()]}, ${MONTH_NAMES[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`;
 
     const renderCalendar = () => {
       const tourKey = getSelectedTour();
@@ -448,6 +447,24 @@ if (bookingForm) {
 
     fetchAvailability(getSelectedTour());
     renderCalendar();
+  } else if (dateInput && dateInput.type === "date") {
+    // Appointment-booking page: the date has already been agreed by
+    // email, so guests type it in directly rather than picking from an
+    // availability calendar.
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    dateInput.min = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, "0")}-${String(today.getDate()).padStart(2, "0")}`;
+
+    dateInput.addEventListener("change", () => {
+      if (dateInput.value) {
+        dateInput.dataset.iso = dateInput.value;
+        dateInput.dataset.display = formatDisplay(new Date(`${dateInput.value}T00:00:00`));
+      } else {
+        delete dateInput.dataset.iso;
+        delete dateInput.dataset.display;
+      }
+      updateSummary();
+    });
   }
 
   // Step navigation (visual only — single-page form, steps are sections)
@@ -518,7 +535,7 @@ if (bookingForm) {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           tourSlug: formData.get("tour"),
-          preferredDate: formData.get("preferredDate"),
+          preferredDate: dateInput?.dataset.display || formData.get("preferredDate"),
           preferredDateISO: dateInput?.dataset.iso || "",
           guests: formData.get("guests"),
           familyResearch: formData.get("familyResearch"),
@@ -527,6 +544,7 @@ if (bookingForm) {
           phone: formData.get("phone"),
           age: formData.get("age"),
           country: formData.get("country"),
+          province: formData.get("province"),
           notes: formData.get("notes"),
         }),
       });

@@ -1,4 +1,4 @@
-const tours = require("../../src/_data/tours.json");
+const tours = require("../../src/_data/tours.js");
 const { bookingsStore, setManualBlock } = require("./lib/bookings");
 
 exports.handler = async (event, context) => {

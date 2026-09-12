@@ -33,6 +33,7 @@ async function notifyBooking(siteUrl, metadata) {
     email: metadata.email || "",
     phone: metadata.phone || "",
     guests: metadata.guests || "",
+    province: metadata.province || "",
     specialRequest,
   });
 }
