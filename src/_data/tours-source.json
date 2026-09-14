@@ -38,7 +38,7 @@
           "alt": "Preserved Canadian trenches on the Vimy Ridge battlefield"
         },
         {
-          "src": "/photos/4-2-.jpg",
+          "src": "/photos/chatgpt-image-14-sept.-2026-10_20_03.png",
           "alt": "Canadian National Vimy Memorial on Vimy Ridge in France"
         },
         {
@@ -93,105 +93,99 @@
       "departureCity": "Arras"
     },
     {
-      "footnote": "Tour itineraries may be adjusted to accommodate weather, timing, or the interests of guests. This tour is also included within The Signature (2 Day) and The Ultimate (3 Day) Canadian Tours.",
-      "heroImage": "/photos/flanders/flanders-cover.jpg",
-      "cardDesc": "Passchendaele, Tyne Cot, the site where \"In Flanders Fields\" was written, and the nightly Last Post Ceremony.",
+      "footnote": "Tour itineraries may be adjusted to accommodate traffic, museum opening times, commemorative events, site accessibility or the interests of guests travelling on the day. Lunch is not included in the tour price. Private and customised battlefield tours are available on request.",
+      "heroImage": "/photos/chatgpt-image-14-sept.-2026-10_54_30.png",
+      "cardDesc": "Explore Ypres and Passchendaele on a full-day Canadian First World War battlefield tour from Arras, visiting Essex Farm, Tyne Cot, Crest Farm and the Passchendaele Museum.",
       "runDays": [
         0,
         3
       ],
       "badge": "Day Tour",
       "scheduleFull": "Departs Arras every Sunday and Wednesday. Other days available on request.",
-      "shortName": "In Flanders Fields",
+      "shortName": "Flanders Fields & Passchendaele",
       "price": 420,
       "galleryImages": [
         {
-          "src": "/photos/flanders/thumbs/flanders-new-1.jpg",
-          "alt": "A preserved trench with corrugated metal revetting in the woods of Flanders"
+          "src": "/photos/img_9226-1-.jpeg",
+          "alt": "Preserved German frontline trenches on Vimy Ridge in France"
         },
         {
-          "src": "/photos/flanders/thumbs/flanders-new-2.jpg",
-          "alt": "A guide and guests at the Hill 62 Sanctuary Wood museum, with a preserved artillery piece"
+          "src": "/photos/chatgpt-image-14-sept.-2026-11_44_30.png",
+          "alt": "Hill 70 Canadian Memorial near Lens in northern France"
         },
         {
-          "src": "/photos/flanders/thumbs/flanders-new-3.jpg",
-          "alt": "Archival photograph of soldiers crossing duckboards through the flooded Passchendaele battlefield"
+          "src": "/photos/chatgpt-image-14-sept.-2026-11_51_14.png",
+          "alt": "Essex Farm Advanced Dressing Station near Ypres where John McCrae served"
         },
         {
           "src": "/photos/flanders/thumbs/flanders-new-4.jpg",
           "alt": "Wild poppies growing among rusted battlefield wire"
         },
         {
-          "src": "/photos/flanders/thumbs/flanders-new-5.jpg",
-          "alt": "A guest placing a Canadian flag at a war grave in a Commonwealth cemetery"
+          "src": "/photos/71983b31-lm-22674-16e39df2b2e.jpg",
+          "alt": "Historic centre of Ypres Belgium during a First World War battlefield tour"
         },
         {
-          "src": "/photos/flanders/thumbs/flanders-new-6.jpg",
-          "alt": "The Mount Sorrel Canadian Memorial near Ypres"
+          "src": "/photos/whatsapp-image-2026-08-24-at-15.09.32-1-.jpeg",
+          "alt": "Memorial Museum Passchendaele 1917 in Zonnebeke Belgium"
         },
         {
-          "src": "/photos/flanders/thumbs/flanders-new-7.jpg",
-          "alt": "The Last Post Ceremony beneath the Menin Gate Memorial in Ypres"
+          "src": "/photos/whatsapp-image-2026-08-24-at-15.09.26.jpeg",
+          "alt": "Tyne Cot Cemetery on the Passchendaele battlefield in Belgium"
         },
         {
-          "src": "/photos/flanders/thumbs/flanders-new-8.jpg",
-          "alt": "The historic market square and Cloth Hall of Ypres"
+          "src": "/photos/front-cover-2-.png",
+          "alt": "Crest Farm Canadian Memorial on the Passchendaele battlefield"
         }
       ],
-      "cardImage": "/photos/flanders/flanders-cover.jpg",
+      "cardImage": "/photos/chatgpt-image-14-sept.-2026-10_54_30.png",
       "itinerary": [
         {
-          "heading": "Morning",
-          "note": "",
+          "heading": "Morning: Vimy, Hill 70 & The Road to Ypres",
+          "note": "Depart Arras and follow the Canadian story north from the battlefields of Artois toward the Ypres Salient.",
           "items": [
-            "Christmas Truce site at Ploegsteert Wood",
-            "Mount Sorrel, Canadian battlefield",
-            "Hill 62 Canadian Memorial"
-          ],
-          "facts": []
-        },
-        {
-          "heading": "Afternoon",
-          "note": "Lunch is taken close to the Passchendaele battlefield.",
-          "items": [
-            "Second Battle of Ypres gas attack battlefield",
-            "Brooding Soldier Memorial at St. Julien",
-            "Passchendaele battlefield and Crest Farm Memorial",
-            "Tyne Cot Commonwealth War Cemetery",
-            "Essex Farm, where John McCrae wrote \"In Flanders Fields\""
-          ],
-          "facts": []
-        },
-        {
-          "heading": "Evening",
-          "note": "Dinner at Ypres's historic square.",
-          "items": [
-            "Menin Gate Memorial and the Last Post Ceremony"
+            "Preserved German frontline trenches on Vimy Ridge",
+            "Hill 70 Canadian Memorial and the battlefield of August 1917",
+            "Christmas Truce battlefield and memorial near Ploegsteert",
+            "Essex Farm Advanced Dressing Station and the story of John McCrae"
           ],
           "facts": [
-            "Departure: Arras, 9:00 AM",
-            "Return: Arras, approx. 9:30 PM"
+            "Departure: Arras, 9:00 AM"
+          ]
+        },
+        {
+          "heading": "Afternoon: Ypres & Passchendaele",
+          "note": "Explore the Ypres Salient and the battlefields where Canadian troops fought through the mud of Passchendaele in 1917.",
+          "items": [
+            "Lunch and free time in historic Ypres, Belgium",
+            "Memorial Museum Passchendaele 1917",
+            "Tyne Cot Cemetery and the Passchendaele battlefield",
+            "Crest Farm Canadian Memorial"
+          ],
+          "facts": [
+            "Return: Arras, approx. 6:00–7:00 PM",
+            "Duration: approx. 9–10 hours"
           ]
         }
       ],
-      "name": "In Flanders Fields Tour",
+      "name": "Ypres & Passchendaele Canadian Battlefield Tour",
       "slug": "in-flanders-fields",
       "intro": [
-        "Journey through the infamous Flanders Fields battlefields and discover what inspired the war's most poignant poem. During the Great War, this small corner of Belgium witnessed some of the fiercest fighting of the First World War. Stand where Canadian soldiers stood facing chlorine gas clouds and went over the top through the mud and devastation of Passchendaele.",
-        "From the Christmas Truce battlefield of 1914 to the ridges and cemeteries of Flanders, this tour explores both the famous and not-so-famous side of Flanders Fields. Walk preserved trenches, visit battlefield memorials, and gain a deeper understanding of the sacrifices made by Canadian soldiers in Belgium. The day concludes with attendance at the moving nightly Last Post Ceremony beneath the Menin Gate Memorial in Ypres, which commemorates nearly 55,000 missing Commonwealth soldiers, including 6,940 Canadians."
+        "Travel from Arras into the heart of Canada’s First World War story, beginning with the preserved frontline trenches at Vimy Ridge and the Canadian battlefield at Hill 70 before continuing north toward Belgium and the Ypres Salient. Along the way, visit a sector associated with the famous Christmas Truce of 1914 and follow the evolution of the Western Front from the early trench battles to the great offensives of 1917.",
+        "In Flanders, stand at Essex Farm, forever associated with Canadian doctor John McCrae and his poem “In Flanders Fields,” before exploring the Battle of Passchendaele through the Memorial Museum Passchendaele 1917, Tyne Cot Cemetery and Crest Farm Canadian Memorial. This small-group tour combines preserved trenches, battlefield landscapes and personal stories at some of the most important Canadian sites of the Great War."
       ],
       "combo": false,
-      "tagline": "\"In Flanders Fields, the poppies blow...\"",
+      "tagline": "Follow CaFollow Canada's story from Hill 70 to the battlefields of Ypres and Passchendaele.",
       "heroAlt": "The Canada Gate memorial arch at Tyne Cot Cemetery in autumn",
-      "duration": "12–13 hours",
+      "duration": "9–10 hours",
       "schedule": "Sun, Wed",
       "inclusions": [
-        "Expert WWI Western Front guide",
-        "Comfortable, air-conditioned 8/9 seat minibus",
-        "Pick-up / drop-off at Arras Train Station or your Arras accommodation",
-        "All entry fees"
+        "Expert Canadian First World War battlefield guide",
+        "Comfortable, air-conditioned 8/9-seat minibus",
+        "All battlefield and site entry fees",
+        "Pick-up and drop-off in Arras with a maximum of 8 guests"
       ],
-      "cardAlt": "The Canada Gate memorial arch at Tyne Cot Cemetery in autumn",
+      "cardAlt": "Canadian battlefield tour at Passchendaele in Belgium",
       "departureCity": "Arras"
     },
     {
