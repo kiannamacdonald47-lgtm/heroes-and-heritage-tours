@@ -49,8 +49,10 @@ permalink: "/booking.html"
           <div data-step>
             <div class="form-fieldset">
               <legend>Which tour would you like to book?</legend>
+              {% set bookableTours = [] %}
+              {% for tour in tours %}{% if tour.bookingMethod != "email" %}{% set noop = bookableTours.push(tour) %}{% endif %}{% endfor %}
               <div class="radio-cards">
-                {% for tour in tours %}{% if tour.bookingMethod != "email" %}
+                {% for tour in bookableTours %}
                 <label class="radio-card">
                   <input type="radio" name="tour" value="{{ tour.slug }}" required {% if loop.first %}checked{% endif %}>
                   <span class="radio-card-body">
@@ -59,7 +61,7 @@ permalink: "/booking.html"
                     <span class="radio-card-price">${{ tour.price | currency }} CAD / person</span>
                   </span>
                 </label>
-                {% endif %}{% endfor %}
+                {% endfor %}
               </div>
               <p class="required-note">Not sure which to choose? <a href="/tours.html" style="color: var(--red); font-weight: 600;">Compare all tours</a> or <a href="/contact.html" style="color: var(--red); font-weight: 600;">ask us first</a>. Booking the Western Front &amp; Normandy 5-Day Tour? <a href="/contact.html?tour=western-front-normandy-5day" style="color: var(--red); font-weight: 600;">Enquire here instead</a>, since its Normandy leg is arranged directly with our team.</p>
             </div>
