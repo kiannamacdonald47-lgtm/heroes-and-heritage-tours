@@ -193,15 +193,15 @@
       "departureCity": "Arras"
     },
     {
-      "footnote": "The above itinerary may be varied based on the wishes and consensus of the guests travelling on any particular day. This tour is also included within The Ultimate (3 Day) Canadian Tour.",
-      "heroImage": "/photos/somme/somme-cover.jpg",
-      "cardDesc": "Beaumont-Hamel, Courcelette's original trenches, and the Battle of Amiens 1918.",
+      "footnote": "Tour itineraries may be adjusted to accommodate museum opening times, traffic, commemorative events, site accessibility or the interests of guests travelling on the day. Lunch is not included in the tour price. Private and customised battlefield tours are available on request.",
+      "heroImage": "/photos/souterrain-carriere-wellington-©-paper-menthe-39.jpg",
+      "cardDesc": "Follow the Canadian Corps from Arras to Cambrai on a full-day First World War battlefield tour exploring the Drocourt-Quéant Line, Canal du Nord and Canada’s Hundred Days.",
       "runDays": [
         1
       ],
       "badge": "Day Tour",
       "scheduleFull": "Departs Arras every Monday. Other days available on request.",
-      "shortName": "The Bloody Somme",
+      "shortName": "Canada’s Hundred Days",
       "price": 320,
       "galleryImages": [
         {
@@ -237,49 +237,52 @@
           "alt": "Rows of Commonwealth war graves at a cemetery on the Somme"
         }
       ],
-      "cardImage": "/photos/somme/somme-cover.jpg",
+      "cardImage": "/photos/souterrain-carriere-wellington-©-paper-menthe-39.jpg",
       "itinerary": [
         {
-          "heading": "Morning",
-          "note": "",
+          "heading": "Morning: Arras & The Road to Cambrai",
+          "note": "Begin in Arras before following the Canadian advance east along one of the most fiercely contested corridors of the Western Front.",
           "items": [
-            "Beaumont-Hamel Newfoundland Memorial & Museum",
-            "Original frontline trenches and No Man's Land",
-            "Courcelette Canadian battlefield",
-            "Tank memorial",
-            "Adanac Canadian Military Cemetery"
+            "Arras Memorial and Faubourg d’Amiens Cemetery",
+            "Carrière Wellington and the underground story of the Battle of Arras",
+            "Monchy-le-Preux Newfoundland Memorial",
+            "Seven Victoria Crosses Memorial and the Drocourt-Quéant battlefield"
           ],
-          "facts": []
+          "facts": [
+            "Departure: Arras, 9:00 AM"
+          ]
         },
         {
-          "heading": "Afternoon",
-          "note": "Lunch is taken at Auchonvillers, close to the battlefield.",
+          "heading": "Afternoon: Bourlon Wood, Cambrai & The Canal du Nord",
+          "note": "Continue east toward Cambrai, following the Canadian Corps through the final stages of its advance across the Canal du Nord.",
           "items": [
-            "Red Baron crash site",
-            "Sir John Monash Centre",
-            "Battle of Amiens 1918 Canadian battlefield",
-            "Hangard Wood and Canadian Victoria Cross location",
-            "Le Quesnel Canadian Memorial"
+            "Bourlon Wood Canadian Memorial and the Canal du Nord battlefield",
+            "Lunch and free time in historic Cambrai",
+            "Masnières Newfoundland Memorial",
+            "Cambrai Tank 1917 Museum at Flesquières"
           ],
-          "facts": []
+          "facts": [
+            "Return: Arras, approx. 5:30–6:00 PM",
+            "Duration: approx. 8–9 hours"
+          ]
         }
       ],
-      "name": "The Bloody Somme Day Tour",
+      "name": "Canada’s Hundred Days: Arras & Cambrai Battlefield Tour",
       "slug": "somme-front",
       "intro": [
-        "Explore the preserved battlefield of the Beaumont-Hamel Newfoundland Memorial, a UNESCO World Heritage Site, and walk through original trenches and No Man's Land. Later, venture off the beaten path at Courcelette, one of the key Canadian battlefields of the Somme. Across the Somme campaign in 1916, Canada suffered more than 24,000 casualties.",
-        "In the afternoon, visit the Amiens battlefield where the Canadian Corps spearheaded the offensive that would become the blackest day for the German army, marking the beginning of the end of the First World War."
+        "Follow the Canadian Corps along the road from Arras to Cambrai and discover the extraordinary final battles of the First World War. Beginning beneath Arras at Carrière Wellington, the tour travels east through Monchy-le-Preux and the formidable German defensive lines that Canadian troops attacked during the Hundred Days Offensive of 1918.",
+        "Stand on the ground where seven Canadians earned the Victoria Cross in a single day, visit the Canadian memorial at Bourlon Wood and follow the advance toward Cambrai after the crossing of the Canal du Nord. The journey also explores the Newfoundland story at Monchy-le-Preux and Masnières before concluding at the Cambrai Tank 1917 Museum, where one of the remarkable surviving tanks of the Great War is preserved."
       ],
       "combo": false,
-      "tagline": "Beaumont-Hamel, Courcelette, and the Battle of Amiens 1918.",
-      "heroAlt": "The Beaumont-Hamel Newfoundland Memorial caribou statue",
+      "tagline": "Follow the Canadian Corps from Arras to Cambrai during the final victorious months of the First World War.",
+      "heroAlt": "Wellington Quarry with shadows of soldiers",
       "duration": "8–9 hours",
       "schedule": "Mon",
       "inclusions": [
-        "Expert WWI Western Front guide",
-        "Comfortable, air-conditioned 8/9 seat minibus",
-        "Pick-up / drop-off at Arras Train Station or your Arras accommodation",
-        "All entry fees"
+        "Expert Canadian First World War battlefield guide",
+        "Comfortable, air-conditioned 8/9-seat minibus",
+        "Admission to Carrière Wellington and the Cambrai Tank 1917 Museum",
+        "Pick-up and drop-off in Arras with a maximum of 8 guests"
       ],
       "cardAlt": "The Beaumont-Hamel Newfoundland Memorial caribou statue",
       "departureCity": "Arras"
