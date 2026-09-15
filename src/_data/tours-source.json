@@ -57,7 +57,9 @@
             "ADANAC Military Cemetery and the graves of Canadian soldiers",
             "Lunch in the historic Somme village of Auchonvillers"
           ],
-          "facts": []
+          "facts": [
+            "Departure: Arras, 9:00 AM"
+          ]
         },
         {
           "heading": "Afternoon: Battle of Vimy Ridge",
@@ -68,7 +70,9 @@
             "Canadian National Vimy Memorial on Hill 145",
             "Cabaret-Rouge British Cemetery and the story of Canada’s Unknown Soldier"
           ],
-          "facts": []
+          "facts": [
+            "Return: Arras, approx. 5:00 PM"
+          ]
         }
       ],
       "name": "Vimy Ridge & Somme Canadian Battlefield Tour",
