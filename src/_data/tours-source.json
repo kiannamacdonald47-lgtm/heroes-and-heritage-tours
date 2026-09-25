@@ -388,7 +388,7 @@
       "departureCity": "Arras"
     },
     {
-      "footnote": "The above itinerary may be varied based on the wishes and consensus of the guests travelling on any particular day. Customised tours are available for this area on request.",
+      "footnote": "Accommodation and meals are not included. Tour itineraries may be adjusted to accommodate museum opening times, traffic, commemorative events, site accessibility or the interests of guests travelling on the day. Private and customised battlefield tours are also available on request.",
       "heroImage": "/photos/ultimate/ultimate-cover.jpg",
       "cardDesc": "Experience the Somme, Vimy Ridge, Ypres, Passchendaele and Canada’s Hundred Days on our complete three-day Canadian battlefield tour from Arras.",
       "runDays": [
@@ -401,43 +401,59 @@
       "price": 1090,
       "galleryImages": [
         {
-          "src": "/photos/ultimate/thumbs/ultimate-new-1.jpg",
-          "alt": "The Last Post Ceremony beneath the Menin Gate Memorial in Ypres"
+          "src": "/photos/2-2-.jpg",
+          "alt": "Beaumont-Hamel Newfoundland Memorial trenches on the Somme battlefield in France"
         },
         {
-          "src": "/photos/ultimate/thumbs/ultimate-new-2.jpg",
-          "alt": "A guide and guest examining a battlefield relic found in the woods"
+          "src": "/photos/chatgpt-image-14-sept.-2026-07_24_27.png",
+          "alt": "Canadian graves at ADANAC Military Cemetery on the Somme battlefields"
         },
         {
-          "src": "/photos/ultimate/thumbs/ultimate-new-3.jpg",
-          "alt": "A preserved trench in the woods of the Ypres Salient"
+          "src": "/photos/pxl_20260607_083112355-2-.jpg",
+          "alt": "Preserved Canadian and German First World War trenches at Vimy Ridge"
         },
         {
-          "src": "/photos/ultimate/thumbs/ultimate-new-4.jpg",
-          "alt": "The Beaumont-Hamel Newfoundland Memorial caribou statue against a blue sky"
+          "src": "/photos/chatgpt-image-14-sept.-2026-10_20_03.png",
+          "alt": "Canadian National Vimy Memorial overlooking the Vimy Ridge battlefield"
         },
         {
-          "src": "/photos/ultimate/thumbs/ultimate-new-5.jpg",
-          "alt": "The entrance to Vimy Ridge's Centennial Park, with the Vimy Memorial in the distance"
+          "src": "/photos/chatgpt-image-14-sept.-2026-11_44_30.png",
+          "alt": "Hill 70 Canadian Memorial near Lens in northern France"
         },
         {
-          "src": "/photos/ultimate/thumbs/ultimate-new-6.jpg",
-          "alt": "The Canadian National Vimy Memorial illuminated at night, viewed from below"
+          "src": "/photos/chatgpt-image-14-sept.-2026-11_51_14.png",
+          "alt": "Essex Farm Advanced Dressing Station near Ypres where John McCrae served"
         },
         {
-          "src": "/photos/ultimate/thumbs/ultimate-new-7.jpg",
-          "alt": "A guide and guest at the preserved trenches and mine craters at Vimy Ridge"
+          "src": "/photos/chatgpt-image-14-sept.-2026-10_54_30.png",
+          "alt": "Tyne Cot Cemetery overlooking the Passchendaele battlefield in Belgiu"
         },
         {
           "src": "/photos/ultimate/thumbs/ultimate-new-8.jpg",
-          "alt": "The Canada Gate memorial arch at Tyne Cot Cemetery in autumn"
+          "alt": "The Canada Gate memorial arch at Passchendaele Belgium"
+        },
+        {
+          "src": "/photos/souterrain-carriere-wellington-©-paper-menthe-39.jpg",
+          "alt": "Carrière Wellington First World War tunnels beneath Arras France"
+        },
+        {
+          "src": "/photos/chatgpt-image-15-sept.-2026-08_53_45.png",
+          "alt": "The Newfoundland Memorial at Monchy-le-Preux France"
+        },
+        {
+          "src": "/photos/7-2-.jpg",
+          "alt": "Seven Canadian Victoria Crosses memorial on the Drocourt-Quéant battlefield"
+        },
+        {
+          "src": "/photos/chatgpt-image-15-sept.-2026-09_11_09.png",
+          "alt": "First World War tank at the Cambrai Tank 1917 Museum in Flesquières France"
         }
       ],
       "cardImage": "/photos/multi-day-experience.jpg",
       "itinerary": [
         {
-          "heading": "Saturday Departure",
-          "note": "This sequence follows each site's own weekly schedule: Vimy to Victory on Saturday, In Flanders Fields on Sunday, and The Bloody Somme on Monday.",
+          "heading": "Saturday / Monday Departures",
+          "note": "This sequence follows the Saturday departure schedule. Tours departing on Monday follow a different order: Canada’s Hundred Days, Vimy Ridge & The Somme, then Flanders Fields & Passchendaele.",
           "isPrefaceNote": true,
           "items": [],
           "facts": []
@@ -482,52 +498,6 @@
           "facts": [
             "Departure: Arras, 9:00 AM",
             "Return: Arras, approx. 5:30–6:00 PM"
-          ]
-        },
-        {
-          "heading": "Monday Departure",
-          "note": "This sequence follows each site's own weekly schedule: The Bloody Somme on Monday, Vimy to Victory on Tuesday, and In Flanders Fields on Wednesday.",
-          "isPrefaceNote": true,
-          "items": [],
-          "facts": []
-        },
-        {
-          "heading": "Day 1: Canada’s Hundred Days",
-          "note": "",
-          "items": [
-            "Beaumont-Hamel Newfoundland Memorial & Museum, original trenches",
-            "Courcelette Canadian battlefield and the Tank memorial",
-            "Battle of Amiens 1918 Canadian battlefield"
-          ],
-          "facts": [
-            "Departure: Arras, 9:00 AM",
-            "Return: Arras, approx. 9:30 PM"
-          ]
-        },
-        {
-          "heading": "Day 2: Vimy to Victory",
-          "note": "",
-          "items": [
-            "Frontline trenches, tunnels & mine craters on Vimy Ridge",
-            "Canadian National Vimy Memorial",
-            "Hill 70, Monchy-le-Preux & the Drocourt-Quéant Line"
-          ],
-          "facts": [
-            "Departure: Arras, 9:00 AM",
-            "Return: Arras, approx. 9:30 PM"
-          ]
-        },
-        {
-          "heading": "Day 3: In Flanders Fields",
-          "note": "",
-          "items": [
-            "Christmas Truce site at Ploegsteert Wood, Mount Sorrel & Hill 62",
-            "Passchendaele battlefield, Crest Farm Memorial & Tyne Cot Cemetery",
-            "Essex Farm and the Menin Gate Last Post Ceremony"
-          ],
-          "facts": [
-            "Departure: Arras, 9:00 AM",
-            "Return: Arras, approx. 9:30 PM"
           ]
         }
       ],
