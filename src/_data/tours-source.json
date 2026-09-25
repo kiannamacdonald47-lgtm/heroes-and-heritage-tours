@@ -288,9 +288,9 @@
       "departureCity": "Arras"
     },
     {
-      "footnote": "The above itinerary may be varied based on the wishes and consensus of the guests travelling on any particular day. Customised tours are available for this area on request.",
+      "footnote": "Accommodation and meals are not included. Tour itineraries may be adjusted to accommodate museum opening times, traffic, commemorative events, site accessibility or the interests of guests travelling on the day. Private and customised battlefield tours are available on request.",
       "heroImage": "/photos/signature/signature-cover.jpg",
-      "cardDesc": "Includes In Flanders Fields + Vimy to Victory. The top-to-bottom of Canada's action on the Western Front.",
+      "cardDesc": "Explore the Somme, Vimy Ridge, Ypres and Passchendaele on a two-day Canadian battlefield tour from Arras, covering the essential Canadian battlefields of France and Belgium.",
       "runDays": [
         6,
         2
@@ -301,85 +301,88 @@
       "price": 770,
       "galleryImages": [
         {
-          "src": "/photos/signature/thumbs/signature-new-1.jpg",
-          "alt": "The Canadian National Vimy Memorial illuminated at night"
+          "src": "/photos/front-cover-1-.png",
+          "alt": "Beaumont-Hamel Newfoundland Memorial on the Somme battlefield in France"
         },
         {
-          "src": "/photos/signature/thumbs/signature-new-2.jpg",
-          "alt": "An underground tunnel beneath Vimy Ridge"
+          "src": "/photos/chatgpt-image-14-sept.-2026-07_15_54.png",
+          "alt": "Courcelette Canadian Memorial on a Canadian Somme battlefield tour"
         },
         {
-          "src": "/photos/signature/thumbs/signature-new-3.jpg",
-          "alt": "A preserved trench in the woods of the Ypres Salient"
+          "src": "/photos/chatgpt-image-14-sept.-2026-10_20_03.png",
+          "alt": "Canadian National Vimy Memorial on Vimy Ridge in France"
         },
         {
-          "src": "/photos/signature/thumbs/signature-new-4.jpg",
-          "alt": "Wild poppies growing among rusted battlefield wire"
+          "src": "/photos/img_9226-1-.jpeg",
+          "alt": "Preserved First World War trenches on the Vimy Ridge battlefield"
         },
         {
-          "src": "/photos/signature/thumbs/signature-new-5.jpg",
-          "alt": "A guest at the grave of a soldier of the 49th Battalion, Canadian Infantry"
+          "src": "/photos/fb_img_1787318515773.jpg",
+          "alt": "Ypres Belgium at Sunset with the Menin Gate Memorial in the Foreground"
         },
         {
-          "src": "/photos/signature/thumbs/signature-new-6.jpg",
-          "alt": "The Last Post Ceremony beneath the Menin Gate Memorial in Ypres"
+          "src": "/photos/whatsapp-image-2026-08-24-at-15.09.32-1-.jpeg",
+          "alt": "Memorial Museum Passchendaele 1917 in Zonnebeke Belgium"
         },
         {
-          "src": "/photos/signature/thumbs/signature-new-7.jpg",
-          "alt": "A memorial marking the Seven Victoria Crosses awarded near Cambrai on 2 September 1918"
+          "src": "/photos/whatsapp-image-2026-08-24-at-15.09.26.jpeg",
+          "alt": "Canadians at a relative's grave during a Battlefield Tour near Passchendaele"
         },
         {
-          "src": "/photos/signature/thumbs/signature-new-8.jpg",
-          "alt": "The Newfoundland Caribou memorial at Monchy-le-Preux"
+          "src": "/photos/front-cover-2-.png",
+          "alt": "Canada Gate at Crest Farm Canadian Memorial near Passchendaele Belgium"
         }
       ],
       "cardImage": "/photos/signature/signature-cover.jpg",
       "itinerary": [
         {
-          "heading": "Day 1: Vimy to Victory",
-          "note": "Into the footsteps of Canadian troops at Vimy Ridge, Hill 70, and the pivotal battles of 1918 on the famous Cambrai road, including the unforgettable National Vimy Memorial, where more than a century on, Canada's efforts and sacrifices are still proudly remembered by local communities.",
+          "heading": "Day 1: Vimy Ridge & The Somme",
+          "note": "From the Somme battlefields of 1916 to Vimy Ridge in 1917, follow the evolution of the Canadian Corps through two of the most important chapters in Canada’s First World War story.",
           "isPrefaceNote": true,
           "items": [
-            "Frontline trenches, tunnels & mine craters on Vimy Ridge",
-            "Canadian National Vimy Memorial",
-            "Hill 70, Monchy-le-Preux & the Drocourt-Quéant Line"
+            "Beaumont-Hamel Newfoundland Memorial and preserved First World War trenches",
+            "Courcelette Canadian battlefield and ADANAC Military Cemetery",
+            "Lunch in the Somme village of Auchonvillers and Mont-Saint-Éloi",
+            "Vimy Ridge, Canadian National Vimy Memorial and Cabaret-Rouge British Cemetery"
           ],
           "facts": [
             "Departure: Arras, 9:00 AM",
-            "Return: Arras, approx. 9:30 PM"
+            "Return: Arras, approx. 5:00 PM"
           ]
         },
         {
-          "heading": "Day 2: In Flanders Fields",
-          "note": "North into Belgium, visiting some of the most iconic battlegrounds of the First World War: original trenches, the infamous Passchendaele battlefield, and the site where John McCrae wrote \"In Flanders Fields\" during the gas attacks of 1915. A relaxing dinner in the old town of Ypres leads into the emotive Last Post Ceremony at the Menin Gate, which commemorates nearly 55,000 missing Commonwealth soldiers, including 6,940 Canadians.",
+          "heading": "Day 2: Flanders Fields & Passchendaele",
+          "note": "Travel north into Belgium and follow Canada’s story through the Ypres Salient to the terrible battlefields of Passchendaele.",
           "isPrefaceNote": true,
           "items": [
-            "Christmas Truce site at Ploegsteert Wood, Mount Sorrel & Hill 62",
-            "Passchendaele battlefield, Crest Farm Memorial & Tyne Cot Cemetery",
-            "Essex Farm and the Menin Gate Last Post Ceremony"
+            "German frontline trenches at Vimy Ridge and Hill 70 Canadian Memorial",
+            "Christmas Truce battlefield and Essex Farm Advanced Dressing Station",
+            "Lunch in historic Ypres and Memorial Museum Passchendaele 1917",
+            "Tyne Cot Cemetery, Passchendaele battlefield and Crest Farm Canadian Memorial"
           ],
           "facts": [
             "Departure: Arras, 9:00 AM",
-            "Return: Arras, approx. 9:30 PM"
+            "Return: Arras, approx. 6:00–7:00 PM"
           ]
         }
       ],
-      "name": "The Signature: 2 Day Canadian Tour",
+      "name": "2-Day Canadian Battlefield Tour: Vimy, Somme & Passchendaele",
       "slug": "signature-2-day",
       "intro": [
-        "The Signature: 2 Day Canadian Tour combines our two most popular day tours to cover the top-to-bottom of Canada's action on the Western Front.",
-        "All tours are based in the old town of Arras. We can recommend accommodation in hotels or guest houses our clients have happily stayed at. Pick-up/drop-off is at your accommodation in Arras or at the train station."
+        "Discover the essential Canadian battlefields of the First World War on a two-day journey across northern France and Belgium. Based in historic Arras, The Signature combines our Vimy Ridge & The Somme and Flanders Fields & Passchendaele tours into one comprehensive small-group experience.",
+        "Walk preserved trenches at Beaumont-Hamel and Vimy Ridge, follow Canadian soldiers onto the Somme at Courcelette, and stand beneath the Canadian National Vimy Memorial. On the second day, travel north through Hill 70 and the Christmas Truce battlefields to Ypres, before exploring Essex Farm, Passchendaele, Tyne Cot Cemetery and Crest Farm. Across two days, personal stories, original landscapes and battlefield archaeology bring Canada’s Western Front experience to life."
       ],
       "combo": true,
-      "tagline": "In Flanders Fields + Vimy to Victory, combined.",
+      "tagline": "Experience Canada’s essential Western Front battlefields across France and Belgium in two unforgettable days.",
       "heroAlt": "The Menin Gate Memorial illuminated at night in Ypres",
       "duration": "2 days",
       "schedule": "Sat–Sun & Tue–Wed departures",
       "inclusions": [
-        "Expert WWI Western Front guide",
-        "Comfortable, air-conditioned 8/9 seat minibus",
-        "Pick-up / drop-off at Arras Train Station or your Arras accommodation",
-        "All entry fees"
+        "Expert Canadian First World War battlefield guide",
+        "Two full days of small-group battlefield touring",
+        "Comfortable, air-conditioned 8/9-seat minibus",
+        "All battlefield and museum entry fees",
+        "Pick-up and drop-off at Arras Train Station"
       ],
       "cardAlt": "The Menin Gate Memorial illuminated at night in Ypres",
       "departureCity": "Arras"
