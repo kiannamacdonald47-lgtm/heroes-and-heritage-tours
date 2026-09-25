@@ -390,7 +390,7 @@
     {
       "footnote": "The above itinerary may be varied based on the wishes and consensus of the guests travelling on any particular day. Customised tours are available for this area on request.",
       "heroImage": "/photos/ultimate/ultimate-cover.jpg",
-      "cardDesc": "Includes Vimy to Victory + In Flanders Fields + The Bloody Somme. From the 1915 gas attacks to the victories of 1918.",
+      "cardDesc": "Experience the Somme, Vimy Ridge, Ypres, Passchendaele and Canada’s Hundred Days on our complete three-day Canadian battlefield tour from Arras.",
       "runDays": [
         6,
         1
@@ -433,7 +433,7 @@
           "alt": "The Canada Gate memorial arch at Tyne Cot Cemetery in autumn"
         }
       ],
-      "cardImage": "/photos/ultimate/ultimate-cover.jpg",
+      "cardImage": "/photos/multi-day-experience.jpg",
       "itinerary": [
         {
           "heading": "Saturday Departure",
@@ -443,42 +443,45 @@
           "facts": []
         },
         {
-          "heading": "Day 1: Vimy to Victory",
-          "note": "",
+          "heading": "Day 1: Vimy Ridge & The Somme",
+          "note": "Follow the Canadian and Newfoundland experience from the Somme battlefields of 1916 to the heights of Vimy Ridge in 1917.",
           "items": [
-            "Frontline trenches, tunnels & mine craters on Vimy Ridge",
-            "Canadian National Vimy Memorial",
-            "Hill 70, Monchy-le-Preux & the Drocourt-Quéant Line"
+            "Beaumont-Hamel Newfoundland Memorial and preserved First World War trenches",
+            "Courcelette Canadian battlefield and ADANAC Military Cemetery",
+            "Lunch in Auchonvillers and the ruined abbey towers of Mont-Saint-Éloi",
+            "Vimy Ridge, Canadian National Vimy Memorial and Cabaret-Rouge British Cemetery"
           ],
           "facts": [
             "Departure: Arras, 9:00 AM",
-            "Return: Arras, approx. 9:30 PM"
+            "Return: Arras, approx. 5:00 PM"
           ]
         },
         {
-          "heading": "Day 2: In Flanders Fields",
-          "note": "",
+          "heading": "Day 2: Flanders Fields & Passchendaele",
+          "note": "Travel north into Belgium and follow the Canadian story through the Ypres Salient to the battlefields of Passchendaele.",
           "items": [
-            "Christmas Truce site at Ploegsteert Wood, Mount Sorrel & Hill 62",
-            "Passchendaele battlefield, Crest Farm Memorial & Tyne Cot Cemetery",
-            "Essex Farm and the Menin Gate Last Post Ceremony"
+            "German frontline trenches at Vimy Ridge and Hill 70 Canadian Memorial",
+            "Christmas Truce battlefield and Essex Farm Advanced Dressing Station",
+            "Lunch in historic Ypres and Memorial Museum Passchendaele 1917",
+            "Tyne Cot Cemetery, Passchendaele battlefield and Crest Farm Canadian Memorial"
           ],
           "facts": [
             "Departure: Arras, 9:00 AM",
-            "Return: Arras, approx. 9:30 PM"
+            "Return: Arras, approx. 6:00–7:00 PM"
           ]
         },
         {
-          "heading": "Day 3: The Bloody Somme",
-          "note": "",
+          "heading": "Day 3: Canada’s Hundred Days",
+          "note": "Follow the Canadian Corps from Arras toward Cambrai during the final and most successful offensive of the First World War.",
           "items": [
-            "Beaumont-Hamel Newfoundland Memorial & Museum, original trenches",
-            "Courcelette Canadian battlefield and the Tank memorial",
-            "Battle of Amiens 1918 Canadian battlefield"
+            "Arras Memorial, Carrière Wellington and Monchy-le-Preux Newfoundland Memorial",
+            "Seven Canadian Victoria Crosses Memorial and the Drocourt-Quéant battlefield",
+            "Bourlon Wood Canadian Memorial, Canal du Nord and lunch in Cambrai",
+            "Masnières Newfoundland Memorial and Cambrai Tank 1917 Museum"
           ],
           "facts": [
             "Departure: Arras, 9:00 AM",
-            "Return: Arras, approx. 9:30 PM"
+            "Return: Arras, approx. 5:30–6:00 PM"
           ]
         },
         {
@@ -489,7 +492,7 @@
           "facts": []
         },
         {
-          "heading": "Day 1: The Bloody Somme",
+          "heading": "Day 1: Canada’s Hundred Days",
           "note": "",
           "items": [
             "Beaumont-Hamel Newfoundland Memorial & Museum, original trenches",
@@ -528,24 +531,25 @@
           ]
         }
       ],
-      "name": "The Ultimate: 3 Day Canadian Tour",
+      "name": "3-Day Canadian Battlefield Tour: Somme, Vimy, Passchendaele & Cambrai",
       "slug": "ultimate-3-day",
       "intro": [
-        "The Ultimate: 3 Day Canadian Tour combines our three day tours to take you into the complete footsteps of Canadian troops on the frontlines of the First World War. From the 1915 gas attacks, to the brutal Somme, up to Vimy Ridge and onto the victories of 1918, where Canadians fought as shock troops to bring the war to an end. Itinerary order varies depending on your departure day (see below).",
-        "All tours run from the old town of Arras. We can recommend accommodation in 3+ star hotels or guest houses our clients have happily stayed at. Pick-up/drop-off is at your accommodation in Arras or at Arras Train Station."
+        "Experience the complete Canadian Western Front story across three unforgettable days in France and Belgium. Based in historic Arras, The Ultimate combines our Vimy Ridge & The Somme, Flanders Fields & Passchendaele and Canada’s Hundred Days tours into one comprehensive journey through the battlefields that shaped Canada during the First World War.",
+        "Walk preserved trenches on the Somme and Vimy Ridge, follow Canadian soldiers through the mud of Passchendaele and trace the Canadian Corps east from Arras toward Cambrai during the victorious Hundred Days of 1918. From Beaumont-Hamel and Courcelette to Tyne Cot, Bourlon Wood and the Canal du Nord, personal stories, battlefield landscapes, memorials and museums bring three years of Canadian fighting on the Western Front to life."
       ],
       "combo": true,
-      "tagline": "Vimy to Victory + In Flanders Fields + The Bloody Somme, combined.",
+      "tagline": "Three days. Three campaigns. Follow Canada’s Western Front story from the Somme to the final advance of 1918.",
       "heroAlt": "The Canadian National Vimy Memorial illuminated at night",
       "duration": "3 days",
       "schedule": "Sat–Mon & Mon–Wed departures",
       "inclusions": [
-        "Expert WWI Western Front guide",
+        "Expert Canadian First World War battlefield guide",
+        "Three full days of small-group battlefield touring",
         "Comfortable, air-conditioned 8/9 seat minibus",
-        "Pick-up / drop-off at Arras Train Station or your Arras accommodation",
-        "All entry fees"
+        "All battlefield and museum entry fees",
+        "Pick-up / drop-off at Arras Train Station"
       ],
-      "cardAlt": "The Canadian National Vimy Memorial illuminated at night",
+      "cardAlt": "Father and son in the woods at Vimy during a Canadian battlefield tour",
       "departureCity": "Arras"
     },
     {
