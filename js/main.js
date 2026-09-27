@@ -269,14 +269,21 @@ if (departureToggle) {
 const dayToursSection = document.getElementById("dayTours");
 if (dayToursSection) {
   const departParam = new URLSearchParams(window.location.search).get("depart");
-  if (departParam === "paris") {
+  const isParisView = departParam === "paris";
+  if (isParisView) {
     dayToursSection.querySelectorAll("[data-price-paris]").forEach((el) => {
       const amountEl = el.querySelector(".amount");
       if (amountEl) amountEl.textContent = "$" + Number(el.dataset.priceParis).toLocaleString();
     });
+  }
+  // Only bother with the banner/switch link if at least one tour here
+  // actually offers a Paris departure.
+  if (dayToursSection.querySelector("[data-price-paris]")) {
     const banner = document.createElement("p");
     banner.className = "depart-banner";
-    banner.innerHTML = 'Showing prices for departures from Paris. <a href="?depart=arras#dayTours">View Arras prices</a>';
+    banner.innerHTML = isParisView
+      ? 'Showing prices for departures from Paris. <a href="?depart=arras#dayTours">View Arras prices</a>'
+      : 'Showing prices for departures from Arras. <a href="?depart=paris#dayTours">View Paris prices</a>';
     const container = dayToursSection.querySelector(".container");
     if (container) container.insertBefore(banner, container.firstElementChild);
   }
@@ -339,6 +346,14 @@ if (bookingForm) {
     const tour = tourKey && TOURS[tourKey];
     const offersParis = !!(tour && tour.parisAvailable);
     if (departureField) departureField.hidden = !offersParis;
+    // Every radio card resets to its own Arras price whenever the tour
+    // selection changes — only the newly-selected tour's card (if it
+    // offers Paris) gets updated again by updateSummary() below, so a
+    // previously Paris-toggled card never shows a stale Paris price
+    // after the user has moved on to a different tour.
+    bookingForm.querySelectorAll(".radio-card-price[data-price-arras]").forEach((el) => {
+      el.textContent = `$${Number(el.dataset.priceArras).toLocaleString()} CAD / person`;
+    });
     if (!offersParis) {
       departureRadios.forEach((r) => { r.checked = r.value === "arras"; });
       if (departureCityField) departureCityField.value = "Arras";
@@ -381,6 +396,16 @@ if (bookingForm) {
 
     if (departureCityField) departureCityField.value = isParis ? "Paris" : (tour.departureCity || "Arras");
     if (parisTuesdayHint) parisTuesdayHint.hidden = !(isParis && tour.parisRunDays && tour.parisRunDays.length);
+
+    // Keep the small price tag on the selected tour's radio card in sync
+    // with the departure choice too, not just the summary panel to the
+    // right — otherwise a guest arriving with Paris pre-selected (e.g.
+    // via a tour page's toggle) sees a card that still says the Arras
+    // price while the summary already reflects the Paris one.
+    const priceTag = bookingForm.querySelector(`.radio-card-price[data-tour-price-slug="${tourKey}"]`);
+    if (priceTag && tour.parisAvailable) {
+      priceTag.textContent = `$${perPerson.toLocaleString()} CAD / person`;
+    }
 
     if (summaryTour) summaryTour.textContent = tour.name;
     if (summaryGuests) summaryGuests.textContent = String(guests);

@@ -57,8 +57,8 @@ permalink: "/booking.html"
                   <input type="radio" name="tour" value="{{ tour.slug }}" required {% if loop.first %}checked{% endif %}>
                   <span class="radio-card-body">
                     <strong>{{ tour.shortName }}</strong>
-                    <span>{{ tour.badge }} · Departs {{ tour.departureCity }} · {{ tour.schedule }}{% if not tour.combo %} · {{ tour.duration }}{% endif %}</span>
-                    <span class="radio-card-price">${{ tour.price | currency }} CAD / person</span>
+                    <span>{{ tour.badge }} · Departs {{ tour.departureCity }}{% if tour.parisAvailable %} or Paris{% endif %} · {{ tour.schedule }}{% if not tour.combo %} · {{ tour.duration }}{% endif %}</span>
+                    <span class="radio-card-price" data-tour-price-slug="{{ tour.slug }}" {% if tour.parisAvailable %}data-price-arras="{{ tour.price }}" data-price-paris="{{ tour.price + 100 }}"{% endif %}>${{ tour.price | currency }} CAD / person</span>
                   </span>
                 </label>
                 {% endfor %}
