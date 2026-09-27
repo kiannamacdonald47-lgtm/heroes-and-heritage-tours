@@ -36,17 +36,22 @@ exports.handler = async () => {
   }
 
   // 2. Balance-tracking store: delete by session ID (unique, safe).
+  // Listing all keys and filtering client-side, matching the pattern
+  // already proven by listBalanceRecords/listTourReminderRecords,
+  // rather than list({prefix}) which returned nothing here.
   const balStore = balanceStore();
-  const { blobs: balBlobs } = await balStore.list({ prefix: TEST_SESSION_PREFIX });
+  const { blobs: balBlobs } = await balStore.list();
   for (const { key } of balBlobs) {
+    if (!key.startsWith(TEST_SESSION_PREFIX)) continue;
     await balStore.delete(key);
     results.push(`balance-tracking/${key}: deleted`);
   }
 
   // 3. Tour-reminders store: delete by session ID.
   const trStore = tourReminderStore();
-  const { blobs: trBlobs } = await trStore.list({ prefix: TEST_SESSION_PREFIX });
+  const { blobs: trBlobs } = await trStore.list();
   for (const { key } of trBlobs) {
+    if (!key.startsWith(TEST_SESSION_PREFIX)) continue;
     await trStore.delete(key);
     results.push(`tour-reminders/${key}: deleted`);
   }
