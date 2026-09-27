@@ -41,6 +41,7 @@ exports.handler = async () => {
   // rather than list({prefix}) which returned nothing here.
   const balStore = balanceStore();
   const { blobs: balBlobs } = await balStore.list();
+  results.push(`balance-tracking: ${balBlobs.length} total record(s) in store`);
   for (const { key } of balBlobs) {
     if (!key.startsWith(TEST_SESSION_PREFIX)) continue;
     await balStore.delete(key);
@@ -50,6 +51,7 @@ exports.handler = async () => {
   // 3. Tour-reminders store: delete by session ID.
   const trStore = tourReminderStore();
   const { blobs: trBlobs } = await trStore.list();
+  results.push(`tour-reminders: ${trBlobs.length} total record(s) in store`);
   for (const { key } of trBlobs) {
     if (!key.startsWith(TEST_SESSION_PREFIX)) continue;
     await trStore.delete(key);
