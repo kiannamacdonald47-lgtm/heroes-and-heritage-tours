@@ -12,8 +12,21 @@
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3 5 7 9 11 5"/></svg>
         </button>
         <div class="nav-dropdown-menu">
-          <a href="/tours.html" {% if activeNav == "tours" %}aria-current="page"{% endif %}>Western Front</a>
-          <a href="/normandy.html" {% if activeNav == "normandy" %}aria-current="page"{% endif %}>Normandy</a>
+          <div class="nav-dropdown-item nav-dropdown-item--has-submenu">
+            <a href="/tours.html" {% if activeNav == "tours" %}aria-current="page"{% endif %}>Western Front</a>
+            <div class="nav-dropdown-submenu">
+              <a href="/tours.html?depart=arras#dayTours">From Arras</a>
+              <a href="/tours.html?depart=paris#dayTours">From Paris</a>
+            </div>
+          </div>
+          <div class="nav-dropdown-item nav-dropdown-item--has-submenu">
+            <a href="/normandy.html" {% if activeNav == "normandy" %}aria-current="page"{% endif %}>Normandy</a>
+            <div class="nav-dropdown-submenu">
+              <a href="/tours/juno-beach-bayeux.html">Juno Beach from Bayeux</a>
+              <a href="/tours/juno-beach-paris.html">Juno Beach from Paris</a>
+              <a href="/normandy.html#multiDay">Multi-day adventures</a>
+            </div>
+          </div>
           <a href="/special-tours.html" {% if activeNav == "special-tours" %}aria-current="page"{% endif %}>Special Tours</a>
         </div>
       </div>
@@ -35,8 +48,17 @@
 
   <div class="mobile-menu-group">
     <span class="mobile-menu-group-label">Tours</span>
-    <a href="/tours.html" class="mobile-menu-sublink">Western Front</a>
-    <a href="/normandy.html" class="mobile-menu-sublink">Normandy</a>
+    <div class="mobile-menu-subgroup">
+      <span class="mobile-menu-subgroup-label">Western Front</span>
+      <a href="/tours.html?depart=arras#dayTours" class="mobile-menu-sublink mobile-menu-sublink--nested">From Arras</a>
+      <a href="/tours.html?depart=paris#dayTours" class="mobile-menu-sublink mobile-menu-sublink--nested">From Paris</a>
+    </div>
+    <div class="mobile-menu-subgroup">
+      <span class="mobile-menu-subgroup-label">Normandy</span>
+      <a href="/tours/juno-beach-bayeux.html" class="mobile-menu-sublink mobile-menu-sublink--nested">Juno Beach from Bayeux</a>
+      <a href="/tours/juno-beach-paris.html" class="mobile-menu-sublink mobile-menu-sublink--nested">Juno Beach from Paris</a>
+      <a href="/normandy.html#multiDay" class="mobile-menu-sublink mobile-menu-sublink--nested">Multi-day adventures</a>
+    </div>
     <a href="/special-tours.html" class="mobile-menu-sublink">Special Tours</a>
   </div>
 

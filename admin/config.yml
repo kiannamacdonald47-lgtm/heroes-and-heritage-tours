@@ -122,6 +122,20 @@ collections:
                   - { label: "Thursday", value: 4 }
                   - { label: "Friday", value: 5 }
                   - { label: "Saturday", value: 6 }
+              - { label: "Also available departing from Paris (+$100 CAD flat, calculated automatically)", name: "parisAvailable", widget: "boolean", default: false, required: false }
+              - label: "Days it runs from PARIS ONLY (leave empty to use the same days as the Arras schedule above)"
+                name: "parisRunDays"
+                widget: "select"
+                multiple: true
+                required: false
+                options:
+                  - { label: "Sunday", value: 0 }
+                  - { label: "Monday", value: 1 }
+                  - { label: "Tuesday", value: 2 }
+                  - { label: "Wednesday", value: 3 }
+                  - { label: "Thursday", value: 4 }
+                  - { label: "Friday", value: 5 }
+                  - { label: "Saturday", value: 6 }
               - { label: "Duration (e.g. 8–9 hours)", name: "duration", widget: "string" }
               - { label: "Price (CAD, per person; leave blank to show 'Price on request')", name: "price", widget: "number", value_type: "int", required: false }
               - { label: "Single Supplement (CAD, multi-day tours only; leave blank if not applicable)", name: "singleSupplement", widget: "number", value_type: "int", required: false }

@@ -12,6 +12,9 @@
 [functions."send-balance-reminders"]
   schedule = "@daily"
 
+[functions."send-tour-reminders"]
+  schedule = "@daily"
+
 [[redirects]]
   from = "/tours/omaha-beach"
   to = "/normandy"

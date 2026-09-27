@@ -2,6 +2,8 @@ const Stripe = require("stripe");
 const tours = require("../../src/_data/tours.js");
 const { CAPACITY_PER_DATE, bookingsStore, getBookedCount } = require("./lib/bookings");
 
+const PARIS_SURCHARGE_CAD = 100;
+
 exports.handler = async (event) => {
   if (event.httpMethod !== "POST") {
     return { statusCode: 405, body: "Method Not Allowed" };
@@ -48,18 +50,35 @@ exports.handler = async (event) => {
     return { statusCode: 500, body: "Could not check availability. Please try again." };
   }
 
-  const subtotal = tour.price * guests;
+  // Departure city is never trusted verbatim from the client — Paris only
+  // applies when the tour actually offers it, and only Paris/Arras are
+  // valid values; anything else falls back to the tour's default city.
+  const departureCity = (data.departureCity === "Paris" && tour.parisAvailable) ? "Paris" : (tour.departureCity || "Arras");
+  const isParis = departureCity === "Paris";
+
+  const parsedDate = new Date(`${data.preferredDateISO}T00:00:00`);
+  if (isNaN(parsedDate)) {
+    return { statusCode: 400, body: "Invalid preferred date." };
+  }
+
+  // Guard the run-day restriction server-side too — the calendar UI
+  // already prevents picking an unavailable date, but this is the only
+  // place that can't be bypassed by a direct API call (e.g. Flanders
+  // Fields from Paris only runs Tuesdays).
+  const effectiveRunDays = (isParis && tour.parisRunDays && tour.parisRunDays.length) ? tour.parisRunDays : tour.runDays;
+  if (effectiveRunDays && effectiveRunDays.length && !effectiveRunDays.includes(parsedDate.getDay())) {
+    return { statusCode: 400, body: "This tour doesn't run on the selected date for this departure city." };
+  }
+
+  const perPersonPrice = tour.price + (isParis ? PARIS_SURCHARGE_CAD : 0);
+  const subtotal = perPersonPrice * guests;
 
   // Tours departing within 21 days must be paid in full — there's no
   // time left to collect a balance payment before departure.
-  const parsedDate = new Date(`${data.preferredDateISO}T00:00:00`);
-  let fullPaymentRequired = false;
-  if (!isNaN(parsedDate)) {
-    const today = new Date();
-    today.setHours(0, 0, 0, 0);
-    const daysUntilTour = Math.round((parsedDate - today) / 86400000);
-    fullPaymentRequired = daysUntilTour < 21;
-  }
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  const daysUntilTour = Math.round((parsedDate - today) / 86400000);
+  const fullPaymentRequired = daysUntilTour < 21;
   const deposit = fullPaymentRequired ? subtotal : Math.round(subtotal * 0.3);
 
   const stripe = Stripe(process.env.STRIPE_SECRET_KEY);
@@ -78,7 +97,7 @@ exports.handler = async (event) => {
             unit_amount: deposit * 100,
             product_data: {
               name: `${tour.name}: ${fullPaymentRequired ? "full payment" : "30% deposit"}`,
-              description: `${guests} guest${guests > 1 ? "s" : ""} · Preferred date: ${data.preferredDate}`,
+              description: `${guests} guest${guests > 1 ? "s" : ""} · Departs ${departureCity} · Preferred date: ${data.preferredDate}`,
             },
           },
         },
@@ -89,6 +108,7 @@ exports.handler = async (event) => {
         guests: String(guests),
         preferredDate: data.preferredDate,
         preferredDateISO: data.preferredDateISO,
+        departureCity,
         fullName,
         email,
         phone: data.phone || "",
@@ -107,12 +127,13 @@ exports.handler = async (event) => {
       // is set here too, including a description that shows directly
       // in the Payments list without needing to click in.
       payment_intent_data: {
-        description: `${tour.name} · ${guests} guest${guests > 1 ? "s" : ""} · ${data.preferredDate}`,
+        description: `${tour.name} · Departs ${departureCity} · ${guests} guest${guests > 1 ? "s" : ""} · ${data.preferredDate}`,
         metadata: {
           tourSlug: tour.slug,
           tourName: tour.name,
           guests: String(guests),
           preferredDate: data.preferredDate,
+          departureCity,
           fullName,
           email,
           phone: data.phone || "",

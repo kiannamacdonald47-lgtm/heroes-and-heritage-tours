@@ -74,6 +74,21 @@ permalink: "/booking.html"
           <div data-step>
             <div class="form-fieldset">
               <legend>Trip details</legend>
+              <div class="form-field" id="departureField" hidden>
+                <label>Departure city <span class="required-mark">*</span></label>
+                <div class="departure-toggle" data-booking-departure-toggle>
+                  <label class="departure-toggle-option">
+                    <input type="radio" name="depart" value="arras" checked>
+                    <span>Departs Arras</span>
+                  </label>
+                  <label class="departure-toggle-option">
+                    <input type="radio" name="depart" value="paris">
+                    <span>Departs Paris (+$100 CAD)</span>
+                  </label>
+                </div>
+                <span class="hint" id="parisTuesdayHint" hidden style="color: var(--red);">This tour runs Tuesdays only when departing from Paris.</span>
+              </div>
+              <input type="hidden" id="departureCityField" name="departureCity" value="Arras">
               <div class="form-grid">
                 <div class="form-field">
                   <label id="calendarLabel">Preferred date <span class="required-mark">*</span></label>
@@ -217,5 +232,6 @@ permalink: "/booking.html"
   <input type="text" name="phone">
   <input type="text" name="guests">
   <input type="text" name="province">
+  <input type="text" name="departureCity">
   <input type="text" name="specialRequest">
 </form>

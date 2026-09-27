@@ -33,22 +33,19 @@ permalink: "/normandy.html"
   </div>
 </section>
 
-<section class="section section--alt">
+<section class="section section--alt" id="multiDay">
   <div class="container">
     <div class="section-head" data-reveal>
       <span class="eyebrow">Multi-day tours</span>
       <h2>The complete Normandy experience.</h2>
-      <p class="lede">Combine the American, British and Canadian D-Day sectors into one seamless journey, with accommodation recommendations in the historic towns of Bayeux and Caen.</p>
+      <p class="lede">Combine the American, British and Canadian D-Day sectors into one seamless journey, with accommodation recommendations in the historic towns of Bayeux and Caen — or continue on from the Western Front.</p>
     </div>
 
+    {% set multiDaySlugs = ["normandy-2-day", "normandy-3-day", "normandy-explorer-5day", "western-front-normandy-5day"] %}
+    {% set multiDayTours = [] %}
+    {% for tour in tours %}{% if tour.slug in multiDaySlugs %}{% set noop = multiDayTours.push(tour) %}{% endif %}{% endfor %}
     <div class="tours-grid" data-reveal>
-      {% for tour in tours %}{% if tour.normandyRegion and tour.combo %}{{ tourCard(tour) }}{% endif %}{% endfor %}
-    </div>
-
-    <div class="info-panel" style="position: static; margin-top: var(--space-5); max-width: 760px;" data-reveal>
-      <h3>Already visiting the Western Front?</h3>
-      <p class="body-text">Our 5-Day Western Front &amp; Normandy tour combines the Canadian story from Vimy Ridge and Flanders Fields through to the Somme, then continues on to Juno Beach and the Normandy landing sites.</p>
-      <a href="/tours/western-front-normandy-5day.html" class="btn btn-ghost btn-sm">View this tour</a>
+      {% for tour in multiDayTours %}{{ tourCard(tour) }}{% endfor %}
     </div>
   </div>
 </section>

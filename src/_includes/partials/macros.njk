@@ -9,11 +9,13 @@
     <div class="tour-card-meta">
       <span>{{ tour.schedule }}</span>
       <span>{{ tour.duration }}</span>
+      {% if tour.parisAvailable %}<span>Departs Arras or Paris</span>{% endif %}
     </div>
     <p class="tour-card-desc">{{ tour.cardDesc }}</p>
     <div class="tour-card-footer">
-      <div class="tour-card-price">
+      <div class="tour-card-price" {% if tour.price and tour.parisAvailable %}data-price-arras="{{ tour.price }}" data-price-paris="{{ tour.price + 100 }}"{% endif %}>
         {% if tour.price %}
+        {% if tour.parisAvailable %}<span class="unit" style="display: block;">From</span>{% endif %}
         <span class="amount">${{ tour.price | currency }}</span><span class="unit">CAD / person</span>
         {% else %}
         <span class="amount" style="font-size: 16px;">Price on request</span>

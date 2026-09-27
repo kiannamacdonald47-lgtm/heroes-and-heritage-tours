@@ -129,6 +129,55 @@ async function listBalanceRecords(store) {
   return records;
 }
 
+// ============================================================
+// Tour-start reminder tracking — a third, separate store from
+// balance-tracking above. Balance records only get created for
+// deposit bookings (see stripe-webhook.js), so a last-minute
+// full-payment booking would otherwise never get a pre-tour
+// reminder if this reused that store. Populated unconditionally
+// for every completed booking, every payment type.
+// ============================================================
+
+function tourReminderStore() {
+  if (process.env.SITE_ID && process.env.NETLIFY_JOE_TOKEN) {
+    return getStore({
+      name: "tour-reminders",
+      siteID: process.env.SITE_ID,
+      token: process.env.NETLIFY_JOE_TOKEN,
+    });
+  }
+  return getStore("tour-reminders");
+}
+
+async function createTourReminderRecord(store, sessionId, data) {
+  const record = {
+    ...data,
+    reminder5dSentAt: null,
+    reminder1dSentAt: null,
+    createdAt: new Date().toISOString(),
+  };
+  await store.setJSON(sessionId, record);
+  return record;
+}
+
+async function markTourReminderSent(store, sessionId, which) {
+  const record = await store.get(sessionId, { type: "json" });
+  if (!record) return null;
+  record[which === 5 ? "reminder5dSentAt" : "reminder1dSentAt"] = new Date().toISOString();
+  await store.setJSON(sessionId, record);
+  return record;
+}
+
+async function listTourReminderRecords(store) {
+  const { blobs } = await store.list();
+  const records = [];
+  for (const { key } of blobs) {
+    const record = await store.get(key, { type: "json" });
+    if (record) records.push({ sessionId: key, ...record });
+  }
+  return records;
+}
+
 module.exports = {
   CAPACITY_PER_DATE,
   bookingsStore,
@@ -143,4 +192,8 @@ module.exports = {
   markBalancePaid,
   markReminderSent,
   listBalanceRecords,
+  tourReminderStore,
+  createTourReminderRecord,
+  markTourReminderSent,
+  listTourReminderRecords,
 };

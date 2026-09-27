@@ -231,6 +231,58 @@ if (filterButtons.length) {
 }
 
 // ============================================================
+// Tour detail page — Arras/Paris departure toggle
+// ============================================================
+const departureToggle = document.querySelector("[data-departure-toggle]");
+if (departureToggle) {
+  const priceEl = document.querySelector(".info-panel-price[data-price-arras]");
+  const parisNote = document.querySelector("[data-paris-note]");
+  const parisRestrictedNote = document.querySelector("[data-paris-restricted-note]");
+  const scheduleArras = document.querySelector("[data-schedule-arras]");
+  const scheduleParis = document.querySelector("[data-schedule-paris]");
+  const bookNowLink = document.querySelector("[data-book-now-link]");
+
+  departureToggle.querySelectorAll('input[name="departureChoice"]').forEach((radio) => {
+    radio.addEventListener("change", () => {
+      const isParis = radio.checked && radio.value === "paris";
+      if (priceEl) {
+        const amountEl = priceEl.querySelector(".amount");
+        const price = isParis ? priceEl.dataset.priceParis : priceEl.dataset.priceArras;
+        if (amountEl && price) amountEl.textContent = "$" + Number(price).toLocaleString();
+      }
+      if (parisNote) parisNote.hidden = !isParis;
+      if (parisRestrictedNote) parisRestrictedNote.hidden = !isParis;
+      if (scheduleArras) scheduleArras.hidden = isParis;
+      if (scheduleParis) scheduleParis.hidden = !isParis;
+      if (bookNowLink) {
+        const url = new URL(bookNowLink.href, window.location.origin);
+        url.searchParams.set("depart", isParis ? "paris" : "arras");
+        bookNowLink.href = url.pathname + url.search;
+      }
+    });
+  });
+}
+
+// ============================================================
+// Tours listing — Arras/Paris price view via ?depart= query param
+// ============================================================
+const dayToursSection = document.getElementById("dayTours");
+if (dayToursSection) {
+  const departParam = new URLSearchParams(window.location.search).get("depart");
+  if (departParam === "paris") {
+    dayToursSection.querySelectorAll("[data-price-paris]").forEach((el) => {
+      const amountEl = el.querySelector(".amount");
+      if (amountEl) amountEl.textContent = "$" + Number(el.dataset.priceParis).toLocaleString();
+    });
+    const banner = document.createElement("p");
+    banner.className = "depart-banner";
+    banner.innerHTML = 'Showing prices for departures from Paris. <a href="?depart=arras#dayTours">View Arras prices</a>';
+    const container = dayToursSection.querySelector(".container");
+    if (container) container.insertBefore(banner, container.firstElementChild);
+  }
+}
+
+// ============================================================
 // Booking form — tour + date + pricing summary
 // ============================================================
 const bookingForm = document.getElementById("bookingForm");
@@ -249,9 +301,11 @@ if (bookingForm) {
   const TOURS = {};
   const RUN_DAYS = {};
   TOUR_LIST.forEach((t) => {
-    TOURS[t.slug] = { name: t.name, price: t.price, departureCity: t.departureCity };
+    TOURS[t.slug] = { name: t.name, price: t.price, departureCity: t.departureCity, parisAvailable: t.parisAvailable, parisRunDays: t.parisRunDays };
     RUN_DAYS[t.slug] = t.runDays;
   });
+
+  const PARIS_SURCHARGE_CAD = 100;
 
   const tourRadios = bookingForm.querySelectorAll('input[name="tour"]');
   const guestsInput = document.getElementById("guests");
@@ -264,6 +318,33 @@ if (bookingForm) {
   const summaryBalanceNote = document.getElementById("summaryBalanceNote");
   const dateHint = document.getElementById("dateAvailabilityHint");
   const dateInput = document.getElementById("preferredDate");
+  const departureField = document.getElementById("departureField");
+  const departureCityField = document.getElementById("departureCityField");
+  const parisTuesdayHint = document.getElementById("parisTuesdayHint");
+  const departureRadios = bookingForm.querySelectorAll('input[name="depart"]');
+
+  const getSelectedDeparture = () => {
+    const tourKey = getSelectedTour();
+    if (!tourKey || !TOURS[tourKey] || !TOURS[tourKey].parisAvailable) return "arras";
+    const checked = Array.from(departureRadios).find((r) => r.checked);
+    return checked ? checked.value : "arras";
+  };
+
+  // Shows/hides the Arras/Paris toggle depending on whether the
+  // currently selected tour offers a Paris departure, and resets the
+  // choice back to Arras whenever the tour changes so a Paris pick
+  // never silently carries over to a tour that doesn't offer it.
+  const updateDepartureVisibility = () => {
+    const tourKey = getSelectedTour();
+    const tour = tourKey && TOURS[tourKey];
+    const offersParis = !!(tour && tour.parisAvailable);
+    if (departureField) departureField.hidden = !offersParis;
+    if (!offersParis) {
+      departureRadios.forEach((r) => { r.checked = r.value === "arras"; });
+      if (departureCityField) departureCityField.value = "Arras";
+      if (parisTuesdayHint) parisTuesdayHint.hidden = true;
+    }
+  };
 
   // Bookings made within 21 days of departure must be paid in full —
   // there's no time left to collect a balance payment before the tour.
@@ -290,14 +371,20 @@ if (bookingForm) {
     const guests = Math.max(1, parseInt(guestsInput?.value || "1", 10) || 1);
     if (!tourKey) return;
     const tour = TOURS[tourKey];
-    const subtotal = tour.price * guests;
+    const departure = getSelectedDeparture();
+    const isParis = tour.parisAvailable && departure === "paris";
+    const perPerson = tour.price + (isParis ? PARIS_SURCHARGE_CAD : 0);
+    const subtotal = perPerson * guests;
     const days = daysUntil(dateInput?.dataset.iso);
     const fullPaymentRequired = days !== null && days < FULL_PAYMENT_WINDOW_DAYS;
     const amountDueNow = fullPaymentRequired ? subtotal : Math.round(subtotal * 0.3);
 
+    if (departureCityField) departureCityField.value = isParis ? "Paris" : (tour.departureCity || "Arras");
+    if (parisTuesdayHint) parisTuesdayHint.hidden = !(isParis && tour.parisRunDays && tour.parisRunDays.length);
+
     if (summaryTour) summaryTour.textContent = tour.name;
     if (summaryGuests) summaryGuests.textContent = String(guests);
-    if (summaryPerPerson) summaryPerPerson.textContent = `$${tour.price.toLocaleString()} CAD`;
+    if (summaryPerPerson) summaryPerPerson.textContent = `$${perPerson.toLocaleString()} CAD`;
     if (summarySubtotal) summarySubtotal.textContent = `$${subtotal.toLocaleString()} CAD`;
     if (summaryDeposit) summaryDeposit.textContent = `$${amountDueNow.toLocaleString()} CAD`;
     if (summaryDepositLabel) summaryDepositLabel.textContent = fullPaymentRequired ? "Full payment due now" : "Deposit due now (30%)";
@@ -308,12 +395,17 @@ if (bookingForm) {
     }
 
     if (dateHint) {
-      const days = RUN_DAYS[tourKey].map((d) => DAY_NAMES[d]).join(", ");
-      dateHint.textContent = `${tour.name} departs ${tour.departureCity} every ${days}. Other days available on request; we'll confirm your exact date by email.`;
+      const effectiveRunDays = (isParis && tour.parisRunDays && tour.parisRunDays.length) ? tour.parisRunDays : RUN_DAYS[tourKey];
+      const days = effectiveRunDays.map((d) => DAY_NAMES[d]).join(", ");
+      dateHint.textContent = `${tour.name} departs ${isParis ? "Paris" : tour.departureCity} every ${days}. Other days available on request; we'll confirm your exact date by email.`;
     }
   };
 
-  tourRadios.forEach((radio) => radio.addEventListener("change", updateSummary));
+  tourRadios.forEach((radio) => radio.addEventListener("change", () => {
+    updateDepartureVisibility();
+    updateSummary();
+  }));
+  departureRadios.forEach((radio) => radio.addEventListener("change", updateSummary));
   guestsInput?.addEventListener("input", updateSummary);
 
   // Pre-select tour from ?tour=slug when arriving from a tour detail page
@@ -322,6 +414,12 @@ if (bookingForm) {
   if (preselect && TOURS[preselect]) {
     const match = bookingForm.querySelector(`input[name="tour"][value="${preselect}"]`);
     if (match) match.checked = true;
+  }
+  updateDepartureVisibility();
+  // Pre-select departure from ?depart=paris, e.g. arriving from a tour
+  // page's toggle or the nav's "From Paris" link.
+  if (searchParams.get("depart") === "paris" && preselect && TOURS[preselect] && TOURS[preselect].parisAvailable) {
+    departureRadios.forEach((r) => { r.checked = r.value === "paris"; });
   }
   updateSummary();
 
@@ -371,7 +469,9 @@ if (bookingForm) {
 
     const renderCalendar = () => {
       const tourKey = getSelectedTour();
-      const runDays = RUN_DAYS[tourKey] || [];
+      const tour = tourKey && TOURS[tourKey];
+      const isParis = tour && tour.parisAvailable && getSelectedDeparture() === "paris";
+      const runDays = (isParis && tour.parisRunDays && tour.parisRunDays.length) ? tour.parisRunDays : (RUN_DAYS[tourKey] || []);
       const remaining = (availabilityCache[tourKey] && availabilityCache[tourKey].remaining) || {};
       calMonthLabel.textContent = `${MONTH_NAMES[viewMonth]} ${viewYear}`;
 
@@ -441,6 +541,17 @@ if (bookingForm) {
       dateInput.value = "";
       delete dateInput.dataset.iso;
       fetchAvailability(getSelectedTour());
+      renderCalendar();
+      updateSummary();
+    }));
+
+    // Changing the departure city can change which days the tour runs
+    // (e.g. Flanders Fields from Paris is Tuesdays only), so the
+    // calendar needs to clear the selected date and re-render too.
+    departureRadios.forEach((radio) => radio.addEventListener("change", () => {
+      selectedISO = null;
+      dateInput.value = "";
+      delete dateInput.dataset.iso;
       renderCalendar();
       updateSummary();
     }));
@@ -545,6 +656,7 @@ if (bookingForm) {
           age: formData.get("age"),
           country: formData.get("country"),
           province: formData.get("province"),
+          departureCity: formData.get("departureCity"),
           notes: formData.get("notes"),
         }),
       });

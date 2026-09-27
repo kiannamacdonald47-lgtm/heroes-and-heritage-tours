@@ -11,7 +11,7 @@
       "badge": "Day Tour",
       "scheduleFull": "Departs Arras every Saturday and Tuesday. Other days available on request.",
       "shortName": "Vimy Ridge & The Somme",
-      "price": 350,
+      "price": 300,
       "galleryImages": [
         {
           "src": "/photos/front-cover-1-.png",
@@ -94,7 +94,8 @@
         "Small-group experience with a maximum of 8 guests"
       ],
       "cardAlt": "Canadian National Vimy Memorial on a Vimy Ridge battlefield tour",
-      "departureCity": "Arras"
+      "departureCity": "Arras",
+      "parisAvailable": true
     },
     {
       "footnote": "Tour itineraries may be adjusted to accommodate traffic, museum opening times, commemorative events, site accessibility or the interests of guests travelling on the day. Lunch is not included in the tour price. Private and customised battlefield tours are available on request.",
@@ -107,7 +108,7 @@
       "badge": "Day Tour",
       "scheduleFull": "Departs Arras every Sunday and Wednesday. Other days available on request.",
       "shortName": "Flanders Fields & Passchendaele",
-      "price": 420,
+      "price": 320,
       "galleryImages": [
         {
           "src": "/photos/img_9226-1-.jpeg",
@@ -190,7 +191,11 @@
         "Pick-up and drop-off in Arras with a maximum of 8 guests"
       ],
       "cardAlt": "Canadian battlefield tour at Passchendaele in Belgium",
-      "departureCity": "Arras"
+      "departureCity": "Arras",
+      "parisAvailable": true,
+      "parisRunDays": [
+        2
+      ]
     },
     {
       "footnote": "Tour itineraries may be adjusted to accommodate museum opening times, traffic, commemorative events, site accessibility or the interests of guests travelling on the day. Lunch is not included in the tour price. Private and customised battlefield tours are available on request.",
@@ -202,7 +207,7 @@
       "badge": "Day Tour",
       "scheduleFull": "Departs Arras every Monday. Other days available on request.",
       "shortName": "Canada’s Hundred Days",
-      "price": 320,
+      "price": 300,
       "galleryImages": [
         {
           "src": "/photos/pxl_20250703_091009451.jpg",
@@ -285,7 +290,8 @@
         "Pick-up and drop-off in Arras with a maximum of 8 guests"
       ],
       "cardAlt": "The Beaumont-Hamel Newfoundland Memorial caribou statue",
-      "departureCity": "Arras"
+      "departureCity": "Arras",
+      "parisAvailable": true
     },
     {
       "footnote": "Accommodation and meals are not included. Tour itineraries may be adjusted to accommodate museum opening times, traffic, commemorative events, site accessibility or the interests of guests travelling on the day. Private and customised battlefield tours are available on request.",
@@ -298,7 +304,7 @@
       "badge": "2 Day Tour",
       "scheduleFull": "Departs Arras every Saturday and Tuesday. Other days available on request. Accommodation and meals are not included.",
       "shortName": "The Signature (2 Day)",
-      "price": 770,
+      "price": 575,
       "galleryImages": [
         {
           "src": "/photos/front-cover-1-.png",
@@ -398,7 +404,7 @@
       "badge": "3 Day Tour",
       "scheduleFull": "Departs Arras every Saturday and Monday. Other days available on request. Accommodation and meals are not included.",
       "shortName": "The Ultimate (3 Day)",
-      "price": 1090,
+      "price": 850,
       "galleryImages": [
         {
           "src": "/photos/2-2-.jpg",
@@ -960,7 +966,10 @@
         "Historical maps, photographs and battlefield interpretation"
       ],
       "cardAlt": "Aerial view of Juno Beach with a preserved German bunker and Canadian memorial",
-      "departureCity": "Bayeux"
+      "departureCity": "Bayeux",
+      "bookingMethod": "email",
+      "appointmentOnly": true,
+      "enquiryNote": "This tour is arranged directly with our team — send us your preferred dates and we'll confirm availability. Once confirmed, we'll send you a link to complete your booking."
     },
     {
       "footnote": "The order and content of the itinerary may be adjusted because of weather, traffic, tides, site access or operational requirements. Private and customised battlefield tours are available upon request.",
@@ -1072,7 +1081,10 @@
         "Historical maps, photographs and battlefield interpretation"
       ],
       "cardAlt": "Mont-Saint-Michel rising above its tidal bay",
-      "departureCity": "Bayeux"
+      "departureCity": "Bayeux",
+      "bookingMethod": "email",
+      "appointmentOnly": true,
+      "enquiryNote": "This tour is arranged directly with our team — send us your preferred dates and we'll confirm availability. Once confirmed, we'll send you a link to complete your booking."
     },
     {
       "footnote": "The order and content of the itinerary may be adjusted because of weather, traffic, tides, opening times, battlefield access or other operational requirements. Private and customised battlefield tours are available upon request. Prices are per person.",

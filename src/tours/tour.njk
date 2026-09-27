@@ -73,7 +73,19 @@ eleventyComputed:
         </div>
 
         <aside class="info-panel">
-          <div class="info-panel-price">
+          {% if tour.parisAvailable %}
+          <div class="departure-toggle" data-departure-toggle>
+            <label class="departure-toggle-option">
+              <input type="radio" name="departureChoice" value="arras" checked>
+              <span>Departs Arras</span>
+            </label>
+            <label class="departure-toggle-option">
+              <input type="radio" name="departureChoice" value="paris">
+              <span>Departs Paris (+$100 CAD)</span>
+            </label>
+          </div>
+          {% endif %}
+          <div class="info-panel-price" {% if tour.price and tour.parisAvailable %}data-price-arras="{{ tour.price }}" data-price-paris="{{ tour.price + 100 }}"{% endif %}>
             {% if tour.price %}
             <span class="amount">${{ tour.price | currency }}</span>
             <span class="unit">CAD / person</span>
@@ -84,6 +96,12 @@ eleventyComputed:
           {% if tour.singleSupplement %}
           <p class="body-text" style="font-size: 13px; margin-top: -8px;">Single supplement: ${{ tour.singleSupplement | currency }} CAD</p>
           {% endif %}
+          {% if tour.parisAvailable %}
+          <p class="body-text" data-paris-note hidden style="font-size: 13px; margin-top: -8px;">When departing from Paris, this tour commences at 7:30 from Paris Gare du Nord Train Station and ends approx 8 pm.</p>
+          {% if tour.parisRunDays %}
+          <p class="body-text" data-paris-restricted-note hidden style="font-size: 13px; margin-top: -8px; color: var(--red);">This tour runs Tuesdays only when departing from Paris.</p>
+          {% endif %}
+          {% endif %}
           <ul class="info-panel-list">
             {% for item in tour.inclusions %}
             <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 10.5l4 4 10-10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>{{ item }}</li>
@@ -91,12 +109,15 @@ eleventyComputed:
           </ul>
           <div class="info-panel-days">
             <strong>{% if tour.bookingMethod == "email" %}Selected departures{% else %}Runs every week{% endif %}</strong>
-            {{ tour.scheduleFull }}
+            <span data-schedule-arras>{{ tour.scheduleFull }}</span>
+            {% if tour.parisAvailable %}
+            <span data-schedule-paris hidden>{% if tour.parisRunDays %}Departs Paris every Tuesday. Other days available on request.{% else %}{{ tour.scheduleFull | replace("Arras", "Paris") }}{% endif %}</span>
+            {% endif %}
           </div>
           {% if tour.bookingMethod == "email" %}
           <a href="/contact.html?tour={{ tour.slug }}" class="btn btn-primary btn-block btn-lg">Enquire About This Tour</a>
           {% else %}
-          <a href="/booking.html?tour={{ tour.slug }}" class="btn btn-primary btn-block btn-lg">Book This Tour</a>
+          <a href="/booking.html?tour={{ tour.slug }}" class="btn btn-primary btn-block btn-lg" data-book-now-link data-tour-slug="{{ tour.slug }}">Book This Tour</a>
           <a href="/contact.html" class="btn btn-ghost btn-block">Ask a question first</a>
           {% endif %}
         </aside>

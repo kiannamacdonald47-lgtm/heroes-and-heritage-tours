@@ -1,5 +1,5 @@
 const Stripe = require("stripe");
-const { bookingsStore, addBooking, balanceStore, createBalanceRecord, markBalancePaid } = require("./lib/bookings");
+const { bookingsStore, addBooking, balanceStore, createBalanceRecord, markBalancePaid, tourReminderStore, createTourReminderRecord } = require("./lib/bookings");
 
 const encodeForm = (data) =>
   Object.keys(data)
@@ -34,6 +34,7 @@ async function notifyBooking(siteUrl, metadata) {
     phone: metadata.phone || "",
     guests: metadata.guests || "",
     province: metadata.province || "",
+    departureCity: metadata.departureCity || "",
     specialRequest,
   });
 }
@@ -96,7 +97,7 @@ exports.handler = async (event) => {
     }
   }
 
-  const { tourSlug, preferredDateISO, guests } = metadata;
+  const { tourSlug, preferredDateISO, guests, departureCity } = metadata;
   if (!tourSlug || !preferredDateISO || !guests) {
     console.error("checkout.session.completed missing required metadata:", metadata);
     return { statusCode: 200, body: "Ignored (missing booking metadata)." };
@@ -108,12 +109,14 @@ exports.handler = async (event) => {
       guests: parseInt(guests, 10) || 0,
       fullName: metadata.fullName || "",
       email: metadata.email || "",
+      departureCity: departureCity || "",
       sessionId: session.id,
       bookedAt: new Date().toISOString(),
     });
 
     // A deposit booking (not full payment) leaves a balance due 21 days
-    // before the tour — track it so the reminder emails know about it.
+    // before the tour — track it so the balance-reminder emails know
+    // about it.
     if (metadata.fullPaymentRequired !== "true") {
       const subtotalCad = parseInt(metadata.subtotalCad, 10) || 0;
       const depositCad = parseInt(metadata.depositCad, 10) || 0;
@@ -127,11 +130,29 @@ exports.handler = async (event) => {
         fullName: metadata.fullName || "",
         email: metadata.email || "",
         phone: metadata.phone || "",
+        departureCity: departureCity || "",
         subtotalCad,
         depositCad,
         balanceCad: Math.max(0, subtotalCad - depositCad),
       });
     }
+
+    // Tour-start reminder tracking — unconditional for every completed
+    // booking (unlike the balance record above), since a full-payment,
+    // last-minute booking still needs a 5-day/1-day reminder even
+    // though it never gets a balance record.
+    const tStore = tourReminderStore();
+    await createTourReminderRecord(tStore, session.id, {
+      tourSlug,
+      tourName: metadata.tourName || "",
+      preferredDate: metadata.preferredDate || "",
+      preferredDateISO,
+      guests: parseInt(guests, 10) || 0,
+      fullName: metadata.fullName || "",
+      email: metadata.email || "",
+      phone: metadata.phone || "",
+      departureCity: departureCity || "",
+    });
 
     await notifyBooking(siteUrl, metadata);
 
