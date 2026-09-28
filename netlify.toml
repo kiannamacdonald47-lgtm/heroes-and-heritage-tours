@@ -27,6 +27,6 @@
 
 [[redirects]]
   from = "/booking.html"
-  to = "/booking"
+  to = "/booking/"
   status = 301
   force = true
