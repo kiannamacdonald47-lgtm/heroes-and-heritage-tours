@@ -94,8 +94,8 @@
         "Small-group experience with a maximum of 8 guests"
       ],
       "cardAlt": "Canadian National Vimy Memorial on a Vimy Ridge battlefield tour",
-      "departureCity": "Arras",
-      "parisAvailable": true
+      "parisAvailable": true,
+      "departureCity": "Arras"
     },
     {
       "footnote": "Tour itineraries may be adjusted to accommodate traffic, museum opening times, commemorative events, site accessibility or the interests of guests travelling on the day. Lunch is not included in the tour price. Private and customised battlefield tours are available on request.",
@@ -183,6 +183,9 @@
       "tagline": "Follow CaFollow Canada's story from Hill 70 to the battlefields of Ypres and Passchendaele.",
       "heroAlt": "The Canada Gate memorial arch at Tyne Cot Cemetery in autumn",
       "duration": "9–10 hours",
+      "parisRunDays": [
+        2
+      ],
       "schedule": "Sun, Wed",
       "inclusions": [
         "Expert Canadian First World War battlefield guide",
@@ -191,11 +194,8 @@
         "Pick-up and drop-off in Arras with a maximum of 8 guests"
       ],
       "cardAlt": "Canadian battlefield tour at Passchendaele in Belgium",
-      "departureCity": "Arras",
       "parisAvailable": true,
-      "parisRunDays": [
-        2
-      ]
+      "departureCity": "Arras"
     },
     {
       "footnote": "Tour itineraries may be adjusted to accommodate museum opening times, traffic, commemorative events, site accessibility or the interests of guests travelling on the day. Lunch is not included in the tour price. Private and customised battlefield tours are available on request.",
@@ -290,8 +290,8 @@
         "Pick-up and drop-off in Arras with a maximum of 8 guests"
       ],
       "cardAlt": "The Beaumont-Hamel Newfoundland Memorial caribou statue",
-      "departureCity": "Arras",
-      "parisAvailable": true
+      "parisAvailable": true,
+      "departureCity": "Arras"
     },
     {
       "footnote": "Accommodation and meals are not included. Tour itineraries may be adjusted to accommodate museum opening times, traffic, commemorative events, site accessibility or the interests of guests travelling on the day. Private and customised battlefield tours are available on request.",
@@ -531,13 +531,13 @@
     {
       "footnote": "The order and content of the itinerary may be adjusted because of traffic, weather, opening times, battlefield access, commemorative events or other operational requirements. Private and customised versions of the tour are available upon request. Prices are per person, based on double or twin occupancy; ask us about the single supplement when you enquire.",
       "heroImage": "/photos/normandy5day/normandy5day-cover.jpg",
-      "cardDesc": "Vimy Ridge, Flanders Fields, Juno Beach. Visit the greatest Canadian historical sites in France on an unforgettable journey.",
+      "cardDesc": "Journey from the Somme, Vimy Ridge and Passchendaele to the D-Day beaches of Normandy on a five-day battlefield tour through France and Belgium.",
       "singleSupplement": null,
       "runDays": [
         1
       ],
       "badge": "5 Day Tour",
-      "scheduleFull": "Selected five-day departures throughout the year, always starting on a Monday. Other dates available on request; contact us to confirm availability for this tour, as its Normandy leg is arranged with our local partner guides.",
+      "scheduleFull": "Selected five-day departures begin in Arras on Monday and conclude in Bayeux on Friday. Additional dates are available on request.",
       "shortName": "Western Front & Normandy (5 Day)",
       "price": 3685,
       "galleryImages": [
@@ -561,38 +561,30 @@
       "cardImage": "/photos/normandy5day/normandy5day-cover.jpg",
       "itinerary": [
         {
-          "heading": "Day 1: In Flanders Fields",
-          "note": "The tour begins in Arras before travelling north into Belgium and the battlefields immortalized by John McCrae's poem, In Flanders Fields. The day concludes in the historic centre of Ypres with dinner in the market square and the Last Post Ceremony beneath the Menin Gate.",
+          "heading": "Day 2: Flanders Fields & Passchendaele",
+          "note": "Travel north into Belgium and follow the Canadian story through the Ypres Salient to the battlefields of Passchendaele.",
           "isPrefaceNote": true,
           "items": [
-            "Christmas Truce site at Ploegsteert Wood",
-            "Mount Sorrel Canadian battlefield & Hill 62 Canadian Memorial",
-            "Second Battle of Ypres gas-attack battlefield",
-            "Brooding Soldier Memorial at St. Julien",
-            "Passchendaele battlefield and Crest Farm Canadian Memorial",
-            "Tyne Cot Commonwealth War Cemetery",
-            "Essex Farm and the site associated with John McCrae's poem",
-            "Dinner in Ypres's historic market square",
-            "Menin Gate Memorial and Last Post Ceremony"
+            "German frontline trenches at Vimy Ridge and Hill 70 Canadian Memorial",
+            "Christmas Truce battlefield near Ploegsteert",
+            "Essex Farm Advanced Dressing Station and the story of John McCrae",
+            "Ypres, Memorial Museum Passchendaele 1917, Tyne Cot Cemetery and Crest Farm Canadian Memorial"
           ],
           "facts": [
-            "Overnight: four-star accommodation in Arras",
-            "Meals included: Dinner"
+            "Departure: Arras, 9:00 AM",
+            "Overnight: four-star accommodation in Arras"
           ]
         },
         {
-          "heading": "Day 2: Vimy to Victory",
-          "note": "Follow the Canadian Corps from its celebrated victory at Vimy Ridge to the final battles of the First World War.",
+          "heading": "Day 2: Vimy Ridge & The Somme",
+          "note": "Begin on the Somme battlefields of 1916 before following the Canadian Corps north to Vimy Ridge and one of the defining Canadian victories of the First World War.",
           "isPrefaceNote": true,
           "items": [
-            "Canadian Corps battle headquarters at Mont-Saint-Éloi",
-            "Frontline trenches and underground tunnels on Vimy Ridge",
-            "Vimy Ridge battlefield and mine craters",
-            "Canadian National Vimy Memorial",
-            "Hill 70 Canadian battlefield and memorial park",
+            "Beaumont-Hamel Newfoundland Memorial and preserved First World War trenches",
             "Monchy-le-Preux battlefield and the Newfoundland Memorial",
-            "Drocourt–Quéant Line battlefield and the Canadian Memorial at Dury",
-            "Canal du Nord Canadian battlefield and memorial (time permitting)"
+            "Courcelette Canadian battlefield and ADANAC Military Cemetery",
+            "Lunch in Auchonvillers and Mont-Saint-Éloi",
+            "Vimy Ridge, Canadian National Vimy Memorial and Cabaret-Rouge British Cemetery"
           ],
           "facts": [
             "Overnight: four-star accommodation in Arras",
@@ -647,27 +639,25 @@
           ]
         }
       ],
-      "name": "Western Front & Normandy: 5-Day Tour",
+      "name": "5-Day Canadian Western Front & Normandy Battlefield Tour",
       "slug": "western-front-normandy-5day",
       "intro": [
-        "Journey across two world wars during an unforgettable five-day battlefield tour through France and Belgium.",
-        "Beginning in the historic city of Arras, the first two days follow the Canadians across the Western Front. Explore the preserved trenches and tunnels of Vimy Ridge, visit the battlefields of Hill 70 and Canada's Hundred Days, and travel into Belgium to walk the ground at Ypres and Passchendaele. The Western Front portion concludes beneath the Menin Gate with the moving nightly Last Post Ceremony.",
-        "The journey then continues through Normandy to Bayeux. Cross Pegasus Bridge, follow the American airborne divisions through the fields and villages behind Utah Beach, and explore Pointe du Hoc, Omaha Beach and the Normandy American Cemetery.",
-        "Combining Canada's most important First World War battlefields with the celebrated D-Day sites of Normandy, this tour is ideal for travellers seeking a comprehensive introduction to the two defining conflicts of the twentieth century."
+        "Journey across two world wars on an unforgettable five-day battlefield tour through France and Belgium. Beginning in historic Arras, follow the Canadian and Newfoundland experience from the Somme and Vimy Ridge into the battlefields of Flanders and Passchendaele before travelling west to Normandy and the beaches of D-Day.",
+        "Walk preserved First World War trenches at Beaumont-Hamel and Vimy Ridge, stand among the graves at Tyne Cot and trace the Canadian advance at Passchendaele. In Normandy, follow British airborne troops to Pegasus Bridge, American paratroopers through the fields behind Utah Beach, and Canadian soldiers ashore at Juno Beach. With fully arranged accommodation, small-group transportation and expert battlefield interpretation included, this journey offers a comprehensive introduction to the Canadian experience of both world wars."
       ],
       "combo": true,
-      "tagline": "From Flanders Fields to the beaches of D-Day.",
-      "heroAlt": "Aerial view of Juno Beach, Normandy",
+      "tagline": "From Vimy Ridge and Passchendaele to Juno Beach and the battlefields of D-Day.",
+      "heroAlt": "Juno Beach in Normandy on a five-day Canadian battlefield tour of France and Belgium",
       "duration": "5 days / 4 nights",
       "enquiryNote": "This tour's Normandy leg is arranged together with a local partner guide. Full online booking for this tour is coming soon; for now, please enquire and our team will confirm availability and full trip details directly.",
       "schedule": "Selected Monday departures",
       "inclusions": [
         "Expert English-speaking First and Second World War battlefield guide",
-        "Comfortable, air-conditioned touring vehicle",
-        "Four nights of four-star accommodation (two in Arras, two in Bayeux)",
-        "Pick-up from Arras Train Station or your Arras accommodation",
-        "Drop-off at Bayeux Train Station or your Bayeux accommodation",
-        "All scheduled admission fees"
+        "Comfortable, air-conditioned touring vehicle throughout the five-day journey",
+        "Four nights accommodation - two nights in Arras and two nights in Bayeux",
+        "Four buffet breakfasts, one lunch and one group dinner",
+        "All scheduled battlefield, museum and attraction admission fees",
+        "Pick-up in Arras and final drop-off in Bayeux"
       ],
       "cardAlt": "Aerial view of Juno Beach, Normandy",
       "bookingMethod": "email",
@@ -946,6 +936,7 @@
       ],
       "name": "The Normandy Experience: 2-Day Tour",
       "slug": "normandy-2-day",
+      "appointmentOnly": true,
       "intro": [
         "Discover the full story of the Allied landings in Normandy during an immersive two-day battlefield tour based in the historic town of Bayeux.",
         "From the American airborne battlefields and the sands of Omaha Beach to the British and Canadian landing sectors at Gold and Juno, this tour follows the events of June 6, 1944, across the breadth of the Normandy invasion area.",
@@ -956,6 +947,7 @@
       "heroAlt": "Aerial view of Juno Beach with a preserved German bunker and Canadian memorial",
       "normandyRegion": true,
       "duration": "2 days",
+      "enquiryNote": "This tour is arranged directly with our team — send us your preferred dates and we'll confirm availability. Once confirmed, we'll send you a link to complete your booking.",
       "schedule": "Mon–Tue & Thu–Fri departures",
       "inclusions": [
         "Expert English-speaking Second World War battlefield guide",
@@ -966,10 +958,8 @@
         "Historical maps, photographs and battlefield interpretation"
       ],
       "cardAlt": "Aerial view of Juno Beach with a preserved German bunker and Canadian memorial",
-      "departureCity": "Bayeux",
       "bookingMethod": "email",
-      "appointmentOnly": true,
-      "enquiryNote": "This tour is arranged directly with our team — send us your preferred dates and we'll confirm availability. Once confirmed, we'll send you a link to complete your booking."
+      "departureCity": "Bayeux"
     },
     {
       "footnote": "The order and content of the itinerary may be adjusted because of weather, traffic, tides, site access or operational requirements. Private and customised battlefield tours are available upon request.",
@@ -1060,6 +1050,7 @@
       ],
       "name": "The Complete Normandy Experience: 3-Day Tour",
       "slug": "normandy-3-day",
+      "appointmentOnly": true,
       "intro": [
         "Discover the remarkable history and beauty of Normandy during a three-day journey based in the medieval town of Bayeux.",
         "The first two days explore the principal American, British and Canadian battlefields of D-Day. Follow the airborne landings behind Utah Beach, stand on the sands of Omaha, walk among the surviving German guns at Longues-sur-Mer and discover the stories of Gold Beach, Juno Beach and Pegasus Bridge.",
@@ -1070,6 +1061,7 @@
       "heroAlt": "Mont-Saint-Michel rising above its tidal bay",
       "normandyRegion": true,
       "duration": "3 days",
+      "enquiryNote": "This tour is arranged directly with our team — send us your preferred dates and we'll confirm availability. Once confirmed, we'll send you a link to complete your booking.",
       "schedule": "Mon–Wed & Wed–Fri departures",
       "inclusions": [
         "Expert English-speaking guide",
@@ -1081,10 +1073,8 @@
         "Historical maps, photographs and battlefield interpretation"
       ],
       "cardAlt": "Mont-Saint-Michel rising above its tidal bay",
-      "departureCity": "Bayeux",
       "bookingMethod": "email",
-      "appointmentOnly": true,
-      "enquiryNote": "This tour is arranged directly with our team — send us your preferred dates and we'll confirm availability. Once confirmed, we'll send you a link to complete your booking."
+      "departureCity": "Bayeux"
     },
     {
       "footnote": "The order and content of the itinerary may be adjusted because of weather, traffic, tides, opening times, battlefield access or other operational requirements. Private and customised battlefield tours are available upon request. Prices are per person.",
