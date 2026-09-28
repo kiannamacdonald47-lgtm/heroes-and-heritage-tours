@@ -529,7 +529,7 @@
       "departureCity": "Arras"
     },
     {
-      "footnote": "The order and content of the itinerary may be adjusted because of traffic, weather, opening times, battlefield access, commemorative events or other operational requirements. Private and customised versions of the tour are available upon request. Prices are per person, based on double or twin occupancy; ask us about the single supplement when you enquire.",
+      "footnote": "The order and content of the itinerary may be adjusted because of traffic, weather, museum opening times, battlefield access, commemorative events or other operational requirements. Accommodation is based on double or twin occupancy. Prices are per person; a single supplement applies to guests requesting their own room. Private and customised versions of this tour are available on request.",
       "heroImage": "/photos/normandy5day/normandy5day-cover.jpg",
       "cardDesc": "Journey from the Somme, Vimy Ridge and Passchendaele to the D-Day beaches of Normandy on a five-day battlefield tour through France and Belgium.",
       "singleSupplement": null,
@@ -561,7 +561,7 @@
       "cardImage": "/photos/normandy5day/normandy5day-cover.jpg",
       "itinerary": [
         {
-          "heading": "Day 2: Flanders Fields & Passchendaele",
+          "heading": "Day 1: Flanders Fields & Passchendaele",
           "note": "Travel north into Belgium and follow the Canadian story through the Ypres Salient to the battlefields of Passchendaele.",
           "isPrefaceNote": true,
           "items": [
@@ -592,49 +592,47 @@
           ]
         },
         {
-          "heading": "Day 3: Arras to Bayeux",
-          "note": "Leave the battlefields of the Western Front and travel west through the French countryside toward Normandy, with an extended stop in the historic harbour town of Honfleur before continuing to Pegasus Bridge and Bayeux.",
+          "heading": "Day 3: Arras to Normandy",
+          "note": "Leave the Western Front behind and travel west across northern France toward Normandy, combining the journey with historic Honfleur, Pegasus Bridge and an evening in Bayeux.",
           "isPrefaceNote": true,
           "items": [
-            "Historic harbour town of Honfleur and Sainte-Catherine's Church",
-            "Pegasus Bridge, captured by British airborne troops on June 6, 1944",
-            "Caen Canal battlefield",
-            "Historic centre of Bayeux and Bayeux Cathedral"
+            "Historic harbour and Sainte-Catherine’s Church in Honfleur",
+            "Pegasus Bridge and the British glider assault of 6 June 1944",
+            "Caen Canal and the opening actions of D-Day",
+            "Historic Bayeux and Bayeux Cathedral"
           ],
           "facts": [
-            "Overnight: four-star accommodation in Bayeux",
-            "Meals included: Breakfast and lunch (Honfleur)"
+            "Overnight: accommodation in central Bayeux",
+            "Meals included: Breakfast and lunch"
           ]
         },
         {
-          "heading": "Day 4: American Airborne & Band of Brothers",
-          "note": "Travel inland from Utah Beach and follow the American paratroopers who landed across Normandy during the early hours of D-Day.",
+          "heading": "Day 4: American Airborne & Omaha Beach",
+          "note": "Follow the American paratroopers who landed behind Utah Beach before continuing to the dramatic cliffs and beaches of the American D-Day sector.",
           "isPrefaceNote": true,
           "items": [
-            "82nd and 101st Airborne Division landing grounds and battlefields",
-            "Sainte-Mère-Église, one of the first towns liberated in France",
-            "Easy Company and the Band of Brothers assault at Brécourt Manor",
-            "Sainte-Marie-du-Mont and the road to Carentan",
-            "La Cambe German War Cemetery"
+            "Sainte-Mère-Église and the American airborne landing grounds",
+            "101st Airborne and Easy Company locations around Brécourt Manor",
+            "Pointe du Hoc Ranger battlefield, bunkers and shell craters",
+            "1. Omaha Beach and the Normandy American Cemetery"
           ],
           "facts": [
-            "Overnight: four-star accommodation in Bayeux",
+            "Overnight: accommodation in central Bayeux",
             "Meals included: Breakfast"
           ]
         },
         {
-          "heading": "Day 5: Omaha Beach & the Atlantic Wall",
-          "note": "The final day explores the dramatic American landing sector along the Normandy coast, concluding at Arromanches-les-Bains where the remains of the Mulberry Harbour can still be seen offshore.",
+          "heading": "Day 5: Gold Beach & Juno Beach",
+          "note": "Conclude the journey along the British and Canadian D-Day sectors, from German coastal defences and the remains of the Mulberry Harbour to the beaches where Canadians landed on 6 June 1944.",
           "isPrefaceNote": true,
           "items": [
-            "Pointe du Hoc Ranger battlefield, bunkers and shell craters",
-            "Omaha Beach and the American landing routes",
-            "Normandy American Cemetery at Colleville-sur-Mer",
             "Longues-sur-Mer German artillery battery",
-            "Arromanches-les-Bains and the Mulberry Harbour remains"
+            "Gold Beach and Arromanches-les-Bains with the Mulberry Harbour remains",
+            "Juno Beach and the Canadian D-Day landing sector",
+            "Juno Beach Centre and Bény-sur-Mer Canadian War Cemetery"
           ],
           "facts": [
-            "Tour concludes in Bayeux at approximately 5:00 PM",
+            "Tour concludes: Bayeux, approx. 5:00 PM",
             "Meals included: Breakfast"
           ]
         }
