@@ -542,20 +542,28 @@
       "price": 3685,
       "galleryImages": [
         {
-          "src": "/photos/normandy5day/thumbs/normandy5day-cover.jpg",
-          "alt": "Aerial view of Juno Beach, Normandy"
+          "src": "/photos/2-2-.jpg",
+          "alt": "Beaumont-Hamel Newfoundland Memorial on the Somme battlefield in France"
         },
         {
-          "src": "/photos/normandy5day/thumbs/normandy5day-03.jpg",
-          "alt": "A preserved First World War trench"
+          "src": "/photos/chatgpt-image-14-sept.-2026-07_15_54.png",
+          "alt": "Courcelette Canadian Memorial on the Somme battlefield"
         },
         {
-          "src": "/photos/normandy5day/thumbs/normandy5day-06.jpg",
-          "alt": "Pegasus Bridge, Normandy"
+          "src": "/photos/chatgpt-image-14-sept.-2026-10_20_03.png",
+          "alt": "Canadian National Vimy Memorial overlooking Vimy Ridge"
         },
         {
-          "src": "/photos/vimy/thumbs/vimy-cover.jpg",
-          "alt": "The Canadian National Vimy Memorial against a blue sky"
+          "src": "/photos/chatgpt-image-14-sept.-2026-11_51_14.png",
+          "alt": "Essex Farm Advanced Dressing Station near Ypres Belgium"
+        },
+        {
+          "src": "/photos/chatgpt-image-14-sept.-2026-10_54_30.png",
+          "alt": "Tyne Cot Cemetery overlooking the Passchendaele battlefield"
+        },
+        {
+          "src": "/photos/front-cover-2-.png",
+          "alt": "Crest Farm Canadian Memorial at Passchendaele Belgium"
         }
       ],
       "cardImage": "/photos/normandy5day/normandy5day-cover.jpg",
@@ -647,7 +655,7 @@
       "tagline": "From Vimy Ridge and Passchendaele to Juno Beach and the battlefields of D-Day.",
       "heroAlt": "Juno Beach in Normandy on a five-day Canadian battlefield tour of France and Belgium",
       "duration": "5 days / 4 nights",
-      "enquiryNote": "This tour's Normandy leg is arranged together with a local partner guide. Full online booking for this tour is coming soon; for now, please enquire and our team will confirm availability and full trip details directly.",
+      "enquiryNote": "",
       "schedule": "Selected Monday departures",
       "inclusions": [
         "Expert English-speaking First and Second World War battlefield guide",
