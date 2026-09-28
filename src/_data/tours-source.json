@@ -604,7 +604,7 @@
           ],
           "facts": [
             "Departure: Arras, 9:00 AM",
-            "Overnight: four-star accommodation in Arras"
+            "Accommodation: Arras"
           ]
         },
         {
@@ -619,8 +619,8 @@
             "Vimy Ridge, Canadian National Vimy Memorial and Cabaret-Rouge British Cemetery"
           ],
           "facts": [
-            "Overnight: four-star accommodation in Arras",
-            "Meals included: Breakfast"
+            "Meals included: Breakfast",
+            "Accommodation: Arras"
           ]
         },
         {
@@ -635,7 +635,7 @@
           ],
           "facts": [
             "Overnight: accommodation in central Bayeux",
-            "Meals included: Breakfast and lunch"
+            "Accommodation: Bayeux"
           ]
         },
         {
@@ -649,8 +649,8 @@
             "1. Omaha Beach and the Normandy American Cemetery"
           ],
           "facts": [
-            "Overnight: accommodation in central Bayeux",
-            "Meals included: Breakfast"
+            "Meals included: Breakfast",
+            "Accommodation: Bayeux"
           ]
         },
         {
@@ -664,8 +664,8 @@
             "Juno Beach Centre and Bény-sur-Mer Canadian War Cemetery"
           ],
           "facts": [
-            "Tour concludes: Bayeux, approx. 5:00 PM",
-            "Meals included: Breakfast"
+            "Meals included: Breakfast",
+            "Tour concludes: Bayeux, approx. 5:00 PM"
           ]
         }
       ],
