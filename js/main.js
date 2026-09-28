@@ -231,65 +231,6 @@ if (filterButtons.length) {
 }
 
 // ============================================================
-// Tour detail page — Arras/Paris departure toggle
-// ============================================================
-const departureToggle = document.querySelector("[data-departure-toggle]");
-if (departureToggle) {
-  const priceEl = document.querySelector(".info-panel-price[data-price-arras]");
-  const parisNote = document.querySelector("[data-paris-note]");
-  const parisRestrictedNote = document.querySelector("[data-paris-restricted-note]");
-  const scheduleArras = document.querySelector("[data-schedule-arras]");
-  const scheduleParis = document.querySelector("[data-schedule-paris]");
-  const bookNowLink = document.querySelector("[data-book-now-link]");
-
-  departureToggle.querySelectorAll('input[name="departureChoice"]').forEach((radio) => {
-    radio.addEventListener("change", () => {
-      const isParis = radio.checked && radio.value === "paris";
-      if (priceEl) {
-        const amountEl = priceEl.querySelector(".amount");
-        const price = isParis ? priceEl.dataset.priceParis : priceEl.dataset.priceArras;
-        if (amountEl && price) amountEl.textContent = "$" + Number(price).toLocaleString();
-      }
-      if (parisNote) parisNote.hidden = !isParis;
-      if (parisRestrictedNote) parisRestrictedNote.hidden = !isParis;
-      if (scheduleArras) scheduleArras.hidden = isParis;
-      if (scheduleParis) scheduleParis.hidden = !isParis;
-      if (bookNowLink) {
-        const url = new URL(bookNowLink.href, window.location.origin);
-        url.searchParams.set("depart", isParis ? "paris" : "arras");
-        bookNowLink.href = url.pathname + url.search;
-      }
-    });
-  });
-}
-
-// ============================================================
-// Tours listing — Arras/Paris price view via ?depart= query param
-// ============================================================
-const dayToursSection = document.getElementById("dayTours");
-if (dayToursSection) {
-  const departParam = new URLSearchParams(window.location.search).get("depart");
-  const isParisView = departParam === "paris";
-  if (isParisView) {
-    dayToursSection.querySelectorAll("[data-price-paris]").forEach((el) => {
-      const amountEl = el.querySelector(".amount");
-      if (amountEl) amountEl.textContent = "$" + Number(el.dataset.priceParis).toLocaleString();
-    });
-  }
-  // Only bother with the banner/switch link if at least one tour here
-  // actually offers a Paris departure.
-  if (dayToursSection.querySelector("[data-price-paris]")) {
-    const banner = document.createElement("p");
-    banner.className = "depart-banner";
-    banner.innerHTML = isParisView
-      ? 'Showing prices for departures from Paris. <a href="?depart=arras#dayTours">View Arras prices</a>'
-      : 'Showing prices for departures from Arras. <a href="?depart=paris#dayTours">View Paris prices</a>';
-    const container = dayToursSection.querySelector(".container");
-    if (container) container.insertBefore(banner, container.firstElementChild);
-  }
-}
-
-// ============================================================
 // Booking form — tour + date + pricing summary
 // ============================================================
 const bookingForm = document.getElementById("bookingForm");
@@ -331,6 +272,9 @@ if (bookingForm) {
   const departureRadios = bookingForm.querySelectorAll('input[name="depart"]');
 
   const getSelectedDeparture = () => {
+    // book-paris.njk forces Paris for the whole page via this attribute
+    // — no toggle exists there, so there's nothing to read.
+    if (bookingForm.dataset.forceDeparture) return bookingForm.dataset.forceDeparture;
     const tourKey = getSelectedTour();
     if (!tourKey || !TOURS[tourKey] || !TOURS[tourKey].parisAvailable) return "arras";
     const checked = Array.from(departureRadios).find((r) => r.checked);
@@ -441,11 +385,6 @@ if (bookingForm) {
     if (match) match.checked = true;
   }
   updateDepartureVisibility();
-  // Pre-select departure from ?depart=paris, e.g. arriving from a tour
-  // page's toggle or the nav's "From Paris" link.
-  if (searchParams.get("depart") === "paris" && preselect && TOURS[preselect] && TOURS[preselect].parisAvailable) {
-    departureRadios.forEach((r) => { r.checked = r.value === "paris"; });
-  }
   updateSummary();
 
   // Returning from a canceled Stripe Checkout: let the guest know their

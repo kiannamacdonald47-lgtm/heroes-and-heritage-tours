@@ -1,0 +1,95 @@
+---
+layout: base.njk
+title: "Canadian Battlefield Tours from Paris | Heroes and Heritage Tours"
+description: "Vimy Ridge, Flanders Fields, and Canada's Hundred Days: Canadian First World War battlefield tours departing central Paris, 7:30 AM from Gare du Nord."
+activeNav: tours
+permalink: "/tours-from-paris.html"
+---
+
+<header class="hero hero--compact">
+  <div class="hero-media">
+    <img src="/photos/vimy/vimy-cover.jpg" alt="The Canadian National Vimy Memorial against a blue sky" width="1800" height="1200">
+  </div>
+  <div class="container">
+    <div class="hero-content">
+      <span class="eyebrow">Departing from Paris</span>
+      <h1>Canadian Battlefield Tours from Paris.</h1>
+      <p class="lede">Vimy Ridge, Flanders Fields, and Canada's Hundred Days, all reachable in a single day from central Paris: a 7:30 AM departure from Gare du Nord, a $100 CAD supplement on top of our Arras pricing, and a battlefield guide waiting for you the moment you step off the train in Arras.</p>
+    </div>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow">How it works</span>
+      <h2>Everything you need to know before you book.</h2>
+    </div>
+
+    <div class="info-panel" style="position: static; max-width: 760px;" data-reveal>
+      <h3>Departing Paris for the Western Front</h3>
+      <ul class="info-panel-list">
+        <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 10.5l4 4 10-10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Meet at Paris Gare du Nord Train Station at 7:30 AM for the morning TGV to Arras. Your battlefield guide meets you at the main entrance of Arras station the moment you arrive.</li>
+        <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 10.5l4 4 10-10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>A flat $100 CAD supplement is added to our usual Arras pricing, to cover the return TGV fare and the earlier start.</li>
+        <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 10.5l4 4 10-10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Vimy Ridge &amp; The Somme and Canada's Hundred Days run from Paris on the same days they run from Arras. Flanders Fields &amp; Passchendaele runs Tuesdays only from Paris.</li>
+        <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 10.5l4 4 10-10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>You'll return to Paris Gare du Nord by approximately 8:00 PM the same day.</li>
+      </ul>
+      <p class="body-text" style="font-size: 14px;">Every tour includes an expert, English-speaking Western Front guide, a comfortable air-conditioned minibus once in Arras, and all entry fees. Prices are quoted in CAD.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow">Choose your tour</span>
+      <h2>Three ways to walk in their footsteps from Paris.</h2>
+    </div>
+
+    {% set parisTourDescriptions = {
+      "vimy-to-victory": "Beaumont-Hamel, Courcelette and Vimy Ridge, on a full-day battlefield tour reachable in one trip from central Paris.",
+      "in-flanders-fields": "Ypres and Passchendaele, including Essex Farm, Tyne Cot and the Passchendaele Museum, reachable in one trip from central Paris.",
+      "somme-front": "The Canadian Corps' advance from Arras to Cambrai, including the Drocourt-Quéant Line and Canal du Nord, reachable in one trip from central Paris."
+    } %}
+    {% set parisTours = [] %}
+    {% for tour in tours %}{% if tour.parisAvailable %}{% set noop = parisTours.push(tour) %}{% endif %}{% endfor %}
+    <div class="tours-grid" data-reveal>
+      {% for tour in parisTours %}
+      <article class="tour-card">
+        <a href="/tours/{{ tour.slug }}.html" class="tour-card-media">
+          <img src="{{ tour.cardImage }}" alt="{{ tour.cardAlt }}" width="800" height="600">
+          <span class="tour-card-badge">{{ tour.badge }}</span>
+        </a>
+        <div class="tour-card-body">
+          <h3><a href="/tours/{{ tour.slug }}.html">{{ tour.shortName }}</a></h3>
+          <div class="tour-card-meta">
+            <span>Departs Paris</span>
+            <span>{% if tour.parisRunDays %}Tuesdays only{% else %}{{ tour.schedule }}{% endif %}</span>
+            <span>{{ tour.duration }}</span>
+          </div>
+          <p class="tour-card-desc">{{ parisTourDescriptions[tour.slug] }}</p>
+          <div class="tour-card-footer">
+            <div class="tour-card-price">
+              <span class="amount">${{ (tour.price + 100) | currency }}</span><span class="unit">CAD / person</span>
+            </div>
+            <a href="/tours/{{ tour.slug }}.html" class="btn btn-ghost btn-sm">Full Itinerary</a>
+          </div>
+          <a href="/book-paris.html?tour={{ tour.slug }}" class="btn btn-primary btn-block" style="margin-top: var(--space-2);">Book from Paris</a>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+
+    <p class="body-text" style="text-align: center; margin-top: var(--space-4);">Prefer departing from Arras? See our <a href="/tours.html#dayTours" style="color: var(--red); font-weight: 600;">Western Front tours</a>.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="cta-band" data-reveal>
+      <h2>Not sure which tour is right for you?</h2>
+      <p class="lede">Send us a message and we'll help you choose the best fit for your trip from Paris.</p>
+      <a href="/contact.html" class="btn btn-primary btn-lg">Get In Touch</a>
+    </div>
+  </div>
+</section>

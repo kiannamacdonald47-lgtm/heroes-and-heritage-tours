@@ -1,9 +1,11 @@
 ---
 layout: base.njk
-title: "Book a Tour | Heroes and Heritage Tours"
-description: "Book your Canadian battlefield tour with Heroes and Heritage Tours. Choose your tour, pick a date, and reserve your place with a deposit."
+title: "Book a Tour from Paris | Heroes and Heritage Tours"
+description: "Book your Canadian battlefield tour departing from Paris. Choose your tour, pick a date, and reserve your place with a deposit."
 activeNav: booking
-permalink: "/booking/"
+robots: "noindex, follow"
+eleventyExcludeFromCollections: true
+permalink: "/book-paris.html"
 ---
 
 <datalist id="countryList">
@@ -26,8 +28,8 @@ permalink: "/booking/"
   </div>
   <div class="container">
     <div class="hero-content">
-      <span class="eyebrow">Book your tour</span>
-      <h1>Reserve your place on the battlefields.</h1>
+      <span class="eyebrow">Book your tour from Paris</span>
+      <h1>Reserve your place, departing from Paris.</h1>
       <p class="lede">Four short steps. A 30% deposit secures your booking; the balance is due 21 days before your tour.</p>
     </div>
   </div>
@@ -35,7 +37,7 @@ permalink: "/booking/"
 
 <section class="section">
   <div class="container">
-    <form id="bookingForm" novalidate>
+    <form id="bookingForm" novalidate data-force-departure="paris">
       <div class="booking-steps">
         <div class="booking-step" data-active="true"><span class="booking-step-num">1</span>Choose Tour</div>
         <div class="booking-step"><span class="booking-step-num">2</span>Trip Details</div>
@@ -48,22 +50,22 @@ permalink: "/booking/"
           <!-- STEP 1 — Choose Tour -->
           <div data-step>
             <div class="form-fieldset">
-              <legend>Which tour would you like to book?</legend>
-              {% set bookableTours = [] %}
-              {% for tour in tours %}{% if tour.bookingMethod != "email" %}{% set noop = bookableTours.push(tour) %}{% endif %}{% endfor %}
+              <legend>Which tour would you like to book from Paris?</legend>
+              {% set parisTours = [] %}
+              {% for tour in tours %}{% if tour.parisAvailable %}{% set noop = parisTours.push(tour) %}{% endif %}{% endfor %}
               <div class="radio-cards">
-                {% for tour in bookableTours %}
+                {% for tour in parisTours %}
                 <label class="radio-card">
                   <input type="radio" name="tour" value="{{ tour.slug }}" required {% if loop.first %}checked{% endif %}>
                   <span class="radio-card-body">
                     <strong>{{ tour.shortName }}</strong>
-                    <span>{{ tour.badge }} · Departs {{ tour.departureCity }} · {{ tour.schedule }}{% if not tour.combo %} · {{ tour.duration }}{% endif %}</span>
-                    <span class="radio-card-price" data-tour-price-slug="{{ tour.slug }}">${{ tour.price | currency }} CAD / person</span>
+                    <span>{{ tour.badge }} · Departs Paris · {% if tour.parisRunDays %}Tuesdays only{% else %}{{ tour.schedule }}{% endif %}{% if not tour.combo %} · {{ tour.duration }}{% endif %}</span>
+                    <span class="radio-card-price" data-tour-price-slug="{{ tour.slug }}">${{ (tour.price + 100) | currency }} CAD / person</span>
                   </span>
                 </label>
                 {% endfor %}
               </div>
-              <p class="required-note">Not sure which to choose? <a href="/tours.html" style="color: var(--red); font-weight: 600;">Compare all tours</a> or <a href="/contact.html" style="color: var(--red); font-weight: 600;">ask us first</a>. Booking the Western Front &amp; Normandy 5-Day Tour? <a href="/contact.html?tour=western-front-normandy-5day" style="color: var(--red); font-weight: 600;">Enquire here instead</a>, since its Normandy leg is arranged directly with our team.</p>
+              <p class="required-note">Looking to depart from Arras instead? <a href="/booking" style="color: var(--red); font-weight: 600;">Book an Arras departure</a>. Not sure which to choose? <a href="/tours-from-paris.html" style="color: var(--red); font-weight: 600;">Compare Paris departures</a> or <a href="/contact.html" style="color: var(--red); font-weight: 600;">ask us first</a>.</p>
             </div>
             <div class="hero-actions" style="margin-top: var(--space-4); justify-content: flex-end;">
               <button type="button" class="btn btn-primary btn-lg" data-step-next>Continue to Trip Details</button>
@@ -74,10 +76,12 @@ permalink: "/booking/"
           <div data-step>
             <div class="form-fieldset">
               <legend>Trip details</legend>
+              <input type="hidden" id="departureCityField" name="departureCity" value="Paris">
               <div class="form-grid">
                 <div class="form-field">
                   <label id="calendarLabel">Preferred date <span class="required-mark">*</span></label>
                   <span class="hint" id="dateAvailabilityHint" style="margin-bottom: 4px;"></span>
+                  <span class="hint" id="parisTuesdayHint" hidden style="color: var(--red); display: block; margin-bottom: 4px;">This tour runs Tuesdays only when departing from Paris.</span>
 
                   <div class="booking-calendar" role="group" aria-labelledby="calendarLabel">
                     <div class="booking-calendar-header">
@@ -204,19 +208,3 @@ permalink: "/booking/"
     </form>
   </div>
 </section>
-
-<!-- Detected by Netlify at build time so the Stripe webhook can relay
-     confirmed bookings into a real email via Netlify Forms. Never
-     rendered or submitted by a visitor's browser. -->
-<form name="booking-notification" data-netlify="true" hidden>
-  <input type="text" name="summary">
-  <input type="text" name="tourName">
-  <input type="text" name="preferredDate">
-  <input type="text" name="fullName">
-  <input type="email" name="email">
-  <input type="text" name="phone">
-  <input type="text" name="guests">
-  <input type="text" name="province">
-  <input type="text" name="departureCity">
-  <input type="text" name="specialRequest">
-</form>

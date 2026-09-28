@@ -15,8 +15,8 @@
           <div class="nav-dropdown-item nav-dropdown-item--has-submenu">
             <a href="/tours.html" {% if activeNav == "tours" %}aria-current="page"{% endif %}>Western Front</a>
             <div class="nav-dropdown-submenu">
-              <a href="/tours.html?depart=arras#dayTours">From Arras</a>
-              <a href="/tours.html?depart=paris#dayTours">From Paris</a>
+              <a href="/tours.html#dayTours">From Arras</a>
+              <a href="/tours-from-paris.html">From Paris</a>
             </div>
           </div>
           <div class="nav-dropdown-item nav-dropdown-item--has-submenu">
@@ -35,7 +35,7 @@
       <a href="/contact.html" {% if activeNav == "contact" %}aria-current="page"{% endif %}>Contact</a>
     </div>
     <div class="nav-actions">
-      <a href="/booking.html" class="btn btn-primary btn-sm" {% if activeNav == "booking" %}aria-current="page"{% endif %}>Book Now</a>
+      <a href="/booking" class="btn btn-primary btn-sm" {% if activeNav == "booking" %}aria-current="page"{% endif %}>Book Now</a>
       <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
         <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
       </button>
@@ -50,8 +50,8 @@
     <span class="mobile-menu-group-label">Tours</span>
     <div class="mobile-menu-subgroup">
       <span class="mobile-menu-subgroup-label">Western Front</span>
-      <a href="/tours.html?depart=arras#dayTours" class="mobile-menu-sublink mobile-menu-sublink--nested">From Arras</a>
-      <a href="/tours.html?depart=paris#dayTours" class="mobile-menu-sublink mobile-menu-sublink--nested">From Paris</a>
+      <a href="/tours.html#dayTours" class="mobile-menu-sublink mobile-menu-sublink--nested">From Arras</a>
+      <a href="/tours-from-paris.html" class="mobile-menu-sublink mobile-menu-sublink--nested">From Paris</a>
     </div>
     <div class="mobile-menu-subgroup">
       <span class="mobile-menu-subgroup-label">Normandy</span>
@@ -65,5 +65,5 @@
   <a href="/family-research.html">Family Research</a>
   <a href="/faq.html">FAQ</a>
   <a href="/contact.html">Contact</a>
-  <a href="/booking.html" class="btn btn-primary btn-block">Book Now</a>
+  <a href="/booking" class="btn btn-primary btn-block">Book Now</a>
 </div>

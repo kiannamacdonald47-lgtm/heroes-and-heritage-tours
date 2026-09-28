@@ -140,7 +140,7 @@ exports.handler = async (event) => {
         },
       },
       success_url: `${siteUrl}/booking-confirmed.html?session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `${siteUrl}/booking.html?canceled=true&tour=${encodeURIComponent(tour.slug)}`,
+      cancel_url: `${siteUrl}/${isParis ? "book-paris.html" : "booking"}?canceled=true&tour=${encodeURIComponent(tour.slug)}`,
     });
 
     return {
