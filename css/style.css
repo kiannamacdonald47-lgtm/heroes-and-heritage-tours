@@ -1076,10 +1076,13 @@ em, .accent-italic {
   border-radius: var(--radius-sm);
   font-size: 13px;
   font-weight: 600;
+  color: var(--foreground);
   cursor: pointer;
   transition: border-color var(--dur-fast) var(--ease-out), background var(--dur-fast) var(--ease-out);
 }
 
+.departure-toggle-option:hover { border-color: var(--red); }
+.departure-toggle-option.is-active { border-color: var(--red); background: rgba(138, 28, 36, 0.05); color: var(--red); cursor: default; }
 .departure-toggle-option:has(input:checked) { border-color: var(--red); background: rgba(138, 28, 36, 0.05); color: var(--red); }
 .departure-toggle-option input { position: absolute; opacity: 0; pointer-events: none; }
 

@@ -690,7 +690,8 @@
       ],
       "cardAlt": "Aerial view of Juno Beach, Normandy",
       "bookingMethod": "email",
-      "departureCity": "Arras"
+      "departureCity": "Arras",
+      "appointmentOnly": true
     },
     {
       "footnote": "Tour itineraries may be adjusted to accommodate weather, traffic, museum schedules, site availability or the interests of guests. Private and customised battlefield tours are available upon request.",

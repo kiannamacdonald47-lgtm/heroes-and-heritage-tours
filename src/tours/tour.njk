@@ -73,6 +73,12 @@ eleventyComputed:
         </div>
 
         <aside class="info-panel">
+          {% if tour.parisAvailable %}
+          <div class="departure-toggle">
+            <span class="departure-toggle-option is-active">Departs Arras</span>
+            <a class="departure-toggle-option" href="/tours-from-paris.html">Departs Paris (+$100 CAD)</a>
+          </div>
+          {% endif %}
           <div class="info-panel-price">
             {% if tour.price %}
             <span class="amount">${{ tour.price | currency }}</span>
@@ -83,9 +89,6 @@ eleventyComputed:
           </div>
           {% if tour.singleSupplement %}
           <p class="body-text" style="font-size: 13px; margin-top: -8px;">Single supplement: ${{ tour.singleSupplement | currency }} CAD</p>
-          {% endif %}
-          {% if tour.parisAvailable %}
-          <p class="body-text" style="font-size: 13px; margin-top: -8px;"><a href="/tours-from-paris.html" style="color: var(--red); font-weight: 600;">Also available departing from Paris (+$100 CAD)</a></p>
           {% endif %}
           <ul class="info-panel-list">
             {% for item in tour.inclusions %}
