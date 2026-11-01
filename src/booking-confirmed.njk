@@ -58,6 +58,20 @@ permalink: "/booking-confirmed.html"
       .then((res) => (res.ok ? res.json() : null))
       .then((data) => {
         if (!data || data.paymentStatus !== "paid") return;
+
+        // Google Ads conversion — fires only once Stripe confirms payment,
+        // with the real amount paid. transaction_id lets Google ignore a
+        // reload of this page. Balance payments return early above, so
+        // they don't count as a second purchase.
+        if (typeof gtag === "function") {
+          gtag("event", "conversion", {
+            send_to: "AW-18441015433/XUmvCPHx-K8dEImhrtlE",
+            value: Number(data.depositCad) || 1.0,
+            currency: "CAD",
+            transaction_id: sessionId,
+          });
+        }
+
         document.getElementById("confirmedTour").textContent = data.tourName || "–";
         document.getElementById("confirmedGuests").textContent = data.guests || "–";
         document.getElementById("confirmedDate").textContent = data.preferredDate || "–";
