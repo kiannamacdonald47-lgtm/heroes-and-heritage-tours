@@ -111,12 +111,12 @@
       "price": 320,
       "galleryImages": [
         {
-          "src": "/photos/img_9226-1-.jpeg",
-          "alt": "Preserved German frontline trenches on Vimy Ridge in France"
-        },
-        {
           "src": "/photos/chatgpt-image-14-sept.-2026-11_44_30.png",
           "alt": "Hill 70 Canadian Memorial near Lens in northern France"
+        },
+        {
+          "src": "/photos/pxl_20261113_093008186-1-.jpg",
+          "alt": "Preserved Canadian trenches at Hill 62"
         },
         {
           "src": "/photos/chatgpt-image-14-sept.-2026-11_51_14.png",
@@ -670,6 +670,7 @@
       ],
       "name": "5-Day Canadian Western Front & Normandy Battlefield Tour",
       "slug": "western-front-normandy-5day",
+      "appointmentOnly": true,
       "intro": [
         "Journey across two world wars on an unforgettable five-day battlefield tour through France and Belgium. Beginning in historic Arras, follow the Canadian and Newfoundland experience from the Somme and Vimy Ridge into the battlefields of Flanders and Passchendaele before travelling west to Normandy and the beaches of D-Day.",
         "Walk preserved First World War trenches at Beaumont-Hamel and Vimy Ridge, stand among the graves at Tyne Cot and trace the Canadian advance at Passchendaele. In Normandy, follow British airborne troops to Pegasus Bridge, American paratroopers through the fields behind Utah Beach, and Canadian soldiers ashore at Juno Beach. With fully arranged accommodation, small-group transportation and expert battlefield interpretation included, this journey offers a comprehensive introduction to the Canadian experience of both world wars."
@@ -690,8 +691,7 @@
       ],
       "cardAlt": "Aerial view of Juno Beach, Normandy",
       "bookingMethod": "email",
-      "departureCity": "Arras",
-      "appointmentOnly": true
+      "departureCity": "Arras"
     },
     {
       "footnote": "Tour itineraries may be adjusted to accommodate weather, traffic, museum schedules, site availability or the interests of guests. Private and customised battlefield tours are available upon request.",
