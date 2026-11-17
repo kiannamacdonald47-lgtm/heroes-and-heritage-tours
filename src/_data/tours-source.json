@@ -100,7 +100,7 @@
     {
       "footnote": "Tour itineraries may be adjusted to accommodate traffic, museum opening times, commemorative events, site accessibility or the interests of guests travelling on the day. Dinner is not included in the tour price. Private and customised battlefield tours are available on request.",
       "heroImage": "/photos/chatgpt-image-14-sept.-2026-10_54_30.png",
-      "cardDesc": "Discover the remarkable story of Canada in Flanders Fields and Hill 70. Traverse the battlegrounds and see where John McCrae wrote his immortalized poem: In Flanders Fields. That night, attend the Last Post at the Menin Gate memorial in historic Ypres, Belgium.",
+      "cardDesc": "Explore Ypres and Passchendaele on a full-day Canadian battlefield tour, from Hill 70 and Essex Farm to Tyne Cot and Crest Farm.",
       "runDays": [
         0,
         3
@@ -180,8 +180,8 @@
         "At the St Julien Canadian Memorial, Essex Farm and Passchendaele, discover the battles and people connected to Canada’s service in Flanders. Visit the Passchendaele Memorial Museum and, time permitting, the Canadian Memorial at Crest Farm. In historic Ypres, enjoy dinner before attending the Last Post ceremony at Menin Gate."
       ],
       "combo": false,
-      "tagline": "Follow Canada’s First World War story from Hill 70 to Ypres and Passchendaele, then attend the Last Post at Menin Gate.",
-      "heroAlt": "The Canada Gate memorial arch at Tyne Cot Cemetery in autumn",
+      "tagline": "Discover the remarkable story of Canada in Flanders Fields and Hill 70. Traverse the battlegrounds and see where John McCrae wrote his immortalized poem: In Flanders Fields. That night, attend the Last Post at the Menin Gate memorial in historic Ypres, Belgium.",
+      "heroAlt": "Tyne Cot Cemetery overlooking the Passchendaele battlefield in Belgium.",
       "duration": "9–10 hours",
       "parisRunDays": null,
       "schedule": "Sun, Wed",
@@ -191,7 +191,7 @@
         "All battlefield and site entry fees",
         "Pick-up and drop-off in Arras with a maximum of 8 guests"
       ],
-      "cardAlt": "Canadian battlefield tour at Passchendaele in Belgium",
+      "cardAlt": "Tyne Cot Cemetery overlooking the Passchendaele battlefield in Belgium.",
       "parisAvailable": false,
       "departureCity": "Arras"
     },
