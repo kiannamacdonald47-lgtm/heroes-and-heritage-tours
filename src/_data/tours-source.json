@@ -98,7 +98,7 @@
       "departureCity": "Arras"
     },
     {
-      "footnote": "Tour itineraries may be adjusted to accommodate traffic, museum opening times, commemorative events, site accessibility or the interests of guests travelling on the day. Lunch is not included in the tour price. Private and customised battlefield tours are available on request.",
+      "footnote": "Tour itineraries may be adjusted to accommodate traffic, museum opening times, commemorative events, site accessibility or the interests of guests travelling on the day. Dinner is not included in the tour price. Private and customised battlefield tours are available on request.",
       "heroImage": "/photos/chatgpt-image-14-sept.-2026-10_54_30.png",
       "cardDesc": "Explore the Canadian First World War battlefields of Flanders on a small-group tour from Arras. Visit Hill 70, the Christmas Truce Memorial, the Passchendaele Memorial Museum, St Julien and Essex Farm, then attend the Last Post at Menin Gate in Ypres. Crest Farm is included when time permits.",
       "runDays": [
@@ -155,21 +155,20 @@
             "Canadian Memorial at Crest Farm (time permitting)"
           ],
           "facts": [
-            "Departure: Arras, 12:00 PM",
-            "No planned lunch stop"
+            "Departure: Arras, 12:00 PM"
           ]
         },
         {
-          "heading": "Afternoon: Ypres & Passchendaele",
-          "note": "Explore the Ypres Salient and the battlefields where Canadian troops fought through the mud of Passchendaele in 1917.",
+          "heading": "Evening: The Gas Attacks, Ypres & the Last Post",
+          "note": "Continue to the St Julien Canadian Memorial and Essex Farm Advanced Dressing Station where John McCrae wrote his immortal poem, then finish the day in Ypres with dinner and the emotive Last Post ceremony beneath the Menin Gate.",
           "items": [
-            "Lunch and free time in historic Ypres, Belgium",
-            "Memorial Museum Passchendaele 1917",
-            "Tyne Cot Cemetery and the Passchendaele battlefield",
-            "Crest Farm Canadian Memorial"
+            "St Julien Canadian Memorial, the “Brooding Soldier”",
+            "Essex Farm Advanced Dressing Station and the story of John McCrae",
+            "Dinner in historic Ypres (not included)",
+            "Official Last Post ceremony at Menin Gate"
           ],
           "facts": [
-            "Return: Arras, approx. 6:00–7:00 PM",
+            "Return: Arras, approx. 9:00 PM",
             "Duration: approx. 9–10 hours"
           ]
         }
@@ -177,7 +176,7 @@
       "name": "Ypres & Passchendaele Canadian Battlefield Tour",
       "slug": "in-flanders-fields",
       "intro": [
-        "Travel from Arras into the Canadian First World War story, beginning at Hill 70 and continuing north toward the Ypres Salient. Visit the Christmas Truce Memorial near Ploegsteert and explore the battlefields, memorials and landscapes that preserve the wider story of Canada in Flanders Fields.",
+        "Travel from Arras into the Canadian First World War story, beginning at Hill 70 and continuing north toward the Ypres Salient. Visit the Christmas Truce Memorial and explore the battlefields, trenches and memorials that preserve the wider story of Canada in Flanders Fields.",
         "At the St Julien Canadian Memorial, Essex Farm and Passchendaele, discover the battles and people connected to Canada’s service in Flanders. Visit the Passchendaele Memorial Museum and, time permitting, the Canadian Memorial at Crest Farm. In historic Ypres, enjoy dinner before attending the Last Post ceremony at Menin Gate."
       ],
       "combo": false,
