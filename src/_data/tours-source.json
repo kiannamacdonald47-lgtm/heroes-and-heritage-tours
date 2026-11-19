@@ -1343,6 +1343,74 @@
       "cardAlt": "The shingle beach, seafront lawns and town of Dieppe seen from the clifftop above the promenade",
       "bookingMethod": "email",
       "departureCity": "Dieppe"
+    },
+    {
+      "footnote": "This tour operates on April 9, 2027 only. Advance registration is required for the official ceremony; booking this tour does not itself secure ceremony admission. The visitor centre, tunnels and trenches will be closed that day. Timings, access, lunch arrangements and transport procedures are subject to the official event programme. Additional battlefield visits are not included. Accommodation and travel to Arras are excluded. Guests should stay locally the night before and allow flexibility for their return. Please discuss mobility and dietary requirements before booking.\n\nThe registration requirement and April 9 closures are confirmed in Veterans Affairs Canada’s visitor notice.",
+      "heroImage": "/photos/vimy-110-_-hommage-canadien.png",
+      "cardDesc": "Mark Vimy’s 110th anniversary with Canadian battle guide Joe MacDonald. Depart Arras for a day of remembrance, with historical commentary, packed lunch and participation in the official Canadian National Vimy 110th Anniversary Ceremony. ",
+      "badge": "Special Event Day Tour",
+      "scheduleFull": "This special commemorative tour departs from Arras on Friday, April 9, 2027.",
+      "shortName": "Vimy 110 Anniversary",
+      "price": 249,
+      "galleryImages": [
+        {
+          "src": "/photos/4-2-.jpg",
+          "alt": "Vimy Memorial, France, lit up at night"
+        }
+      ],
+      "cardImage": "/photos/affiche-patrimoniale-vimy-110.png",
+      "itinerary": [
+        {
+          "isPrefaceNote": false,
+          "heading": "1. Depart Arras",
+          "note": "Meet Joe at our designated central pickup point (In front of the Holiday Inn Express Hotel, 3 Rue du Dr Brassart) in Arras and board the bus for Vimy Ridge. Your introduction begins during the journey, exploring Canada’s role in the war and the soldiers preparing for the attack in April 1917. Bus departs at 9:00 AM sharp.",
+          "items": []
+        },
+        {
+          "isPrefaceNote": false,
+          "heading": "2. Arrival at Vimy Ridge",
+          "note": "Arrive at the designated event reception point and follow the official arrangements for access to the commemorative site. Time will be allowed for security screening, walking and any required shuttle transfers."
+        },
+        {
+          "isPrefaceNote": false,
+          "note": "Participate in the official commemoration marking 110 years since the Battle of Vimy Ridge, subject to successful ceremony registration. Remember those who served and reflect on their sacrifice at the Canadian National Vimy Memorial.",
+          "heading": "3. Vimy 110 Anniversary Commemoration"
+        },
+        {
+          "isPrefaceNote": false,
+          "heading": "4. Lunch and Remembrance",
+          "note": "A packed lunch and water will be provided, subject to event security rules. Opportunities for photographs and personal reflection will follow the official programme and permitted access. Lunch timing will depend on the ceremony schedule."
+        },
+        {
+          "isPrefaceNote": false,
+          "heading": "5. Return to Arras",
+          "note": "Rejoin the coach at the designated meeting point for the return journey to Arras. Departure from Vimy and arrival in Arras will depend on official event transport arrangements and traffic conditions."
+        }
+      ],
+      "name": "Vimy Ridge 110 Anniversary Day Tour",
+      "slug": "\tvimy-110-day-tour",
+      "appointmentOnly": false,
+      "intro": [
+        "On April 9, 2027, join fellow Canadians at Vimy Ridge to mark the 110th anniversary of the battle. Departing from Arras, this special coach tour brings together historical storytelling and a shared day of remembrance at one of Canada’s most significant overseas memorials.",
+        "Through soldiers’ stories, letters and battlefield accounts, your guide, Joe will explore the preparations, fighting and human experiences behind Canada's greatest victory and sacrifice."
+      ],
+      "combo": false,
+      "tagline": "A day of Canadian remembrance at Vimy Ridge — April 9, 2027",
+      "heroAlt": "Twin pylons of the Canadian National Vimy Memorial in northern France",
+      "normandyRegion": false,
+      "duration": "Approx 6 hours",
+      "enquiryNote": "Enquire about our April 9, 2027 departure. Please include your party size and any dietary or mobility requirements. Departure times and ceremony arrangements will be confirmed closer to the event. ",
+      "schedule": "April 9, 2027 only",
+      "inclusions": [
+        "Return coach transport from a central meeting point in Arras",
+        "Canadian battlefield guide and former Vimy guide Joe MacDonald",
+        "Historical commentary and personal stories of Canadians at Vimy Ridge",
+        "Packed lunch and bottled water, subject to event security rules"
+      ],
+      "cardAlt": "Canadian National Vimy Memorial at Vimy Ridge, France",
+      "bookingMethod": "email",
+      "parisAvailable": false,
+      "departureCity": "Arras"
     }
   ]
 }
