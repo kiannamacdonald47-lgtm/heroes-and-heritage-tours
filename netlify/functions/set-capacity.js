@@ -1,5 +1,5 @@
 const tours = require("../../src/_data/tours.js");
-const { bookingsStore, setManualBlock } = require("./lib/bookings");
+const { bookingsStore, setDateClosed } = require("./lib/bookings");
 
 exports.handler = async (event, context) => {
   if (event.httpMethod !== "POST") {
@@ -8,7 +8,7 @@ exports.handler = async (event, context) => {
 
   const user = context.clientContext && context.clientContext.user;
   if (!user) {
-    return { statusCode: 401, body: "Please log in to change capacity." };
+    return { statusCode: 401, body: "Please log in to change availability." };
   }
 
   let data;
@@ -18,25 +18,24 @@ exports.handler = async (event, context) => {
     return { statusCode: 400, body: "Invalid request body." };
   }
 
-  const { tourSlug, dateISO, manualBlock } = data;
+  const { tourSlug, dateISO, closed } = data;
   const isIsoDate = /^\d{4}-\d{2}-\d{2}$/.test(dateISO || "");
   const tour = tours.find((t) => t.slug === tourSlug);
-  const blockValue = parseInt(manualBlock, 10);
 
-  if (!tour || !isIsoDate || isNaN(blockValue) || blockValue < 0) {
-    return { statusCode: 400, body: "Invalid tourSlug, dateISO, or manualBlock." };
+  if (!tour || !isIsoDate || typeof closed !== "boolean") {
+    return { statusCode: 400, body: "Invalid tourSlug, dateISO, or closed." };
   }
 
   try {
     const store = bookingsStore();
-    const record = await setManualBlock(store, tourSlug, dateISO, blockValue);
+    const record = await setDateClosed(store, tourSlug, dateISO, closed);
     return {
       statusCode: 200,
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(record),
     };
   } catch (err) {
-    console.error("set-capacity error:", err);
-    return { statusCode: 500, body: "Could not update capacity." };
+    console.error("set-capacity (close/reopen date) error:", err);
+    return { statusCode: 500, body: "Could not update availability." };
   }
 };

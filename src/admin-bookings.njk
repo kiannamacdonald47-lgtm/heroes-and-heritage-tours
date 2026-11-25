@@ -23,11 +23,12 @@ eleventyExcludeFromCollections: true
     table { width: 100%; border-collapse: collapse; background: #FBF8F1; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 4px rgba(20,16,13,0.06); }
     th, td { text-align: left; padding: 10px 12px; font-size: 13px; border-bottom: 1px solid rgba(33,28,21,0.1); vertical-align: top; }
     th { background: rgba(33,28,21,0.04); font-weight: 700; text-transform: uppercase; font-size: 11px; letter-spacing: 0.04em; }
-    .full { color: #8A1C24; font-weight: 700; }
+    .closed { color: #8A1C24; font-weight: 700; }
     .guest-list { font-size: 12px; color: #56503F; margin-top: 4px; }
     .guest-list div { margin-bottom: 2px; }
-    .adjust-row { display: flex; gap: 6px; align-items: center; margin-top: 6px; }
-    .adjust-row input { width: 56px; padding: 4px 6px; border: 1px solid rgba(33,28,21,0.2); border-radius: 4px; }
+    .close-form { display: flex; flex-wrap: wrap; gap: 12px; align-items: flex-end; margin-bottom: 20px; }
+    .close-form label { display: flex; flex-direction: column; gap: 4px; font-size: 12px; font-weight: 700; }
+    .close-form select, .close-form input { padding: 8px; font-size: 14px; border: 1px solid rgba(33,28,21,0.2); border-radius: 6px; }
     #status { font-size: 13px; margin-bottom: 16px; min-height: 18px; }
     #empty { color: #7A7360; padding: 40px 0; text-align: center; }
   </style>
@@ -42,7 +43,16 @@ eleventyExcludeFromCollections: true
 
     <div id="dashboard" hidden>
       <h1>Booking Admin</h1>
-      <p class="sub">Every confirmed, paid booking, grouped by date. Capacity is capped at 8 guests per tour per date. Use "Block extra spots" to manually reserve or close a date (e.g. for a private group), independent of paid bookings.</p>
+      <p class="sub">Every confirmed, paid booking, grouped by date. There is no guest limit. Close a date to stop new bookings for that tour (for example a private group or a day off), and reopen it at any time. Closing a tour closes both its Arras and Paris departures.</p>
+      <form id="closeForm" class="close-form">
+        <label>Tour
+          <select id="closeTour" required>
+            {% for tour in tours %}<option value="{{ tour.slug }}">{{ tour.shortName }}</option>{% endfor %}
+          </select>
+        </label>
+        <label>Date <input type="date" id="closeDate" required></label>
+        <button type="submit" class="save-btn">Close date</button>
+      </form>
       <p id="status"></p>
       <div id="tableWrap"></div>
     </div>
@@ -81,58 +91,59 @@ eleventyExcludeFromCollections: true
 
     function renderTable(data) {
       if (!data.entries.length) {
-        tableWrap.innerHTML = '<p id="empty">No bookings or capacity blocks recorded yet.</p>';
+        tableWrap.innerHTML = '<p id="empty">No bookings or closed dates yet.</p>';
         return;
       }
+      // Names and emails are typed by customers, so escape before rendering.
+      const esc = (v) => String(v ?? "").replace(/[&<>"']/g, (c) => `&#${c.charCodeAt(0)};`);
       const rows = data.entries.map((e) => {
         const guestList = e.bookings.length
-          ? '<div class="guest-list">' + e.bookings.map((b) => `<div>${b.fullName || "—"} · ${b.email || "—"} · ${b.guests} guest${b.guests === 1 ? "" : "s"}</div>`).join("") + "</div>"
-          : "";
+          ? '<div class="guest-list">' + e.bookings.map((b) => `<div>${esc(b.fullName || "—")} · ${esc(b.email || "—")} · ${esc(b.guests)} guest${b.guests === 1 ? "" : "s"}</div>`).join("") + "</div>"
+          : "—";
         return `
           <tr>
-            <td>${formatDate(e.date)}</td>
-            <td>${e.tourSlug}</td>
-            <td>${e.totalGuests}</td>
-            <td>${e.manualBlock}</td>
-            <td class="${e.remaining <= 0 ? "full" : ""}">${e.remaining <= 0 ? "Full" : e.remaining}</td>
-            <td>
-              ${guestList}
-              <div class="adjust-row">
-                <input type="number" min="0" max="8" value="${e.manualBlock}" data-tour="${e.tourSlug}" data-date="${e.date}">
-                <button class="save-btn">Save</button>
-              </div>
-            </td>
+            <td>${esc(formatDate(e.date))}</td>
+            <td>${esc(e.tourSlug)}</td>
+            <td>${esc(e.totalGuests)}</td>
+            <td class="${e.closed ? "closed" : ""}">${e.closed ? "Closed" : "Open"}</td>
+            <td>${guestList}</td>
+            <td><button class="save-btn" data-tour="${esc(e.tourSlug)}" data-date="${esc(e.date)}" data-closed="${!e.closed}">${e.closed ? "Reopen" : "Close"}</button></td>
           </tr>`;
       }).join("");
 
       tableWrap.innerHTML = `
         <table>
-          <thead><tr><th>Date</th><th>Tour</th><th>Booked</th><th>Blocked</th><th>Remaining</th><th>Guests / Adjust</th></tr></thead>
+          <thead><tr><th>Date</th><th>Tour</th><th>Booked</th><th>Status</th><th>Guests</th><th></th></tr></thead>
           <tbody>${rows}</tbody>
         </table>`;
 
-      tableWrap.querySelectorAll(".save-btn").forEach((btn) => {
-        btn.addEventListener("click", async () => {
-          const input = btn.previousElementSibling;
-          btn.disabled = true;
-          try {
-            const user = netlifyIdentity.currentUser();
-            const token = await user.jwt();
-            const res = await fetch("/.netlify/functions/set-capacity", {
-              method: "POST",
-              headers: { "Content-Type": "application/json", Authorization: "Bearer " + token },
-              body: JSON.stringify({ tourSlug: input.dataset.tour, dateISO: input.dataset.date, manualBlock: input.value }),
-            });
-            if (!res.ok) throw new Error(await res.text());
-            statusEl.textContent = "Saved.";
-            loadBookings();
-          } catch (err) {
-            statusEl.textContent = "Couldn't save: " + err.message;
-            btn.disabled = false;
-          }
-        });
+      tableWrap.querySelectorAll("button[data-tour]").forEach((btn) => {
+        btn.addEventListener("click", () => setClosed(btn, btn.dataset.tour, btn.dataset.date, btn.dataset.closed === "true"));
       });
     }
+
+    async function setClosed(btn, tourSlug, dateISO, closed) {
+      btn.disabled = true;
+      try {
+        const token = await netlifyIdentity.currentUser().jwt();
+        const res = await fetch("/.netlify/functions/set-capacity", {
+          method: "POST",
+          headers: { "Content-Type": "application/json", Authorization: "Bearer " + token },
+          body: JSON.stringify({ tourSlug, dateISO, closed }),
+        });
+        if (!res.ok) throw new Error(await res.text());
+        await loadBookings();
+        statusEl.textContent = closed ? "Date closed." : "Date reopened.";
+      } catch (err) {
+        statusEl.textContent = "Couldn't save: " + err.message;
+      }
+      btn.disabled = false;
+    }
+
+    document.getElementById("closeForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+      setClosed(e.target.querySelector("button"), document.getElementById("closeTour").value, document.getElementById("closeDate").value, true);
+    });
 
     netlifyIdentity.on("init", (user) => {
       if (user) {

@@ -415,13 +415,11 @@ if (bookingForm) {
     let viewMonth = today.getMonth();
     let selectedISO = null;
 
-    // Remaining-capacity data per tour, fetched from the booking backend
-    // so the calendar can grey out dates that are already fully booked
-    // (max 8 guests/date, tracked server-side as bookings are paid for).
+    // Dates an admin has closed, per tour, so the calendar can grey them out.
     const availabilityCache = {};
     const fetchAvailability = (tourKey) => {
       if (!tourKey || availabilityCache[tourKey]) return;
-      availabilityCache[tourKey] = { remaining: {} };
+      availabilityCache[tourKey] = { closed: [] };
       fetch(`/.netlify/functions/get-availability?tourSlug=${encodeURIComponent(tourKey)}`)
         .then((res) => (res.ok ? res.json() : null))
         .then((json) => {
@@ -436,7 +434,7 @@ if (bookingForm) {
       const tour = tourKey && TOURS[tourKey];
       const isParis = tour && tour.parisAvailable && getSelectedDeparture() === "paris";
       const runDays = (isParis && tour.parisRunDays && tour.parisRunDays.length) ? tour.parisRunDays : (RUN_DAYS[tourKey] || []);
-      const remaining = (availabilityCache[tourKey] && availabilityCache[tourKey].remaining) || {};
+      const closedDates = (availabilityCache[tourKey] && availabilityCache[tourKey].closed) || [];
       calMonthLabel.textContent = `${MONTH_NAMES[viewMonth]} ${viewYear}`;
 
       const firstOfMonth = new Date(viewYear, viewMonth, 1);
@@ -455,9 +453,8 @@ if (bookingForm) {
         const date = new Date(viewYear, viewMonth, d);
         const iso = `${viewYear}-${String(viewMonth + 1).padStart(2, "0")}-${String(d).padStart(2, "0")}`;
         const isPast = date < today;
-        const spotsLeft = Object.prototype.hasOwnProperty.call(remaining, iso) ? remaining[iso] : null;
-        const isFull = spotsLeft !== null && spotsLeft <= 0;
-        const available = runDays.includes(date.getDay()) && !isPast && !isFull;
+        const isClosedDate = closedDates.includes(iso);
+        const available = runDays.includes(date.getDay()) && !isPast && !isClosedDate;
 
         const btn = document.createElement("button");
         btn.type = "button";
@@ -466,9 +463,7 @@ if (bookingForm) {
         if (!available) btn.disabled = true;
         if (iso === selectedISO) btn.classList.add("booking-calendar-day--selected");
         let label = formatDisplay(date);
-        if (isFull) label += ", fully booked";
-        else if (!available) label += ", not available";
-        else if (spotsLeft !== null && spotsLeft <= 3) label += `, ${spotsLeft} spot${spotsLeft === 1 ? "" : "s"} left`;
+        if (!available) label += ", not available";
         btn.setAttribute("aria-label", label);
 
         if (available) {

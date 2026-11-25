@@ -91,7 +91,7 @@
         "Comfortable, air-conditioned 8/9-seat minibus",
         "Pick-up and drop-off at Arras Train Station or your Arras accommodation",
         "All battlefield and site entry fees",
-        "Small-group experience with a maximum of 8 guests"
+        "Small-group experience"
       ],
       "cardAlt": "Canadian National Vimy Memorial on a Vimy Ridge battlefield tour",
       "parisAvailable": true,
@@ -190,7 +190,7 @@
         "Expert Canadian First World War battlefield guide",
         "Comfortable, air-conditioned 8/9-seat minibus",
         "All battlefield and site entry fees",
-        "Pick-up and drop-off in Arras with a maximum of 8 guests"
+        "Pick-up and drop-off in Arras"
       ],
       "cardAlt": "Tyne Cot Cemetery overlooking the Passchendaele battlefield in Belgium.",
       "parisAvailable": false,
@@ -286,7 +286,7 @@
         "Expert Canadian First World War battlefield guide",
         "Comfortable, air-conditioned 8/9-seat minibus",
         "Admission to Carrière Wellington and the Cambrai Tank 1917 Museum",
-        "Pick-up and drop-off in Arras with a maximum of 8 guests"
+        "Pick-up and drop-off in Arras"
       ],
       "cardAlt": "The Beaumont-Hamel Newfoundland Memorial caribou statue",
       "parisAvailable": true,
@@ -1337,8 +1337,7 @@
         "Expert English-speaking Second World War battlefield guide",
         "Comfortable, air-conditioned eight- or nine-seat minibus",
         "Pick-up and drop-off at Dieppe Train Station or your Dieppe accommodation",
-        "Access to original German defensive positions and bunkers",
-        "Maximum group size of eight guests"
+        "Access to original German defensive positions and bunkers"
       ],
       "cardAlt": "The shingle beach, seafront lawns and town of Dieppe seen from the clifftop above the promenade",
       "bookingMethod": "email",

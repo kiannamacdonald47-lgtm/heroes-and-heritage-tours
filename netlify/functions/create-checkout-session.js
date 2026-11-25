@@ -1,6 +1,6 @@
 const Stripe = require("stripe");
 const tours = require("../../src/_data/tours.js");
-const { CAPACITY_PER_DATE, bookingsStore, getBookedCount } = require("./lib/bookings");
+const { bookingsStore, getRecord, isClosed } = require("./lib/bookings");
 
 const PARIS_SURCHARGE_CAD = 100;
 
@@ -25,7 +25,7 @@ exports.handler = async (event) => {
     return { statusCode: 400, body: "This tour isn't available for online booking." };
   }
 
-  const guests = Math.max(1, Math.min(8, parseInt(data.guests, 10) || 1));
+  const guests = Math.max(1, parseInt(data.guests, 10) || 1);
   const fullName = (data.fullName || "").trim();
   const email = (data.email || "").trim();
   const isIsoDate = /^\d{4}-\d{2}-\d{2}$/.test(data.preferredDateISO || "");
@@ -35,15 +35,9 @@ exports.handler = async (event) => {
 
   try {
     const store = bookingsStore();
-    const booked = await getBookedCount(store, tour.slug, data.preferredDateISO);
-    if (booked + guests > CAPACITY_PER_DATE) {
-      const spotsLeft = Math.max(0, CAPACITY_PER_DATE - booked);
-      return {
-        statusCode: 409,
-        body: spotsLeft > 0
-          ? `Only ${spotsLeft} spot${spotsLeft === 1 ? "" : "s"} left for this date. Please reduce your guest count or choose another date.`
-          : "This date is fully booked. Please choose another date.",
-      };
+    const record = await getRecord(store, tour.slug, data.preferredDateISO);
+    if (isClosed(record)) {
+      return { statusCode: 409, body: "This date isn't available. Please choose another date." };
     }
   } catch (err) {
     console.error("Availability check error:", err);

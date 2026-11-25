@@ -1,6 +1,16 @@
 const { getStore } = require("@netlify/blobs");
 
-const CAPACITY_PER_DATE = 8;
+// Tours have no guest limit; a date is only unavailable when an admin
+// closes it. Records saved while there was an 8-guest limit closed a date
+// by blocking spots up to that number, so those are still honoured.
+const LEGACY_CAPACITY = 8;
+
+function isClosed(record) {
+  if (!record) return false;
+  if (typeof record.closed === "boolean") return record.closed;
+  const block = record.manualBlock || 0;
+  return block > 0 && block + (record.totalGuests || 0) >= LEGACY_CAPACITY;
+}
 
 // Netlify's automatic Blobs environment injection (NETLIFY_BLOBS_CONTEXT)
 // isn't reaching this site's functions for reasons unrelated to bundler
@@ -36,15 +46,7 @@ function bookingKey(tourSlug, dateISO) {
 }
 
 async function getRecord(store, tourSlug, dateISO) {
-  return (await store.get(bookingKey(tourSlug, dateISO), { type: "json" })) || { totalGuests: 0, bookings: [], manualBlock: 0 };
-}
-
-// Booked count plus any manual block an admin has set for this date
-// (e.g. reserving spots for a private group, or closing the date
-// entirely by setting manualBlock to the full capacity).
-async function getBookedCount(store, tourSlug, dateISO) {
-  const record = await getRecord(store, tourSlug, dateISO);
-  return (record.totalGuests || 0) + (record.manualBlock || 0);
+  return (await store.get(bookingKey(tourSlug, dateISO), { type: "json" })) || { totalGuests: 0, bookings: [] };
 }
 
 // Adds a confirmed booking to the store for a tour+date, returning the
@@ -60,19 +62,21 @@ async function addBooking(store, tourSlug, dateISO, entry) {
   if (existing.bookings.some((b) => b.sessionId === entry.sessionId)) {
     return existing;
   }
+  // Fix the open/closed state before the count changes, so a new booking
+  // can never flip a legacy partial block into a closed date.
+  existing.closed = isClosed(existing);
   existing.totalGuests += entry.guests;
   existing.bookings.push(entry);
   await store.setJSON(key, existing);
   return existing;
 }
 
-// Sets (not adds to) the manual block for a tour+date — an admin
-// reserving/closing capacity independent of paid bookings. Pass 0 to
-// clear a previously set block.
-async function setManualBlock(store, tourSlug, dateISO, manualBlock) {
+// Closes or reopens a tour+date, independent of paid bookings.
+async function setDateClosed(store, tourSlug, dateISO, closed) {
   const key = bookingKey(tourSlug, dateISO);
   const existing = await getRecord(store, tourSlug, dateISO);
-  existing.manualBlock = Math.max(0, manualBlock);
+  existing.closed = closed;
+  delete existing.manualBlock;
   await store.setJSON(key, existing);
   return existing;
 }
@@ -179,14 +183,13 @@ async function listTourReminderRecords(store) {
 }
 
 module.exports = {
-  CAPACITY_PER_DATE,
+  isClosed,
   bookingsStore,
   balanceStore,
   bookingKey,
   getRecord,
-  getBookedCount,
   addBooking,
-  setManualBlock,
+  setDateClosed,
   createBalanceRecord,
   getBalanceRecord,
   markBalancePaid,

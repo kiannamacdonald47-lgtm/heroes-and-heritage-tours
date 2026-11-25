@@ -1,4 +1,4 @@
-const { CAPACITY_PER_DATE, bookingsStore } = require("./lib/bookings");
+const { bookingsStore, isClosed } = require("./lib/bookings");
 
 exports.handler = async (event) => {
   if (event.httpMethod !== "GET") {
@@ -14,18 +14,16 @@ exports.handler = async (event) => {
     const store = bookingsStore();
     const { blobs } = await store.list({ prefix: `${tourSlug}__` });
 
-    const remaining = {};
+    const closed = [];
     for (const { key } of blobs) {
-      const date = key.slice(tourSlug.length + 2);
       const record = await store.get(key, { type: "json" });
-      const booked = (record && record.totalGuests ? record.totalGuests : 0) + (record && record.manualBlock ? record.manualBlock : 0);
-      remaining[date] = Math.max(0, CAPACITY_PER_DATE - booked);
+      if (isClosed(record)) closed.push(key.slice(tourSlug.length + 2));
     }
 
     return {
       statusCode: 200,
       headers: { "Content-Type": "application/json", "Cache-Control": "no-store" },
-      body: JSON.stringify({ capacity: CAPACITY_PER_DATE, remaining }),
+      body: JSON.stringify({ closed }),
     };
   } catch (err) {
     console.error("get-availability error:", err);
