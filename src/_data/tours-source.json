@@ -1344,9 +1344,13 @@
       "departureCity": "Dieppe"
     },
     {
-      "footnote": "This tour operates on April 9, 2027 only. Advance registration is required for the official ceremony; booking this tour does not itself secure ceremony admission. The visitor centre, tunnels and trenches will be closed that day. Timings, access, lunch arrangements and transport procedures are subject to the official event programme. Additional battlefield visits are not included. Accommodation and travel to Arras are excluded. Guests should stay locally the night before and allow flexibility for their return. Please discuss mobility and dietary requirements before booking.",
+      "footnote": "This tour operates on April 9, 2027 only. Advance registration is required for the official ceremony. The visitor centre, tunnels and trenches will be closed that day. Timings, access, lunch arrangements and transport procedures are subject to the official event programme. Guests should stay locally in Arras the night before and allow flexibility for their return. Please discuss mobility and dietary requirements before booking.",
       "heroImage": "/photos/image-chatgpt-25-sept.-2026-16_22_03.png",
       "cardDesc": "Mark Vimy’s 110th anniversary with Canadian guide Joe MacDonald. Depart Arras by coach for a day of remembrance, with historical commentary, packed lunch and return transport included.",
+      "singleSupplement": "",
+      "runDays": [
+        5
+      ],
       "badge": "Special Event Day Tour",
       "scheduleFull": "This special commemorative tour departs from Arras on Friday, April 9, 2027.",
       "shortName": "Vimy 110 Anniversary",
